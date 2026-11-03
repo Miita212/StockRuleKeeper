@@ -218,3 +218,24 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- Team rules ---
+.env
+.env.*
+!.env.example
+CLAUDE.local.md
+
+# Data / model files
+data/*
+members/*/data/
+models/
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.gguf
+*.ckpt
+
+# Outputs / logs
+outputs/
+*.log
