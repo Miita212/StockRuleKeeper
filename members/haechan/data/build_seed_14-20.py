@@ -158,15 +158,7 @@ def main():
     out = HERE / "seed_14-20.jsonl"
     lines = []
     for n, (kind, user, answer, note) in enumerate(SEEDS, 1):
-        ids = set(answer.get("anchors", []))
-        if "indicator_id" in answer:
-            ids.add(answer["indicator_id"])
-        ids |= {c["id"] for c in answer.get("candidates", [])}
-        lines.append(json.dumps({
-            "type": "SEED", "seed_id": f"H4c-{n:03d}", "kind": kind, "note": note, "indicator_ids": sorted(ids),
-            "messages": [{"role": "system", "content": S.SYSTEM}, {"role": "user", "content": user},
-                         {"role": "assistant", "content": json.dumps(answer, ensure_ascii=False)}],
-        }, ensure_ascii=False))
+        lines.append(json.dumps(S.record(f"H4c-{n:03d}", kind, user, answer, note), ensure_ascii=False))
     out.write_text("\n".join(lines) + "\n", encoding="utf-8")
     kinds = {}
     for k, *_ in SEEDS:

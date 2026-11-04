@@ -110,6 +110,11 @@ class PeriodReturn(unittest.TestCase):
         rec["messages"][1]["content"] = json.dumps(e, ensure_ascii=False)
         self.assertIn("V1", rules(rec))
 
+    def test_default_entry_needs_no_period(self):
+        """20개 세트의 기본값 채움 항목(source=default)은 기간이 없어도 된다."""
+        rec = chat("SEED", "x", {"indicators": [{"id": 15, "operator": ">=", "value": 10, "unit": "%", "source": "default"}]})
+        self.assertEqual(rules(rec), set())
+
     def test_bad_period(self):
         self.assertIn("V1", rules(self.ok_entry(period_months=2)))
 

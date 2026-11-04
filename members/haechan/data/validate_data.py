@@ -223,7 +223,7 @@ def check_output_obj(obj, master, locked):
                 if e["id"] in seen:
                     errs.append(("V1", f"지표 {e['id']} 가 두 번 나와요"))
                 seen.add(e["id"])
-                if e["id"] == PERIOD_INDICATOR and e.get("period_months") not in PERIOD_MONTHS:
+                if e["id"] == PERIOD_INDICATOR and e.get("source") != "default" and e.get("period_months") not in PERIOD_MONTHS:
                     errs.append(("V1", f"기간 수익률은 period_months {sorted(PERIOD_MONTHS)} 가 필요해요"))
                 if "source" in e and e["source"] not in SOURCES:
                     errs.append(("V1", f"source {e['source']!r} 는 user/default 여야 해요"))

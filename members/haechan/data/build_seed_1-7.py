@@ -4,8 +4,9 @@
 검증: python -X utf8 validate_data.py --master-dir ../../byungjun/data --input seed_1-7.jsonl
 
 정답 규칙 (byungjun 의 H1-0 마스터 양식, H3-0 되묻기 정책을 따른다. 아래 결정은 모두 [제안], 팀 확인 필요)
-- 값과 지표가 둘 다 분명하면 되묻지 않고 확정(T4). 정답에는 **사용자가 말한 지표만** source=user 로 적고,
-  나머지 지표의 기본값 채우기는 코드가 한다.                                              (결정 3)
+- 값과 지표가 둘 다 분명하면 되묻지 않고 확정(T4). 정답은 시트 예시 E06 / yappang 조립 형식과 같은 **20개 세트**:
+  말한 지표는 source=user, 나머지는 마스터 기본값 source=default, anchors=말한 지표. (처음에는 말한 지표만 적었으나
+  yappang 의 생성·조립 도구가 20개 세트라 한 가지 형식으로 맞췄다.)
 - 지표는 정해졌는데 값이 없으면 되묻기(T1, VALUE_MISSING). 선택지 3개와 메시지는 H3-a 파일(byungjun)에서 읽는다.
 - 말이 여러 지표로 갈리면 지표 후보를 되묻기(T2, AMBIGUOUS_INDICATOR), 후보는 최대 4개.
   "안전한/튼튼한" 후보 = 1·2·4·18 (H3-0 6장 기준, yappang 사전의 2·3·4 대신).                (결정 1)
@@ -21,8 +22,9 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 BJ = HERE.parent.parent / "byungjun" / "data"
 
-SYSTEM = ("너는 투자 원칙 점검 앱의 말 번역기야. 사용자의 말을 지표 20개 조건 JSON으로 바꿔. "
-          "종목 추천이나 수익 예측은 하지 않아.")
+# yappang 의 assemble_s1_s2.py SYSTEM 과 같게 맞춘다 (최종 학습 형식은 팀 합의 후 확정)
+SYSTEM = ('너는 투자 원칙 점검 앱의 도우미야. 사용자의 말을 지표 20개 기준 JSON으로 바꿔. '
+          'JSON만 출력하고, 종목 추천이나 수익 예측은 하지 않아.')
 
 
 def load():
@@ -45,7 +47,15 @@ def ind(i, value, op=None):
 
 
 def confirm(*inds):
-    return {"anchors": [x["id"] for x in inds], "indicators": list(inds)}
+    """E06 형식(yappang 의 gold_full 과 같음): 말한 지표는 source=user, 나머지 지표는 마스터 기본값 source=default,
+    anchors 는 말한 지표 id. 기본값 항목에는 기간(period_months)을 붙이지 않는다."""
+    said = {x["id"]: x for x in inds}
+    full = []
+    for i in range(1, 21):
+        m = MASTER[i]
+        full.append(said[i] if i in said else
+                    {"id": i, "operator": m["operator"], "value": m["default"], "unit": m["unit"], "source": "default"})
+    return {"indicators": full, "anchors": sorted(said)}
 
 
 def clarify_value(i):
@@ -57,7 +67,7 @@ def clarify_value(i):
 
 def ambiguous(message, ids):
     return {"needs_clarification": True, "reason": "AMBIGUOUS_INDICATOR", "message": message,
-            "candidates": [{"id": i, "label": f"{MASTER[i]['ui_name']}"} for i in ids]}
+            "candidates": [{"id": i, "name": MASTER[i]["ui_name"]} for i in ids]}
 
 
 def refuse(message):
@@ -164,19 +174,25 @@ SEEDS = [
 ]
 
 
+def record(seed_id, kind, user, answer, note):
+    """시드 한 줄. messages 는 학습·검증용, text/output/id 는 yappang build_prompts.py --seeds 가 읽는 필드."""
+    ids = set(answer.get("anchors", []))
+    if "indicator_id" in answer:
+        ids.add(answer["indicator_id"])
+    ids |= {c["id"] for c in answer.get("candidates", [])}
+    return {
+        "type": "SEED", "seed_id": seed_id, "id": seed_id, "kind": kind, "note": note, "indicator_ids": sorted(ids),
+        "text": user, "output": answer,
+        "messages": [{"role": "system", "content": SYSTEM}, {"role": "user", "content": user},
+                     {"role": "assistant", "content": json.dumps(answer, ensure_ascii=False)}],
+    }
+
+
 def main():
     out = HERE / "seed_1-7.jsonl"
     lines = []
     for n, (kind, user, answer, note) in enumerate(SEEDS, 1):
-        ids = set(answer.get("anchors", []))
-        if "indicator_id" in answer:
-            ids.add(answer["indicator_id"])
-        ids |= {c["id"] for c in answer.get("candidates", [])}
-        lines.append(json.dumps({
-            "type": "SEED", "seed_id": f"H4a-{n:03d}", "kind": kind, "note": note, "indicator_ids": sorted(ids),
-            "messages": [{"role": "system", "content": SYSTEM}, {"role": "user", "content": user},
-                         {"role": "assistant", "content": json.dumps(answer, ensure_ascii=False)}],
-        }, ensure_ascii=False))
+        lines.append(json.dumps(record(f"H4a-{n:03d}", kind, user, answer, note), ensure_ascii=False))
     out.write_text("\n".join(lines) + "\n", encoding="utf-8")
     kinds = {}
     for k, *_ in SEEDS:
