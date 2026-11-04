@@ -7,7 +7,8 @@
     "area": "재무 건전성",
     "operator": "<=",
     "allowed_operators": [
-      "<="
+      "<=",
+      "<"
     ],
     "unit": "%",
     "default": 100,
@@ -33,7 +34,8 @@
     "area": "재무 건전성",
     "operator": "<=",
     "allowed_operators": [
-      "<="
+      "<=",
+      "<"
     ],
     "unit": "%",
     "default": 30,
@@ -59,7 +61,8 @@
     "area": "재무 건전성",
     "operator": ">=",
     "allowed_operators": [
-      ">="
+      ">=",
+      ">"
     ],
     "unit": "배",
     "default": 3,
@@ -85,7 +88,8 @@
     "area": "재무 건전성",
     "operator": "<=",
     "allowed_operators": [
-      "<="
+      "<=",
+      "<"
     ],
     "unit": "%",
     "default": 0,
@@ -110,6 +114,8 @@
     "operator": ">",
     "allowed_operators": [
       ">",
+      ">=",
+      "<",
       "<="
     ],
     "unit": "억원",
@@ -136,7 +142,8 @@
     "area": "수익성",
     "operator": ">=",
     "allowed_operators": [
-      ">="
+      ">=",
+      ">"
     ],
     "unit": "년",
     "default": 3,
@@ -160,7 +167,8 @@
     "area": "수익성",
     "operator": ">=",
     "allowed_operators": [
-      ">="
+      ">=",
+      ">"
     ],
     "unit": "%",
     "default": 5,

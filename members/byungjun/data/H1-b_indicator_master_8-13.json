@@ -7,7 +7,8 @@
     "area": "성장성",
     "operator": ">=",
     "allowed_operators": [
-      ">="
+      ">=",
+      ">"
     ],
     "unit": "%",
     "default": 15,
@@ -33,7 +34,8 @@
     "area": "성장성",
     "operator": ">=",
     "allowed_operators": [
-      ">="
+      ">=",
+      ">"
     ],
     "unit": "%",
     "default": 10,
@@ -59,7 +61,8 @@
     "area": "가치",
     "operator": "<=",
     "allowed_operators": [
-      "<="
+      "<=",
+      "<"
     ],
     "unit": "배",
     "default": 10,
@@ -85,14 +88,15 @@
     "area": "가치",
     "operator": "<=",
     "allowed_operators": [
-      "<="
+      "<=",
+      "<"
     ],
     "unit": "배",
     "default": 1,
     "min": 0,
     "max": 20,
     "step_stricter": "기준값의 20% 낮춤 (예: 1 → 0.8)",
-    "definition": "주가 ÷ 주당순자산(BPS) (낮을수록 순자산에 비해 주가가 싼 편이에요. 1배보다 낮으면 주가가 순자산보다 낮다는 뜻이에요)",
+    "definition": "주가 ÷ 주당순자산(BPS) (버는 돈 대비 기업의 순자산 가치 비율을 의미해요. 1배보다 낮으면 주가가 순자산보다 낮다는 뜻이에요)",
     "source": [
       "StockRuleKeeper 지표 정의 (핵심지표20개.xlsx)",
       "금융위원회 금융용어사전 (공공데이터포털, D1) - 해당 용어 항목 대조 필요"
@@ -111,7 +115,8 @@
     "area": "배당",
     "operator": ">=",
     "allowed_operators": [
-      ">="
+      ">=",
+      ">"
     ],
     "unit": "%",
     "default": 2,
@@ -137,14 +142,15 @@
     "area": "배당",
     "operator": ">=",
     "allowed_operators": [
-      ">="
+      ">=",
+      ">"
     ],
     "unit": "년",
     "default": 3,
     "min": 0,
     "max": 20,
     "step_stricter": "1년 늘림 (예: 3 → 4)",
-    "definition": "현금배당을 한 해가 가장 최근 완료 연도부터 몇 해 연속인지 센 값 (길수록 배당을 꾸준히 했다는 뜻이에요)",
+    "definition": "현금배당을 한 해가 가장 최근 완료 연도부터 몇 해 연속인지 센 값 (길수록 현금으로 배당을 꾸준히 줬다는 뜻이에요)",
     "source": [
       "StockRuleKeeper 지표 정의 (핵심지표20개.xlsx)",
       "금융위원회 금융용어사전 (공공데이터포털, D1) - 해당 용어 항목 대조 필요"

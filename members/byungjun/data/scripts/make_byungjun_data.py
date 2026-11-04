@@ -279,10 +279,19 @@ FORBIDDEN = ["사세요", "반드시", "오릅니다", "추천", "보장", "확�
 
 
 # ---------- 마스터 ----------
+def allowed_ops(i):
+    """같은 방향의 두 부등호는 항상 허용, 반대 방향을 허용하던 지표는 반대 두 부등호도 허용."""
+    same = [">", ">="] if i["op"] in (">", ">=") else ["<", "<="]
+    ops = [i["op"]] + [x for x in same if x != i["op"]]
+    if len(i["allowed"]) > 1:
+        ops += ["<", "<="] if same[0] == ">" else [">", ">="]
+    return ops
+
+
 def master_row(i):
     return {
         "id": i["id"], "name": i["name"], "ui_name": i["ui"], "abbr": i["abbr"], "area": i["area"],
-        "operator": i["op"], "allowed_operators": i["allowed"], "unit": i["unit"], "default": i["default"],
+        "operator": i["op"], "allowed_operators": allowed_ops(i), "unit": i["unit"], "default": i["default"],
         "min": i["min"], "max": i["max"], "step_stricter": i["step"],
         "definition": f"{i['formula']} ({i['good']})" if i["dirtype"] != "neutral" else f"{i['formula']} ({i['good']})",
         "source": [SRC_SELF, SRC_TERM],
