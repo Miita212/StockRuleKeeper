@@ -1,0 +1,156 @@
+[
+  {
+    "id": 8,
+    "name": "매출액 증가율",
+    "ui_name": "매출액 증가율",
+    "abbr": "매출성장",
+    "area": "성장성",
+    "operator": ">=",
+    "allowed_operators": [
+      ">="
+    ],
+    "unit": "%",
+    "default": 15,
+    "min": -100,
+    "max": 1000,
+    "step_stricter": "기준값의 20% 높임 (0이면 5%p 올림)",
+    "definition": "(이번 매출액 − 비교 기간 매출액) ÷ 비교 기간 매출액 × 100 (높을수록 매출이 빠르게 커지고 있어요)",
+    "source": [
+      "StockRuleKeeper 지표 정의 (핵심지표20개.xlsx)",
+      "금융위원회 금융용어사전 (공공데이터포털, D1) - 해당 용어 항목 대조 필요"
+    ],
+    "data_source": "직접: 종목별 성장성비율 grs",
+    "alias": [
+      "매출 성장률"
+    ],
+    "note": "비교 기간 정의 확인 필요(핵심지표20개.xlsx). 카드 문구 '매출 성장률 15% 이상'(E21) / 출처 대조 필요"
+  },
+  {
+    "id": 9,
+    "name": "영업이익 증가율",
+    "ui_name": "영업이익 증가율",
+    "abbr": "이익성장",
+    "area": "성장성",
+    "operator": ">=",
+    "allowed_operators": [
+      ">="
+    ],
+    "unit": "%",
+    "default": 10,
+    "min": -100,
+    "max": 1000,
+    "step_stricter": "기준값의 20% 높임 (0이면 5%p 올림)",
+    "definition": "(이번 영업이익 − 비교 기간 영업이익) ÷ |비교 기간 영업이익| × 100 (높을수록 본업 이익이 빠르게 늘고 있어요)",
+    "source": [
+      "StockRuleKeeper 지표 정의 (핵심지표20개.xlsx)",
+      "금융위원회 금융용어사전 (공공데이터포털, D1) - 해당 용어 항목 대조 필요"
+    ],
+    "data_source": "직접: 종목별 성장성비율 bsop_prfi_inrt",
+    "alias": [
+      "영업이익 성장률"
+    ],
+    "note": "적자 전환·흑자 전환은 별도 처리 필요(핵심지표20개.xlsx). 분모 정의는 팀 확인 [추론] / 출처 대조 필요"
+  },
+  {
+    "id": 10,
+    "name": "PER",
+    "ui_name": "PER",
+    "abbr": "PER",
+    "area": "가치",
+    "operator": "<=",
+    "allowed_operators": [
+      "<="
+    ],
+    "unit": "배",
+    "default": 10,
+    "min": 0,
+    "max": 100,
+    "step_stricter": "기준값의 20% 낮춤 (예: 10 → 8)",
+    "definition": "주가 ÷ 주당순이익(EPS) (낮을수록 번 돈에 비해 주가가 싼 편이에요. 적자 회사는 PER이 의미가 없어요)",
+    "source": [
+      "StockRuleKeeper 지표 정의 (핵심지표20개.xlsx)",
+      "금융위원회 금융용어사전 (공공데이터포털, D1) - 해당 용어 항목 대조 필요"
+    ],
+    "data_source": "직접: 현재가 시세 per",
+    "alias": [
+      "주가수익비율"
+    ],
+    "note": "default 10은 시트 예시 [임의값]. 적자(EPS<0)일 때 PER 처리 규칙 팀 확인 필요 / 출처 대조 필요"
+  },
+  {
+    "id": 11,
+    "name": "PBR",
+    "ui_name": "PBR",
+    "abbr": "PBR",
+    "area": "가치",
+    "operator": "<=",
+    "allowed_operators": [
+      "<="
+    ],
+    "unit": "배",
+    "default": 1,
+    "min": 0,
+    "max": 20,
+    "step_stricter": "기준값의 20% 낮춤 (예: 1 → 0.8)",
+    "definition": "주가 ÷ 주당순자산(BPS) (낮을수록 순자산에 비해 주가가 싼 편이에요. 1배보다 낮으면 주가가 순자산보다 낮다는 뜻이에요)",
+    "source": [
+      "StockRuleKeeper 지표 정의 (핵심지표20개.xlsx)",
+      "금융위원회 금융용어사전 (공공데이터포털, D1) - 해당 용어 항목 대조 필요"
+    ],
+    "data_source": "직접: 현재가 시세 pbr",
+    "alias": [
+      "주가순자산비율"
+    ],
+    "note": "default 1은 [임의값] / 출처 대조 필요"
+  },
+  {
+    "id": 12,
+    "name": "최근 12개월 현금배당수익률",
+    "ui_name": "12개월 배당수익률",
+    "abbr": "배당",
+    "area": "배당",
+    "operator": ">=",
+    "allowed_operators": [
+      ">="
+    ],
+    "unit": "%",
+    "default": 2,
+    "min": 0,
+    "max": 20,
+    "step_stricter": "기준값의 20% 높임 (예: 2 → 2.4)",
+    "definition": "최근 12개월 주당 현금배당금 합계 ÷ 현재가 × 100 (높을수록 배당을 많이 줘요)",
+    "source": [
+      "StockRuleKeeper 지표 정의 (핵심지표20개.xlsx)",
+      "금융위원회 금융용어사전 (공공데이터포털, D1) - 해당 용어 항목 대조 필요"
+    ],
+    "data_source": "계산: 최근 12개월 주당 현금배당금 합계 ÷ 현재가 (예탁원 배당일정)",
+    "alias": [
+      "배당수익률"
+    ],
+    "note": "default 2는 시트 예시 E06 [임의값]. 검증 필요(핵심지표20개.xlsx) / 출처 대조 필요"
+  },
+  {
+    "id": 13,
+    "name": "연속 현금배당 연수",
+    "ui_name": "연속 배당 연수",
+    "abbr": "연속배당",
+    "area": "배당",
+    "operator": ">=",
+    "allowed_operators": [
+      ">="
+    ],
+    "unit": "년",
+    "default": 3,
+    "min": 0,
+    "max": 20,
+    "step_stricter": "1년 늘림 (예: 3 → 4)",
+    "definition": "현금배당을 한 해가 가장 최근 완료 연도부터 몇 해 연속인지 센 값 (길수록 배당을 꾸준히 했다는 뜻이에요)",
+    "source": [
+      "StockRuleKeeper 지표 정의 (핵심지표20개.xlsx)",
+      "금융위원회 금융용어사전 (공공데이터포털, D1) - 해당 용어 항목 대조 필요"
+    ],
+    "data_source": "계산: 배당 이력으로 계산",
+    "alias": [],
+    "note": "default 3은 시트 예시 E06 [임의값]. 완결 연도·이력 범위 검증 필요 / 출처 대조 필요"
+  }
+]
