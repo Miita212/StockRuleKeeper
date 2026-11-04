@@ -4,6 +4,8 @@
     "name": "시가총액",
     "operator": ">=",
     "unit": "억원",
+    "clarify_message": "회사의 덩치는 시가총액으로 볼 수 있어요. 어느 정도 이상이면 괜찮을까요?",
+    "normal_equals_default": true,
     "options": [
       {
         "level": "엄격",
@@ -31,6 +33,8 @@
     "name": "기간 수익률",
     "operator": ">=",
     "unit": "%",
+    "clarify_message": "최근 주가 흐름은 기간 수익률로 볼 수 있어요. 얼마 이상 오른 종목을 볼까요?",
+    "normal_equals_default": true,
     "options": [
       {
         "level": "엄격",
@@ -58,6 +62,8 @@
     "name": "52주 최고가 대비 등락률",
     "operator": ">=",
     "unit": "%",
+    "clarify_message": "고점에서 얼마나 떨어졌는지는 52주 고점 대비로 볼 수 있어요. 고점보다 몇 % 안쪽까지 괜찮을까요?",
+    "normal_equals_default": true,
     "options": [
       {
         "level": "엄격",
@@ -85,6 +91,8 @@
     "name": "52주 최저가 대비 상승률",
     "operator": "<=",
     "unit": "%",
+    "clarify_message": "1년 최저가에서 얼마나 올랐는지는 52주 저점 대비로 볼 수 있어요. 저점보다 몇 % 안쪽이면 괜찮을까요?",
+    "normal_equals_default": true,
     "options": [
       {
         "level": "엄격",
@@ -112,6 +120,8 @@
     "name": "최근 60거래일 변동성",
     "operator": "<=",
     "unit": "%",
+    "clarify_message": "주가가 출렁이는 정도는 60일 변동성으로 볼 수 있어요. 하루 등락이 평균 몇 % 안쪽이면 괜찮을까요?",
+    "normal_equals_default": true,
     "options": [
       {
         "level": "엄격",
@@ -139,6 +149,8 @@
     "name": "최근 20거래일 평균 거래대금",
     "operator": ">=",
     "unit": "억원",
+    "clarify_message": "거래가 활발한지는 20일 평균 거래대금으로 볼 수 있어요. 하루 평균 얼마 이상이면 괜찮을까요?",
+    "normal_equals_default": true,
     "options": [
       {
         "level": "엄격",
@@ -166,6 +178,8 @@
     "name": "거래량 증가 배율",
     "operator": ">=",
     "unit": "배",
+    "clarify_message": "거래량이 갑자기 늘었는지는 거래량 증가 배율로 볼 수 있어요. 평소의 몇 배 이상이면 괜찮을까요?",
+    "normal_equals_default": true,
     "options": [
       {
         "level": "엄격",
