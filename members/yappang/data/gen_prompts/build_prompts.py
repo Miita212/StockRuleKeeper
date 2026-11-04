@@ -76,17 +76,19 @@ def main():
             s1.append(dict(prompt_id='S1A-%02d-%d' % (i, k + 1), template='s1_from_expressions', mode='no_value',
                            indicator_ids=[i], n=a.per_prompt,
                            prompt=fill(tpl('s1_from_expressions.txt'), N=a.per_prompt, EXPRESSIONS=expr(),
-                                       VALUE_RULE='숫자 기준(예: 100%, 3년)은 넣지 않는다. 말만으로 쓴다.', **base)))
+                                       VALUE_RULE='숫자 기준(예: 100%, 3년)은 넣지 않는다. 말만으로 쓴다.', OP_FIELD='', **base)))
         # S1-V 값 있음: 엄격/보통/느슨 값을 문장에 넣는다. 정답 = 그 값으로 확정 (T4)
         for opt in H3[i]['options']:
             ph = value_phrases(opt['value'], m['unit'])
-            rule = ('문장에 기준 숫자를 반드시 넣는다: %s 중 하나를 그대로 쓴다. 방향은 "%s"이다. 다른 숫자는 넣지 않는다.'
-                    % (' / '.join('"%s"' % p for p in ph), OP_WORD[m['operator']]))
+            ops = same_dir_ops(m)
+            opw = {OP_WORD[o]: o for o in ops}  # 예: {'이하': '<=', '미만': '<'}
+            rule = ('문장에 기준 숫자를 반드시 넣는다: %s 중 하나를 그대로 쓴다. 숫자 뒤에 %s 중 하나를 문장에 쓰고, 쓴 말을 op_word 에 적는다. 다른 숫자는 넣지 않는다.'
+                    % (' / '.join('"%s"' % p for p in ph), ' / '.join('"%s"' % w for w in opw)))
             s1.append(dict(prompt_id='S1V-%02d-%s' % (i, opt['level']), template='s1_from_expressions', mode='with_value',
                            indicator_ids=[i], n=a.value_per_prompt, value=opt['value'], level=opt['level'],
-                           value_phrases=ph,
+                           value_phrases=ph, op_words=opw,
                            prompt=fill(tpl('s1_from_expressions.txt'), N=a.value_per_prompt, EXPRESSIONS=expr(),
-                                       VALUE_RULE=rule, **base)))
+                                       VALUE_RULE=rule, OP_FIELD=', "op_word": "%s"' % '|'.join(opw), **base)))
     # S1-B 시드 (H4가 있을 때)
     skipped = 0
     for fn in a.seeds:
@@ -115,7 +117,7 @@ def main():
         vals, vlines, ex = {}, [], []
         for x in c:
             v = M[x]['default']  # 마스터 default를 기준으로 삼는다 (H3 보통 값과 다르면 아래 경고)
-            if H3[x]['options'][1]['value'] != v:
+            if H3[x]['options'][1]['value'] != v and H3[x].get('normal_equals_default', True):
                 print('[경고] 지표 %d: 마스터 default=%s, H3 보통=%s (H3-0 정책은 둘이 같아야 함)' % (x, v, H3[x]['options'][1]['value']), file=sys.stderr)
             ph = value_phrases(v, M[x]['unit'])
             vals[x] = dict(value=v, phrases=ph)

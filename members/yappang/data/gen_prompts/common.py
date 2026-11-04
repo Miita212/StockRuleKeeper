@@ -55,3 +55,12 @@ def value_phrases(v, unit):
 def direction_text(m):
     d = {'<=': '낮을수록 좋음', '>=': '높을수록 좋음', '<': '낮을수록 좋음', '>': '높을수록 좋음'}[m['operator']]
     return '%s (%s)' % (d, OP_WORD[m['operator']])
+
+
+SAME_DIR = {'<=': ('<=', '<'), '<': ('<=', '<'), '>=': ('>=', '>'), '>': ('>=', '>')}
+
+
+def same_dir_ops(m):
+    """마스터 allowed_operators 안에서 기본 부등호와 같은 방향인 것들 (기본 부등호가 맨 앞)."""
+    allowed = set(m.get('allowed_operators') or []) | {m['operator']}
+    return [m['operator']] + [o for o in SAME_DIR[m['operator']] if o != m['operator'] and o in allowed]

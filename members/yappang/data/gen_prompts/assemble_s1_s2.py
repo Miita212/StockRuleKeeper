@@ -21,13 +21,14 @@ MAX_CANDIDATES = 4  # H3-0: 후보 지표는 2~4개
 NUM = re.compile(r'\d')
 
 
-def gold_full(M, anchors):
-    """E06 형식: 말한 지표는 source=user, 나머지는 마스터 기본값 source=default. anchors = {id: value}"""
+def gold_full(M, anchors, ops=None):
+    """E06 형식: 말한 지표는 source=user, 나머지는 마스터 기본값 source=default. anchors = {id: value}, ops = {id: 부등호}"""
+    ops = ops or {}
     inds = []
     for i in range(1, 21):
         m = M[i]
         if i in anchors:
-            inds.append(dict(id=i, operator=m['operator'], value=anchors[i], unit=m['unit'], source='user'))
+            inds.append(dict(id=i, operator=ops.get(i, m['operator']), value=anchors[i], unit=m['unit'], source='user'))
         else:
             inds.append(dict(id=i, operator=m['operator'], value=m['default'], unit=m['unit'], source='default'))
     return dict(indicators=inds, anchors=sorted(anchors))
@@ -70,7 +71,7 @@ def build(meta, d, M, H3):
         i = ids[0]
         h = H3[i]
         gold = dict(needs_clarification=True, reason='VALUE_MISSING', indicator_id=i,
-                    message='%s 기준을 정해 볼게요. 어느 정도까지 괜찮을까요?' % M[i]['ui_name'],  # [제안] 임시 문구
+                    message=h.get('clarify_message') or '%s 기준을 정해 볼게요. 어느 정도까지 괜찮을까요?' % M[i]['ui_name'],  # H3 지표별 문구, 없으면 임시 문구
                     options=[dict(level=o['level'], label=o['label'], value=o['value']) for o in h['options']])
         return (gold, 'S1'), None
     if mode == 'with_value':
@@ -80,7 +81,15 @@ def build(meta, d, M, H3):
             return None, '기준 숫자 표현이 문장에 없음'
         if NUM.search(strip_phrases(text, meta['value_phrases'])):
             return None, '기준 말고 다른 숫자가 있음'
-        return (gold_full(M, {ids[0]: meta['value']}), 'S1'), None
+        w = d.get('op_word')
+        if w not in meta['op_words']:
+            return None, 'op_word %r 가 허용 목록 %s 에 없음' % (w, list(meta['op_words']))
+        if w not in text:
+            return None, 'op_word %r 가 문장에 없음' % w
+        other = [x for x in meta['op_words'] if x != w]
+        if any(x in text for x in other):
+            return None, '문장에 부등호 말이 두 가지 섞임'
+        return (gold_full(M, {ids[0]: meta['value']}, {ids[0]: meta['op_words'][w]}), 'S1'), None
     if mode == 'multi_value':
         if sorted(d.get('indicator_ids', [])) != sorted(ids):
             return None, 'indicator_ids 가 프롬프트와 다름'
@@ -96,7 +105,7 @@ def build(meta, d, M, H3):
         if d.get('needs_clarification') is not True or sorted(d.get('candidate_ids', [])) != sorted(ids):
             return None, 'candidate_ids/needs_clarification 이 프롬프트와 다름'
         if len(ids) > MAX_CANDIDATES:
-            return None, '후보 지표가 %d개 (정책은 2~%d개)' % (len(ids), MAX_CANDIDATES)
+            return None, '후보 지표가 %d개: 2단계 되묻기 대화(S3)로 만들어야 함. 검증 코드도 아직 stage 미지원' % len(ids)
         gold = dict(needs_clarification=True, reason='AMBIGUOUS_INDICATOR',
                     message='어떤 기준으로 볼까요? 아래에서 골라 주세요.',  # [제안] 임시 문구
                     candidates=[dict(id=i, name=M[i]['ui_name']) for i in ids])

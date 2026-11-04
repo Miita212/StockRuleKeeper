@@ -20,4 +20,4 @@
 
 [출력 형식]
 한 줄에 JSON 하나(JSONL). 설명, 번호, 코드블록 없이 JSON 줄만 출력한다.
-{"text": "문장", "indicator_ids": [{{ID}}], "style": "존댓말|반말|줄임말|오타|영어약어"}
+{"text": "문장", "indicator_ids": [{{ID}}], "style": "존댓말|반말|줄임말|오타|영어약어"{{OP_FIELD}}}
