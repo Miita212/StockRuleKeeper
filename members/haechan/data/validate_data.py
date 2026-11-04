@@ -27,11 +27,13 @@ import re
 import sys
 from pathlib import Path
 
-JSON_REQUIRED_TYPES = {"S1", "S2", "S3", "S4"}
+JSON_REQUIRED_TYPES = {"SEED", "S1", "S2", "S3", "S4"}  # SEED = 사람이 쓴 시드(H4)
 TEXT_TYPES = {"S6", "S7", "S8"}
 CLARIFY_REASONS = {"VALUE_MISSING", "AMBIGUOUS_INDICATOR", "PERIOD_MISSING"}
 OPTION_COUNT = 3  # H3-0: 선택지는 항상 3개
 SOURCES = {"user", "default"}
+PERIOD_MONTHS = {1, 3, 6, 12}  # H3-0 T3: 기간 수익률(15)의 기간 선택지. 저장 위치(period_months)는 팀 확인 필요 [제안]
+PERIOD_INDICATOR = 15
 
 # V7: 추천·단정·예측 표현 (H6 가이드가 나오면 여기를 맞춘다). 부정형("추천하지 않아요")은 걸리지 않게 썼다.
 FORBIDDEN_PATTERNS = [
@@ -168,12 +170,31 @@ def check_output_obj(obj, master, locked):
                     if need(isinstance(opt, dict) and "label" in opt and "value" in opt,
                             "선택지에 label/value 가 없어요"):
                         errs += check_indicator_entry({"id": iid, "value": opt["value"]}, master, "선택지")
+            if "period_months" in obj:
+                need(iid == PERIOD_INDICATOR and obj["period_months"] in PERIOD_MONTHS,
+                     f"period_months 는 지표 {PERIOD_INDICATOR} 의 {sorted(PERIOD_MONTHS)} 만 가능해요")
+        elif reason == "PERIOD_MISSING":
+            if need(obj.get("indicator_id") == PERIOD_INDICATOR, f"PERIOD_MISSING 은 지표 {PERIOD_INDICATOR}(기간 수익률)에만 써요"):
+                opts = obj.get("options")
+                if need(isinstance(opts, list) and {o.get("months") for o in opts if isinstance(o, dict)} == PERIOD_MONTHS,
+                        f"기간 선택지는 months {sorted(PERIOD_MONTHS)} 이어야 해요"):
+                    pass
+                if isinstance(obj.get("known"), dict):  # 이미 말한 값(예: 10% 이상)은 id 를 붙여 같이 검사
+                    errs += check_indicator_entry(dict(obj["known"], id=PERIOD_INDICATOR), master, "known")
         elif reason == "AMBIGUOUS_INDICATOR":
             cand = obj.get("candidates")
             if need(isinstance(cand, list) and cand, "AMBIGUOUS_INDICATOR 되묻기에 candidates 가 없어요"):
-                for c in cand:
-                    cid = c.get("id") if isinstance(c, dict) else c
-                    errs += check_indicator_entry({"id": cid}, master, "후보")
+                if obj.get("stage") == "AREA":  # H3-0 2단계 되묻기 1단계: 후보가 지표 id 가 아니라 영역 이름
+                    areas = {m.get("area") for m in master.values()}
+                    need(len(cand) <= 4, "영역 후보는 최대 4개예요")
+                    for c in cand:
+                        name = c.get("area") if isinstance(c, dict) else c
+                        need(name in areas, f"영역 {name!r} 는 마스터에 없는 영역이에요")
+                else:
+                    need(len(cand) <= 4, "지표 후보는 최대 4개예요 (5개 이상은 2단계 되묻기)")
+                    for c in cand:
+                        cid = c.get("id") if isinstance(c, dict) else c
+                        errs += check_indicator_entry({"id": cid}, master, "후보")
     elif obj.get("refusal") is True:
         need(isinstance(obj.get("message"), str) and obj["message"].strip(), "거절에 message 가 없어요")
         need(obj.get("indicators", []) == [], "거절인데 indicators 가 비어 있지 않아요")
@@ -202,6 +223,8 @@ def check_output_obj(obj, master, locked):
                 if e["id"] in seen:
                     errs.append(("V1", f"지표 {e['id']} 가 두 번 나와요"))
                 seen.add(e["id"])
+                if e["id"] == PERIOD_INDICATOR and e.get("period_months") not in PERIOD_MONTHS:
+                    errs.append(("V1", f"기간 수익률은 period_months {sorted(PERIOD_MONTHS)} 가 필요해요"))
                 if "source" in e and e["source"] not in SOURCES:
                     errs.append(("V1", f"source {e['source']!r} 는 user/default 여야 해요"))
                 errs += check_indicator_entry(e, master, "indicators")

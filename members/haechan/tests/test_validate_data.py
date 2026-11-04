@@ -20,6 +20,7 @@ MASTER = {
     6: m(6, "연속 영업흑자 연수", ">=", "년", 3, 0, 30),
     12: m(12, "배당수익률", ">=", "%", 2, 0, 30),
     13: m(13, "연속 배당 연수", ">=", "년", 3, 0, 30),
+    15: m(15, "기간 수익률", ">=", "%", 10, -100, 1000, [">=", "<="]),
     16: m(16, "52주 최고가 대비 등락률", ">=", "%", -20, -100, 0, [">=", "<="]),
 }
 
@@ -70,6 +71,66 @@ class V1Format(unittest.TestCase):
     def test_duplicate_indicator_in_output(self):
         ind = GOOD_IND["indicators"][0]
         self.assertIn("V1", rules(chat("S1", "x", {"indicators": [ind, ind]})))
+
+
+class AmbiguousStages(unittest.TestCase):
+    def amb(self, **kw):
+        o = {"needs_clarification": True, "reason": "AMBIGUOUS_INDICATOR", "message": "어떤 걸로 볼까요?"}
+        o.update(kw)
+        return chat("SEED", "안전한 회사", o)
+
+    def test_indicator_candidates(self):
+        self.assertEqual(rules(self.amb(candidates=[{"id": 1}, {"id": 5}])), set())
+
+    def test_too_many_candidates(self):
+        self.assertIn("V1", rules(self.amb(candidates=[{"id": 1}, {"id": 5}, {"id": 6}, {"id": 12}, {"id": 13}])))
+
+    def test_area_stage(self):
+        ok = self.amb(stage="AREA", candidates=["재무 건전성", "수익성"])
+        master = {k: dict(v, area="재무 건전성" if k == 1 else "수익성") for k, v in MASTER.items()}
+        self.assertEqual(vd.validate_record(ok, master), [])
+
+    def test_area_unknown(self):
+        self.assertIn("V1", rules(self.amb(stage="AREA", candidates=["없는영역"])))
+
+
+class PeriodReturn(unittest.TestCase):
+    def ok_entry(self, **kw):
+        e = {"id": 15, "operator": ">=", "value": 10, "unit": "%", "source": "user", "period_months": 3}
+        e.update(kw)
+        return chat("SEED", "3개월 10% 이상 오른 종목", {"indicators": [e]})
+
+    def test_confirmed_with_period(self):
+        self.assertEqual(rules(self.ok_entry()), set())
+
+    def test_missing_period(self):
+        rec = self.ok_entry()
+        e = json.loads(rec["messages"][1]["content"])
+        del e["indicators"][0]["period_months"]
+        rec["messages"][1]["content"] = json.dumps(e, ensure_ascii=False)
+        self.assertIn("V1", rules(rec))
+
+    def test_bad_period(self):
+        self.assertIn("V1", rules(self.ok_entry(period_months=2)))
+
+    def period_q(self, **kw):
+        o = {"needs_clarification": True, "reason": "PERIOD_MISSING", "indicator_id": 15, "message": "얼마 동안의 수익률로 볼까요?",
+             "options": [{"label": f"{n}개월", "months": n} for n in (1, 3, 6, 12)]}
+        o.update(kw)
+        return chat("SEED", "요즘 많이 오른 종목", o)
+
+    def test_period_question(self):
+        self.assertEqual(rules(self.period_q()), set())
+        self.assertEqual(rules(self.period_q(known={"operator": ">=", "value": 10, "unit": "%"})), set())
+
+    def test_period_question_wrong_options(self):
+        self.assertIn("V1", rules(self.period_q(options=[{"label": "2개월", "months": 2}])))
+
+    def test_period_question_known_out_of_range(self):
+        self.assertIn("V3", rules(self.period_q(known={"operator": ">=", "value": 5000, "unit": "%"})))
+
+    def test_period_only_for_15(self):
+        self.assertIn("V1", rules(self.period_q(indicator_id=1)))
 
 
 class V2V3V4Values(unittest.TestCase):
