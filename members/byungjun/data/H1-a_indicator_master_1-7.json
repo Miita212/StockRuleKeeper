@@ -1,0 +1,181 @@
+[
+  {
+    "id": 1,
+    "name": "부채비율",
+    "ui_name": "부채비율",
+    "abbr": "부채",
+    "area": "재무 건전성",
+    "operator": "<=",
+    "allowed_operators": [
+      "<="
+    ],
+    "unit": "%",
+    "default": 100,
+    "min": 0,
+    "max": 1000,
+    "step_stricter": "기준값의 20% 낮춤 (예: 100 → 80)",
+    "definition": "부채총계 ÷ 자본총계 × 100 (낮을수록 빚 부담이 적어요)",
+    "source": [
+      "StockRuleKeeper 지표 정의 (핵심지표20개.xlsx)",
+      "금융위원회 금융용어사전 (공공데이터포털, D1) - 해당 용어 항목 대조 필요"
+    ],
+    "data_source": "직접: 종목별 안정성비율 lblt_rate",
+    "alias": [
+      "부채 비율"
+    ],
+    "note": "default 100은 Figma 샘플 값 [임의값]. '업종 평균 100% 안팎'은 출처 미확인이라 쓰지 않음 / 출처 대조 필요"
+  },
+  {
+    "id": 2,
+    "name": "차입금의존도",
+    "ui_name": "차입금의존도",
+    "abbr": "차입금",
+    "area": "재무 건전성",
+    "operator": "<=",
+    "allowed_operators": [
+      "<="
+    ],
+    "unit": "%",
+    "default": 30,
+    "min": 0,
+    "max": 100,
+    "step_stricter": "기준값의 20% 낮춤 (예: 30 → 24)",
+    "definition": "차입금 ÷ 총자산 × 100 (낮을수록 빌린 돈에 덜 의존해요)",
+    "source": [
+      "StockRuleKeeper 지표 정의 (핵심지표20개.xlsx)",
+      "금융위원회 금융용어사전 (공공데이터포털, D1) - 해당 용어 항목 대조 필요"
+    ],
+    "data_source": "직접: 종목별 안정성비율 bram_depn",
+    "alias": [
+      "차입금 의존도"
+    ],
+    "note": "default 30은 [임의값]. 정의(차입금 범위)는 출처 대조 필요 / 출처 대조 필요"
+  },
+  {
+    "id": 3,
+    "name": "EBITDA/금융비용",
+    "ui_name": "EBITDA/금융비용",
+    "abbr": "이자감당",
+    "area": "재무 건전성",
+    "operator": ">=",
+    "allowed_operators": [
+      ">="
+    ],
+    "unit": "배",
+    "default": 3,
+    "min": 0,
+    "max": 100,
+    "step_stricter": "기준값의 20% 높임 (예: 3 → 3.6)",
+    "definition": "EBITDA ÷ 금융비용 (EBITDA = 이자·세금 등 고정비 차감전 이익) (높을수록 이자를 낼 여유가 커요)",
+    "source": [
+      "StockRuleKeeper 지표 정의 (핵심지표20개.xlsx)",
+      "금융위원회 금융용어사전 (공공데이터포털, D1) - 해당 용어 항목 대조 필요"
+    ],
+    "data_source": "직접: 시장가치 순위 ebitda_div_fnnc_expn (안 나오면 영업이익과 영업외비용으로 계산)",
+    "alias": [
+      "이자보상배율"
+    ],
+    "note": "default 3은 [임의값]. 정의·단위 확인 필요(핵심지표20개.xlsx 상태 칸) / 출처 대조 필요"
+  },
+  {
+    "id": 4,
+    "name": "자본잠식률",
+    "ui_name": "자본잠식률",
+    "abbr": "잠식",
+    "area": "재무 건전성",
+    "operator": "<=",
+    "allowed_operators": [
+      "<="
+    ],
+    "unit": "%",
+    "default": 0,
+    "min": 0,
+    "max": 100,
+    "step_stricter": "기준값이 0이면 그대로, 아니면 20% 낮춤",
+    "definition": "(자본금 − 자본총계) ÷ 자본금 × 100 (낮을수록 좋아요. 0 이하면 자본이 깎이지 않은 상태예요)",
+    "source": [
+      "StockRuleKeeper 지표 정의 (핵심지표20개.xlsx)",
+      "금융위원회 금융용어사전 (공공데이터포털, D1) - 해당 용어 항목 대조 필요"
+    ],
+    "data_source": "계산: 자본금 cpfn, 자본총계 total_cptl",
+    "alias": [],
+    "note": "계산값이 0보다 작으면(잠식 없음) 0으로 취급하는 규칙은 팀 확인 필요 [추론]. 단위 검증 필요 / 출처 대조 필요"
+  },
+  {
+    "id": 5,
+    "name": "영업이익",
+    "ui_name": "영업이익",
+    "abbr": "영업이익",
+    "area": "수익성",
+    "operator": ">",
+    "allowed_operators": [
+      ">",
+      "<="
+    ],
+    "unit": "억원",
+    "default": 0,
+    "min": -100000,
+    "max": 1000000,
+    "step_stricter": "기준값이 0이면 100억원, 이미 양수면 2배",
+    "definition": "매출액 − 매출원가 − 판매비와관리비 (클수록 본업에서 많이 벌어요. 0보다 크면 흑자예요)",
+    "source": [
+      "StockRuleKeeper 지표 정의 (핵심지표20개.xlsx)",
+      "금융위원회 금융용어사전 (공공데이터포털, D1) - 해당 용어 항목 대조 필요"
+    ],
+    "data_source": "직접: 종목별 손익계산서 bsop_prti",
+    "alias": [
+      "흑자"
+    ],
+    "note": "'적자 기업 제외' = 영업이익 > 0 (E03, E08) / 출처 대조 필요"
+  },
+  {
+    "id": 6,
+    "name": "연속 영업흑자 연수",
+    "ui_name": "연속 영업흑자 연수",
+    "abbr": "흑자연속",
+    "area": "수익성",
+    "operator": ">=",
+    "allowed_operators": [
+      ">="
+    ],
+    "unit": "년",
+    "default": 3,
+    "min": 0,
+    "max": 20,
+    "step_stricter": "1년 늘림 (예: 3 → 4)",
+    "definition": "영업이익이 0보다 큰 해가 가장 최근 완료 연도부터 몇 해 연속인지 센 값 (길수록 꾸준히 흑자를 냈다는 뜻이에요)",
+    "source": [
+      "StockRuleKeeper 지표 정의 (핵심지표20개.xlsx)",
+      "금융위원회 금융용어사전 (공공데이터포털, D1) - 해당 용어 항목 대조 필요"
+    ],
+    "data_source": "계산: 연도별 영업이익을 조회해 계산",
+    "alias": [],
+    "note": "과거 조회 범위 검증 필요(핵심지표20개.xlsx). max 20은 [임의값] / 출처 대조 필요"
+  },
+  {
+    "id": 7,
+    "name": "매출순이익률",
+    "ui_name": "매출순이익률",
+    "abbr": "순이익률",
+    "area": "수익성",
+    "operator": ">=",
+    "allowed_operators": [
+      ">="
+    ],
+    "unit": "%",
+    "default": 5,
+    "min": -100,
+    "max": 100,
+    "step_stricter": "기준값의 20% 높임 (예: 5 → 6)",
+    "definition": "당기순이익 ÷ 매출액 × 100 (높을수록 이익이 잘 남아요)",
+    "source": [
+      "StockRuleKeeper 지표 정의 (핵심지표20개.xlsx)",
+      "금융위원회 금융용어사전 (공공데이터포털, D1) - 해당 용어 항목 대조 필요"
+    ],
+    "data_source": "직접: 종목별 수익성비율 sale_ntin_rate",
+    "alias": [
+      "순이익률"
+    ],
+    "note": "default 5는 [임의값]. 업종마다 차이가 큼 / 출처 대조 필요"
+  }
+]
