@@ -61,7 +61,7 @@ def collect_dart(conn, code: str, force: bool) -> None:
     for year, reprt in report_targets(date.today()):
         if (year, reprt) in have and not force:
             continue
-        st = get_statement(row["corp_code"], year, reprt)
+        st = get_statement(row["corp_code"], year, reprt, with_xbrl=year >= date.today().year - 1)  # EBITDA용 상각비는 최근 보고서만 보완
         if st:
             conn.execute("INSERT OR REPLACE INTO financials(code,year,reprt_code,basis,rows_json) VALUES (?,?,?,?,?)",
                          (code, year, reprt, st["basis"], json.dumps(st["rows"], ensure_ascii=False)))

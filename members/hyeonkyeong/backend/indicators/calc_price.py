@@ -83,5 +83,6 @@ def compute_price_indicators(daily: list[dict], dividends: list[dict], snapshot:
     while by_year.get(y, 0) > 0:
         years += 1
         y -= 1
-    put(13, float(years))
+    # 배당이 끊겨서 멈춘 게 아니라 조회한 이력이 끝나서 멈췄으면 "N년 이상"이다
+    out[13] = {"value": float(years), "approx": False, "at_least": bool(by_year) and y < min(by_year)}
     return out

@@ -15,10 +15,18 @@ def judge_indicator(ind: dict, actual: dict | None) -> dict:
     passed = False
     if value is not None:
         passed = _OPS[ind["operator"]](value, ind["value"] * MASTER[ind["id"]]["scale"])
+    actual = actual or {}
+    if actual.get("no_cost"):  # 갚을 이자가 없음
+        text = "이자 부담 없음"
+    elif value is None and actual.get("reason"):  # 계산하지 않은 사유(적자 전환 등)
+        text = actual["reason"]
+    else:
+        text = actual_text(ind["id"], value) + (" 이상" if actual.get("at_least") and value is not None else "") \
+            + (" (근사)" if actual.get("approx") and value is not None else "")
     return {
         "indicator_id": ind["id"],
         "criterion": criterion_text(ind["id"], ind["operator"], ind["value"]),
-        "actual": actual_text(ind["id"], value) + (" (근사)" if actual and actual.get("approx") and value is not None else ""),
+        "actual": text,
         "pass": passed,
         "has_data": value is not None,
     }
