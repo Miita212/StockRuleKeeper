@@ -32,7 +32,7 @@ export default function NavMain() {
       {tabs.map((t) => {
         const on = t.active(pathname);
         return (
-          <Link key={t.to} to={t.to} className={on ? "active" : ""}>
+          <Link key={t.to} to={t.to} state={{ fromNav: true }} className={on ? "active" : ""}>
             <img src={on ? t.iconActive : t.icon} width={24} height={24} alt="" />
             {t.label}
           </Link>

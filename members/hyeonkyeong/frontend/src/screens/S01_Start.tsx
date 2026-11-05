@@ -1,4 +1,4 @@
-import { Navigate, useNavigate } from "react-router-dom";
+import { Navigate, useLocation, useNavigate } from "react-router-dom";
 import { askPrinciple } from "../api";
 import ChatInput from "../components/ChatInput";
 import Chip from "../components/Chip";
@@ -14,10 +14,12 @@ const suggestions = [
 
 export default function S01_Start() {
   const navigate = useNavigate();
+  const location = useLocation();
   const { principles, setUserText, setDraft, setClarify } = useApp();
 
-  // 이미 원칙이 있는 사용자는 시작 화면 없이 종목 검색으로 간다
-  if (principles.length > 0) return <Navigate to="/stocks" replace />;
+  // 앱을 켰을 때 이미 원칙이 있으면 종목 검색으로 간다 (하단 [원칙 생성] 탭으로 온 경우는 새 원칙을 만든다)
+  const fromNav = location.state?.fromNav;
+  if (principles.length > 0 && !fromNav) return <Navigate to="/stocks" replace />;
 
   async function start(text: string) {
     const result = await askPrinciple(text);
