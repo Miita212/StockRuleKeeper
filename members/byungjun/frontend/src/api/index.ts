@@ -83,9 +83,9 @@ export async function askPrinciple(
   return { needsClarify: false, clarify: null, principle: toPrinciple(r) };
 }
 
-// 03: 원칙 충족 개수 순 종목 목록
-export async function searchStocks(principle: Principle): Promise<Stock[]> {
-  return call<Stock[]>(`/stocks?principle_id=${principle.id}`);
+// 03: 원칙 충족 개수 순 종목 목록. q 없음 = 전체(DB 값, 즉시), q 있음 = 검색한 종목(한투 최신 값)
+export async function searchStocks(principle: Principle, q = ""): Promise<Stock[]> {
+  return call<Stock[]>(`/stocks?principle_id=${principle.id}&q=${encodeURIComponent(q)}`);
 }
 
 // 03 검색창 아래: 내 원칙(사용자가 정한 지표)을 모두 충족하는 추천 종목

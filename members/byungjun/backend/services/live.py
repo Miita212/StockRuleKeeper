@@ -1,22 +1,20 @@
-"""요청 시점에 한투에서 최신 데이터를 받아 DB에 저장한다. (한투는 API 우선, DART 재무는 DB 값을 쓴다)
+"""검색한 종목과 판정서에서 한투의 최신 데이터를 API로 받아 계산에 쓴다. DB에는 저장하지 않는다.
 
-- 현재가 스냅샷은 매번, 일봉은 마지막 저장일 이후만, 배당은 DB에 없을 때만 받는다.
-- DART 재무제표는 분기마다만 바뀌므로 요청 때 부르지 않는다(batch/collect_data.py 로 DB에 채운다).
-- 같은 종목은 LIVE_TTL_SEC 안에는 다시 받지 않는다.
-- 받기에 실패하면 DB에 있는 값을 그대로 쓴다.
+- DB 갱신은 개발자가 batch/collect_data.py 를 돌릴 때만 한다(앱을 쓰는 중에는 DB에 쓰지 않는다).
+- 한투: 현재가 스냅샷, 일봉(DB 마지막 날짜 이후), 배당을 받는다. DART 재무제표는 DB 값을 쓴다.
+- 같은 종목은 LIVE_TTL_SEC 안에는 받은 값을 메모리에서 다시 쓴다.
+- 받기에 실패하면 None 을 돌려주고, 호출한 쪽이 DB 값으로 계산한다.
 """
 import json
-import threading
 import time
-from datetime import date, datetime, timedelta
+from datetime import date, timedelta
 
 import config
 from batch.collect_data import PRICE_DAYS, DIVIDEND_YEARS
 from db.database import connect
 from external.kis import quotes
 
-_fetched_at: dict[str, float] = {}
-_lock = threading.Lock()  # 목록과 추천이 동시에 요청돼도 같은 종목을 두 번 받지 않는다
+_fetched: dict[str, tuple[float, dict]] = {}
 
 
 def enabled() -> bool:
@@ -24,7 +22,7 @@ def enabled() -> bool:
 
 
 def seed_stocks() -> None:
-    """stocks 표가 비어 있으면 종목 풀 파일(data/semiconductor_universe.json)로 채운다."""
+    """stocks 표가 비어 있을 때만(처음 한 번) 종목 풀 파일(data/semiconductor_universe.json)로 채운다."""
     with connect() as conn:
         if conn.execute("SELECT 1 FROM stocks LIMIT 1").fetchone():
             return
@@ -35,34 +33,25 @@ def seed_stocks() -> None:
         conn.commit()
 
 
-def _refresh_kis(conn, code: str) -> None:
-    today = date.today()
-    count, last = conn.execute("SELECT COUNT(*), MAX(date) FROM prices_daily WHERE code=?", (code,)).fetchone()
-    start = today - timedelta(days=PRICE_DAYS) if count < 400 else date.fromisoformat(last)
-    rows = quotes.get_daily_prices(code, start, today)
-    conn.executemany("INSERT OR REPLACE INTO prices_daily(code,date,close,volume,value) VALUES (?,?,?,?,?)",
-                     [(code, r["date"], r["close"], r["volume"], r["value"]) for r in rows])
-    snap = quotes.get_snapshot(code)
-    conn.execute("INSERT OR REPLACE INTO snapshots(code, fetched_at, json) VALUES (?,?,?)",
-                 (code, datetime.now().isoformat(timespec="seconds"), json.dumps(snap)))
-    if not conn.execute("SELECT 1 FROM dividends WHERE code=? LIMIT 1", (code,)).fetchone():
-        divs = quotes.get_dividends(code, today - timedelta(days=365 * DIVIDEND_YEARS), today)
-        conn.executemany(
-            "INSERT OR REPLACE INTO dividends(code,record_date,pay_date,amount_per_share,kind) VALUES (?,?,?,?,?)",
-            [(code, d["record_date"], d["pay_date"], d["amount_per_share"], d["kind"]) for d in divs if d["record_date"]])
-
-
-def ensure_fresh(conn, code: str) -> None:
-    """종목 하나의 한투 데이터를 API로 받아 DB에 저장한다. 실패하면 DB 값을 그대로 쓴다."""
+def fetch_kis(conn, code: str) -> dict | None:
+    """{"snapshot", "daily", "dividends"}. 한투 API로 받은 값을 돌려준다(DB에 쓰지 않는다)."""
     if not enabled():
-        return
-    with _lock:
-        if time.time() - _fetched_at.get(code, 0) < config.LIVE_TTL_SEC:
-            return
-        try:
-            _refresh_kis(conn, code)
-            conn.commit()
-        except Exception as e:  # API 실패 때는 DB 값으로 계속한다
-            conn.rollback()
-            print(f"[live] 한투 {code} 실패, DB 값 사용: {type(e).__name__}: {e}", flush=True)
-        _fetched_at[code] = time.time()
+        return None
+    hit = _fetched.get(code)
+    if hit and time.time() - hit[0] < config.LIVE_TTL_SEC:
+        return hit[1]
+    try:
+        today = date.today()
+        count, last = conn.execute("SELECT COUNT(*), MAX(date) FROM prices_daily WHERE code=?", (code,)).fetchone()
+        start = today - timedelta(days=PRICE_DAYS) if count < 400 else date.fromisoformat(last)
+        data = {
+            "daily": quotes.get_daily_prices(code, start, today),
+            "snapshot": quotes.get_snapshot(code),
+            "dividends": [d for d in quotes.get_dividends(code, today - timedelta(days=365 * DIVIDEND_YEARS), today)
+                          if d["record_date"]],
+        }
+    except Exception as e:  # API 실패 때는 DB 값으로 계산한다
+        print(f"[live] 한투 {code} 실패, DB 값 사용: {type(e).__name__}: {e}", flush=True)
+        return None
+    _fetched[code] = (time.time(), data)
+    return data

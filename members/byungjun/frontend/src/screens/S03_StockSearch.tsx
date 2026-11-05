@@ -1,6 +1,6 @@
 ﻿import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { recommendStocks, searchStocks } from "../api";
+import { searchStocks } from "../api";
 import search from "../assets/icons/search.svg";
 import { useApp } from "../store/AppContext";
 import type { Stock } from "../types";
@@ -10,24 +10,46 @@ export default function S03_StockSearch() {
   const { principles, currentId } = useApp();
   const principle = principles.find((p) => p.id === currentId)!;
   const total = Object.keys(principle.values).length;
-  const [stocks, setStocks] = useState<Stock[]>([]); // 검색용 전체 종목
-  const [recs, setRecs] = useState<Stock[]>([]); // 검색창 아래 추천(원칙을 모두 충족)
+  const [all, setAll] = useState<Stock[]>([]); // 전체 종목(서버 DB 값, 즉시)
+  const [found, setFound] = useState<Stock[]>([]); // 검색한 종목(서버가 한투 최신 값으로 계산)
+  const [searchingNow, setSearchingNow] = useState(false);
   const [query, setQuery] = useState("");
 
   useEffect(() => {
-    searchStocks(principle).then(setStocks);
-    recommendStocks(principle).then(setRecs);
+    searchStocks(principle).then(setAll);
   }, [principle]);
 
-  // 검색어가 없으면 추천 종목, 있으면 전체 종목에서 검색
-  const searching = query.trim() !== "";
-  const found = searching ? stocks.filter((s) => s.name.includes(query) || s.code.includes(query)) : recs;
+  // 입력이 0.5초 멈추면 그 검색어만 서버에 보낸다
+  useEffect(() => {
+    const q = query.trim();
+    if (q === "") {
+      setFound([]);
+      setSearchingNow(false);
+      return;
+    }
+    let ignore = false;
+    setSearchingNow(true);
+    const timer = setTimeout(() => {
+      searchStocks(principle, q).then((r) => {
+        if (!ignore) {
+          setFound(r);
+          setSearchingNow(false);
+        }
+      });
+    }, 500);
+    return () => {
+      ignore = true;
+      clearTimeout(timer);
+    };
+  }, [principle, query]);
 
-  // 서버가 충족 지표가 많은 순으로 보내 준다. 15개씩 페이지로 나눠 보여 준다.
+  // 검색어가 없으면 전체 종목, 있으면 검색 결과. 충족 지표 많은 순(서버 정렬)으로 15개씩 페이지.
+  const searching = query.trim() !== "";
+  const list = searching ? found : all;
   const PAGE_SIZE = 15;
   const [page, setPage] = useState(1);
-  const pageCount = Math.max(1, Math.ceil(found.length / PAGE_SIZE));
-  const shown = found.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
+  const pageCount = Math.max(1, Math.ceil(list.length / PAGE_SIZE));
+  const shown = list.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 
   return (
     <div className="screen s03">
@@ -38,12 +60,11 @@ export default function S03_StockSearch() {
       </div>
       <p className="note">반도체 업종 종목만 점검할 수 있어요.</p>
       <div className="list-header">
-        <h3 className="label">{searching ? "검색 결과" : "내 원칙에 맞는 반도체 종목"}</h3>
-        <span>{found.length}개</span>
+        <h3 className="label">{searching ? "검색 결과" : "내 원칙 충족 순 반도체 종목"}</h3>
+        <span>{list.length}개</span>
       </div>
-      {!searching && recs.length === 0 && (
-        <p className="note">지금 원칙을 모두 충족하는 종목이 없어요. 종목을 검색하면 판정서를 볼 수 있어요.</p>
-      )}
+      {searching && searchingNow && <p className="note">한국투자증권에서 최신 값을 불러오는 중이에요.</p>}
+      {searching && !searchingNow && list.length === 0 && <p className="note">검색한 종목이 없어요.</p>}
       <div className="list">
         {shown.map((s) => (
           <div key={s.code} className="stock-card" onClick={() => navigate(`/stocks/${s.code}`)}>
