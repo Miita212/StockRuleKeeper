@@ -19,7 +19,8 @@ def criterion_text(ind_id: int, operator: str, value: float) -> str:
     m = MASTER[ind_id]
     if m["word"] == "흑자":
         return "흑자" if operator == ">" and value == 0 else f"{_num(value)}{m['unit']} {OPERATOR_WORDS[operator]}"
-    word = m["word"] or OPERATOR_WORDS[operator]
+    # "이내"는 기본 방향일 때만(52주 저점 대비 > 30 은 "30% 초과")
+    word = m["word"] if m["word"] and same_direction(ind_id, operator) else OPERATOR_WORDS[operator]
     return f"{_num(value)}{m['unit']} {word}"
 
 
@@ -41,6 +42,17 @@ RANGES = {1: (0, 1000), 2: (0, 100), 3: (0, 100), 4: (0, 100), 5: (0, 100000), 6
           15: (-100, 1000), 16: (-100, 0), 17: (0, 1000), 18: (0, 20), 19: (0, 100000), 20: (0, 100)}
 
 
+# 양방향을 허용하는 지표(팀 지표 마스터 byungjun/data/H1-*의 allowed_operators와 같게).
+# 예: "시총 1조 미만 소형주", "저점에서 30% 넘게 오른 종목". 나머지는 방향을 뒤집으면 막는다(빚 적은 -> 부채비율 이상).
+BOTH_WAYS = {5, 14, 15, 16, 17}
+
+
+def same_direction(ind_id: int, operator: str) -> bool:
+    return (operator in ("<=", "<")) == (MASTER[ind_id]["operator"] in ("<=", "<"))
+
+
 def allowed_operators(ind_id: int) -> tuple[str, ...]:
-    """지표마다 허용하는 연산자. 방향을 뒤집는 연산자(빚 적은 -> 부채비율 이상)는 막는다."""
+    """지표마다 허용하는 연산자."""
+    if ind_id in BOTH_WAYS:
+        return ("<=", "<", ">=", ">")
     return ("<=", "<") if MASTER[ind_id]["operator"] in ("<=", "<") else (">=", ">")

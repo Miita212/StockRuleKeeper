@@ -16,6 +16,7 @@ class Indicator(BaseModel):
     unit: str = ""
     source: str = "default"
     locked: bool = False
+    period_months: int | None = None  # 지표 15(기간 수익률)를 사용자가 기간과 함께 정했을 때만
 
 
 class AskBody(BaseModel):
@@ -45,7 +46,7 @@ def indicators():
 
 @router.post("/principles/ask")
 def ask(body: AskBody):
-    base = [i.model_dump() for i in body.base_indicators] if body.base_indicators else None
+    base = [i.model_dump(exclude_none=True) for i in body.base_indicators] if body.base_indicators else None
     if body.base_principle_id is not None:
         with connect() as conn:
             saved = svc.get(conn, body.base_principle_id)
@@ -60,7 +61,7 @@ def ask(body: AskBody):
 
 @router.post("/principles")
 def create(body: SaveBody):
-    items = [i.model_dump() for i in body.indicators]
+    items = [i.model_dump(exclude_none=True) for i in body.indicators]
     with connect() as conn:
         pid = svc.save(conn, body.name, items, body.reason)
         return public(svc.get(conn, pid))
@@ -86,7 +87,7 @@ def update(principle_id: int, body: SaveBody):
     """수정하면 같은 원칙에 새 버전이 쌓인다(이전 버전은 남는다)."""
     with connect() as conn:
         try:
-            svc.new_version(conn, principle_id, [i.model_dump() for i in body.indicators], body.reason)
+            svc.new_version(conn, principle_id, [i.model_dump(exclude_none=True) for i in body.indicators], body.reason)
         except KeyError:
             raise HTTPException(404, "원칙을 찾을 수 없어요") from None
         if body.name:

@@ -48,7 +48,10 @@ def _valid_setting(s: dict, warnings: list[str]) -> dict | None:
     if not lo <= v <= hi:
         warnings.append(f"{MASTER[i]['name']}: 값 {v:g}이(가) 범위({lo}~{hi}) 밖")
         return None
-    return {"id": i, "operator": op, "value": v, "source": s.get("source") if s.get("source") in ("user", "inferred") else "user"}
+    ok = {"id": i, "operator": op, "value": v, "source": s.get("source") if s.get("source") in ("user", "inferred") else "user"}
+    if i == 15 and s.get("period_months"):
+        ok["period_months"] = int(s["period_months"])
+    return ok
 
 
 def normalize(raw: dict, base: list[dict] | None, locked_ids: list[int]) -> dict:
@@ -61,6 +64,8 @@ def normalize(raw: dict, base: list[dict] | None, locked_ids: list[int]) -> dict
 
     changed, blocked = [], []
     for s in raw.get("indicators") or []:
+        if s.get("source") == "default":  # 모델이 기본값으로 채운 지표는 사용자 조건이 아니다(코드가 채운다)
+            continue
         ok = _valid_setting(s, warnings)
         if not ok:
             continue
@@ -69,6 +74,10 @@ def normalize(raw: dict, base: list[dict] | None, locked_ids: list[int]) -> dict
             blocked.append(MASTER[ok["id"]]["name"])
             continue
         current[ok["id"]].update(operator=ok["operator"], value=ok["value"], source=ok["source"])
+        if "period_months" in ok:
+            current[ok["id"]]["period_months"] = ok["period_months"]
+            if ok["period_months"] != 3:
+                warnings.append(f"기간 수익률은 지금은 3개월 기준으로 계산해요({ok['period_months']}개월은 저장만 해 둬요)")
         changed.append(ok["id"])
     anchors = [a for a in (raw.get("anchors") or []) if a in MASTER]
 
@@ -77,6 +86,10 @@ def normalize(raw: dict, base: list[dict] | None, locked_ids: list[int]) -> dict
         c = raw.get("clarify") or {}
         options = []
         for o in c.get("options") or []:
+            if o.get("value") is None:  # 지표·영역·기간 후보처럼 값이 없는 선택지는 이름만 보여 준다
+                if o.get("label"):
+                    options.append({"label": str(o["label"])})
+                continue
             ok = _valid_setting({"id": o.get("indicator_id"), "operator": o.get("operator"), "value": o.get("value")}, warnings)
             if ok and ok["id"] not in locked:
                 options.append({"label": str(o.get("label", "")), "indicator_id": ok["id"],
