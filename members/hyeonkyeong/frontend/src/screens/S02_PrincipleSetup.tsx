@@ -4,9 +4,11 @@ import { askPrinciple, savePrinciple, updatePrinciple } from "../api";
 import Button from "../components/Button";
 import ChatBubble from "../components/ChatBubble";
 import ChatInput from "../components/ChatInput";
+import Chip from "../components/Chip";
 import IndicatorCard from "../components/IndicatorCard";
 import { categoryLabel, findIndicator, groupByCategory } from "../data/indicators";
 import { useApp } from "../store/AppContext";
+import type { Clarify } from "../types";
 
 // edit=false: 02 (신규 원칙), edit=true: 02-2 (원칙 수정 흐름)
 export default function S02_PrincipleSetup({ edit = false }: { edit?: boolean }) {
@@ -18,7 +20,8 @@ export default function S02_PrincipleSetup({ edit = false }: { edit?: boolean })
   const [lockedIds, setLockedIds] = useState<number[]>( // 잠근 지표 id (저장된 원칙을 고칠 때는 기존 잠금에서 시작)
     draft ? draft.indicators.filter((i) => i.locked).map((i) => i.id) : [],
   );
-  const [notice, setNotice] = useState(""); // 수정 말이 모호해서 서버가 되물을 때의 안내
+  const [clarify, setClarify] = useState<Clarify | null>(null); // 수정 말이 모호해서 서버가 되물을 때의 질문과 선택지
+  const [history, setHistory] = useState<string[]>([]); // 되묻기 전까지 사용자가 한 말
 
   if (!draft) return <div className="screen">세팅할 원칙이 없어요.</div>;
 
@@ -55,13 +58,16 @@ export default function S02_PrincipleSetup({ edit = false }: { edit?: boolean })
     setLockedIds((ids) => (ids.includes(id) ? ids.filter((x) => x !== id) : [...ids, id]));
   }
 
+  // 되묻는 중이면 앞서 한 말을 history로 함께 보내, 선택지 답이 무엇에 대한 것인지 서버가 알게 한다.
   async function modify(text: string) {
-    const result = await askPrinciple(text, draft ?? undefined, lockedIds);
+    const result = await askPrinciple(text, draft ?? undefined, lockedIds, history);
     if (result.needsClarify || !result.principle) {
-      setNotice(result.clarify?.message ?? "");
+      setClarify(result.clarify);
+      setHistory([...history, text]);
       return;
     }
-    setNotice("");
+    setClarify(null);
+    setHistory([]);
     // 모델 응답과 상관없이 잠긴 지표는 기존 수치를 그대로 유지한다
     const values = { ...result.principle.values };
     for (const id of lockedIds) values[id] = draft!.values[id];
@@ -75,7 +81,14 @@ export default function S02_PrincipleSetup({ edit = false }: { edit?: boolean })
       <h1 className="title">이런 수치로 세팅했어요!</h1>
       <div className="scroll s02-scroll">
         <p className="s02-hint">아이콘을 누르면 자세한 설명이 나와요</p>
-        <ChatBubble side="ai" size="sm">{notice || draft.bubble || "말씀하신 내용을 수치로 바꿨어요."}</ChatBubble>
+        <ChatBubble side="ai" size="sm">{clarify?.message || draft.bubble || "말씀하신 내용을 수치로 바꿨어요."}</ChatBubble>
+        {clarify && (
+          <div className="options">
+            {clarify.options.map((o) => (
+              <Chip key={o.label} onClick={() => modify(o.label)}>{o.label}</Chip>
+            ))}
+          </div>
+        )}
         {groups.map(([category, items]) => [
           <h3 key={category} className="category">{categoryLabel(category, items.length)}</h3>,
           ...items.map((i) => (

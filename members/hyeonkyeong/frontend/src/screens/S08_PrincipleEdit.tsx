@@ -7,6 +7,7 @@ import ChatBubble from "../components/ChatBubble";
 import Chip from "../components/Chip";
 import Select from "../components/Select";
 import { useApp } from "../store/AppContext";
+import type { Clarify } from "../types";
 
 const suggestions = ["부채비율을 더 낮춰 줘", "배당 기준을 올려 줘", "성장성도 보고 싶어", "조건을 조금 느슨하게 해 줘"];
 
@@ -14,15 +15,20 @@ export default function S08_PrincipleEdit() {
   const navigate = useNavigate();
   const { principles, editTargetId, setEditTargetId, setDraft } = useApp();
 
-  const [notice, setNotice] = useState(""); // 서버가 되물을 때의 안내
+  const [clarify, setClarify] = useState<Clarify | null>(null); // 서버가 되물을 때의 질문과 선택지
+  const [history, setHistory] = useState<string[]>([]); // 되묻기 전까지 사용자가 한 말
 
+  // 되묻는 중이면 앞서 한 말을 history로 함께 보내, 선택지 답이 무엇에 대한 것인지 서버가 알게 한다.
   async function modify(text: string) {
     const base = principles.find((p) => p.id === editTargetId)!;
-    const result = await askPrinciple(text, base);
+    const result = await askPrinciple(text, base, [], history);
     if (result.needsClarify || !result.principle) {
-      setNotice(result.clarify?.message ?? "");
+      setClarify(result.clarify);
+      setHistory([...history, text]);
       return;
     }
+    setClarify(null);
+    setHistory([]);
     setDraft({ ...result.principle, id: base.id, name: base.name });
     navigate("/setup-edit");
   }
@@ -41,13 +47,22 @@ export default function S08_PrincipleEdit() {
         <h2 className="headline-sm">{"어떻게 바꾸고\n싶으세요?"}</h2>
         <p className="desc">말해 주시면 수치로 바꿔서 보여 드려요. 마음에 들면 그때 반영해요.</p>
       </div>
-      {notice && <ChatBubble side="ai">{notice}</ChatBubble>}
+      {clarify && <ChatBubble side="ai">{clarify.message}</ChatBubble>}
+      {clarify && (
+        <div className="options">
+          {clarify.options.map((o) => (
+            <Chip key={o.label} onClick={() => modify(o.label)}>{o.label}</Chip>
+          ))}
+        </div>
+      )}
       <div className="spacer" />
-      <div className="chip-row">
-        {suggestions.map((s) => (
-          <Chip key={s} onClick={() => modify(s)}>{s}</Chip>
-        ))}
-      </div>
+      {!clarify && (
+        <div className="chip-row">
+          {suggestions.map((s) => (
+            <Chip key={s} onClick={() => modify(s)}>{s}</Chip>
+          ))}
+        </div>
+      )}
       <ChatInput placeholder="바꾸고 싶은 점을 말해 보세요" onSend={modify} />
     </div>
   );
