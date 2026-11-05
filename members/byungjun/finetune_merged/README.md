@@ -5,7 +5,7 @@ Qwen3-8B 파인튜닝(4090, QLoRA)에 쓰는 학습 데이터를 팀원 폴더�
 ## 파일
 | 파일 | 내용 |
 |---|---|
-| `train.jsonl` | 학습용 2,092건. 한 줄 = `{"messages": [system, user, assistant, ...]}` |
+| `train.jsonl` | 학습용 2,090건. 한 줄 = `{"messages": [system, user, assistant, ...]}` |
 | `val.jsonl` | 학습 중 loss 확인용 109건 (종류별 약 5%) |
 | `train_meta.jsonl`, `val_meta.jsonl` | 같은 순서의 부가 정보 (type, kind, indicator_ids, locked, 원본 파일·줄 번호) |
 | `merge_train_data.py` | 합치는 스크립트. `python -I merge_train_data.py` (시드 42 고정) |
@@ -13,7 +13,7 @@ Qwen3-8B 파인튜닝(4090, QLoRA)에 쓰는 학습 데이터를 팀원 폴더�
 ## 구성 (train / val)
 | type | 내용 | 원본 | train | val |
 |---|---|---|---|---|
-| SEED | 시드 | haechan `seed_*.jsonl` | 197 | 10 |
+| SEED | 시드 | haechan `seed_*.jsonl` | 195 | 12 |
 | S3 | 되묻기(다중 턴) | hyeonkyeong `gen_s3.jsonl` | 340 | 18 |
 | S4 | 기존 규칙 수정 | hyeonkyeong `gen_s4_s5.jsonl` | 665 | 35 |
 | S5 | 거절 | hyeonkyeong `gen_s4_s5.jsonl` | 291 | 15 |
@@ -34,3 +34,8 @@ V-1(`haechan/data/validate_data.py`)로 원본 2,207건 전체 통과, 합친 �
 - system 프롬프트가 2종이다(JSON 변환용 / 쉬운 설명용). 그대로 둔다.
 - Qwen3 채팅 템플릿은 `enable_thinking=False` 로 적용한다(정답에 `<think>` 가 없다). 마지막 assistant 턴만 loss 에 넣을지(`assistant_only_loss`)는 S3 다중 턴 때문에 정해야 한다.
 - 시스템 문구는 팀 합의 전 임시일 수 있다(yappang README).
+
+## 알려진 사항 (2026-11-05)
+- S7(원본 `S-4_gen_s6_s7.jsonl`)은 같은 입력(확정 규칙 JSON)이 3번씩 나오는 그룹이 60개 있다(답변 문구만 다름, 초과분 120건). 병합본에서는 지우지 않고 유지했다. 입력 단위로 나누므로 한 그룹은 train 또는 val 한쪽에만 들어간다.
+- 처음 병합본은 건 단위로 나눠서 S7 val 10건의 입력이 train에도 있었다. 입력 단위 분할로 고쳤고 train/val 입력 겹침은 0이다.
+- S6는 답변 문구가 같은 건이 많다(템플릿 생성).

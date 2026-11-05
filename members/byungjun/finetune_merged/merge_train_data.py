@@ -46,16 +46,27 @@ for path in TRAIN_FILES:
         rows.append(row)
 
 random.seed(42)
-by_type = {}
+# 같은 첫 질문(입력)은 한쪽에만 들어가도록 입력 단위로 묶어서 나눈다
+groups = {}
 for row in rows:
-    by_type.setdefault(row["type"], []).append(row)
+    groups.setdefault(first_user(row), []).append(row)
+
+by_type = {}
+for group in groups.values():
+    by_type.setdefault(group[0]["type"], []).append(group)
 
 train, val = [], []
-for type_rows in by_type.values():
-    random.shuffle(type_rows)
-    n_val = max(1, round(len(type_rows) * VAL_RATIO))
-    val += type_rows[:n_val]
-    train += type_rows[n_val:]
+for type_groups in by_type.values():
+    random.shuffle(type_groups)
+    n_total = sum(len(g) for g in type_groups)
+    n_val = max(1, round(n_total * VAL_RATIO))
+    count = 0
+    for group in type_groups:
+        if count < n_val:
+            val += group
+            count += len(group)
+        else:
+            train += group
 random.shuffle(train)
 random.shuffle(val)
 
