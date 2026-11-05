@@ -1,0 +1,26 @@
+{
+ "needs_clarification": false,
+ "anchors": [
+  1
+ ],
+ "indicators": [
+  {
+   "id": 1,
+   "operator": "<=",
+   "value": 100,
+   "unit": "%",
+   "source": "user",
+   "locked": false
+  },
+  {
+   "id": 5,
+   "operator": ">",
+   "value": 0,
+   "unit": "억원",
+   "source": "default",
+   "locked": false
+  }
+ ],
+ "explain_bubble": "빚이 많은 회사는 피하고 싶다고 하셔서 부채비율을 100% 이하로 정했어요.",
+ "explain_card": "부채비율은 갚아야 할 빚이 내 돈(자본)보다 얼마나 많은지 보여줘요."
+}

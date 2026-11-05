@@ -1,0 +1,104 @@
+{
+ "basis": "CFS",
+ "rows": [
+  {
+   "sj_div": "BS",
+   "account_id": "ifrs-full_Assets",
+   "account_name": "자산총계",
+   "current": 300000000000000.0,
+   "current_cum": null,
+   "prev": 280000000000000.0,
+   "prev_cum": null
+  },
+  {
+   "sj_div": "BS",
+   "account_id": "ifrs-full_Liabilities",
+   "account_name": "부채총계",
+   "current": 90000000000000.0,
+   "current_cum": null,
+   "prev": 85000000000000.0,
+   "prev_cum": null
+  },
+  {
+   "sj_div": "BS",
+   "account_id": "ifrs-full_Equity",
+   "account_name": "자본총계",
+   "current": 210000000000000.0,
+   "current_cum": null,
+   "prev": 195000000000000.0,
+   "prev_cum": null
+  },
+  {
+   "sj_div": "BS",
+   "account_id": "ifrs-full_IssuedCapital",
+   "account_name": "자본금",
+   "current": 1000000000000.0,
+   "current_cum": null,
+   "prev": 1000000000000.0,
+   "prev_cum": null
+  },
+  {
+   "sj_div": "BS",
+   "account_id": "ifrs-full_CurrentBorrowings",
+   "account_name": "단기차입금",
+   "current": 5000000000000.0,
+   "current_cum": null,
+   "prev": 4000000000000.0,
+   "prev_cum": null
+  },
+  {
+   "sj_div": "BS",
+   "account_id": "ifrs-full_NoncurrentBorrowings",
+   "account_name": "장기차입금",
+   "current": 10000000000000.0,
+   "current_cum": null,
+   "prev": 9000000000000.0,
+   "prev_cum": null
+  },
+  {
+   "sj_div": "IS",
+   "account_id": "ifrs-full_Revenue",
+   "account_name": "매출액",
+   "current": 80000000000000.0,
+   "current_cum": 240000000000000.0,
+   "prev": 70000000000000.0,
+   "prev_cum": 200000000000000.0
+  },
+  {
+   "sj_div": "IS",
+   "account_id": "dart_OperatingIncomeLoss",
+   "account_name": "영업이익",
+   "current": 9000000000000.0,
+   "current_cum": 27000000000000.0,
+   "prev": 6000000000000.0,
+   "prev_cum": 15000000000000.0
+  },
+  {
+   "sj_div": "IS",
+   "account_id": "ifrs-full_FinanceCosts",
+   "account_name": "금융비용",
+   "current": 500000000000.0,
+   "current_cum": 1400000000000.0,
+   "prev": 400000000000.0,
+   "prev_cum": 1100000000000.0
+  },
+  {
+   "sj_div": "IS",
+   "account_id": "ifrs-full_ProfitLoss",
+   "account_name": "당기순이익",
+   "current": 8000000000000.0,
+   "current_cum": 24000000000000.0,
+   "prev": 5000000000000.0,
+   "prev_cum": 13000000000000.0
+  },
+  {
+   "sj_div": "CF",
+   "account_id": "ifrs-full_DepreciationAndAmortisationExpense",
+   "account_name": "감가상각비",
+   "current": 3000000000000.0,
+   "current_cum": 9000000000000.0,
+   "prev": 2800000000000.0,
+   "prev_cum": 8200000000000.0
+  }
+ ]
+}
