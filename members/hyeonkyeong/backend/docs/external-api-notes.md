@@ -63,8 +63,10 @@
 ## 4. LLM
 - 어댑터 `llm/provider.py`: `complete_json(system, user, sample, provider)`. 원칙 변환(FR-01)은 `LLM_PROVIDER`(anthropic|local), 종합 리포트는 항상 Anthropic.
 - Anthropic: `POST https://api.anthropic.com/v1/messages`, 헤더 `x-api-key`·`anthropic-version: 2023-06-01`, 모델 `LLM_MODEL`(기본 `claude-haiku-5-5`). 모델 ID·응답 형식은 공식 문서(docs.claude.com)와 실호출로 확인 필요(키 없음).
-- 로컬: Ollama `POST {LOCAL_LLM_URL}/api/chat`(`format: json`). 파인튜닝 모델 서빙 방식이 확정되지 않아 **미확인**.
-- 원칙 변환 프롬프트: 시스템 프롬프트에 지표표 20개와 규칙(임계값이 불명확하면 추측 말고 되묻기, 20개 지표로만 변환, 잠긴 지표 변경 금지)을 넣고, 출력은 `needs_clarification, anchors, indicators[{id, operator, value, unit, source, locked}], explain_bubble, explain_card`(병수 문서 1.4). 코드가 20개 화이트리스트·범위·연산자·잠금 불변을 검증한다. (구현: 3단계)
+- 로컬: Ollama `POST {LOCAL_LLM_URL}/api/chat`(`format: json`, `think: false`, `temperature: 0`). 실제 모델 호출은 모델 파일이 없어 **미확인**.
+- 원칙 변환 프롬프트(Haiku): 시스템 프롬프트에 지표표 20개와 규칙(임계값이 불명확하면 추측 말고 되묻기, 20개 지표로만 변환, 잠긴 지표 변경 금지)을 넣고, 출력은 `needs_clarification, clarify, name, anchors, indicators, explain_bubble, explain_card`.
+- 원칙 변환(로컬 Qwen3-8B, 2026-11-05): 팀 학습 데이터와 같은 system 문구·입력 형식으로 부르고, 학습 형식 출력(되묻기 `reason`, 수정 `changes`/`skipped_locked`, 거절 `refusal`, 20개 세트)을 `llm/principle.py` `from_trained`가 위 형식으로 바꾼다. 상세는 `members/hyeonkyeong/README.md`의 "로컬 모델 입출력 계약".
+- 두 경로 모두 `services/principles.py` `normalize`가 20개 화이트리스트·범위·연산자(양방향 지표 5·14·15·16·17 포함)·잠금 불변을 검증한다. 모델이 `source=default`로 채운 지표는 사용자 조건으로 쓰지 않는다.
 - 리포트 프롬프트: `project_details/07_종합리포트_LLM_설계.md`의 시스템 프롬프트·출력 스키마를 그대로 쓴다. 금지 표현: "추천", "사세요", "더 좋아요", "유리해요". 출력 JSON(headline, what_changed, comparison, stock_changes, cautions, think_about) 외 글 금지, 입력에 없는 숫자·원인 금지. 실패 시 재요청 2회 후 템플릿 대체. (구현: 5단계)
 
 ## 5. 확인하지 못한 항목 (확인 요청)
@@ -75,10 +77,10 @@
 5. DART 일일 호출 한도 실측, EBITDA/금융비용(id 3)의 상각비 원천(위 3-1 참고).
 6. 60일 변동성(연환산 여부), 거래량 증가 배율(분모 기간)의 정확한 정의.
 7. Anthropic: `claude-haiku-5-5`로 실호출 성공(2026-11-04, JSON 응답 확인). 로컬 모델 서빙 방식은 미확인.
-8. 07 문서 샘플의 `dropped_stocks.examples`에 반도체가 아닌 종목(현대차, POSCO홀딩스, KB금융)이 있음 — 반도체 풀 기준으로 샘플 교체 필요.
+8. (해결 2026-11-05) 07 문서 샘플 종목을 반도체 종목으로 교체함(수치는 가짜 그대로).
 
 ## 6. 계산 구현에서 내가 정한 기준 (확인 필요, 코드: `indicators/calc_price.py`, `calc_financial.py` 상수·주석)
-- **기간 수익률(id 15)**: 기본 3개월(`PERIOD_RETURN_MONTHS`). 원칙에 기간이 따로 없어 정한 값이다. 시뮬레이션에서는 선택한 기간을 쓴다.
+- **기간 수익률(id 15)**: 기본 3개월(`PERIOD_RETURN_MONTHS`). 원칙에 기간이 따로 없어 정한 값이다. 시뮬레이션에서는 선택한 기간을 쓴다. 로컬 모델이 기간을 되물어 정하면 원칙에 `period_months`로 저장만 하고, 판정 계산은 아직 3개월 그대로다.
 - **60일 변동성(id 18)**: 최근 60거래일 일간 수익률의 표준편차(%), 연환산 안 함(UI 샘플 "2% 이하"에 맞춤).
 - **거래량 증가 배율(id 20)**: 최근 1거래일 거래량 / 직전 20거래일 평균 거래량.
 - **연속 배당 연수(id 13)**: 직전 완료 연도부터 거꾸로 센다. 조회 구간이 8년이라 최대 8년.
