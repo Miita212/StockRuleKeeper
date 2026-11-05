@@ -12,7 +12,7 @@ LLM 담당. 데이터 준비 계획표(`docs/data-preparation-plan(2).xlsx`)의 
 | V-2 분할·평가 격리 | (제외: 팀 회의 2026-11-05, 코드 삭제) | 제외 |
 | D2 기관별 용어 자료 | `data/glossary_check.md` | 초안. 확인 못 한 이용조건은 메모에 표시 |
 | D3 공개 금융 데이터셋 | `data/public_dataset_check.md` | 초안. KRX-Bench·KFinEval 라이선스 미확인 |
-| T-run 용어 진단 | `data/diag_result.md` (예정) | 진행 중 |
+| T-run 용어 진단 | (제외: 하지 않기로 결정 2026-11-05) | 제외 |
 
 **구버전 후보 (쓰지 않음):** 11-04 팀 회의 전에 만든 것이다. 모델이 Qwen2.5 기준이고 형식이 새 계획과 다르다.
 `llm/`(지표 20개 코드·출력 검증), `tests/test_schema.py`, `data/build_pilot.py`·`pilot_labels.jsonl`(시범 라벨 33개),
@@ -44,7 +44,6 @@ python -X utf8 tests/test_validate_data.py
 `input`/`output` 형식도 읽는다.
 
 ## 필요한 라이브러리
-없음 (Python 표준 라이브러리). T-run은 로컬 Ollama(Qwen3-8B)를 쓴다.
-
+없음 (Python 표준 라이브러리). 
 ## 통합 때 옮길 위치
 - `validate_data.py`: 학습 데이터를 합치는 단계에서 그대로 사용 (옮길 필요 없음)
