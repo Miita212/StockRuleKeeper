@@ -88,6 +88,11 @@ export async function searchStocks(principle: Principle): Promise<Stock[]> {
   return call<Stock[]>(`/stocks?principle_id=${principle.id}`);
 }
 
+// 03 검색창 아래: 내 원칙(사용자가 정한 지표)을 모두 충족하는 추천 종목
+export async function recommendStocks(principle: Principle): Promise<Stock[]> {
+  return call<Stock[]>(`/stocks/recommend?principle_id=${principle.id}`);
+}
+
 // 04: 코드가 수행하는 판정 (지표별 충족 여부)
 export async function getVerdict(code: string, principle: Principle): Promise<Verdict> {
   return call<Verdict>(`/stocks/${code}/verdict?principle_id=${principle.id}`);
