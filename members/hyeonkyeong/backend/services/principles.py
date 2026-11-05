@@ -7,7 +7,7 @@ import sqlite3
 
 import config
 from indicators.master import MASTER, RANGES, allowed_operators, criterion_text
-from llm.principle import ask_model
+from llm.principle import ask_model, summary_texts
 
 GENERIC_CLARIFY = "어떤 기준으로 볼지 조금 더 알려 주세요. 예: '빚 적은 회사', '배당 꾸준한 회사'"
 
@@ -105,9 +105,13 @@ def normalize(raw: dict, base: list[dict] | None, locked_ids: list[int]) -> dict
                 "explain_bubble": "", "explain_card": "", "warnings": warnings}
 
     indicators = [current[i] for i in sorted(current)]
+    card = raw.get("explain_card") or ""
+    if base:  # 수정: 모델 설명은 바뀐 부분만 말하므로, 저장될 설명은 원칙 전체로 코드가 만든다
+        core = [x for x in indicators if x.get("source") in ("user", "inferred")]
+        card = summary_texts(core)["explain_card"] or card
     return {"needs_clarification": False, "clarify": None, "name": (raw.get("name") or "내 원칙")[:30],
             "anchors": anchors or changed, "indicators": indicators,
-            "explain_bubble": raw.get("explain_bubble") or "", "explain_card": raw.get("explain_card") or "",
+            "explain_bubble": raw.get("explain_bubble") or "", "explain_card": card,
             "warnings": warnings}
 
 

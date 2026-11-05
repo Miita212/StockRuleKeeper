@@ -76,6 +76,11 @@ def test_trained_format():
              "skipped_locked": [14]}, base, locked=[14])
     by = {x["id"]: x for x in m["indicators"]}
     assert by[20]["value"] == 2.4 and by[14]["value"] == 1 and by[14]["locked"] and any("잠긴" in w for w in m["warnings"])
+    # 수정하면 저장될 설명(explain_card)은 바뀐 부분이 아니라 원칙 전체(사용자가 정한 지표 모두)
+    dividend = [dict(x, value=3, source="user") if x["id"] == 13 else x for x in default_indicators()]
+    e = normalize({"indicators": [{"id": 8, "operator": ">=", "value": 5, "source": "user"}],
+                   "explain_card": "매출이 5% 이상 늘고 있는 회사만 고르는 원칙이에요."}, dividend, [])
+    assert "연속 배당 연수 3년 이상" in e["explain_card"] and "매출액 증가율 5% 이상" in e["explain_card"], e["explain_card"]
     only_locked = run({"changes": [], "skipped_locked": [14]}, base, locked=[14])
     assert only_locked["needs_clarification"] and "잠겨" in only_locked["clarify"]["message"]
     # 수정 입력은 학습 형식(억원, locked:true)

@@ -144,8 +144,8 @@ def ask_local(text: str, base: dict | None, locked_ids: list[int], history: list
     return from_trained(raw, base)
 
 
-def _template_texts(settings: list[dict]) -> dict:
-    """학습 형식에는 원칙 이름·설명 카드가 없어서 코드가 만든다."""
+def summary_texts(settings: list[dict]) -> dict:
+    """원칙 이름·설명 카드를 코드가 만든다(학습 형식에 없고, 수정 때 모델 설명은 바뀐 부분만 말하므로)."""
     if not settings:
         return {"name": "", "explain_card": ""}
     names = [MASTER[s["id"]]["name"] for s in settings]
@@ -156,7 +156,7 @@ def _template_texts(settings: list[dict]) -> dict:
             texts.append(f"{MASTER[s['id']]['name']} {criterion_text(s['id'], s['operator'], float(s['value']))}")
         except (TypeError, ValueError):
             pass
-    card = f"{', '.join(texts)}인 종목만 고르는 원칙이에요. 나머지 지표는 기본값이에요." if texts else ""
+    card = f"{', '.join(texts)}인 반도체 종목만 고르는 원칙이에요. 나머지 지표는 기본값이에요." if texts else ""
     return {"name": name, "explain_card": card}
 
 
@@ -193,7 +193,7 @@ def from_trained(raw: dict, base: dict | None = None) -> dict:
                      for i in raw.get("skipped_locked") or [] if i in MASTER]
         changed = [s for s in settings if s["id"] not in (raw.get("skipped_locked") or [])]
         return {"needs_clarification": False, "clarify": None, "anchors": [s["id"] for s in changed],
-                "indicators": settings, "explain_bubble": "", **_template_texts(changed)}
+                "indicators": settings, "explain_bubble": "", **summary_texts(changed)}
 
     # 확정(SEED·S3 마지막): 20개 세트. 기본값(source=default)은 코드가 채우므로 사용자가 정한 것만 쓴다
     settings = []
@@ -206,4 +206,4 @@ def from_trained(raw: dict, base: dict | None = None) -> dict:
             s["period_months"] = x["period_months"]
         settings.append(s)
     return {"needs_clarification": False, "clarify": None, "anchors": raw.get("anchors") or [s["id"] for s in settings],
-            "indicators": settings, "explain_bubble": raw.get("explain_bubble", ""), **_template_texts(settings)}
+            "indicators": settings, "explain_bubble": raw.get("explain_bubble", ""), **summary_texts(settings)}
