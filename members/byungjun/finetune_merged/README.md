@@ -6,7 +6,7 @@ Qwen3-8B 파인튜닝(4090, QLoRA)에 쓰는 학습 데이터를 팀원 폴더�
 | 파일 | 내용 |
 |---|---|
 | `train.jsonl` | 학습용 2,090건. 한 줄 = `{"messages": [system, user, assistant, ...]}` |
-| `val.jsonl` | 학습 중 loss 확인용 109건 (종류별 약 5%) |
+| `val.jsonl` | 학습 중 loss 확인용 111건 (종류별 약 5%, 같은 첫 질문은 train 또는 val 한쪽에만 들어가게 입력 단위로 나눔) |
 | `train_meta.jsonl`, `val_meta.jsonl` | 같은 순서의 부가 정보 (type, kind, indicator_ids, locked, 원본 파일·줄 번호) |
 | `merge_train_data.py` | 합치는 스크립트. `python -I merge_train_data.py` (시드 42 고정) |
 
