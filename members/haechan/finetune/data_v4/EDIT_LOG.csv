@@ -41,3 +41,4 @@ B4,재라벨,train,1118,바닥 근처에서 반등 중인 종목,VALUE_MISSING:1
 B4,재라벨,train,1126,저점에서 회복 중인 주식,VALUE_MISSING:17,"AMBIGUOUS_INDICATOR:[15, 17]"
 B4,재라벨,train,1130,저점에서 반등한 주식,VALUE_MISSING:17,"AMBIGUOUS_INDICATOR:[15, 17]"
 B5,재라벨,train,47,대출 의존도가 높은 기업은 자금 부담이 커,VALUE_MISSING:1,VALUE_MISSING:2
+B6,재라벨,train,3280,배당을 꾸준히 뿌리는 회사,"AMBIGUOUS_INDICATOR:[12, 13]",VALUE_MISSING:13
