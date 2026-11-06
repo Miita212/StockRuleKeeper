@@ -1008,3 +1008,433 @@ trainable params: 87,293,952 || all params: 8,278,029,312 || trainable%: 1.0545
 정답이 <|im_end|> 로 끝나는 샘플: 5627/5627  (전부여야 정상)
 `torch_dtype` is deprecated! Use `dtype` instead!
 
+trainable params: 87,293,952 || all params: 8,278,029,312 || trainable%: 1.0545
+에폭당 약 352스텝, 평가·저장 176스텝마다, 전체 약 1056스텝, group_by_length=False
+
+
+                                                  
+{'loss': 0.0014, 'grad_norm': 0.030278824269771576, 'learning_rate': 2.6689279735983917e-05, 'epoch': 2.02}
+
+                                                  
+{'loss': 0.0015, 'grad_norm': 0.05879011005163193, 'learning_rate': 2.531681381581913e-05, 'epoch': 2.05}
+
+                                                    
+{'loss': 0.0015, 'grad_norm': 0.02245578169822693, 'learning_rate': 2.396851352463148e-05, 'epoch': 2.07}
+
+                                                    
+{'loss': 0.0012, 'grad_norm': 0.03761455789208412, 'learning_rate': 2.264569889154295e-05, 'epoch': 2.1}
+
+                                                    
+{'loss': 0.0016, 'grad_norm': 0.03832760080695152, 'learning_rate': 2.1349664994400852e-05, 'epoch': 2.13}
+
+                                                    
+{'loss': 0.0012, 'grad_norm': 0.07918631285429001, 'learning_rate': 2.0081680691855247e-05, 'epoch': 2.16}
+
+                                                    
+{'loss': 0.0014, 'grad_norm': 0.05509045720100403, 'learning_rate': 1.8842987381105626e-05, 'epoch': 2.19}
+
+                                                    
+{'loss': 0.0019, 'grad_norm': 0.028867628425359726, 'learning_rate': 1.7634797782533436e-05, 'epoch': 2.22}
+
+                                                    
+{'loss': 0.0013, 'grad_norm': 0.004193268250674009, 'learning_rate': 1.6458294752409943e-05, 'epoch': 2.24}
+
+                                                    
+{'loss': 0.0015, 'grad_norm': 0.007474650163203478, 'learning_rate': 1.5314630124842146e-05, 'epoch': 2.27}
+
+                                                    
+{'loss': 0.0012, 'grad_norm': 0.06939258426427841, 'learning_rate': 1.4204923584090313e-05, 'epoch': 2.3}
+
+                                                    
+{'loss': 0.0013, 'grad_norm': 0.025156747549772263, 'learning_rate': 1.3130261568361336e-05, 'epoch': 2.33}
+
+                                                    
+{'loss': 0.0017, 'grad_norm': 0.010738061740994453, 'learning_rate': 1.2091696206150844e-05, 'epoch': 2.36}
+
+                                                    
+{'loss': 0.0015, 'grad_norm': 0.03620206192135811, 'learning_rate': 1.1090244286175832e-05, 'epoch': 2.39}
+
+                                                    
+{'loss': 0.0008, 'grad_norm': 0.011585051193833351, 'learning_rate': 1.012688626190596e-05, 'epoch': 2.42}
+
+                                                    
+{'loss': 0.0012, 'grad_norm': 0.02935030311346054, 'learning_rate': 9.202565291668253e-06, 'epoch': 2.44}
+
+                                                  
+{'loss': 0.0015, 'grad_norm': 0.026377156376838684, 'learning_rate': 8.31818631526486e-06, 'epoch': 2.47}
+
+                                                  
+{'loss': 0.0016, 'grad_norm': 0.029314927756786346, 'learning_rate': 7.474615168008126e-06, 'epoch': 2.5}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                  
+
+
+                                                 
+[A{'eval_loss': 0.006424994673579931, 'eval_runtime': 147.3045, 'eval_samples_per_second': 2.03, 'eval_steps_per_second': 1.018, 'epoch': 2.5}
+
+
+
+                                                 [A
+                                                    
+{'loss': 0.0018, 'grad_norm': 0.03504670783877373, 'learning_rate': 6.672677733040039e-06, 'epoch': 2.53}
+
+                                                    
+{'loss': 0.0011, 'grad_norm': 0.0240053478628397, 'learning_rate': 5.913159132766272e-06, 'epoch': 2.56}
+
+                                                    
+{'loss': 0.0015, 'grad_norm': 0.021804312244057655, 'learning_rate': 5.1968029601961894e-06, 'epoch': 2.59}
+
+                                                    
+{'loss': 0.0015, 'grad_norm': 0.06809138506650925, 'learning_rate': 4.524310550941513e-06, 'epoch': 2.61}
+
+                                                    
+{'loss': 0.0011, 'grad_norm': 0.02680451236665249, 'learning_rate': 3.896340296586309e-06, 'epoch': 2.64}
+
+                                                    
+{'loss': 0.001, 'grad_norm': 0.023830126971006393, 'learning_rate': 3.3135070001006187e-06, 'epoch': 2.67}
+
+                                                    
+{'loss': 0.0011, 'grad_norm': 0.01017299760133028, 'learning_rate': 2.7763812739285967e-06, 'epoch': 2.7}
+
+                                                    
+{'loss': 0.001, 'grad_norm': 0.04124097898602486, 'learning_rate': 2.285488981340722e-06, 'epoch': 2.73}
+
+                                                    
+{'loss': 0.0016, 'grad_norm': 0.052529387176036835, 'learning_rate': 1.8413107215968172e-06, 'epoch': 2.76}
+
+                                                    
+{'loss': 0.001, 'grad_norm': 0.014227536506950855, 'learning_rate': 1.444281359424038e-06, 'epoch': 2.78}
+
+                                                    
+{'loss': 0.0009, 'grad_norm': 0.05080953240394592, 'learning_rate': 1.0947895992703127e-06, 'epoch': 2.81}
+
+                                                     
+{'loss': 0.0009, 'grad_norm': 0.05316944047808647, 'learning_rate': 7.93177604750317e-07, 'epoch': 2.84}
+
+                                                     
+{'loss': 0.0009, 'grad_norm': 0.012532511726021767, 'learning_rate': 5.397406636563296e-07, 'epoch': 2.87}
+
+                                                     
+{'loss': 0.0015, 'grad_norm': 0.06996563822031021, 'learning_rate': 3.347268988620256e-07, 'epoch': 2.9}
+
+                                                     
+{'loss': 0.0014, 'grad_norm': 0.04705967381596565, 'learning_rate': 1.7833702540225873e-07, 'epoch': 2.93}
+
+                                                     
+{'loss': 0.001, 'grad_norm': 0.014455749653279781, 'learning_rate': 7.072415396661702e-08, 'epoch': 2.96}
+
+                                                     
+{'loss': 0.0011, 'grad_norm': 0.03322503715753555, 'learning_rate': 1.1993640999147237e-08, 'epoch': 2.98}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                     
+
+
+                                                 
+[A{'eval_loss': 0.006279017310589552, 'eval_runtime': 146.846, 'eval_samples_per_second': 2.036, 'eval_steps_per_second': 1.021, 'epoch': 3.0}
+
+
+
+                                                 [A
+                                                     
+{'train_runtime': 7115.3005, 'train_samples_per_second': 2.372, 'train_steps_per_second': 0.148, 'train_loss': 0.0004327159523117271, 'epoch': 3.0}
+
+저장 완료: runs/qwen3-8b-v3-haechan
