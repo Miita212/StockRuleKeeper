@@ -2,6 +2,8 @@
 import { useNavigate } from "react-router-dom";
 import { searchStocks } from "../api";
 import search from "../assets/icons/search.svg";
+import Pager from "../components/Pager";
+import usePageSwipe from "../hooks/usePageSwipe";
 import { useApp } from "../store/AppContext";
 import type { Stock } from "../types";
 
@@ -43,17 +45,18 @@ export default function S03_StockSearch() {
     };
   }, [principle, query]);
 
-  // 검색어가 없으면 전체 종목, 있으면 검색 결과. 충족 지표 많은 순(서버 정렬)으로 15개씩 페이지.
+  // 검색어가 없으면 전체 종목, 있으면 검색 결과. 충족 지표 많은 순(서버 정렬)으로 6개씩 페이지.
   const searching = query.trim() !== "";
   const waiting = searching && searchingNow; // 한투 최신 값을 받는 중
   const list = searching ? found : all;
-  const PAGE_SIZE = 15;
+  const PAGE_SIZE = 6; // 스크롤 없이 한 화면에 들어가는 개수
   const [page, setPage] = useState(1);
   const pageCount = Math.max(1, Math.ceil(list.length / PAGE_SIZE));
   const shown = list.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
+  const swipe = usePageSwipe(() => setPage(Math.min(page + 1, pageCount)), () => setPage(Math.max(page - 1, 1)));
 
   return (
-    <div className="screen s03">
+    <div className="screen s03 swipe-page" {...swipe}>
       <h1 className="title">종목 검색</h1>
       <div className="search">
         <img src={search} width={22} height={22} alt="" />
@@ -68,7 +71,10 @@ export default function S03_StockSearch() {
       ) : (
         <div className="list-header">
           <h3 className="label">{searching ? "검색 결과" : "내 원칙 충족 순 반도체 종목"}</h3>
-          <span>{list.length}개</span>
+          <div className="count-pager">
+            <span>{list.length}개</span>
+            {pageCount > 1 && <Pager page={page} pageCount={pageCount} onChange={setPage} />}
+          </div>
         </div>
       )}
       {searching && !waiting && list.length === 0 && <p className="note">검색한 종목이 없어요.</p>}
@@ -98,13 +104,6 @@ export default function S03_StockSearch() {
           </div>
         ))}
       </div>
-      )}
-      {pageCount > 1 && !waiting && (
-        <div className="pager">
-          {Array.from({ length: pageCount }, (_, i) => i + 1).map((n) => (
-            <button key={n} className={n === page ? "on" : ""} onClick={() => setPage(n)}>{n}</button>
-          ))}
-        </div>
       )}
     </div>
   );

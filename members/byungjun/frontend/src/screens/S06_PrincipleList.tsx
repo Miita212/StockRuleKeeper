@@ -1,23 +1,37 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { deletePrinciple, updatePrinciple } from "../api";
 import ConfirmDialog from "../components/ConfirmDialog";
+import Pager from "../components/Pager";
+import ScrollText from "../components/ScrollText";
 import { summarize } from "../data/indicators";
+import usePageSwipe from "../hooks/usePageSwipe";
 import { useApp } from "../store/AppContext";
 import type { Principle } from "../types";
 import S07_PrincipleDetailSheet from "./S07_PrincipleDetailSheet";
 
-// 카드 탭: 07 시트 / "선택": 적용 중인 원칙으로 바꾸기 / "수정": 원칙 이름 바꾸기
+const PAGE_SIZE = 4; // 다른 원칙은 한 페이지에 4개까지
+const LONG_PRESS_MS = 600; // 카드를 이만큼 누르고 있으면 삭제 안내가 뜬다
+
+// 카드 탭: 07 시트 / 카드 꾹 누르기: 삭제 안내 / "선택": 적용 중인 원칙으로 바꾸기 / "수정": 원칙 이름 바꾸기
 export default function S06_PrincipleList() {
   const { principles, setPrinciples, currentId, setCurrentId, editTargetId, setEditTargetId, simPrincipleId, setSimPrincipleId } = useApp();
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [renamingId, setRenamingId] = useState<string | null>(null);
   const [name, setName] = useState("");
-  const [swipedId, setSwipedId] = useState<string | null>(null); // 왼쪽으로 밀려 삭제 버튼이 보이는 카드
   const [deleteId, setDeleteId] = useState<string | null>(null); // 삭제 확인 창에 떠 있는 원칙
-  const [startX, setStartX] = useState(0);
-  const [dragged, setDragged] = useState(false); // 밀고 난 뒤 이어지는 클릭은 카드 탭으로 보지 않는다
+  const [pageIndex, setPageIndex] = useState(0);
+  const pressTimer = useRef<number>();
+  const pressStart = useRef({ x: 0, y: 0 });
+  const longPressed = useRef(false); // 꾹 누른 뒤 이어지는 클릭은 카드 탭으로 보지 않는다
   const current = principles.find((p) => p.id === currentId)!;
   const others = principles.filter((p) => p.id !== currentId);
+  const pageCount = Math.max(1, Math.ceil(others.length / PAGE_SIZE));
+  const page = Math.min(pageIndex, pageCount - 1); // 원칙을 지워 페이지가 줄면 마지막 페이지로
+  const pageItems = others.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
+  const swipe = usePageSwipe(
+    () => setPageIndex(Math.min(page + 1, pageCount - 1)),
+    () => setPageIndex(Math.max(page - 1, 0)),
+  );
   const selected = principles.find((p) => p.id === selectedId) ?? null;
 
   // 카드 안의 버튼·입력창은 카드 탭(시트 열기)과 따로 동작한다
@@ -43,18 +57,28 @@ export default function S06_PrincipleList() {
     setCurrentId(id);
   }
 
-  // 카드를 40px 넘게 왼쪽으로 밀면 삭제 버튼이 나오고, 오른쪽으로 밀면 닫힌다
-  function endDrag(e: React.PointerEvent, id: string) {
-    const dx = e.clientX - startX;
-    setDragged(Math.abs(dx) > 10);
-    if (dx < -40) setSwipedId(id);
-    if (dx > 40) setSwipedId(null);
+  // 카드를 누르고 있으면 삭제 안내가 뜬다. 손가락이 움직이면(스크롤·페이지 넘기기) 취소한다.
+  function startPress(e: React.PointerEvent, id: string) {
+    if (renamingId) return;
+    longPressed.current = false;
+    pressStart.current = { x: e.clientX, y: e.clientY };
+    pressTimer.current = window.setTimeout(() => {
+      longPressed.current = true;
+      setDeleteId(id);
+    }, LONG_PRESS_MS);
+  }
+
+  function movePress(e: React.PointerEvent) {
+    if (Math.hypot(e.clientX - pressStart.current.x, e.clientY - pressStart.current.y) > 10) endPress();
+  }
+
+  function endPress() {
+    window.clearTimeout(pressTimer.current);
   }
 
   async function remove() {
     const id = deleteId!;
     setDeleteId(null);
-    setSwipedId(null);
     await deletePrinciple(id);
     setPrinciples(principles.filter((p) => p.id !== id));
     // 지운 원칙을 가리키던 선택은 적용 중인 원칙으로 돌린다
@@ -63,8 +87,10 @@ export default function S06_PrincipleList() {
   }
 
   function open(id: string) {
-    if (dragged) return setDragged(false);
-    if (swipedId) return setSwipedId(null);
+    if (longPressed.current) {
+      longPressed.current = false;
+      return;
+    }
     if (renamingId) return;
     setSelectedId(id);
   }
@@ -76,7 +102,7 @@ export default function S06_PrincipleList() {
           className="name-input"
           autoFocus
           value={name}
-          maxLength={20}
+          maxLength={30}
           onClick={(e) => e.stopPropagation()}
           onChange={(e) => setName(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && saveName()}
@@ -85,7 +111,7 @@ export default function S06_PrincipleList() {
     }
     return (
       <div className="principle-name">
-        {p.name}
+        <ScrollText text={p.name} />
         {badge && <span className="badge">적용 중</span>}
       </div>
     );
@@ -100,7 +126,7 @@ export default function S06_PrincipleList() {
   }
 
   return (
-    <div className="screen">
+    <div className="screen swipe-page" {...swipe}>
       <h1 className="title s06-title">원칙 리스트</h1>
       <h3 className="label">현재 적용 중인 원칙</h3>
       <div className="principle-card current" onClick={() => open(current.id)}>
@@ -110,26 +136,33 @@ export default function S06_PrincipleList() {
         </div>
         {editButton(current)}
       </div>
-      {others.length > 0 && <h3 className="label s06-label">내가 만든 다른 원칙</h3>}
+      {others.length > 0 && (
+        <div className="s06-label-row">
+          <h3 className="label">내가 만든 다른 원칙</h3>
+          {pageCount > 1 && <Pager page={page + 1} pageCount={pageCount} onChange={(n) => setPageIndex(n - 1)} />}
+        </div>
+      )}
       <div className="list">
-        {others.map((p) => (
-          <div key={p.id} className={`swipe-row${swipedId === p.id ? " open" : ""}`}>
-            <button className="swipe-delete" onClick={() => setDeleteId(p.id)}>삭제</button>
-            <div
-              className="principle-card"
-              onClick={() => open(p.id)}
-              onPointerDown={(e) => setStartX(e.clientX)}
-              onPointerUp={(e) => endDrag(e, p.id)}
-            >
-              <div className="indicator-text">
-                {title(p)}
-                <div className="indicator-desc">{summarize(p)}</div>
-              </div>
-              {p.id !== renamingId && (
-                <button className="btn-sm fill" onClick={(e) => choose(e, p.id)}>선택</button>
-              )}
-              {editButton(p)}
+        {pageItems.map((p) => (
+          <div
+            key={p.id}
+            className="principle-card pressable"
+            onClick={() => open(p.id)}
+            onPointerDown={(e) => startPress(e, p.id)}
+            onPointerMove={movePress}
+            onPointerUp={endPress}
+            onPointerLeave={endPress}
+            onPointerCancel={endPress}
+            onContextMenu={(e) => e.preventDefault()}
+          >
+            <div className="indicator-text">
+              {title(p)}
+              <div className="indicator-desc">{summarize(p)}</div>
             </div>
+            {p.id !== renamingId && (
+              <button className="btn-sm fill" onClick={(e) => choose(e, p.id)}>선택</button>
+            )}
+            {editButton(p)}
           </div>
         ))}
       </div>

@@ -254,7 +254,7 @@ p, h1, h2, h3 { margin: 0; }
 .s14 { gap: 16px; }
 
 /* 하단 바 (Nav/Main, Nav/Sim): 화면 아래 12px 위에 뜬 바 */
-.nav { position: absolute; left: 8px; bottom: 12px; display: flex; width: 374px; padding: 8px; box-sizing: border-box; border-radius: 24px; background: var(--surface-0); box-shadow: var(--shadow-bar); }
+.nav { z-index: 10; position: absolute; left: 8px; bottom: 12px; display: flex; width: 374px; padding: 8px; box-sizing: border-box; border-radius: 24px; background: var(--surface-0); box-shadow: var(--shadow-bar); }
 .nav a { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 8px 0; font-size: 12px; line-height: 16px; font-weight: 500; color: var(--ink-500); text-decoration: none; white-space: nowrap; }
 .nav a.active { font-weight: 700; color: var(--brand-500); }
 
@@ -273,9 +273,6 @@ p, h1, h2, h3 { margin: 0; }
 .compare-note { font-size: 13px; line-height: 18px; color: var(--ink-600); }
 
 /* 03 종목 검색: 15개씩 페이지 번호 */
-.pager { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px; padding: 4px 0 12px; }
-.pager button { min-width: 32px; height: 32px; border: 0; border-radius: 8px; background: var(--surface-0); color: var(--ink-500); font-size: 13px; cursor: pointer; box-shadow: var(--shadow-card); }
-.pager button.on { background: var(--ink-900, #191f28); color: #fff; }
 
 /* 로딩 표시 (API 호출을 기다리는 화면에서 일부분만 쓴다) */
 @keyframes spin { to { transform: rotate(360deg); } }
@@ -368,9 +365,21 @@ p, h1, h2, h3 { margin: 0; }
 .stepper-card .value-box.editing { background: var(--surface-0); color: var(--ink-900); }
 .stepper-card .stepper-value { width: auto; min-width: 52px; }
 
-/* 6. 원칙 카드를 밀어서 삭제 */
-.swipe-row { position: relative; }
-.swipe-row .principle-card { position: relative; z-index: 1; touch-action: pan-y; transition: transform 0.2s; }
-.swipe-row.open .principle-card { transform: translateX(-80px); }
-.swipe-delete { position: absolute; top: 0; right: 0; bottom: 0; width: 72px; padding: 0; border: 0; border-radius: 16px; background: #e5484d; color: #fff; font-size: 15px; font-weight: 700; cursor: pointer; visibility: hidden; }
-.swipe-row.open .swipe-delete { visibility: visible; }
+/* 7. 06 원칙 리스트: 하단 바는 맨 앞, 다른 원칙은 5개씩 페이지 */
+.s06-label-row { display: flex; align-items: center; justify-content: space-between; padding-top: 12px; }
+.s06-label-row .label { padding: 0 4px; }
+.pager { display: flex; align-items: center; gap: 4px; font-size: 13px; line-height: 18px; font-weight: 700; }
+.pager button { width: 32px; height: 32px; padding: 0; border: 0; border-radius: 8px; background: var(--surface-50); font-size: 18px; line-height: 24px; font-weight: 700; color: var(--brand-500); cursor: pointer; }
+.pager button:disabled { color: var(--ink-300, #c0c7d1); cursor: default; }
+
+/* 8. 원칙 카드 꾹 눌러 삭제, 03·06 페이지 넘기기 */
+.swipe-page { touch-action: pan-y; }
+.pressable { user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
+.pressable:active { background: #e8ecf2; box-shadow: inset 0 0 0 2px var(--ink-500); }
+.count-pager { display: flex; align-items: center; gap: 8px; }
+.list-header { align-items: center; }
+
+/* 9. 긴 원칙명: 칸 안에서 흘러가다 끝에서 멈춘다 */
+.scroll-text { flex: 0 1 auto; min-width: 0; overflow: hidden; white-space: nowrap; }
+.scroll-text > span { display: inline-block; }
+.principle-name .badge { flex-shrink: 0; }
