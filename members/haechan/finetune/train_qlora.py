@@ -79,6 +79,8 @@ def main():
     ap.add_argument("--lr", type=float, default=1e-4, help="byungjun 명세 1e-4 (불안정하면 5e-5, 느리면 2e-4)")
     ap.add_argument("--max-steps", type=int, default=-1, help="스모크 테스트용. 예: 50 (-1 이면 에폭 기준)")
     ap.add_argument("--eval-steps", type=int, default=0, help="평가·저장 간격(스텝). 0 이면 0.5 에폭마다")
+    ap.add_argument("--keep-ckpts", type=int, default=3, help="체크포인트를 최근 몇 개 남길지 (최저 val loss 체크포인트는 따로 남음)")
+    ap.add_argument("--early-stop", type=int, default=0, help="val loss 가 N번 연속(평가 간격 기준) 나아지지 않으면 멈춤. 0 이면 끔. 최저 체크포인트는 load_best_model_at_end 로 남는다")
     ap.add_argument("--resume", default=None, help="체크포인트 폴더에서 이어서 학습 (학습률 일정·옵티마이저 상태 포함). 다른 설정은 처음과 같게")
     ap.add_argument("--group-by-length", action="store_true",
                     help="길이가 비슷한 샘플끼리 배치. 기본 끔: 답 유형마다 길이가 달라 배치가 한 유형으로 몰리고 v1·v2가 한 유형으로 쏠렸다")
@@ -115,7 +117,7 @@ def main():
 
     import torch
     from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
-    from transformers import BitsAndBytesConfig, Trainer, TrainingArguments, set_seed
+    from transformers import BitsAndBytesConfig, EarlyStoppingCallback, Trainer, TrainingArguments, set_seed
 
     set_seed(args.seed)
     bnb = BitsAndBytesConfig(
@@ -181,7 +183,7 @@ def main():
         eval_steps=half_epoch,
         save_strategy="steps",
         save_steps=half_epoch,
-        save_total_limit=3,
+        save_total_limit=args.keep_ckpts,
         load_best_model_at_end=True,
         metric_for_best_model="eval_loss",
         greater_is_better=False,
@@ -190,7 +192,8 @@ def main():
         seed=args.seed,
         remove_unused_columns=False,
     )
-    trainer = Trainer(model=model, args=targs, train_dataset=train_ex, eval_dataset=val_ex, data_collator=collate)
+    callbacks = [EarlyStoppingCallback(early_stopping_patience=args.early_stop)] if args.early_stop > 0 else []
+    trainer = Trainer(model=model, args=targs, train_dataset=train_ex, eval_dataset=val_ex, data_collator=collate, callbacks=callbacks)
     trainer.train(resume_from_checkpoint=args.resume)
     trainer.save_model(args.out)  # LoRA 어댑터만 저장(합치기·양자화는 따로)
     tok.save_pretrained(args.out)
