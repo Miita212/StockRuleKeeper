@@ -1,0 +1,1010 @@
+원본 대화: train 5202 / val 275
+[train] 샘플 5627개 (너무 길어 버린 것 0개)
+  전체 길이 평균 448 / 최대 1180 토큰, 정답 길이 평균 269 / 최대 688
+[val] 샘플 299개 (너무 길어 버린 것 0개)
+  전체 길이 평균 428 / 최대 1093 토큰, 정답 길이 평균 249 / 최대 686
+
+--- 샘플 1 (대화 안 1번째 답변): 학습 대상 ---
+번 돈에 비해 너무 비싸지 않은 주가를 보려고 PER을 8배 이하로 잡았어요. 꽤 엄격한 기준이에요. 조금 느슨하게 바꿔 볼까요?<|im_end|>
+    [마스크된 앞부분 끝 60자] '풍선을 써줘.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n'
+
+--- 샘플 2 (대화 안 1번째 답변): 학습 대상 ---
+{"needs_clarification": true, "reason": "VALUE_MISSING", "indicator_id": 17, "message": "1년 최저가에서 얼마나 올랐는지는 52주 저점 대비로 볼 수 있어요. 저점보다 몇 % 안쪽이면 괜찮을까요?", "options": [{"level": "엄격", "label": "20% 이내로 엄격하게 할래요", "value": 20}, {"level": "보통", "label": "50% 이내로 보통으로 할래요", "value": 50}, {"level": "느슨", "label": "100% 이내로 느슨하게 할래요", "value": 100}]}<|im_end|>
+    [마스크된 앞부분 끝 60자] '고 있는 주식<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n'
+
+--- 샘플 3 (대화 안 1번째 답변): 학습 대상 ---
+{"indicators": [{"id": 1, "operator": "<=", "value": 100, "unit": "%", "source": "default"}, {"id": 2, "operator": "<=", "value": 30, "unit": "%", "source": "default"}, {"id": 3, "operator": ">=", "value": 3, "unit": "배", "source": "default"}, {"id": 4, "operator": "<=", "value": 0, "unit": "%", "source": "default"}, {"id": 5, "operator": ">", "value": 0, "unit": "억원", "source": "user"}, {"id": 6, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 7, "operator": ">=", "value": 5, "unit": "%", "source": "default"}, {"id": 8, "operator": ">=", "value": 15, "unit": "%", "source": "default"}, {"id": 9, "operator": ">=", "value": 10, "unit": "%", "source": "default"}, {"id": 10, "operator": "<=", "value": 10, "unit": "배", "source": "default"}, {"id": 11, "operator": "<=", "value": 1, "unit": "배", "source": "default"}, {"id": 12, "operator": ">=", "value": 2, "unit": "%", "source": "default"}, {"id": 13, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 14, "operator": ">=", "value": 10000, "unit": "억원", "source": "default"}, {"id": 15, "operator": ">=", "value": 10, "unit": "%", "source": "default"}, {"id": 16, "operator": ">=", "value": -20, "unit": "%", "source": "default"}, {"id": 17, "operator": "<=", "value": 50, "unit": "%", "source": "default"}, {"id": 18, "operator": "<=", "value": 2, "unit": "%", "source": "default"}, {"id": 19, "operator": ">=", "value": 10, "unit": "억원", "source": "default"}, {"id": 20, "operator": ">=", "value": 2, "unit": "배", "source": "default"}], "anchors": [5]}<|im_end|>
+    [마스크된 앞부분 끝 60자] '없애고 싶어요<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n'
+
+--- 샘플 4 (대화 안 2번째 답변): 학습 대상 ---
+{"indicators": [{"id": 1, "operator": "<=", "value": 100, "unit": "%", "source": "default"}, {"id": 2, "operator": "<=", "value": 30, "unit": "%", "source": "default"}, {"id": 3, "operator": ">=", "value": 3, "unit": "배", "source": "default"}, {"id": 4, "operator": "<=", "value": 0, "unit": "%", "source": "default"}, {"id": 5, "operator": ">", "value": 0, "unit": "억원", "source": "default"}, {"id": 6, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 7, "operator": ">=", "value": 5, "unit": "%", "source": "default"}, {"id": 8, "operator": ">=", "value": 15, "unit": "%", "source": "default"}, {"id": 9, "operator": ">=", "value": 0, "unit": "%", "source": "user"}, {"id": 10, "operator": "<=", "value": 10, "unit": "배", "source": "default"}, {"id": 11, "operator": "<=", "value": 1, "unit": "배", "source": "default"}, {"id": 12, "operator": ">=", "value": 2, "unit": "%", "source": "default"}, {"id": 13, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 14, "operator": ">=", "value": 10000, "unit": "억원", "source": "default"}, {"id": 15, "operator": ">=", "value": 10, "unit": "%", "source": "default"}, {"id": 16, "operator": ">=", "value": -20, "unit": "%", "source": "default"}, {"id": 17, "operator": "<=", "value": 50, "unit": "%", "source": "default"}, {"id": 18, "operator": "<=", "value": 2, "unit": "%", "source": "default"}, {"id": 19, "operator": ">=", "value": 10, "unit": "억원", "source": "default"}, {"id": 20, "operator": ">=", "value": 2, "unit": "배", "source": "default"}], "anchors": [9], "explain_bubble": "영업이익 증가율 기준을 0% 이상으로 잡았어요. 본업 이익이 줄지만 않으면 되는 느슨한 기준이에요. 나중에 바꿀 수 있어요."}<|im_end|>
+    [마스크된 앞부분 끝 60자] '상으로 할래요<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n'
+
+--- 샘플 5 (대화 안 2번째 답변): 학습 대상 ---
+{"indicators": [{"id": 1, "operator": "<=", "value": 100, "unit": "%", "source": "default"}, {"id": 2, "operator": "<=", "value": 30, "unit": "%", "source": "default"}, {"id": 3, "operator": ">=", "value": 3, "unit": "배", "source": "default"}, {"id": 4, "operator": "<=", "value": 0, "unit": "%", "source": "default"}, {"id": 5, "operator": ">", "value": 0, "unit": "억원", "source": "default"}, {"id": 6, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 7, "operator": ">=", "value": 5, "unit": "%", "source": "default"}, {"id": 8, "operator": ">=", "value": 15, "unit": "%", "source": "default"}, {"id": 9, "operator": ">=", "value": 10, "unit": "%", "source": "default"}, {"id": 10, "operator": "<=", "value": 10, "unit": "배", "source": "default"}, {"id": 11, "operator": "<=", "value": 1, "unit": "배", "source": "default"}, {"id": 12, "operator": ">=", "value": 2, "unit": "%", "source": "user"}, {"id": 13, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 14, "operator": ">=", "value": 10000, "unit": "억원", "source": "default"}, {"id": 15, "operator": ">=", "value": 10, "unit": "%", "source": "default"}, {"id": 16, "operator": ">=", "value": -20, "unit": "%", "source": "default"}, {"id": 17, "operator": "<=", "value": 50, "unit": "%", "source": "default"}, {"id": 18, "operator": "<=", "value": 2, "unit": "%", "source": "default"}, {"id": 19, "operator": ">=", "value": 10, "unit": "억원", "source": "default"}, {"id": 20, "operator": ">=", "value": 2, "unit": "배", "source": "default"}], "anchors": [12], "explain_bubble": "12개월 배당수익률 기준을 2% 이상으로 잡았어요. 1년에 주가의 2% 이상을 배당하는 무난한 기준이에요. 나중에 바꿀 수 있어요."}<|im_end|>
+    [마스크된 앞부분 끝 60자] '센트로 할게요<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n'
+
+정답이 <|im_end|> 로 끝나는 샘플: 5627/5627  (전부여야 정상)
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+trainable params: 87,293,952 || all params: 8,278,029,312 || trainable%: 1.0545
+에폭당 약 352스텝, 평가·저장 176스텝마다, 전체 약 1056스텝, group_by_length=False
+
+
+                                                   
+{'loss': 0.9524, 'grad_norm': 1.1056185960769653, 'learning_rate': 1.730769230769231e-05, 'epoch': 0.03}
+
+                                                   
+{'loss': 0.7808, 'grad_norm': 0.5987638235092163, 'learning_rate': 3.653846153846154e-05, 'epoch': 0.06}
+
+                                                   
+{'loss': 0.5141, 'grad_norm': 0.24404403567314148, 'learning_rate': 5.576923076923077e-05, 'epoch': 0.09}
+
+                                                   
+{'loss': 0.2956, 'grad_norm': 0.3370899260044098, 'learning_rate': 7.500000000000001e-05, 'epoch': 0.11}
+
+                                                   
+{'loss': 0.1891, 'grad_norm': 0.2826721966266632, 'learning_rate': 9.423076923076924e-05, 'epoch': 0.14}
+
+                                                   
+{'loss': 0.1004, 'grad_norm': 0.2865942418575287, 'learning_rate': 9.998800635900086e-05, 'epoch': 0.17}
+
+                                                   
+{'loss': 0.0821, 'grad_norm': 0.22899912297725677, 'learning_rate': 9.992927584603339e-05, 'epoch': 0.2}
+
+                                                   
+{'loss': 0.0408, 'grad_norm': 0.22700612246990204, 'learning_rate': 9.982166297459774e-05, 'epoch': 0.23}
+
+                                                   
+{'loss': 0.0385, 'grad_norm': 0.1882641613483429, 'learning_rate': 9.966527310113798e-05, 'epoch': 0.26}
+
+                                                    
+{'loss': 0.0265, 'grad_norm': 0.2253740429878235, 'learning_rate': 9.946025933634369e-05, 'epoch': 0.28}
+
+                                                    
+{'loss': 0.0346, 'grad_norm': 0.1458957940340042, 'learning_rate': 9.920682239524969e-05, 'epoch': 0.31}
+
+                                                    
+{'loss': 0.0397, 'grad_norm': 0.23745094239711761, 'learning_rate': 9.890521040072969e-05, 'epoch': 0.34}
+
+                                                    
+{'loss': 0.0188, 'grad_norm': 0.21957597136497498, 'learning_rate': 9.855571864057598e-05, 'epoch': 0.37}
+
+                                                    
+{'loss': 0.018, 'grad_norm': 0.1342029720544815, 'learning_rate': 9.81586892784032e-05, 'epoch': 0.4}
+
+                                                    
+{'loss': 0.016, 'grad_norm': 0.0839032381772995, 'learning_rate': 9.77145110186593e-05, 'epoch': 0.43}
+
+                                                    
+{'loss': 0.019, 'grad_norm': 0.134397953748703, 'learning_rate': 9.722361872607142e-05, 'epoch': 0.45}
+
+                                                      
+{'loss': 0.0155, 'grad_norm': 0.09366818517446518, 'learning_rate': 9.668649299989938e-05, 'epoch': 0.48}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                      
+
+
+                                                 
+[A{'eval_loss': 0.03199869021773338, 'eval_runtime': 147.1582, 'eval_samples_per_second': 2.032, 'eval_steps_per_second': 1.019, 'epoch': 0.5}
+
+
+
+                                                 [A
+                                                      
+{'loss': 0.0161, 'grad_norm': 0.14811663329601288, 'learning_rate': 9.61036597034137e-05, 'epoch': 0.51}
+
+                                                      
+{'loss': 0.0112, 'grad_norm': 0.16478323936462402, 'learning_rate': 9.547568944905849e-05, 'epoch': 0.54}
+
+                                                      
+{'loss': 0.0115, 'grad_norm': 0.13116058707237244, 'learning_rate': 9.480319703980382e-05, 'epoch': 0.57}
+
+                                                      
+{'loss': 0.016, 'grad_norm': 0.16412919759750366, 'learning_rate': 9.408684086723373e-05, 'epoch': 0.6}
+
+                                                      
+{'loss': 0.0118, 'grad_norm': 0.07503281533718109, 'learning_rate': 9.332732226695995e-05, 'epoch': 0.63}
+
+                                                      
+{'loss': 0.0102, 'grad_norm': 0.08185716718435287, 'learning_rate': 9.252538483199189e-05, 'epoch': 0.65}
+
+                                                      
+{'loss': 0.0098, 'grad_norm': 0.2693699598312378, 'learning_rate': 9.168181368473514e-05, 'epoch': 0.68}
+
+                                                      
+{'loss': 0.0101, 'grad_norm': 0.18104876577854156, 'learning_rate': 9.079743470833177e-05, 'epoch': 0.71}
+
+                                                      
+{'loss': 0.0135, 'grad_norm': 0.14970315992832184, 'learning_rate': 8.987311373809406e-05, 'epoch': 0.74}
+
+                                                      
+{'loss': 0.0067, 'grad_norm': 0.11953084915876389, 'learning_rate': 8.890975571382419e-05, 'epoch': 0.77}
+
+                                                      
+{'loss': 0.0107, 'grad_norm': 0.10188517719507217, 'learning_rate': 8.790830379384918e-05, 'epoch': 0.8}
+
+                                                      
+{'loss': 0.0095, 'grad_norm': 0.06440562754869461, 'learning_rate': 8.686973843163868e-05, 'epoch': 0.82}
+
+                                                      
+{'loss': 0.009, 'grad_norm': 0.11752048879861832, 'learning_rate': 8.579507641590969e-05, 'epoch': 0.85}
+
+                                                      
+{'loss': 0.0076, 'grad_norm': 0.12281477451324463, 'learning_rate': 8.468536987515787e-05, 'epoch': 0.88}
+
+                                                      
+{'loss': 0.0068, 'grad_norm': 0.06225127726793289, 'learning_rate': 8.354170524759007e-05, 'epoch': 0.91}
+
+                                                      
+{'loss': 0.0061, 'grad_norm': 0.10580608248710632, 'learning_rate': 8.236520221746657e-05, 'epoch': 0.94}
+
+                                                      
+{'loss': 0.0052, 'grad_norm': 0.10433056205511093, 'learning_rate': 8.115701261889437e-05, 'epoch': 0.97}
+
+                                                      
+{'loss': 0.0045, 'grad_norm': 0.07443967461585999, 'learning_rate': 7.991831930814475e-05, 'epoch': 1.0}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                      
+
+
+                                                 
+[A{'eval_loss': 0.01484683994203806, 'eval_runtime': 150.5621, 'eval_samples_per_second': 1.986, 'eval_steps_per_second': 0.996, 'epoch': 1.0}
+
+
+
+                                                 [A
+[train] 샘플 5627개 (너무 길어 버린 것 0개)
+  전체 길이 평균 448 / 최대 1180 토큰, 정답 길이 평균 269 / 최대 688
+[val] 샘플 299개 (너무 길어 버린 것 0개)
+  전체 길이 평균 428 / 최대 1093 토큰, 정답 길이 평균 249 / 최대 686
+
+--- 샘플 1 (대화 안 1번째 답변): 학습 대상 ---
+번 돈에 비해 너무 비싸지 않은 주가를 보려고 PER을 8배 이하로 잡았어요. 꽤 엄격한 기준이에요. 조금 느슨하게 바꿔 볼까요?<|im_end|>
+    [마스크된 앞부분 끝 60자] '풍선을 써줘.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n'
+
+--- 샘플 2 (대화 안 1번째 답변): 학습 대상 ---
+{"needs_clarification": true, "reason": "VALUE_MISSING", "indicator_id": 17, "message": "1년 최저가에서 얼마나 올랐는지는 52주 저점 대비로 볼 수 있어요. 저점보다 몇 % 안쪽이면 괜찮을까요?", "options": [{"level": "엄격", "label": "20% 이내로 엄격하게 할래요", "value": 20}, {"level": "보통", "label": "50% 이내로 보통으로 할래요", "value": 50}, {"level": "느슨", "label": "100% 이내로 느슨하게 할래요", "value": 100}]}<|im_end|>
+    [마스크된 앞부분 끝 60자] '고 있는 주식<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n'
+
+--- 샘플 3 (대화 안 1번째 답변): 학습 대상 ---
+{"indicators": [{"id": 1, "operator": "<=", "value": 100, "unit": "%", "source": "default"}, {"id": 2, "operator": "<=", "value": 30, "unit": "%", "source": "default"}, {"id": 3, "operator": ">=", "value": 3, "unit": "배", "source": "default"}, {"id": 4, "operator": "<=", "value": 0, "unit": "%", "source": "default"}, {"id": 5, "operator": ">", "value": 0, "unit": "억원", "source": "user"}, {"id": 6, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 7, "operator": ">=", "value": 5, "unit": "%", "source": "default"}, {"id": 8, "operator": ">=", "value": 15, "unit": "%", "source": "default"}, {"id": 9, "operator": ">=", "value": 10, "unit": "%", "source": "default"}, {"id": 10, "operator": "<=", "value": 10, "unit": "배", "source": "default"}, {"id": 11, "operator": "<=", "value": 1, "unit": "배", "source": "default"}, {"id": 12, "operator": ">=", "value": 2, "unit": "%", "source": "default"}, {"id": 13, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 14, "operator": ">=", "value": 10000, "unit": "억원", "source": "default"}, {"id": 15, "operator": ">=", "value": 10, "unit": "%", "source": "default"}, {"id": 16, "operator": ">=", "value": -20, "unit": "%", "source": "default"}, {"id": 17, "operator": "<=", "value": 50, "unit": "%", "source": "default"}, {"id": 18, "operator": "<=", "value": 2, "unit": "%", "source": "default"}, {"id": 19, "operator": ">=", "value": 10, "unit": "억원", "source": "default"}, {"id": 20, "operator": ">=", "value": 2, "unit": "배", "source": "default"}], "anchors": [5]}<|im_end|>
+    [마스크된 앞부분 끝 60자] '없애고 싶어요<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n'
+
+--- 샘플 4 (대화 안 2번째 답변): 학습 대상 ---
+{"indicators": [{"id": 1, "operator": "<=", "value": 100, "unit": "%", "source": "default"}, {"id": 2, "operator": "<=", "value": 30, "unit": "%", "source": "default"}, {"id": 3, "operator": ">=", "value": 3, "unit": "배", "source": "default"}, {"id": 4, "operator": "<=", "value": 0, "unit": "%", "source": "default"}, {"id": 5, "operator": ">", "value": 0, "unit": "억원", "source": "default"}, {"id": 6, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 7, "operator": ">=", "value": 5, "unit": "%", "source": "default"}, {"id": 8, "operator": ">=", "value": 15, "unit": "%", "source": "default"}, {"id": 9, "operator": ">=", "value": 0, "unit": "%", "source": "user"}, {"id": 10, "operator": "<=", "value": 10, "unit": "배", "source": "default"}, {"id": 11, "operator": "<=", "value": 1, "unit": "배", "source": "default"}, {"id": 12, "operator": ">=", "value": 2, "unit": "%", "source": "default"}, {"id": 13, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 14, "operator": ">=", "value": 10000, "unit": "억원", "source": "default"}, {"id": 15, "operator": ">=", "value": 10, "unit": "%", "source": "default"}, {"id": 16, "operator": ">=", "value": -20, "unit": "%", "source": "default"}, {"id": 17, "operator": "<=", "value": 50, "unit": "%", "source": "default"}, {"id": 18, "operator": "<=", "value": 2, "unit": "%", "source": "default"}, {"id": 19, "operator": ">=", "value": 10, "unit": "억원", "source": "default"}, {"id": 20, "operator": ">=", "value": 2, "unit": "배", "source": "default"}], "anchors": [9], "explain_bubble": "영업이익 증가율 기준을 0% 이상으로 잡았어요. 본업 이익이 줄지만 않으면 되는 느슨한 기준이에요. 나중에 바꿀 수 있어요."}<|im_end|>
+    [마스크된 앞부분 끝 60자] '상으로 할래요<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n'
+
+--- 샘플 5 (대화 안 2번째 답변): 학습 대상 ---
+{"indicators": [{"id": 1, "operator": "<=", "value": 100, "unit": "%", "source": "default"}, {"id": 2, "operator": "<=", "value": 30, "unit": "%", "source": "default"}, {"id": 3, "operator": ">=", "value": 3, "unit": "배", "source": "default"}, {"id": 4, "operator": "<=", "value": 0, "unit": "%", "source": "default"}, {"id": 5, "operator": ">", "value": 0, "unit": "억원", "source": "default"}, {"id": 6, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 7, "operator": ">=", "value": 5, "unit": "%", "source": "default"}, {"id": 8, "operator": ">=", "value": 15, "unit": "%", "source": "default"}, {"id": 9, "operator": ">=", "value": 10, "unit": "%", "source": "default"}, {"id": 10, "operator": "<=", "value": 10, "unit": "배", "source": "default"}, {"id": 11, "operator": "<=", "value": 1, "unit": "배", "source": "default"}, {"id": 12, "operator": ">=", "value": 2, "unit": "%", "source": "user"}, {"id": 13, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 14, "operator": ">=", "value": 10000, "unit": "억원", "source": "default"}, {"id": 15, "operator": ">=", "value": 10, "unit": "%", "source": "default"}, {"id": 16, "operator": ">=", "value": -20, "unit": "%", "source": "default"}, {"id": 17, "operator": "<=", "value": 50, "unit": "%", "source": "default"}, {"id": 18, "operator": "<=", "value": 2, "unit": "%", "source": "default"}, {"id": 19, "operator": ">=", "value": 10, "unit": "억원", "source": "default"}, {"id": 20, "operator": ">=", "value": 2, "unit": "배", "source": "default"}], "anchors": [12], "explain_bubble": "12개월 배당수익률 기준을 2% 이상으로 잡았어요. 1년에 주가의 2% 이상을 배당하는 무난한 기준이에요. 나중에 바꿀 수 있어요."}<|im_end|>
+    [마스크된 앞부분 끝 60자] '센트로 할게요<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n'
+
+정답이 <|im_end|> 로 끝나는 샘플: 5627/5627  (전부여야 정상)
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+trainable params: 87,293,952 || all params: 8,278,029,312 || trainable%: 1.0545
+에폭당 약 352스텝, 평가·저장 176스텝마다, 전체 약 1056스텝, group_by_length=False
+
+
+                                                  
+{'loss': 0.0053, 'grad_norm': 0.1246701329946518, 'learning_rate': 7.865033500559915e-05, 'epoch': 1.02}
+
+[train] 샘플 5627개 (너무 길어 버린 것 0개)
+  전체 길이 평균 448 / 최대 1180 토큰, 정답 길이 평균 269 / 최대 688
+[val] 샘플 299개 (너무 길어 버린 것 0개)
+  전체 길이 평균 428 / 최대 1093 토큰, 정답 길이 평균 249 / 최대 686
+
+--- 샘플 1 (대화 안 1번째 답변): 학습 대상 ---
+번 돈에 비해 너무 비싸지 않은 주가를 보려고 PER을 8배 이하로 잡았어요. 꽤 엄격한 기준이에요. 조금 느슨하게 바꿔 볼까요?<|im_end|>
+    [마스크된 앞부분 끝 60자] '풍선을 써줘.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n'
+
+--- 샘플 2 (대화 안 1번째 답변): 학습 대상 ---
+{"needs_clarification": true, "reason": "VALUE_MISSING", "indicator_id": 17, "message": "1년 최저가에서 얼마나 올랐는지는 52주 저점 대비로 볼 수 있어요. 저점보다 몇 % 안쪽이면 괜찮을까요?", "options": [{"level": "엄격", "label": "20% 이내로 엄격하게 할래요", "value": 20}, {"level": "보통", "label": "50% 이내로 보통으로 할래요", "value": 50}, {"level": "느슨", "label": "100% 이내로 느슨하게 할래요", "value": 100}]}<|im_end|>
+    [마스크된 앞부분 끝 60자] '고 있는 주식<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n'
+
+--- 샘플 3 (대화 안 1번째 답변): 학습 대상 ---
+{"indicators": [{"id": 1, "operator": "<=", "value": 100, "unit": "%", "source": "default"}, {"id": 2, "operator": "<=", "value": 30, "unit": "%", "source": "default"}, {"id": 3, "operator": ">=", "value": 3, "unit": "배", "source": "default"}, {"id": 4, "operator": "<=", "value": 0, "unit": "%", "source": "default"}, {"id": 5, "operator": ">", "value": 0, "unit": "억원", "source": "user"}, {"id": 6, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 7, "operator": ">=", "value": 5, "unit": "%", "source": "default"}, {"id": 8, "operator": ">=", "value": 15, "unit": "%", "source": "default"}, {"id": 9, "operator": ">=", "value": 10, "unit": "%", "source": "default"}, {"id": 10, "operator": "<=", "value": 10, "unit": "배", "source": "default"}, {"id": 11, "operator": "<=", "value": 1, "unit": "배", "source": "default"}, {"id": 12, "operator": ">=", "value": 2, "unit": "%", "source": "default"}, {"id": 13, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 14, "operator": ">=", "value": 10000, "unit": "억원", "source": "default"}, {"id": 15, "operator": ">=", "value": 10, "unit": "%", "source": "default"}, {"id": 16, "operator": ">=", "value": -20, "unit": "%", "source": "default"}, {"id": 17, "operator": "<=", "value": 50, "unit": "%", "source": "default"}, {"id": 18, "operator": "<=", "value": 2, "unit": "%", "source": "default"}, {"id": 19, "operator": ">=", "value": 10, "unit": "억원", "source": "default"}, {"id": 20, "operator": ">=", "value": 2, "unit": "배", "source": "default"}], "anchors": [5]}<|im_end|>
+    [마스크된 앞부분 끝 60자] '없애고 싶어요<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n'
+
+--- 샘플 4 (대화 안 2번째 답변): 학습 대상 ---
+{"indicators": [{"id": 1, "operator": "<=", "value": 100, "unit": "%", "source": "default"}, {"id": 2, "operator": "<=", "value": 30, "unit": "%", "source": "default"}, {"id": 3, "operator": ">=", "value": 3, "unit": "배", "source": "default"}, {"id": 4, "operator": "<=", "value": 0, "unit": "%", "source": "default"}, {"id": 5, "operator": ">", "value": 0, "unit": "억원", "source": "default"}, {"id": 6, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 7, "operator": ">=", "value": 5, "unit": "%", "source": "default"}, {"id": 8, "operator": ">=", "value": 15, "unit": "%", "source": "default"}, {"id": 9, "operator": ">=", "value": 0, "unit": "%", "source": "user"}, {"id": 10, "operator": "<=", "value": 10, "unit": "배", "source": "default"}, {"id": 11, "operator": "<=", "value": 1, "unit": "배", "source": "default"}, {"id": 12, "operator": ">=", "value": 2, "unit": "%", "source": "default"}, {"id": 13, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 14, "operator": ">=", "value": 10000, "unit": "억원", "source": "default"}, {"id": 15, "operator": ">=", "value": 10, "unit": "%", "source": "default"}, {"id": 16, "operator": ">=", "value": -20, "unit": "%", "source": "default"}, {"id": 17, "operator": "<=", "value": 50, "unit": "%", "source": "default"}, {"id": 18, "operator": "<=", "value": 2, "unit": "%", "source": "default"}, {"id": 19, "operator": ">=", "value": 10, "unit": "억원", "source": "default"}, {"id": 20, "operator": ">=", "value": 2, "unit": "배", "source": "default"}], "anchors": [9], "explain_bubble": "영업이익 증가율 기준을 0% 이상으로 잡았어요. 본업 이익이 줄지만 않으면 되는 느슨한 기준이에요. 나중에 바꿀 수 있어요."}<|im_end|>
+    [마스크된 앞부분 끝 60자] '상으로 할래요<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n'
+
+--- 샘플 5 (대화 안 2번째 답변): 학습 대상 ---
+{"indicators": [{"id": 1, "operator": "<=", "value": 100, "unit": "%", "source": "default"}, {"id": 2, "operator": "<=", "value": 30, "unit": "%", "source": "default"}, {"id": 3, "operator": ">=", "value": 3, "unit": "배", "source": "default"}, {"id": 4, "operator": "<=", "value": 0, "unit": "%", "source": "default"}, {"id": 5, "operator": ">", "value": 0, "unit": "억원", "source": "default"}, {"id": 6, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 7, "operator": ">=", "value": 5, "unit": "%", "source": "default"}, {"id": 8, "operator": ">=", "value": 15, "unit": "%", "source": "default"}, {"id": 9, "operator": ">=", "value": 10, "unit": "%", "source": "default"}, {"id": 10, "operator": "<=", "value": 10, "unit": "배", "source": "default"}, {"id": 11, "operator": "<=", "value": 1, "unit": "배", "source": "default"}, {"id": 12, "operator": ">=", "value": 2, "unit": "%", "source": "user"}, {"id": 13, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 14, "operator": ">=", "value": 10000, "unit": "억원", "source": "default"}, {"id": 15, "operator": ">=", "value": 10, "unit": "%", "source": "default"}, {"id": 16, "operator": ">=", "value": -20, "unit": "%", "source": "default"}, {"id": 17, "operator": "<=", "value": 50, "unit": "%", "source": "default"}, {"id": 18, "operator": "<=", "value": 2, "unit": "%", "source": "default"}, {"id": 19, "operator": ">=", "value": 10, "unit": "억원", "source": "default"}, {"id": 20, "operator": ">=", "value": 2, "unit": "배", "source": "default"}], "anchors": [12], "explain_bubble": "12개월 배당수익률 기준을 2% 이상으로 잡았어요. 1년에 주가의 2% 이상을 배당하는 무난한 기준이에요. 나중에 바꿀 수 있어요."}<|im_end|>
+    [마스크된 앞부분 끝 60자] '센트로 할게요<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n'
+
+정답이 <|im_end|> 로 끝나는 샘플: 5627/5627  (전부여야 정상)
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+trainable params: 87,293,952 || all params: 8,278,029,312 || trainable%: 1.0545
+에폭당 약 352스텝, 평가·저장 176스텝마다, 전체 약 1056스텝, group_by_length=False
+
+
+                                                  
+{'loss': 0.0054, 'grad_norm': 0.12334487587213516, 'learning_rate': 7.865033500559915e-05, 'epoch': 1.02}
+
+[train] 샘플 5627개 (너무 길어 버린 것 0개)
+  전체 길이 평균 448 / 최대 1180 토큰, 정답 길이 평균 269 / 최대 688
+[val] 샘플 299개 (너무 길어 버린 것 0개)
+  전체 길이 평균 428 / 최대 1093 토큰, 정답 길이 평균 249 / 최대 686
+
+--- 샘플 1 (대화 안 1번째 답변): 학습 대상 ---
+번 돈에 비해 너무 비싸지 않은 주가를 보려고 PER을 8배 이하로 잡았어요. 꽤 엄격한 기준이에요. 조금 느슨하게 바꿔 볼까요?<|im_end|>
+    [마스크된 앞부분 끝 60자] '풍선을 써줘.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n'
+
+--- 샘플 2 (대화 안 1번째 답변): 학습 대상 ---
+{"needs_clarification": true, "reason": "VALUE_MISSING", "indicator_id": 17, "message": "1년 최저가에서 얼마나 올랐는지는 52주 저점 대비로 볼 수 있어요. 저점보다 몇 % 안쪽이면 괜찮을까요?", "options": [{"level": "엄격", "label": "20% 이내로 엄격하게 할래요", "value": 20}, {"level": "보통", "label": "50% 이내로 보통으로 할래요", "value": 50}, {"level": "느슨", "label": "100% 이내로 느슨하게 할래요", "value": 100}]}<|im_end|>
+    [마스크된 앞부분 끝 60자] '고 있는 주식<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n'
+
+--- 샘플 3 (대화 안 1번째 답변): 학습 대상 ---
+{"indicators": [{"id": 1, "operator": "<=", "value": 100, "unit": "%", "source": "default"}, {"id": 2, "operator": "<=", "value": 30, "unit": "%", "source": "default"}, {"id": 3, "operator": ">=", "value": 3, "unit": "배", "source": "default"}, {"id": 4, "operator": "<=", "value": 0, "unit": "%", "source": "default"}, {"id": 5, "operator": ">", "value": 0, "unit": "억원", "source": "user"}, {"id": 6, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 7, "operator": ">=", "value": 5, "unit": "%", "source": "default"}, {"id": 8, "operator": ">=", "value": 15, "unit": "%", "source": "default"}, {"id": 9, "operator": ">=", "value": 10, "unit": "%", "source": "default"}, {"id": 10, "operator": "<=", "value": 10, "unit": "배", "source": "default"}, {"id": 11, "operator": "<=", "value": 1, "unit": "배", "source": "default"}, {"id": 12, "operator": ">=", "value": 2, "unit": "%", "source": "default"}, {"id": 13, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 14, "operator": ">=", "value": 10000, "unit": "억원", "source": "default"}, {"id": 15, "operator": ">=", "value": 10, "unit": "%", "source": "default"}, {"id": 16, "operator": ">=", "value": -20, "unit": "%", "source": "default"}, {"id": 17, "operator": "<=", "value": 50, "unit": "%", "source": "default"}, {"id": 18, "operator": "<=", "value": 2, "unit": "%", "source": "default"}, {"id": 19, "operator": ">=", "value": 10, "unit": "억원", "source": "default"}, {"id": 20, "operator": ">=", "value": 2, "unit": "배", "source": "default"}], "anchors": [5]}<|im_end|>
+    [마스크된 앞부분 끝 60자] '없애고 싶어요<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n'
+
+--- 샘플 4 (대화 안 2번째 답변): 학습 대상 ---
+{"indicators": [{"id": 1, "operator": "<=", "value": 100, "unit": "%", "source": "default"}, {"id": 2, "operator": "<=", "value": 30, "unit": "%", "source": "default"}, {"id": 3, "operator": ">=", "value": 3, "unit": "배", "source": "default"}, {"id": 4, "operator": "<=", "value": 0, "unit": "%", "source": "default"}, {"id": 5, "operator": ">", "value": 0, "unit": "억원", "source": "default"}, {"id": 6, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 7, "operator": ">=", "value": 5, "unit": "%", "source": "default"}, {"id": 8, "operator": ">=", "value": 15, "unit": "%", "source": "default"}, {"id": 9, "operator": ">=", "value": 0, "unit": "%", "source": "user"}, {"id": 10, "operator": "<=", "value": 10, "unit": "배", "source": "default"}, {"id": 11, "operator": "<=", "value": 1, "unit": "배", "source": "default"}, {"id": 12, "operator": ">=", "value": 2, "unit": "%", "source": "default"}, {"id": 13, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 14, "operator": ">=", "value": 10000, "unit": "억원", "source": "default"}, {"id": 15, "operator": ">=", "value": 10, "unit": "%", "source": "default"}, {"id": 16, "operator": ">=", "value": -20, "unit": "%", "source": "default"}, {"id": 17, "operator": "<=", "value": 50, "unit": "%", "source": "default"}, {"id": 18, "operator": "<=", "value": 2, "unit": "%", "source": "default"}, {"id": 19, "operator": ">=", "value": 10, "unit": "억원", "source": "default"}, {"id": 20, "operator": ">=", "value": 2, "unit": "배", "source": "default"}], "anchors": [9], "explain_bubble": "영업이익 증가율 기준을 0% 이상으로 잡았어요. 본업 이익이 줄지만 않으면 되는 느슨한 기준이에요. 나중에 바꿀 수 있어요."}<|im_end|>
+    [마스크된 앞부분 끝 60자] '상으로 할래요<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n'
+
+--- 샘플 5 (대화 안 2번째 답변): 학습 대상 ---
+{"indicators": [{"id": 1, "operator": "<=", "value": 100, "unit": "%", "source": "default"}, {"id": 2, "operator": "<=", "value": 30, "unit": "%", "source": "default"}, {"id": 3, "operator": ">=", "value": 3, "unit": "배", "source": "default"}, {"id": 4, "operator": "<=", "value": 0, "unit": "%", "source": "default"}, {"id": 5, "operator": ">", "value": 0, "unit": "억원", "source": "default"}, {"id": 6, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 7, "operator": ">=", "value": 5, "unit": "%", "source": "default"}, {"id": 8, "operator": ">=", "value": 15, "unit": "%", "source": "default"}, {"id": 9, "operator": ">=", "value": 10, "unit": "%", "source": "default"}, {"id": 10, "operator": "<=", "value": 10, "unit": "배", "source": "default"}, {"id": 11, "operator": "<=", "value": 1, "unit": "배", "source": "default"}, {"id": 12, "operator": ">=", "value": 2, "unit": "%", "source": "user"}, {"id": 13, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 14, "operator": ">=", "value": 10000, "unit": "억원", "source": "default"}, {"id": 15, "operator": ">=", "value": 10, "unit": "%", "source": "default"}, {"id": 16, "operator": ">=", "value": -20, "unit": "%", "source": "default"}, {"id": 17, "operator": "<=", "value": 50, "unit": "%", "source": "default"}, {"id": 18, "operator": "<=", "value": 2, "unit": "%", "source": "default"}, {"id": 19, "operator": ">=", "value": 10, "unit": "억원", "source": "default"}, {"id": 20, "operator": ">=", "value": 2, "unit": "배", "source": "default"}], "anchors": [12], "explain_bubble": "12개월 배당수익률 기준을 2% 이상으로 잡았어요. 1년에 주가의 2% 이상을 배당하는 무난한 기준이에요. 나중에 바꿀 수 있어요."}<|im_end|>
+    [마스크된 앞부분 끝 60자] '센트로 할게요<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n'
+
+정답이 <|im_end|> 로 끝나는 샘플: 5627/5627  (전부여야 정상)
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+trainable params: 87,293,952 || all params: 8,278,029,312 || trainable%: 1.0545
+에폭당 약 352스텝, 평가·저장 176스텝마다, 전체 약 1056스텝, group_by_length=False
+
+
+                                                  
+{'loss': 0.0054, 'grad_norm': 0.12443635612726212, 'learning_rate': 7.865033500559915e-05, 'epoch': 1.02}
+
+                                                    
+{'loss': 0.006, 'grad_norm': 0.2857370376586914, 'learning_rate': 7.735430110845708e-05, 'epoch': 1.05}
+
+                                                    
+{'loss': 0.0051, 'grad_norm': 0.07117242366075516, 'learning_rate': 7.603148647536852e-05, 'epoch': 1.08}
+
+                                                    
+{'loss': 0.0048, 'grad_norm': 0.07265379279851913, 'learning_rate': 7.468318618418088e-05, 'epoch': 1.11}
+
+                                                    
+{'loss': 0.0049, 'grad_norm': 0.07162076234817505, 'learning_rate': 7.331072026401611e-05, 'epoch': 1.14}
+
+                                                    
+{'loss': 0.0036, 'grad_norm': 0.0998888686299324, 'learning_rate': 7.19154324029201e-05, 'epoch': 1.16}
+
+                                                    
+{'loss': 0.0049, 'grad_norm': 0.11732178181409836, 'learning_rate': 7.04986886323491e-05, 'epoch': 1.19}
+
+                                                    
+{'loss': 0.0041, 'grad_norm': 0.08152135461568832, 'learning_rate': 6.906187598978117e-05, 'epoch': 1.22}
+
+                                                    
+{'loss': 0.0035, 'grad_norm': 0.05792606621980667, 'learning_rate': 6.76064011607621e-05, 'epoch': 1.25}
+
+                                                    
+{'loss': 0.003, 'grad_norm': 0.07064316421747208, 'learning_rate': 6.613368910171532e-05, 'epoch': 1.28}
+
+                                                    
+{'loss': 0.0034, 'grad_norm': 0.02285343036055565, 'learning_rate': 6.464518164486395e-05, 'epoch': 1.31}
+
+                                                    
+{'loss': 0.0041, 'grad_norm': 0.09211600571870804, 'learning_rate': 6.314233608663084e-05, 'epoch': 1.34}
+
+                                                    
+{'loss': 0.0034, 'grad_norm': 0.034483470022678375, 'learning_rate': 6.162662376089894e-05, 'epoch': 1.36}
+
+                                                    
+{'loss': 0.0031, 'grad_norm': 0.08340000361204147, 'learning_rate': 6.009952859852809e-05, 'epoch': 1.39}
+
+                                                    
+{'loss': 0.0024, 'grad_norm': 0.034714870154857635, 'learning_rate': 5.8562545674539496e-05, 'epoch': 1.42}
+
+                                                    
+{'loss': 0.0035, 'grad_norm': 0.055238742381334305, 'learning_rate': 5.7017179744389274e-05, 'epoch': 1.45}
+
+                                                    
+{'loss': 0.0034, 'grad_norm': 0.03790801763534546, 'learning_rate': 5.5464943770764775e-05, 'epoch': 1.48}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                    
+
+
+                                                 
+[A{'eval_loss': 0.010391841642558575, 'eval_runtime': 63.8403, 'eval_samples_per_second': 4.684, 'eval_steps_per_second': 2.35, 'epoch': 1.5}
+
+
+
+                                                 [A
+                                                    
+{'loss': 0.0021, 'grad_norm': 0.032775700092315674, 'learning_rate': 5.390735744234573e-05, 'epoch': 1.51}
+
+                                                    
+{'loss': 0.0055, 'grad_norm': 0.15833927690982819, 'learning_rate': 5.23459456859804e-05, 'epoch': 1.53}
+
+                                                    
+{'loss': 0.003, 'grad_norm': 0.03281375393271446, 'learning_rate': 5.078223717373334e-05, 'epoch': 1.56}
+
+                                                    
+{'loss': 0.0028, 'grad_norm': 0.024553878232836723, 'learning_rate': 4.9217762826266665e-05, 'epoch': 1.59}
+
+                                                    
+{'loss': 0.0035, 'grad_norm': 0.1295003741979599, 'learning_rate': 4.765405431401961e-05, 'epoch': 1.62}
+
+                                                    
+{'loss': 0.0033, 'grad_norm': 0.09558574110269547, 'learning_rate': 4.609264255765428e-05, 'epoch': 1.65}
+
+                                                    
+{'loss': 0.0043, 'grad_norm': 0.08738672733306885, 'learning_rate': 4.4535056229235237e-05, 'epoch': 1.68}
+
+                                                    
+{'loss': 0.0024, 'grad_norm': 0.03136679157614708, 'learning_rate': 4.298282025561076e-05, 'epoch': 1.71}
+
+                                                    
+{'loss': 0.0018, 'grad_norm': 0.04762261360883713, 'learning_rate': 4.143745432546052e-05, 'epoch': 1.73}
+
+                                                      
+{'loss': 0.0033, 'grad_norm': 0.026347912847995758, 'learning_rate': 3.990047140147191e-05, 'epoch': 1.76}
+
+                                                      
+{'loss': 0.0034, 'grad_norm': 0.09519536048173904, 'learning_rate': 3.837337623910108e-05, 'epoch': 1.79}
+
+                                                      
+{'loss': 0.0017, 'grad_norm': 0.06178111582994461, 'learning_rate': 3.6857663913369156e-05, 'epoch': 1.82}
+
+                                                      
+{'loss': 0.0032, 'grad_norm': 0.09679261595010757, 'learning_rate': 3.535481835513606e-05, 'epoch': 1.85}
+
+                                                      
+{'loss': 0.0021, 'grad_norm': 0.06350059062242508, 'learning_rate': 3.386631089828468e-05, 'epoch': 1.88}
+
+                                                      
+{'loss': 0.0026, 'grad_norm': 0.023748748004436493, 'learning_rate': 3.23935988392379e-05, 'epoch': 1.9}
+
+                                                      
+{'loss': 0.002, 'grad_norm': 0.05667721480131149, 'learning_rate': 3.093812401021885e-05, 'epoch': 1.93}
+
+                                                      
+{'loss': 0.003, 'grad_norm': 0.07372861355543137, 'learning_rate': 2.950131136765091e-05, 'epoch': 1.96}
+
+                                                      
+{'loss': 0.0014, 'grad_norm': 0.00865980051457882, 'learning_rate': 2.8084567597079913e-05, 'epoch': 1.99}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                      
+
+
+                                                 
+[A{'eval_loss': 0.007387384306639433, 'eval_runtime': 66.0471, 'eval_samples_per_second': 4.527, 'eval_steps_per_second': 2.271, 'epoch': 2.0}
+
+
+
+                                                 [A
+                                                      
+{'loss': 0.0018, 'grad_norm': 0.028138447552919388, 'learning_rate': 2.6689279735983917e-05, 'epoch': 2.02}
+
+[train] 샘플 5627개 (너무 길어 버린 것 0개)
+  전체 길이 평균 448 / 최대 1180 토큰, 정답 길이 평균 269 / 최대 688
+[val] 샘플 299개 (너무 길어 버린 것 0개)
+  전체 길이 평균 428 / 최대 1093 토큰, 정답 길이 평균 249 / 최대 686
+
+--- 샘플 1 (대화 안 1번째 답변): 학습 대상 ---
+번 돈에 비해 너무 비싸지 않은 주가를 보려고 PER을 8배 이하로 잡았어요. 꽤 엄격한 기준이에요. 조금 느슨하게 바꿔 볼까요?<|im_end|>
+    [마스크된 앞부분 끝 60자] '풍선을 써줘.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n'
+
+--- 샘플 2 (대화 안 1번째 답변): 학습 대상 ---
+{"needs_clarification": true, "reason": "VALUE_MISSING", "indicator_id": 17, "message": "1년 최저가에서 얼마나 올랐는지는 52주 저점 대비로 볼 수 있어요. 저점보다 몇 % 안쪽이면 괜찮을까요?", "options": [{"level": "엄격", "label": "20% 이내로 엄격하게 할래요", "value": 20}, {"level": "보통", "label": "50% 이내로 보통으로 할래요", "value": 50}, {"level": "느슨", "label": "100% 이내로 느슨하게 할래요", "value": 100}]}<|im_end|>
+    [마스크된 앞부분 끝 60자] '고 있는 주식<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n'
+
+--- 샘플 3 (대화 안 1번째 답변): 학습 대상 ---
+{"indicators": [{"id": 1, "operator": "<=", "value": 100, "unit": "%", "source": "default"}, {"id": 2, "operator": "<=", "value": 30, "unit": "%", "source": "default"}, {"id": 3, "operator": ">=", "value": 3, "unit": "배", "source": "default"}, {"id": 4, "operator": "<=", "value": 0, "unit": "%", "source": "default"}, {"id": 5, "operator": ">", "value": 0, "unit": "억원", "source": "user"}, {"id": 6, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 7, "operator": ">=", "value": 5, "unit": "%", "source": "default"}, {"id": 8, "operator": ">=", "value": 15, "unit": "%", "source": "default"}, {"id": 9, "operator": ">=", "value": 10, "unit": "%", "source": "default"}, {"id": 10, "operator": "<=", "value": 10, "unit": "배", "source": "default"}, {"id": 11, "operator": "<=", "value": 1, "unit": "배", "source": "default"}, {"id": 12, "operator": ">=", "value": 2, "unit": "%", "source": "default"}, {"id": 13, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 14, "operator": ">=", "value": 10000, "unit": "억원", "source": "default"}, {"id": 15, "operator": ">=", "value": 10, "unit": "%", "source": "default"}, {"id": 16, "operator": ">=", "value": -20, "unit": "%", "source": "default"}, {"id": 17, "operator": "<=", "value": 50, "unit": "%", "source": "default"}, {"id": 18, "operator": "<=", "value": 2, "unit": "%", "source": "default"}, {"id": 19, "operator": ">=", "value": 10, "unit": "억원", "source": "default"}, {"id": 20, "operator": ">=", "value": 2, "unit": "배", "source": "default"}], "anchors": [5]}<|im_end|>
+    [마스크된 앞부분 끝 60자] '없애고 싶어요<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n'
+
+--- 샘플 4 (대화 안 2번째 답변): 학습 대상 ---
+{"indicators": [{"id": 1, "operator": "<=", "value": 100, "unit": "%", "source": "default"}, {"id": 2, "operator": "<=", "value": 30, "unit": "%", "source": "default"}, {"id": 3, "operator": ">=", "value": 3, "unit": "배", "source": "default"}, {"id": 4, "operator": "<=", "value": 0, "unit": "%", "source": "default"}, {"id": 5, "operator": ">", "value": 0, "unit": "억원", "source": "default"}, {"id": 6, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 7, "operator": ">=", "value": 5, "unit": "%", "source": "default"}, {"id": 8, "operator": ">=", "value": 15, "unit": "%", "source": "default"}, {"id": 9, "operator": ">=", "value": 0, "unit": "%", "source": "user"}, {"id": 10, "operator": "<=", "value": 10, "unit": "배", "source": "default"}, {"id": 11, "operator": "<=", "value": 1, "unit": "배", "source": "default"}, {"id": 12, "operator": ">=", "value": 2, "unit": "%", "source": "default"}, {"id": 13, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 14, "operator": ">=", "value": 10000, "unit": "억원", "source": "default"}, {"id": 15, "operator": ">=", "value": 10, "unit": "%", "source": "default"}, {"id": 16, "operator": ">=", "value": -20, "unit": "%", "source": "default"}, {"id": 17, "operator": "<=", "value": 50, "unit": "%", "source": "default"}, {"id": 18, "operator": "<=", "value": 2, "unit": "%", "source": "default"}, {"id": 19, "operator": ">=", "value": 10, "unit": "억원", "source": "default"}, {"id": 20, "operator": ">=", "value": 2, "unit": "배", "source": "default"}], "anchors": [9], "explain_bubble": "영업이익 증가율 기준을 0% 이상으로 잡았어요. 본업 이익이 줄지만 않으면 되는 느슨한 기준이에요. 나중에 바꿀 수 있어요."}<|im_end|>
+    [마스크된 앞부분 끝 60자] '상으로 할래요<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n'
+
+--- 샘플 5 (대화 안 2번째 답변): 학습 대상 ---
+{"indicators": [{"id": 1, "operator": "<=", "value": 100, "unit": "%", "source": "default"}, {"id": 2, "operator": "<=", "value": 30, "unit": "%", "source": "default"}, {"id": 3, "operator": ">=", "value": 3, "unit": "배", "source": "default"}, {"id": 4, "operator": "<=", "value": 0, "unit": "%", "source": "default"}, {"id": 5, "operator": ">", "value": 0, "unit": "억원", "source": "default"}, {"id": 6, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 7, "operator": ">=", "value": 5, "unit": "%", "source": "default"}, {"id": 8, "operator": ">=", "value": 15, "unit": "%", "source": "default"}, {"id": 9, "operator": ">=", "value": 10, "unit": "%", "source": "default"}, {"id": 10, "operator": "<=", "value": 10, "unit": "배", "source": "default"}, {"id": 11, "operator": "<=", "value": 1, "unit": "배", "source": "default"}, {"id": 12, "operator": ">=", "value": 2, "unit": "%", "source": "user"}, {"id": 13, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 14, "operator": ">=", "value": 10000, "unit": "억원", "source": "default"}, {"id": 15, "operator": ">=", "value": 10, "unit": "%", "source": "default"}, {"id": 16, "operator": ">=", "value": -20, "unit": "%", "source": "default"}, {"id": 17, "operator": "<=", "value": 50, "unit": "%", "source": "default"}, {"id": 18, "operator": "<=", "value": 2, "unit": "%", "source": "default"}, {"id": 19, "operator": ">=", "value": 10, "unit": "억원", "source": "default"}, {"id": 20, "operator": ">=", "value": 2, "unit": "배", "source": "default"}], "anchors": [12], "explain_bubble": "12개월 배당수익률 기준을 2% 이상으로 잡았어요. 1년에 주가의 2% 이상을 배당하는 무난한 기준이에요. 나중에 바꿀 수 있어요."}<|im_end|>
+    [마스크된 앞부분 끝 60자] '센트로 할게요<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n'
+
+정답이 <|im_end|> 로 끝나는 샘플: 5627/5627  (전부여야 정상)
+`torch_dtype` is deprecated! Use `dtype` instead!
+
