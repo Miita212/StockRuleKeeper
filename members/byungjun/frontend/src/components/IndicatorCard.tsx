@@ -1,6 +1,7 @@
 import lock from "../assets/icons/lock.svg";
 import lockOpen from "../assets/icons/lock-open.svg";
 import type { Indicator } from "../types";
+import ValueInput from "./ValueInput";
 
 type Props = {
   indicator: Indicator;
@@ -10,21 +11,25 @@ type Props = {
   onToggleLock?: () => void;
   mark?: "match" | "soft" | "changed" | "rest" | "off"; // 02: match=대화로 정한 지표, soft=이전에 정한 지표, changed=방금 바꾼 지표, rest=기본값 지표, off=원칙에 포함하지 않는 기본값 지표
   prev?: string; // changed일 때 바꾸기 전 값
+  onEditValue?: (text: string, number: number) => void; // 있으면 수치를 눌러 직접 입력할 수 있다
+  tag?: "user" | "default"; // 08: 설명 줄 대신 "내가 정한 지표"/"기본값"을 보여준다
 };
 
-export default function IndicatorCard({ indicator, value, compact, locked, onToggleLock, mark, prev }: Props) {
+export default function IndicatorCard({ indicator, value, compact, locked, onToggleLock, mark, prev, tag, onEditValue }: Props) {
   return (
-    <div className={`indicator-card ${compact ? "compact" : ""}${mark ? ` mark-${mark}` : ""}`}>
+    <div className={`indicator-card ${compact ? "compact" : ""}${mark ? ` mark-${mark}` : ""}${tag ? ` tag-${tag}` : ""}`}>
       <div className="code">{indicator.code}</div>
       <div className="indicator-text">
         <div className="indicator-name">
           {indicator.name}
           {mark === "changed" && <span className="changed-pill">방금 바꿨어요</span>}
         </div>
-        {!compact && <div className="indicator-desc">{indicator.desc}</div>}
+        {!compact && (tag
+          ? <div className={`indicator-tag ${tag}`}>{tag === "user" ? "내가 정한 지표" : "기본값"}</div>
+          : <div className="indicator-desc">{indicator.desc}</div>)}
       </div>
       <div className="indicator-value">
-        {value}
+        {onEditValue && !compact ? <ValueInput value={value} onChange={onEditValue} /> : value}
         {prev && <span className="prev-value">이전 {prev}</span>}
       </div>
       {!compact && (

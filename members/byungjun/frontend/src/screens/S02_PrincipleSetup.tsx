@@ -66,6 +66,15 @@ export default function S02_PrincipleSetup({ edit = false }: { edit?: boolean })
     }
   }
 
+  // 수치를 직접 입력하면 그 지표는 내가 정한 지표(user)가 된다
+  function editValue(id: number, text: string, n: number) {
+    setDraft({
+      ...draft!,
+      values: { ...draft!.values, [id]: text },
+      indicators: draft!.indicators.map((i) => (i.id === id ? { ...i, value: n, source: "user" } : i)),
+    });
+  }
+
   function toggleLock(id: number) {
     setLockedIds((ids) => (ids.includes(id) ? ids.filter((x) => x !== id) : [...ids, id]));
   }
@@ -111,6 +120,7 @@ export default function S02_PrincipleSetup({ edit = false }: { edit?: boolean })
         value={draft!.values[id]}
         locked={lockedIds.includes(id)}
         onToggleLock={() => toggleLock(id)}
+        onEditValue={(text, n) => editValue(id, text, n)}
         mark={mark}
         prev={prev}
       />
