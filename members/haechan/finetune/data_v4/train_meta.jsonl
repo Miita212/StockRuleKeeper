@@ -183,7 +183,6 @@
 {"type": "S6", "indicator_ids": [17], "_source": "byungjun/data/S-4_gen_s6_s7.jsonl", "_line": 343}
 {"type": "S5", "kind": "S5 20개 밖 지표", "indicator_ids": [], "_source": "hyeonkyeong/data/gen_s4_s5.jsonl", "_line": 955}
 {"type": "S1", "indicator_ids": [3], "prompt_id": "S1V-03-보통", "style": "존댓말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 203}
-{"type": "S1", "indicator_ids": [16], "prompt_id": "S1V-16-느슨", "style": "반말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1092}
 {"type": "S2", "indicator_ids": [10, 11], "prompt_id": "S1B-H4b-055", "style": "줄임말", "seed_id": "H4b-055", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2208}
 {"type": "S2", "indicator_ids": [1, 5], "prompt_id": "S2A-01_05", "style": "줄임말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2767}
 {"type": "S1", "indicator_ids": [20], "prompt_id": "S1A-20-3", "style": "반말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1318}
@@ -263,7 +262,6 @@
 {"type": "S6", "indicator_ids": [1], "_source": "byungjun/data/S-4_gen_s6_s7.jsonl", "_line": 12}
 {"type": "S7", "indicator_ids": [4], "_source": "byungjun/data/S-4_gen_s6_s7.jsonl", "_line": 456}
 {"type": "S6", "indicator_ids": [3], "_source": "byungjun/data/S-4_gen_s6_s7.jsonl", "_line": 52}
-{"type": "S1", "indicator_ids": [16], "prompt_id": "S1V-16-보통", "style": "존댓말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1083}
 {"type": "S1", "indicator_ids": [8], "prompt_id": "S1B-H4b-002", "style": "영어약어", "seed_id": "H4b-002", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1848}
 {"type": "S6", "indicator_ids": [11], "_source": "byungjun/data/S-4_gen_s6_s7.jsonl", "_line": 230}
 {"type": "S1", "indicator_ids": [1], "prompt_id": "S1A-01-3", "style": "존댓말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 48}
@@ -324,7 +322,7 @@
 {"type": "S1", "indicator_ids": [16], "prompt_id": "S1A-16-3", "style": "반말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1072}
 {"type": "S4", "kind": "S4 값 지정", "indicator_ids": [6], "locked": [15], "_source": "hyeonkyeong/data/gen_s4_s5.jsonl", "_line": 170}
 {"type": "S4", "kind": "S4 상대 요청", "indicator_ids": [20], "locked": [8, 16], "_source": "hyeonkyeong/data/gen_s4_s5.jsonl", "_line": 281}
-{"type": "S2", "indicator_ids": [12, 13], "prompt_id": "S1B-H4b-052", "style": "반말", "seed_id": "H4b-052", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2191}
+{"type": "S2", "indicator_ids": [13], "prompt_id": "S1B-H4b-052", "style": "반말", "seed_id": "H4b-052", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2191}
 {"type": "S2", "indicator_ids": [9, 12], "prompt_id": "S2A-09_12", "style": "반말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 3092}
 {"type": "S6", "indicator_ids": [20], "_source": "byungjun/data/S-4_gen_s6_s7.jsonl", "_line": 407}
 {"type": "S1", "indicator_ids": [8], "prompt_id": "S1V-08-보통", "style": "반말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 547}
@@ -369,7 +367,6 @@
 {"type": "S1", "indicator_ids": [12], "prompt_id": "S1A-12-3", "style": "반말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 798}
 {"type": "S3", "kind": "A 값 없음", "indicator_ids": [6], "_source": "hyeonkyeong/data/gen_s3.jsonl", "_line": 72}
 {"type": "S1", "indicator_ids": [3], "prompt_id": "S1V-03-보통", "style": "존댓말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 198}
-{"type": "S1", "indicator_ids": [16], "prompt_id": "S1V-16-느슨", "style": "줄임말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1091}
 {"type": "S1", "indicator_ids": [15], "prompt_id": "S1V-15-엄격-6m", "style": "줄임말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1021}
 {"type": "S1", "indicator_ids": [8], "prompt_id": "S1B-H4b-004", "style": "영어약어", "seed_id": "H4b-004", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1861}
 {"type": "S6", "indicator_ids": [1], "_source": "byungjun/data/S-4_gen_s6_s7.jsonl", "_line": 7}
@@ -941,7 +938,7 @@
 {"type": "S1", "indicator_ids": [3], "prompt_id": "S1A-03-2", "style": "줄임말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 163}
 {"type": "S1", "indicator_ids": [10], "prompt_id": "S1V-10-느슨", "style": "줄임말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 702}
 {"type": "S2", "indicator_ids": [10, 20], "prompt_id": "S2A-10_20", "style": "존댓말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 3112}
-{"type": "S2", "indicator_ids": [12, 13], "prompt_id": "S2B-13-15", "style": "영어약어", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 3284}
+{"type": "S2", "indicator_ids": [13], "prompt_id": "S2B-13-15", "style": "영어약어", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 3284}
 {"type": "S1", "indicator_ids": [18], "prompt_id": "S1B-H4c-041", "style": "반말", "seed_id": "H4c-041", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2562}
 {"type": "S1", "indicator_ids": [20], "prompt_id": "S1V-20-보통", "style": "반말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1341}
 {"type": "S4", "kind": "S4 상대 요청", "indicator_ids": [1], "locked": [4, 7, 8], "_source": "hyeonkyeong/data/gen_s4_s5.jsonl", "_line": 397}
@@ -1335,7 +1332,7 @@
 {"type": "S1", "indicator_ids": [10], "prompt_id": "S1B-H4b-023", "style": "줄임말", "seed_id": "H4b-023", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2011}
 {"type": "S2", "indicator_ids": [5, 8], "prompt_id": "S2A-05_08", "style": "줄임말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2973}
 {"type": "S5", "indicator_ids": [], "prompt_id": "S5R-H4c-076", "style": "줄임말", "seed_id": "H4c-076", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2750}
-{"type": "S2", "indicator_ids": [12, 13], "prompt_id": "S1B-H4b-052", "style": "존댓말", "seed_id": "H4b-052", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2195}
+{"type": "S2", "indicator_ids": [13], "prompt_id": "S1B-H4b-052", "style": "존댓말", "seed_id": "H4b-052", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2195}
 {"type": "S6", "indicator_ids": [16], "_source": "byungjun/data/S-4_gen_s6_s7.jsonl", "_line": 324}
 {"type": "S3", "kind": "A 값 없음", "indicator_ids": [14], "_source": "hyeonkyeong/data/gen_s3.jsonl", "_line": 197}
 {"type": "S1", "indicator_ids": [4], "prompt_id": "S1A-04-1", "style": "존댓말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 227}
@@ -1401,7 +1398,6 @@
 {"type": "S6", "indicator_ids": [20], "_source": "byungjun/data/S-4_gen_s6_s7.jsonl", "_line": 402}
 {"type": "S5", "kind": "S5 20개 밖 지표", "indicator_ids": [], "_source": "hyeonkyeong/data/gen_s4_s5.jsonl", "_line": 915}
 {"type": "S2", "indicator_ids": [9, 12], "prompt_id": "S2A-09_12", "style": "오타", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 3093}
-{"type": "S1", "indicator_ids": [16], "prompt_id": "S1V-16-보통", "style": "반말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1085}
 {"type": "S1", "indicator_ids": [10], "prompt_id": "S1A-10-3", "style": "오타", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 674}
 {"type": "S2", "indicator_ids": [15, 19, 20], "prompt_id": "S1B-H4c-064", "style": "반말", "seed_id": "H4c-064", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2688}
 {"type": "S1", "indicator_ids": [5], "prompt_id": "S1A-05-3", "style": "반말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 327}
@@ -1457,7 +1453,6 @@
 {"type": "S1", "indicator_ids": [14], "prompt_id": "S1B-H4c-005", "style": "존댓말", "seed_id": "H4c-005", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2356}
 {"type": "S1", "indicator_ids": [14], "prompt_id": "S1A-14-2", "style": "존댓말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 920}
 {"type": "S7", "indicator_ids": [18], "_source": "byungjun/data/S-4_gen_s6_s7.jsonl", "_line": 578}
-{"type": "S1", "indicator_ids": [12], "prompt_id": "S1B-H4b-044", "style": "줄임말", "seed_id": "H4b-044", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2131}
 {"type": "S5", "indicator_ids": [], "prompt_id": "S5R-H4a-064", "style": "오타", "seed_id": "H4a-064", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1828}
 {"type": "S1", "indicator_ids": [11], "prompt_id": "S1B-H4b-030", "style": "반말", "seed_id": "H4b-030", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2052}
 {"type": "SEED", "seed_id": "H4b-024", "id": "H4b-024", "kind": "되묻기(값 없음)", "note": "값 없음", "indicator_ids": [10], "text": "PER 낮은 주식이 좋아", "output": {"needs_clarification": true, "reason": "VALUE_MISSING", "indicator_id": 10, "message": "버는 돈에 비해 주가가 싼지는 PER로 볼 수 있어요. PER이 몇 배 이하면 괜찮을까요?", "options": [{"level": "엄격", "label": "8배 이하로 엄격하게 할래요", "value": 8}, {"level": "보통", "label": "10배 이하로 보통으로 할래요", "value": 10}, {"level": "느슨", "label": "15배 이하로 느슨하게 할래요", "value": 15}]}, "_source": "haechan/data/seed_8-13.jsonl", "_line": 24}
@@ -1550,7 +1545,6 @@
 {"type": "S5", "kind": "S5 예측", "indicator_ids": [], "_source": "hyeonkyeong/data/gen_s4_s5.jsonl", "_line": 779}
 {"type": "S4", "kind": "S4 상대 요청", "indicator_ids": [2], "locked": [5], "_source": "hyeonkyeong/data/gen_s4_s5.jsonl", "_line": 344}
 {"type": "S3", "kind": "A 값 없음", "indicator_ids": [1], "_source": "hyeonkyeong/data/gen_s3.jsonl", "_line": 8}
-{"type": "S1", "indicator_ids": [12], "prompt_id": "S1B-H4b-044", "style": "영어약어", "seed_id": "H4b-044", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2133}
 {"type": "S4", "kind": "S4 값 지정", "indicator_ids": [13], "locked": [6, 11, 20], "_source": "hyeonkyeong/data/gen_s4_s5.jsonl", "_line": 75}
 {"type": "S5", "kind": "S5 종목 추천", "indicator_ids": [], "_source": "hyeonkyeong/data/gen_s4_s5.jsonl", "_line": 787}
 {"type": "S1", "indicator_ids": [19], "prompt_id": "S1V-19-엄격", "style": "존댓말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1267}
@@ -1611,7 +1605,6 @@
 {"type": "S5", "kind": "S5 예측", "indicator_ids": [], "_source": "hyeonkyeong/data/gen_s4_s5.jsonl", "_line": 710}
 {"type": "S4", "kind": "S4 상대 요청", "indicator_ids": [2], "locked": [], "_source": "hyeonkyeong/data/gen_s4_s5.jsonl", "_line": 283}
 {"type": "S2", "indicator_ids": [7, 12, 15], "prompt_id": "S2A-07_12_15", "style": "오타", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 3040}
-{"type": "S1", "indicator_ids": [16], "prompt_id": "S1V-16-보통", "style": "줄임말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1086}
 {"type": "S3", "kind": "B 지표 모호", "indicator_ids": [1, 2], "_source": "hyeonkyeong/data/gen_s3.jsonl", "_line": 342}
 {"type": "S1", "indicator_ids": [6], "prompt_id": "S1B-H4a-042", "style": "영어약어", "seed_id": "H4a-042", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1680}
 {"type": "S2", "indicator_ids": [10, 11, 16], "prompt_id": "S1B-H4b-036", "style": "반말", "seed_id": "H4b-036", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2082}
@@ -1722,7 +1715,6 @@
 {"type": "S1", "indicator_ids": [10], "prompt_id": "S1V-10-느슨", "style": "반말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 701}
 {"type": "S2", "indicator_ids": [15, 16], "prompt_id": "S1B-H4c-026", "style": "반말", "seed_id": "H4c-026", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2484}
 {"type": "S1", "indicator_ids": [7], "prompt_id": "S1A-07-1", "style": "반말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 424}
-{"type": "S1", "indicator_ids": [16], "prompt_id": "S1V-16-느슨", "style": "줄임말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1088}
 {"type": "S4", "kind": "S4 상대 요청", "indicator_ids": [10], "locked": [12, 15], "_source": "hyeonkyeong/data/gen_s4_s5.jsonl", "_line": 292}
 {"type": "S1", "indicator_ids": [12], "prompt_id": "S1A-12-3", "style": "존댓말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 801}
 {"type": "S1", "indicator_ids": [1], "prompt_id": "S1B-H4a-001", "style": "존댓말", "seed_id": "H4a-001", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1364}
@@ -1952,7 +1944,7 @@
 {"type": "S1", "indicator_ids": [15], "prompt_id": "S1B-H4c-013", "style": "존댓말", "seed_id": "H4c-013", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2421}
 {"type": "S5", "kind": "S5 20개 밖 지표", "indicator_ids": [], "_source": "hyeonkyeong/data/gen_s4_s5.jsonl", "_line": 861}
 {"type": "S2", "indicator_ids": [12, 17], "prompt_id": "S2A-12_17", "style": "반말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 3142}
-{"type": "S2", "indicator_ids": [12, 13], "prompt_id": "S1B-H4b-052", "style": "존댓말", "seed_id": "H4b-052", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2192}
+{"type": "S2", "indicator_ids": [13], "prompt_id": "S1B-H4b-052", "style": "존댓말", "seed_id": "H4b-052", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2192}
 {"type": "S6", "indicator_ids": [18], "_source": "byungjun/data/S-4_gen_s6_s7.jsonl", "_line": 373}
 {"type": "S1", "indicator_ids": [5], "prompt_id": "S1A-05-1", "style": "반말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 279}
 {"type": "S6", "indicator_ids": [2], "_source": "byungjun/data/S-4_gen_s6_s7.jsonl", "_line": 28}
@@ -2247,7 +2239,6 @@
 {"type": "S1", "indicator_ids": [15, 17], "prompt_id": "S1A-17-3", "style": "반말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1130}
 {"type": "S1", "indicator_ids": [5], "prompt_id": "S1A-05-2", "style": "줄임말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 302}
 {"type": "S2", "indicator_ids": [10, 17], "prompt_id": "S2A-10_17", "style": "줄임말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 3102}
-{"type": "S1", "indicator_ids": [16], "prompt_id": "S1V-16-느슨", "style": "오타", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1089}
 {"type": "S6", "indicator_ids": [15], "_source": "byungjun/data/S-4_gen_s6_s7.jsonl", "_line": 308}
 {"type": "S1", "indicator_ids": [20], "prompt_id": "S1V-20-보통", "style": "존댓말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1346}
 {"type": "S1", "indicator_ids": [20], "prompt_id": "S1B-H4c-061", "style": "존댓말", "seed_id": "H4c-061", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2671}
@@ -2348,7 +2339,7 @@
 {"type": "S1", "indicator_ids": [19], "prompt_id": "S1A-19-2", "style": "줄임말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1232}
 {"type": "S1", "indicator_ids": [14], "prompt_id": "S1B-H4c-005", "style": "오타", "seed_id": "H4c-005", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2355}
 {"type": "S5", "indicator_ids": [], "prompt_id": "S5R-H4a-063", "style": "존댓말", "seed_id": "H4a-063", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1822}
-{"type": "S3", "kind": "B 지표 모호", "indicator_ids": [12, 13], "_source": "hyeonkyeong/data/gen_s3.jsonl", "_line": 305}
+{"type": "S3", "kind": "B 지표 모호", "indicator_ids": [13], "_source": "hyeonkyeong/data/gen_s3.jsonl", "_line": 305}
 {"type": "S3", "kind": "A 값 없음", "indicator_ids": [6], "_source": "hyeonkyeong/data/gen_s3.jsonl", "_line": 84}
 {"type": "S2", "indicator_ids": [8, 9], "prompt_id": "S1B-H4b-016", "style": "줄임말", "seed_id": "H4b-016", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1956}
 {"type": "S4", "kind": "S4 전체 요청", "indicator_ids": [11], "locked": [], "_source": "hyeonkyeong/data/gen_s4_s5.jsonl", "_line": 662}
@@ -2362,7 +2353,7 @@
 {"type": "S3", "kind": "A 값 없음", "indicator_ids": [7], "_source": "hyeonkyeong/data/gen_s3.jsonl", "_line": 89}
 {"type": "S1", "indicator_ids": [18], "prompt_id": "S1A-18-1", "style": "줄임말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1149}
 {"type": "S1", "indicator_ids": [12], "prompt_id": "S1B-H4b-044", "style": "존댓말", "seed_id": "H4b-044", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2135}
-{"type": "S2", "indicator_ids": [12, 13], "prompt_id": "S2B-13-15", "style": "반말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 3282}
+{"type": "S2", "indicator_ids": [13], "prompt_id": "S2B-13-15", "style": "반말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 3282}
 {"type": "S1", "indicator_ids": [19], "prompt_id": "S1A-19-1", "style": "존댓말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1215}
 {"type": "S5", "kind": "S5 20개 밖 지표", "indicator_ids": [], "_source": "hyeonkyeong/data/gen_s4_s5.jsonl", "_line": 962}
 {"type": "S5", "kind": "S5 종목 추천", "indicator_ids": [], "_source": "hyeonkyeong/data/gen_s4_s5.jsonl", "_line": 797}
@@ -2570,7 +2561,7 @@
 {"type": "S1", "indicator_ids": [15], "prompt_id": "S1B-H4c-023", "style": "영어약어", "seed_id": "H4c-023", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2467}
 {"type": "S3", "kind": "A 값 없음", "indicator_ids": [20], "_source": "hyeonkyeong/data/gen_s3.jsonl", "_line": 263}
 {"type": "S1", "indicator_ids": [9], "prompt_id": "S1B-H4b-012", "style": "오타", "seed_id": "H4b-012", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1920}
-{"type": "S2", "indicator_ids": [12, 13], "prompt_id": "S1B-H4b-052", "style": "반말", "seed_id": "H4b-052", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2196}
+{"type": "S2", "indicator_ids": [13], "prompt_id": "S1B-H4b-052", "style": "반말", "seed_id": "H4b-052", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2196}
 {"type": "S2", "indicator_ids": [4, 19], "prompt_id": "S2A-04_19", "style": "반말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2956}
 {"type": "S2", "indicator_ids": [3, 7, 18], "prompt_id": "S2A-03_07_18", "style": "줄임말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2856}
 {"type": "S1", "indicator_ids": [15], "prompt_id": "S1B-H4c-020", "style": "영어약어", "seed_id": "H4c-020", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2451}
@@ -2813,7 +2804,6 @@
 {"type": "S1", "indicator_ids": [15], "prompt_id": "S1A-15-3", "style": "존댓말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1004}
 {"type": "S3", "kind": "B 지표 모호", "indicator_ids": [8, 9, 14], "_source": "hyeonkyeong/data/gen_s3.jsonl", "_line": 300}
 {"type": "S2", "indicator_ids": [2, 10], "prompt_id": "S2A-02_10", "style": "존댓말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2820}
-{"type": "S1", "indicator_ids": [16], "prompt_id": "S1V-16-느슨", "style": "존댓말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1087}
 {"type": "S1", "indicator_ids": [6], "prompt_id": "S1B-H4a-037", "style": "반말", "seed_id": "H4a-037", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1628}
 {"type": "S1", "indicator_ids": [13], "prompt_id": "S1A-13-2", "style": "존댓말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 850}
 {"type": "S5", "kind": "S5 20개 밖 지표", "indicator_ids": [], "_source": "hyeonkyeong/data/gen_s4_s5.jsonl", "_line": 951}
@@ -2898,7 +2888,7 @@
 {"type": "S4", "kind": "S4 값 지정", "indicator_ids": [4], "locked": [14, 16, 20], "_source": "hyeonkyeong/data/gen_s4_s5.jsonl", "_line": 163}
 {"type": "S1", "indicator_ids": [18], "prompt_id": "S1A-18-3", "style": "존댓말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1190}
 {"type": "S1", "indicator_ids": [16], "prompt_id": "S1B-H4c-032", "style": "반말", "seed_id": "H4c-032", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2507}
-{"type": "S2", "indicator_ids": [12, 13], "prompt_id": "S1B-H4b-052", "style": "반말", "seed_id": "H4b-052", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2194}
+{"type": "S2", "indicator_ids": [13], "prompt_id": "S1B-H4b-052", "style": "반말", "seed_id": "H4b-052", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2194}
 {"type": "S6", "indicator_ids": [3], "_source": "byungjun/data/S-4_gen_s6_s7.jsonl", "_line": 56}
 {"type": "S6", "indicator_ids": [7], "_source": "byungjun/data/S-4_gen_s6_s7.jsonl", "_line": 138}
 {"type": "S6", "indicator_ids": [18], "_source": "byungjun/data/S-4_gen_s6_s7.jsonl", "_line": 375}
@@ -2961,7 +2951,6 @@
 {"type": "SEED", "seed_id": "H4a-002", "id": "H4a-002", "kind": "단일", "note": "'미만' = <. 이하(<=)와 구분", "indicator_ids": [1], "text": "부채비율 100% 미만인 회사만 보여줘", "output": {"indicators": [{"id": 1, "operator": "<", "value": 100, "unit": "%", "source": "user"}, {"id": 2, "operator": "<=", "value": 30, "unit": "%", "source": "default"}, {"id": 3, "operator": ">=", "value": 3, "unit": "배", "source": "default"}, {"id": 4, "operator": "<=", "value": 0, "unit": "%", "source": "default"}, {"id": 5, "operator": ">", "value": 0, "unit": "억원", "source": "default"}, {"id": 6, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 7, "operator": ">=", "value": 5, "unit": "%", "source": "default"}, {"id": 8, "operator": ">=", "value": 15, "unit": "%", "source": "default"}, {"id": 9, "operator": ">=", "value": 10, "unit": "%", "source": "default"}, {"id": 10, "operator": "<=", "value": 10, "unit": "배", "source": "default"}, {"id": 11, "operator": "<=", "value": 1, "unit": "배", "source": "default"}, {"id": 12, "operator": ">=", "value": 2, "unit": "%", "source": "default"}, {"id": 13, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 14, "operator": ">=", "value": 10000, "unit": "억원", "source": "default"}, {"id": 15, "operator": ">=", "value": 10, "unit": "%", "source": "default"}, {"id": 16, "operator": ">=", "value": -20, "unit": "%", "source": "default"}, {"id": 17, "operator": "<=", "value": 50, "unit": "%", "source": "default"}, {"id": 18, "operator": "<=", "value": 2, "unit": "%", "source": "default"}, {"id": 19, "operator": ">=", "value": 10, "unit": "억원", "source": "default"}, {"id": 20, "operator": ">=", "value": 2, "unit": "배", "source": "default"}], "anchors": [1]}, "_source": "haechan/data/seed_1-7.jsonl", "_line": 2}
 {"type": "S2", "indicator_ids": [3, 4], "prompt_id": "S1B-H4a-052", "style": "줄임말", "seed_id": "H4a-052", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1749}
 {"type": "S4", "kind": "S4 상대 요청", "indicator_ids": [2], "locked": [12], "_source": "hyeonkyeong/data/gen_s4_s5.jsonl", "_line": 347}
-{"type": "S1", "indicator_ids": [16], "prompt_id": "S1V-16-보통", "style": "줄임말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1084}
 {"type": "S6", "indicator_ids": [17], "_source": "byungjun/data/S-4_gen_s6_s7.jsonl", "_line": 346}
 {"type": "S1", "indicator_ids": [11], "prompt_id": "S1V-11-느슨", "style": "줄임말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 759}
 {"type": "S2", "indicator_ids": [4, 5, 14], "prompt_id": "S2A-04_05_14", "style": "반말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2894}
@@ -3146,7 +3135,7 @@
 {"type": "S2", "indicator_ids": [10, 11, 16], "prompt_id": "S1B-H4b-035", "style": "반말", "seed_id": "H4b-035", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2071}
 {"type": "S5", "kind": "S5 20개 밖 지표", "indicator_ids": [], "_source": "hyeonkyeong/data/gen_s4_s5.jsonl", "_line": 868}
 {"type": "S1", "indicator_ids": [19], "prompt_id": "S1V-19-엄격", "style": "반말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1266}
-{"type": "S2", "indicator_ids": [12, 13], "prompt_id": "S1B-H4b-052", "style": "줄임말", "seed_id": "H4b-052", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2193}
+{"type": "S2", "indicator_ids": [13], "prompt_id": "S1B-H4b-052", "style": "줄임말", "seed_id": "H4b-052", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2193}
 {"type": "S1", "indicator_ids": [18], "prompt_id": "S1V-18-보통", "style": "존댓말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1203}
 {"type": "S2", "indicator_ids": [9, 11], "prompt_id": "S2A-09_11", "style": "오타", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 3087}
 {"type": "S1", "indicator_ids": [9], "prompt_id": "S1A-09-1", "style": "반말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 571}
@@ -3429,13 +3418,12 @@
 {"type": "S1", "indicator_ids": [7], "prompt_id": "S1V-07-보통", "style": "오타", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 472}
 {"type": "SEED", "seed_id": "H4b-066", "id": "H4b-066", "kind": "거절", "note": "종목 추천 요청", "indicator_ids": [], "text": "이 주식 배당 받으려고 지금 사도 돼?", "output": {"refusal": true, "message": "저는 종목을 추천하지 않아요. 내 원칙에 맞는지는 판정서에서 확인해 볼 수 있어요.", "indicators": []}, "_source": "haechan/data/seed_8-13.jsonl", "_line": 66}
 {"type": "S1", "indicator_ids": [10], "prompt_id": "S1V-10-보통", "style": "반말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 687}
-{"type": "S1", "indicator_ids": [16], "prompt_id": "S1V-16-느슨", "style": "반말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1090}
 {"type": "S1", "indicator_ids": [1], "prompt_id": "S1A-01-2", "style": "존댓말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 20}
 {"type": "S1", "indicator_ids": [8], "prompt_id": "S1A-08-3", "style": "존댓말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 516}
 {"type": "S2", "indicator_ids": [1, 5], "prompt_id": "S1B-H4a-051", "style": "오타", "seed_id": "H4a-051", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1746}
 {"type": "S1", "indicator_ids": [11], "prompt_id": "S1A-11-3", "style": "반말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 742}
 {"type": "S7", "indicator_ids": [2], "_source": "byungjun/data/S-4_gen_s6_s7.jsonl", "_line": 432}
-{"type": "S2", "indicator_ids": [12, 13], "prompt_id": "S2B-13-15", "style": "존댓말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 3278}
+{"type": "S2", "indicator_ids": [13], "prompt_id": "S2B-13-15", "style": "존댓말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 3278}
 {"type": "S1", "indicator_ids": [4], "prompt_id": "S1V-04-엄격", "style": "존댓말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 258}
 {"type": "S4", "kind": "S4 값 지정", "indicator_ids": [20], "locked": [7, 10, 14], "_source": "hyeonkyeong/data/gen_s4_s5.jsonl", "_line": 98}
 {"type": "S6", "indicator_ids": [9], "_source": "byungjun/data/S-4_gen_s6_s7.jsonl", "_line": 169}
@@ -3658,7 +3646,6 @@
 {"type": "S4", "kind": "S4 여러 지표", "indicator_ids": [5, 18], "locked": [17], "_source": "hyeonkyeong/data/gen_s4_s5.jsonl", "_line": 448}
 {"type": "S4", "kind": "S4 값 지정", "indicator_ids": [2], "locked": [7, 17, 20], "_source": "hyeonkyeong/data/gen_s4_s5.jsonl", "_line": 212}
 {"type": "S1", "indicator_ids": [11], "prompt_id": "S1A-11-2", "style": "줄임말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 726}
-{"type": "S1", "indicator_ids": [16], "prompt_id": "S1V-16-느슨", "style": "줄임말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1093}
 {"type": "S1", "indicator_ids": [7], "prompt_id": "S1A-07-1", "style": "존댓말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 423}
 {"type": "S1", "indicator_ids": [17], "prompt_id": "S1B-H4c-037", "style": "반말", "seed_id": "H4c-037", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2528}
 {"type": "S2", "indicator_ids": [6, 12], "prompt_id": "S1B-H4b-061", "style": "줄임말", "seed_id": "H4b-061", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2260}
@@ -4069,7 +4056,7 @@
 {"type": "SEED", "seed_id": "H4c-037", "id": "H4c-037", "kind": "되묻기(값 없음)", "note": "근처 = 값 필요", "indicator_ids": [17], "text": "저점 근처 종목이 좋아", "output": {"needs_clarification": true, "reason": "VALUE_MISSING", "indicator_id": 17, "message": "1년 최저가에서 얼마나 올랐는지는 52주 저점 대비로 볼 수 있어요. 저점보다 몇 % 안쪽이면 괜찮을까요?", "options": [{"level": "엄격", "label": "20% 이내로 엄격하게 할래요", "value": 20}, {"level": "보통", "label": "50% 이내로 보통으로 할래요", "value": 50}, {"level": "느슨", "label": "100% 이내로 느슨하게 할래요", "value": 100}]}, "_source": "haechan/data/seed_14-20.jsonl", "_line": 37}
 {"type": "S1", "indicator_ids": [6], "prompt_id": "S1A-06-1", "style": "존댓말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 357}
 {"type": "S3", "kind": "A 값 없음", "indicator_ids": [18], "_source": "hyeonkyeong/data/gen_s3.jsonl", "_line": 241}
-{"type": "S3", "kind": "B 지표 모호", "indicator_ids": [12, 13], "_source": "hyeonkyeong/data/gen_s3.jsonl", "_line": 310}
+{"type": "S3", "kind": "B 지표 모호", "indicator_ids": [13], "_source": "hyeonkyeong/data/gen_s3.jsonl", "_line": 310}
 {"type": "S1", "indicator_ids": [8], "prompt_id": "S1A-08-3", "style": "존댓말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 523}
 {"type": "S1", "indicator_ids": [5], "prompt_id": "S1A-05-3", "style": "반말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 323}
 {"type": "S1", "indicator_ids": [7], "prompt_id": "S1B-H4a-045", "style": "반말", "seed_id": "H4a-045", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1693}
@@ -4238,7 +4225,7 @@
 {"type": "S2", "indicator_ids": [4, 11, 14], "prompt_id": "S2A-04_11_14", "style": "존댓말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2926}
 {"type": "S1", "indicator_ids": [3], "prompt_id": "S1B-H4a-017", "style": "오타", "seed_id": "H4a-017", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1474}
 {"type": "S6", "indicator_ids": [5], "_source": "byungjun/data/S-4_gen_s6_s7.jsonl", "_line": 85}
-{"type": "SEED", "seed_id": "H4b-052", "id": "H4b-052", "kind": "되묻기(지표 모호)", "note": "꾸준=금액인지 연속인지 모호. E06(확정)과 다르게 H3-0 T1·T2 를 따름", "indicator_ids": [12, 13], "text": "배당 꾸준한 곳이 좋아", "output": {"needs_clarification": true, "reason": "AMBIGUOUS_INDICATOR", "message": "꾸준한 배당은 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?", "candidates": [{"id": 12, "name": "12개월 배당수익률"}, {"id": 13, "name": "연속 배당 연수"}]}, "_source": "haechan/data/seed_8-13.jsonl", "_line": 52}
+{"type": "SEED", "seed_id": "H4b-052", "id": "H4b-052", "kind": "되묻기(지표 모호)", "note": "꾸준=금액인지 연속인지 모호. E06(확정)과 다르게 H3-0 T1·T2 를 따름", "indicator_ids": [13], "text": "배당 꾸준한 곳이 좋아", "output": {"needs_clarification": true, "reason": "AMBIGUOUS_INDICATOR", "message": "꾸준한 배당은 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?", "candidates": [{"id": 12, "name": "12개월 배당수익률"}, {"id": 13, "name": "연속 배당 연수"}]}, "_source": "haechan/data/seed_8-13.jsonl", "_line": 52}
 {"type": "S4", "kind": "S4 전체 요청", "indicator_ids": [16], "locked": [], "_source": "hyeonkyeong/data/gen_s4_s5.jsonl", "_line": 656}
 {"type": "S2", "indicator_ids": [5, 6, 7], "prompt_id": "S1B-H4a-043", "style": "반말", "seed_id": "H4a-043", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1682}
 {"type": "S1", "indicator_ids": [9], "prompt_id": "S1V-09-보통", "style": "줄임말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 611}
@@ -4802,7 +4789,7 @@
 {"type": "S2", "indicator_ids": [8, 14], "prompt_id": "S1B-H4b-018", "style": "반말", "seed_id": "H4b-018", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1976}
 {"type": "S7", "indicator_ids": [1], "_source": "byungjun/data/S-4_gen_s6_s7.jsonl", "_line": 421}
 {"type": "S7", "indicator_ids": [19, 9], "_source": "byungjun/data/S-4_gen_s6_s7.jsonl", "_line": 608}
-{"type": "S2", "indicator_ids": [12, 13], "prompt_id": "S1B-H4b-053", "style": "존댓말", "seed_id": "H4b-053", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2200}
+{"type": "S2", "indicator_ids": [13], "prompt_id": "S1B-H4b-053", "style": "존댓말", "seed_id": "H4b-053", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2200}
 {"type": "S1", "indicator_ids": [9], "prompt_id": "S1B-H4b-010", "style": "오타", "seed_id": "H4b-010", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1906}
 {"type": "S5", "kind": "S5 20개 밖 지표", "indicator_ids": [], "_source": "hyeonkyeong/data/gen_s4_s5.jsonl", "_line": 883}
 {"type": "S4", "kind": "S4 상대 요청", "indicator_ids": [17], "locked": [], "_source": "hyeonkyeong/data/gen_s4_s5.jsonl", "_line": 388}

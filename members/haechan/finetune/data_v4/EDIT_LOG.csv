@@ -42,3 +42,31 @@ B4,재라벨,train,1126,저점에서 회복 중인 주식,VALUE_MISSING:17,"AMBI
 B4,재라벨,train,1130,저점에서 반등한 주식,VALUE_MISSING:17,"AMBIGUOUS_INDICATOR:[15, 17]"
 B5,재라벨,train,47,대출 의존도가 높은 기업은 자금 부담이 커,VALUE_MISSING:1,VALUE_MISSING:2
 B6,재라벨,train,3280,배당을 꾸준히 뿌리는 회사,"AMBIGUOUS_INDICATOR:[12, 13]",VALUE_MISSING:13
+B6-확대,재라벨,train,2191,꾸준한 배당을 주는 곳이 좋아,"AMBIGUOUS_INDICATOR:[12, 13]",VALUE_MISSING:13
+B6-확대,재라벨,train,3284,배당을 매년 지속해서 내는 기업,"AMBIGUOUS_INDICATOR:[12, 13]",VALUE_MISSING:13
+B6-확대,재라벨,train,2195,배당이 규칙적인 곳이 좋아,"AMBIGUOUS_INDICATOR:[12, 13]",VALUE_MISSING:13
+B6-확대,재라벨,train,2192,배당이 지속적인 곳이 좋아,"AMBIGUOUS_INDICATOR:[12, 13]",VALUE_MISSING:13
+B6-확대,재라벨,train,305,꾸준히 배당하는 회사,"AMBIGUOUS_INDICATOR:[12, 13]",VALUE_MISSING:13
+B6-확대,재라벨,train,3282,연간 배당을 꾸준히 내는 기업,"AMBIGUOUS_INDICATOR:[12, 13]",VALUE_MISSING:13
+B6-확대,재라벨,train,2196,배당이 매달 나오는 곳이 좋아,"AMBIGUOUS_INDICATOR:[12, 13]",VALUE_MISSING:13
+B6-확대,재라벨,train,2194,배당이 정기적인 곳이 좋아,"AMBIGUOUS_INDICATOR:[12, 13]",VALUE_MISSING:13
+B6-확대,재라벨,train,2193,배당이 계속 나오는 곳이 좋아,"AMBIGUOUS_INDICATOR:[12, 13]",VALUE_MISSING:13
+B6-확대,재라벨,train,3278,정기적으로 배당금을 지급하는 기업,"AMBIGUOUS_INDICATOR:[12, 13]",VALUE_MISSING:13
+B6-확대,재라벨,train,310,매년 꼬박꼬박 배당하는 회사,"AMBIGUOUS_INDICATOR:[12, 13]",VALUE_MISSING:13
+B6-확대,재라벨,train,52,배당 꾸준한 곳이 좋아,"AMBIGUOUS_INDICATOR:[12, 13]",VALUE_MISSING:13
+B6-확대,재라벨,train,2200,정기 배당으로 수익 얻고 싶습니다,"AMBIGUOUS_INDICATOR:[12, 13]",VALUE_MISSING:13
+B6-확대,재라벨,val,3281,배당 지급이 매년 이어지는 회사,"AMBIGUOUS_INDICATOR:[12, 13]",VALUE_MISSING:13
+B6-확대,재라벨,val,2189,배당이 꾸준한 곳이 좋아요,"AMBIGUOUS_INDICATOR:[12, 13]",VALUE_MISSING:13
+추가점검-방향모순,제거,train,1092,전고점 대비 -30% 이상 떨어진 주식이에요,"추출:[(16, '>=', -30)]",
+추가점검-방향모순,제거,train,1083,최고가 대비 -20% 이상 떨어진 주식은 주의가 필요해요,"추출:[(16, '>=', -20)]",
+추가점검-방향모순,제거,train,1091,최고가 대비 마이너스 30% 이상 내려온 주식이에요,"추출:[(16, '>=', -30)]",
+추가점검-방향모순,제거,train,1085,고점에 비해 -20% 이상 하락한 주식은 매수 안 좋아,"추출:[(16, '>=', -20)]",
+추가점검-방향모순,제거,train,1086,신고가 대비 -20% 이상 떨어진 주식은 매도 추천,"추출:[(16, '>=', -20)]",
+추가점검-방향모순,제거,train,1088,신고가 기록한 후 -30% 이상 내려온 주식이에요,"추출:[(16, '>=', -30)]",
+추가점검-방향모순,제거,train,1089,전고점 대비 마이너스 30% 이상 감소한 주식이에요,"추출:[(16, '>=', -30)]",
+추가점검-방향모순,제거,train,1087,최고가 대비 -30퍼센트 이상 하락한 주식이에요,"추출:[(16, '>=', -30)]",
+추가점검-방향모순,제거,train,1084,신고가 대비 -20% 이상 하락한 주식은 매수 포인트 아냐,"추출:[(16, '>=', -20)]",
+추가점검-방향모순,제거,train,1090,고점 대비 -30% 이상 떨어진 종목이에요,"추출:[(16, '>=', -30)]",
+추가점검-방향모순,제거,train,1093,고점 대비 마이너스 30% 이상 하락한 주식이에요,"추출:[(16, '>=', -30)]",
+추가점검-생성설명,제거,train,2131,배당 수익률 지정됐지만 숫자 없음,VALUE_MISSING:12,
+추가점검-생성설명,제거,train,2133,배당금 비율이 지정되지만 값 없음,VALUE_MISSING:12,
