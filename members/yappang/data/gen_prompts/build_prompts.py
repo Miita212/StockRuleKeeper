@@ -25,7 +25,7 @@ def tpl(name):
 
 def load_syn():
     rows = []
-    for fn in sorted(glob.glob(os.path.join(DATA, 'synonyms_*.csv'))):
+    for fn in sorted(glob.glob(os.path.join(DATA, 'H2-*_synonyms_*.csv'))):
         with open(fn, encoding='utf-8-sig', newline='') as f:
             rows += list(csv.DictReader(f))
     return rows
