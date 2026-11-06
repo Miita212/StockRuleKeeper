@@ -1,0 +1,811 @@
+{
+ "keyword": "반도체",
+ "count": 113,
+ "errors": [],
+ "stocks": [
+  {
+   "code": "000660",
+   "name": "SK하이닉스",
+   "market": "KOSPI",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "000990",
+   "name": "DB하이텍",
+   "market": "KOSPI",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "005290",
+   "name": "동진쎄미켐",
+   "market": "KOSDAQ",
+   "industry_name": "기초화학물질 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "005930",
+   "name": "삼성전자",
+   "market": "KOSPI",
+   "industry_name": "통신 및 방송 장비 제조업",
+   "source": "manual",
+   "reason": "대표 반도체 기업이나 한투 산업분류가 '통신 및 방송 장비 제조업'이라 자동 선별에서 빠짐"
+  },
+  {
+   "code": "011690",
+   "name": "와이투솔루션",
+   "market": "KOSPI",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "011930",
+   "name": "신성이엔지",
+   "market": "KOSPI",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "014680",
+   "name": "한솔케미칼",
+   "market": "KOSPI",
+   "industry_name": "기초화학물질 제조업",
+   "source": "manual",
+   "reason": "반도체 소재(과산화수소 등). 산업분류 '기초화학물질 제조업'"
+  },
+  {
+   "code": "0155E0",
+   "name": "해치텍",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "017900",
+   "name": "광전자",
+   "market": "KOSPI",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "020760",
+   "name": "일진디스플",
+   "market": "KOSPI",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "030530",
+   "name": "원익홀딩스",
+   "market": "KOSDAQ",
+   "industry_name": "기초화학물질 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "031980",
+   "name": "피에스케이홀딩스",
+   "market": "KOSDAQ",
+   "industry_name": "특수 목적용 기계 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "032580",
+   "name": "피델릭스",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "033160",
+   "name": "엠케이전자",
+   "market": "KOSDAQ",
+   "industry_name": "전자부품 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "033170",
+   "name": "시그네틱스",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "033640",
+   "name": "네패스",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "036170",
+   "name": "에이치엠넥스",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "036200",
+   "name": "유니셈",
+   "market": "KOSDAQ",
+   "industry_name": "특수 목적용 기계 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "036540",
+   "name": "SFA반도체",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "036710",
+   "name": "심텍홀딩스",
+   "market": "KOSDAQ",
+   "industry_name": "회사본부, 지주회사 및 경영컨설팅 서비스업",
+   "source": "auto"
+  },
+  {
+   "code": "036810",
+   "name": "에프에스티",
+   "market": "KOSDAQ",
+   "industry_name": "전자부품 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "036930",
+   "name": "주성엔지니어링",
+   "market": "KOSDAQ",
+   "industry_name": "특수 목적용 기계 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "038060",
+   "name": "루멘스바이오스",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "038880",
+   "name": "아이에이",
+   "market": "KOSDAQ",
+   "industry_name": "전자부품 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "039030",
+   "name": "이오테크닉스",
+   "market": "KOSDAQ",
+   "industry_name": "특수 목적용 기계 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "039440",
+   "name": "에스티아이",
+   "market": "KOSDAQ",
+   "industry_name": "특수 목적용 기계 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "042700",
+   "name": "한미반도체",
+   "market": "KOSPI",
+   "industry_name": "특수 목적용 기계 제조업",
+   "source": "manual",
+   "reason": "반도체 후공정 장비. 산업분류 '특수 목적용 기계 제조업'"
+  },
+  {
+   "code": "043590",
+   "name": "웰킵스하이텍",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "045300",
+   "name": "성우테크론",
+   "market": "KOSDAQ",
+   "industry_name": "전자부품 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "046890",
+   "name": "서울반도체",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "052860",
+   "name": "아이앤씨",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "052900",
+   "name": "KX하이텍",
+   "market": "KOSDAQ",
+   "industry_name": "플라스틱제품 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "053610",
+   "name": "프로텍",
+   "market": "KOSDAQ",
+   "industry_name": "특수 목적용 기계 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "054450",
+   "name": "텔레칩스",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "054620",
+   "name": "APS",
+   "market": "KOSDAQ",
+   "industry_name": "기타 금융업",
+   "source": "auto"
+  },
+  {
+   "code": "058470",
+   "name": "리노공업",
+   "market": "KOSDAQ",
+   "industry_name": "전자부품 제조업",
+   "source": "manual",
+   "reason": "반도체 테스트 소켓·핀. 산업분류 '전자부품 제조업'"
+  },
+  {
+   "code": "059090",
+   "name": "미코",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "059120",
+   "name": "아진엑스텍",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "061970",
+   "name": "LB세미콘",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "064520",
+   "name": "테크엘",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "064760",
+   "name": "티씨케이",
+   "market": "KOSDAQ",
+   "industry_name": "기타 비금속 광물제품 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "066310",
+   "name": "큐에스아이",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "067310",
+   "name": "하나마이크론",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "077360",
+   "name": "덕산하이메탈",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "078350",
+   "name": "한양디지텍",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "080220",
+   "name": "제주반도체",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "080520",
+   "name": "오디텍",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "083310",
+   "name": "엘오티베큠",
+   "market": "KOSDAQ",
+   "industry_name": "특수 목적용 기계 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "083450",
+   "name": "GST",
+   "market": "KOSDAQ",
+   "industry_name": "특수 목적용 기계 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "084370",
+   "name": "유진테크",
+   "market": "KOSDAQ",
+   "industry_name": "특수 목적용 기계 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "086390",
+   "name": "유니테스트",
+   "market": "KOSDAQ",
+   "industry_name": "특수 목적용 기계 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "088280",
+   "name": "쏘닉스",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "089030",
+   "name": "테크윙",
+   "market": "KOSDAQ",
+   "industry_name": "특수 목적용 기계 제조업",
+   "source": "manual",
+   "reason": "반도체 테스트 핸들러. 산업분류 '특수 목적용 기계 제조업'"
+  },
+  {
+   "code": "089790",
+   "name": "제이티",
+   "market": "KOSDAQ",
+   "industry_name": "특수 목적용 기계 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "089890",
+   "name": "코세스",
+   "market": "KOSDAQ",
+   "industry_name": "특수 목적용 기계 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "090470",
+   "name": "제이스로보틱스",
+   "market": "KOSDAQ",
+   "industry_name": "특수 목적용 기계 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "092190",
+   "name": "서울바이오시스",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "092220",
+   "name": "KEC",
+   "market": "KOSPI",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "092600",
+   "name": "앤씨앤",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "093640",
+   "name": "케이알엠",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "094170",
+   "name": "동운아나텍",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "094360",
+   "name": "칩스앤미디어",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "095340",
+   "name": "ISC",
+   "market": "KOSDAQ",
+   "industry_name": "기계장비 및 관련 물품 도매업",
+   "source": "auto"
+  },
+  {
+   "code": "095610",
+   "name": "테스",
+   "market": "KOSDAQ",
+   "industry_name": "특수 목적용 기계 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "096870",
+   "name": "엘디티",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "097800",
+   "name": "윈팩",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "098120",
+   "name": "마이크로컨텍솔",
+   "market": "KOSDAQ",
+   "industry_name": "전자부품 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "101160",
+   "name": "월덱스",
+   "market": "KOSDAQ",
+   "industry_name": "전자부품 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "101400",
+   "name": "엔시트론",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "101490",
+   "name": "에스앤에스텍",
+   "market": "KOSDAQ",
+   "industry_name": "전자부품 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "102120",
+   "name": "어보브반도체",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "108320",
+   "name": "LX세미콘",
+   "market": "KOSPI",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "115610",
+   "name": "이미지스",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "117670",
+   "name": "알파칩스",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "123860",
+   "name": "아나패스",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "131970",
+   "name": "두산테스나",
+   "market": "KOSDAQ",
+   "industry_name": "그외 기타 전문, 과학 및 기술 서비스업",
+   "source": "manual",
+   "reason": "반도체 테스트 위탁(후공정). 산업분류가 서비스업으로 분류됨"
+  },
+  {
+   "code": "146320",
+   "name": "비씨엔씨",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "153490",
+   "name": "우리이앤엘하루틴",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "166090",
+   "name": "하나머티리얼즈",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "172670",
+   "name": "에이엘티",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "177900",
+   "name": "쓰리에이로직스",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "200470",
+   "name": "에이팩트",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "200710",
+   "name": "에이디테크놀로지",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "212710",
+   "name": "아이에스티이",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "234030",
+   "name": "싸이닉솔루션",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "240810",
+   "name": "원익IPS",
+   "market": "KOSDAQ",
+   "industry_name": "특수 목적용 기계 제조업",
+   "source": "manual",
+   "reason": "반도체 증착 장비. 산업분류 '특수 목적용 기계 제조업'"
+  },
+  {
+   "code": "241770",
+   "name": "메카로",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "272110",
+   "name": "케이엔제이",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "281820",
+   "name": "케이씨텍",
+   "market": "KOSPI",
+   "industry_name": "측정, 시험, 항해, 제어 및 기타 정밀기기 제조업; 광학기기제외",
+   "source": "manual",
+   "reason": "반도체 CMP 등 장비·소재. 산업분류 '정밀기기 제조업'"
+  },
+  {
+   "code": "289930",
+   "name": "웨이비스",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "303030",
+   "name": "지니틱스",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "317120",
+   "name": "라닉스",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "321260",
+   "name": "프로이천",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "322310",
+   "name": "오로스테크놀로지",
+   "market": "KOSDAQ",
+   "industry_name": "특수 목적용 기계 제조업",
+   "source": "manual",
+   "reason": "반도체 오버레이 계측 장비. 산업분류 '특수 목적용 기계 제조업'"
+  },
+  {
+   "code": "348210",
+   "name": "넥스틴",
+   "market": "KOSDAQ",
+   "industry_name": "특수 목적용 기계 제조업",
+   "source": "manual",
+   "reason": "웨이퍼 검사 장비. 산업분류 '특수 목적용 기계 제조업'"
+  },
+  {
+   "code": "355150",
+   "name": "코스텍시스",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "357780",
+   "name": "솔브레인",
+   "market": "KOSDAQ",
+   "industry_name": "기타 화학제품 제조업",
+   "source": "manual",
+   "reason": "반도체 식각액 등 소재. 산업분류 '기타 화학제품 제조업'"
+  },
+  {
+   "code": "365590",
+   "name": "하이딥",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "389020",
+   "name": "자람테크놀로지",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "394280",
+   "name": "오픈엣지테크놀로지",
+   "market": "KOSDAQ",
+   "industry_name": "소프트웨어 개발 및 공급업",
+   "source": "manual",
+   "reason": "반도체 설계 IP. 산업분류 '소프트웨어 개발 및 공급업'"
+  },
+  {
+   "code": "396270",
+   "name": "넥스트칩",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "399720",
+   "name": "가온칩스",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "402490",
+   "name": "그린리소스",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "403870",
+   "name": "HPSP",
+   "market": "KOSDAQ",
+   "industry_name": "특수 목적용 기계 제조업",
+   "source": "manual",
+   "reason": "반도체 열처리 장비. 산업분류 '특수 목적용 기계 제조업'"
+  },
+  {
+   "code": "424980",
+   "name": "마이크로투나노",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "429270",
+   "name": "시지트로닉스",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "432720",
+   "name": "퀄리타스반도체",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "440110",
+   "name": "파두",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "445090",
+   "name": "에이직랜드",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "452430",
+   "name": "사피엔반도체",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "456010",
+   "name": "아이씨티케이",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "464500",
+   "name": "아이언디바이스",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  },
+  {
+   "code": "486510",
+   "name": "글로벌테크놀로지",
+   "market": "KOSDAQ",
+   "industry_name": "반도체 제조업",
+   "source": "auto"
+  }
+ ]
+}
