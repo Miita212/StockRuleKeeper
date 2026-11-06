@@ -1,0 +1,43 @@
+﻿결정번호,조치,분할,원본줄,입력,변경 전 정답,변경 후 정답
+A01,재라벨,train,976,변동이 큰 주식은 어때?,PERIOD_MISSING:15,VALUE_MISSING:18
+A02,재라벨,val,988,변동이 두드러진 주식,PERIOD_MISSING:15,VALUE_MISSING:18
+A03,재라벨,train,2634,주가 변동이 큰 종목,"AMBIGUOUS_INDICATOR:[19, 20]",VALUE_MISSING:18
+A04,재라벨,train,2638,주가 변동이 빈번한 종목,"AMBIGUOUS_INDICATOR:[19, 20]",VALUE_MISSING:18
+A05,재라벨,train,2636,주가가 빈번하게 움직이는 종목,"AMBIGUOUS_INDICATOR:[19, 20]",VALUE_MISSING:18
+A06,제거,train,1254,주식이 잘 움직이는 종목은 피할 필요 없어,VALUE_MISSING:19,
+A07,제거,train,1262,주식이 잘 움직이는 종목은 마음에 드는 거야,VALUE_MISSING:19,
+A08,재라벨,train,51,이자 지급 부담이 큰 회사는 리스크가 있어,VALUE_MISSING:1,"AMBIGUOUS_INDICATOR:[1, 2, 3]"
+A09,재라벨,val,42,이자 부담이 큰 기업은 피하는 게 낫지?,VALUE_MISSING:1,"AMBIGUOUS_INDICATOR:[1, 2, 3]"
+A22,재라벨,train,19,의존도가 높은 기업은 위험성이 크다고 생각해,VALUE_MISSING:1,VALUE_MISSING:2
+A23,제거,train,1416,자본 비율이 높은 회사는 피하고 싶어요,VALUE_MISSING:1,
+A24,제거,train,2403,매출액이 많은 기업만 가져줘,VALUE_MISSING:14,
+A25,제거,val,2401,수익이 높은 기업만 선별해,VALUE_MISSING:14,
+A26,제거,train,795,안정적인 수익을 줄 수 있는 주식,VALUE_MISSING:12,
+A27,제거,train,1659,영업익만 기록한 기업,VALUE_MISSING:6,
+A28,제거,train,1522,0% 미만인 기업들만 볼래요,추출:[4],
+A29,제거,train,1573,0억원 초과 회사는 빼고 싶어요,추출:[5],
+A30,제거,train,1572,0억원을 초과하는 회사는 빼고 싶어요,추출:[5],
+A31,제거,val,3244,저항선 아래서 움직이는 주식들,"AMBIGUOUS_INDICATOR:[16, 17]",
+A33,재라벨,train,2103,초과한 가격 주식은 싫어요,"AMBIGUOUS_INDICATOR:[10, 11, 15]","AMBIGUOUS_INDICATOR:[10, 11]"
+A34,재라벨,train,2098,과도한 가격의 주식은 싫어요,"AMBIGUOUS_INDICATOR:[10, 11, 15]","AMBIGUOUS_INDICATOR:[10, 11]"
+A36,제거,train,2129,배당금 수익률이 설정됐지만 기준값(숫자)이 없어,VALUE_MISSING:12,
+A37,제거,train,2134,"배당 주는 회사, 기준값 없네",VALUE_MISSING:12,
+A38,제거,train,2136,배당금 수익률 지정됐지만 값 없음,VALUE_MISSING:12,
+A39,제거,train,2132,"배당 주는 회사, 숫자 빠졌어",VALUE_MISSING:12,
+A40,제거,val,2130,배당 주는 회사가 있는데 수치가 빠졌네,VALUE_MISSING:12,
+B1,제거,train,3234,매출이익률이 높은 기업,"AMBIGUOUS_INDICATOR:[5, 6, 7]",
+B2,제거,train,1979,성장 중인 회사,"AMBIGUOUS_INDICATOR:[8, 14]",
+B3,제거,train,3201,정기적인 수익을 기록하는 기업,"AMBIGUOUS_INDICATOR:[5, 7, 8, 9]",
+B4,재라벨,train,1095,이 주식은 바닥 근처에서 회복 중이야,VALUE_MISSING:17,"AMBIGUOUS_INDICATOR:[15, 17]"
+B4,재라벨,train,1098,이 주식은 바닥 근처에서 반등 중이야,VALUE_MISSING:17,"AMBIGUOUS_INDICATOR:[15, 17]"
+B4,재라벨,train,1103,저점에서 반등 중인 주식이야,VALUE_MISSING:17,"AMBIGUOUS_INDICATOR:[15, 17]"
+B4,재라벨,train,1105,이 종목은 바닥 근처에서 회복 중이야,VALUE_MISSING:17,"AMBIGUOUS_INDICATOR:[15, 17]"
+B4,재라벨,train,1108,저점에서 반등 중인 주식,VALUE_MISSING:17,"AMBIGUOUS_INDICATOR:[15, 17]"
+B4,재라벨,train,1109,저점 근처에서 회복 중이야,VALUE_MISSING:17,"AMBIGUOUS_INDICATOR:[15, 17]"
+B4,재라벨,train,1113,저점 근처에서 반등 중이야,VALUE_MISSING:17,"AMBIGUOUS_INDICATOR:[15, 17]"
+B4,재라벨,train,1114,바닥 근처에서 회복 중인 종목,VALUE_MISSING:17,"AMBIGUOUS_INDICATOR:[15, 17]"
+B4,재라벨,train,1116,바닥에서 반등 중인 주식,VALUE_MISSING:17,"AMBIGUOUS_INDICATOR:[15, 17]"
+B4,재라벨,train,1118,바닥 근처에서 반등 중인 종목,VALUE_MISSING:17,"AMBIGUOUS_INDICATOR:[15, 17]"
+B4,재라벨,train,1126,저점에서 회복 중인 주식,VALUE_MISSING:17,"AMBIGUOUS_INDICATOR:[15, 17]"
+B4,재라벨,train,1130,저점에서 반등한 주식,VALUE_MISSING:17,"AMBIGUOUS_INDICATOR:[15, 17]"
+B5,재라벨,train,47,대출 의존도가 높은 기업은 자금 부담이 커,VALUE_MISSING:1,VALUE_MISSING:2
