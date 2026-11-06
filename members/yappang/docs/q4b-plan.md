@@ -72,7 +72,7 @@ Q4B는 팀과 별개 트랙이라 **평가 기준을 직접 정해도 된다**�
   - S3(다중 턴), S5·S6·S7은 줄이지 않는다(시간 절감이 작거나 기능 손실이 크다).
 - 데이터 첫 답 유형이 되묻기(약 2,084)에 치우쳐 있어(지표 JSON 약 1,440, 거절 약 414) S1 되묻기를 줄이면 균형이 낫다. 다만 "되묻기 판단" 정확도가 떨어질 위험이 있다.
 - 줄일 때는 유형별 층화 추출·시드 고정으로 `data/train_sub.jsonl`을 따로 만들고 원본은 보존한다.
-- 최종 구성(A 또는 D)은 **미확정**이다.
+- 최종 구성은 **A(전체 데이터, 2에폭)로 확정**했다(2026-11-06). 다른 컴퓨터에서 본 학습 진행 중, 완료 예상 16시 이후.
 
 ## 5. 다른 컴퓨터로 옮겨 학습할 때
 
@@ -107,7 +107,10 @@ Q4B는 팀과 별개 트랙이라 **평가 기준을 직접 정해도 된다**�
 |---|---|
 | `train_model/scripts/train_qlora.py` | 학습 |
 | `train_model/scripts/eval_q4b.py` | 평가(위 2절 지표) |
-| `train_model/scripts/token_stats.py`, `merge_train_data.py` | 토큰 길이 분포, 자체 병합본 생성 |
+| `train_model/scripts/token_stats.py` | 토큰 길이 분포 |
+| `train_model/scripts/merge_train_sets.py` | 데이터 병합(byungjun 최종 병합 코드와 같은 규칙, `--compare`로 해시 비교. 병준 병합본과 완전히 같은 결과를 재현함을 확인) |
+| `data/S-1_gen_s1_s2_pass.jsonl` | `gen_s1_s2_pass.jsonl`의 ID 이름 복사본(내용 동일). 원본은 byungjun 병합 코드가 읽으므로 유지. 복사본은 gitignore라 저장소에 없을 수 있어, `merge_train_sets.py`는 복사본이 없으면 원본을 읽고 둘이 다르면 중단함 |
+| `train_model/scripts/merge_train_data.py` | 예전 복사본. S1·S2의 "기존과 첫 질문이 같으면 제외" 규칙이 없어 5,209/276이 나옴(병준 최종은 5,202/275). 쓰지 않음 |
 | `train_model/requirements.lock.txt` | 검증된 라이브러리 버전 |
 | `byungjun/finetune_merged/` | 학습 데이터 원본(최종 병합본) |
 | `hyeonkyeong/data/eval_*.jsonl` | 평가 111문항 |
