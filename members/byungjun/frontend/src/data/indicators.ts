@@ -6,7 +6,7 @@ export const indicators: Indicator[] = [
   { id: 2, name: "차입금의존도", code: "차입", desc: "빌린 돈에 기대는 정도예요", category: "재무 건전성", sample: "30% 이하" },
   { id: 3, name: "EBITDA/금융비용", code: "이자", desc: "이자 낼 여력이에요", category: "재무 건전성", sample: "3배 이상" },
   { id: 4, name: "자본잠식률", code: "잠식", desc: "자본이 바닥났는지 봐요", category: "재무 건전성", sample: "0% 이하" },
-  { id: 5, name: "영업이익", code: "영익", desc: "본업에서 번 돈이에요", category: "수익성", sample: "흑자" },
+  { id: 5, name: "영업이익", code: "영익", desc: "본업에서 번 돈이에요", category: "수익성", sample: "100억원 이상" },
   { id: 6, name: "연속 영업흑자 연수", code: "흑자", desc: "몇 년째 흑자인지 봐요", category: "수익성", sample: "3년 이상" },
   { id: 7, name: "매출순이익률", code: "순익", desc: "매출 중 남는 이익이에요", category: "수익성", sample: "5% 이상" },
   { id: 8, name: "매출액 증가율", code: "매출", desc: "매출이 얼마나 늘었는지", category: "성장성", sample: "15% 이상" },

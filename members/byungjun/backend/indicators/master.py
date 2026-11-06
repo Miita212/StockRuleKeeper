@@ -29,8 +29,6 @@ def actual_text(ind_id: int, actual: float | None) -> str:
     if actual is None:
         return "데이터 없음"
     m = MASTER[ind_id]
-    if ind_id == 5:
-        return "흑자" if actual > 0 else "적자"
     shown = actual / m["scale"]
     sign = "+" if ind_id in (15, 17) and shown > 0 else ""
     return f"{sign}{_num(shown)}{m['unit']}"
