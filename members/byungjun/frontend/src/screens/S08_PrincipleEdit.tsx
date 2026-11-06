@@ -17,11 +17,14 @@ export default function S08_PrincipleEdit() {
 
   const [clarify, setClarify] = useState<Clarify | null>(null); // 서버가 되물을 때의 질문과 선택지
   const [history, setHistory] = useState<string[]>([]); // 되묻기 전까지 사용자가 한 말
+  const [pending, setPending] = useState<string | null>(null); // 서버가 수치를 바꾸는 동안 보낸 말
 
   // 되묻는 중이면 앞서 한 말을 history로 함께 보내, 선택지 답이 무엇에 대한 것인지 서버가 알게 한다.
   async function modify(text: string) {
+    setPending(text);
     const base = principles.find((p) => p.id === editTargetId)!;
     const result = await askPrinciple(text, base, [], history);
+    setPending(null);
     if (result.needsClarify || !result.principle) {
       setClarify(result.clarify);
       setHistory([...history, text]);
@@ -48,7 +51,7 @@ export default function S08_PrincipleEdit() {
         <p className="desc">말해 주시면 수치로 바꿔서 보여 드려요. 마음에 들면 그때 반영해요.</p>
       </div>
       {clarify && <ChatBubble side="ai">{clarify.message}</ChatBubble>}
-      {clarify && (
+      {clarify && pending === null && (
         <div className="options">
           {clarify.options.map((o) => (
             <Chip key={o.label} onClick={() => modify(o.label)}>{o.label}</Chip>
@@ -56,14 +59,20 @@ export default function S08_PrincipleEdit() {
         </div>
       )}
       <div className="spacer" />
-      {!clarify && (
+      {pending !== null && (
+        <div className="chat-wait">
+          <ChatBubble side="user">{pending}</ChatBubble>
+          <ChatBubble side="ai"><span className="typing"><span className="dots"><i /><i /><i /></span>수치를 바꿔 보는 중이에요</span></ChatBubble>
+        </div>
+      )}
+      {!clarify && pending === null && (
         <div className="chip-row">
           {suggestions.map((s) => (
             <Chip key={s} onClick={() => modify(s)}>{s}</Chip>
           ))}
         </div>
       )}
-      <ChatInput placeholder="바꾸고 싶은 점을 말해 보세요" onSend={modify} />
+      <ChatInput placeholder="바꾸고 싶은 점을 말해 보세요" busy={pending !== null} busyText="수치를 바꿔 보는 중이에요" onSend={modify} />
     </div>
   );
 }
