@@ -15,6 +15,10 @@ TRAIN_FILES = [
     "hyeonkyeong/data/gen_s4_s5.jsonl",
     "byungjun/data/S-4_gen_s6_s7.jsonl",
 ]
+# 위 파일과 같은 첫 질문이 있으면 이 파일의 행을 뺀다 (같은 입력에 정답이 달라지는 것을 막는다)
+EXTRA_FILES = [
+    "yappang/data/gen_s1_s2_pass.jsonl",
+]
 EVAL_FILES = [
     "hyeonkyeong/data/eval_1-7.jsonl",
     "hyeonkyeong/data/eval_8-13.jsonl",
@@ -41,6 +45,21 @@ for path in TRAIN_FILES:
         if first_user(row) in eval_texts:  # 평가 세트와 같은 질문은 뺀다
             removed += 1
             continue
+        row["_source"] = path
+        row["_line"] = i + 1
+        rows.append(row)
+
+seen = {first_user(r) for r in rows}
+skipped = 0
+for path in EXTRA_FILES:
+    for i, row in enumerate(read_jsonl(path)):
+        if first_user(row) in eval_texts:
+            removed += 1
+            continue
+        if first_user(row) in seen:
+            skipped += 1
+            continue
+        seen.add(first_user(row))
         row["_source"] = path
         row["_line"] = i + 1
         rows.append(row)
@@ -87,5 +106,6 @@ write("train_meta.jsonl", train, True)
 write("val_meta.jsonl", val, True)
 
 print("평가와 겹쳐 제외:", removed)
+print("기존 데이터와 첫 질문이 같아 제외:", skipped)
 print("train", len(train), dict(Counter(r["type"] for r in train)))
 print("val  ", len(val), dict(Counter(r["type"] for r in val)))
