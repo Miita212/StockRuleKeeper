@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { askPrinciple } from "../api";
 import back from "../assets/icons/back.svg";
 import Button from "../components/Button";
+import BottomSheet from "../components/BottomSheet";
 import ChatInput from "../components/ChatInput";
 import ChatBubble from "../components/ChatBubble";
 import Chip from "../components/Chip";
@@ -13,7 +14,6 @@ import { useApp } from "../store/AppContext";
 import type { Clarify, IndicatorSetting, Principle } from "../types";
 
 const suggestions = ["부채비율을 더 낮춰 줘", "배당 기준을 올려 줘", "성장성도 보고 싶어", "조건을 조금 느슨하게 해 줘"];
-const PREVIEW_COUNT = 3; // 접어 둔 목록에서 보여주는 지표 수
 
 const lockedOf = (p?: Principle) => (p ? p.indicators.filter((i) => i.locked).map((i) => i.id) : []);
 const rank = (i: IndicatorSetting, lockedIds: number[]) => (lockedIds.includes(i.id) ? 0 : i.source === "default" ? 2 : 1);
@@ -27,14 +27,14 @@ export default function S08_PrincipleEdit() {
   const [pending, setPending] = useState<string | null>(null); // 서버가 수치를 바꾸는 동안 보낸 말
   const base = principles.find((p) => p.id === editTargetId);
   const [lockedIds, setLockedIds] = useState<number[]>(() => lockedOf(base)); // 잠근 지표 id. 대화로 수정할 때 서버에 보내 수치를 지킨다.
-  const [open, setOpen] = useState(false); // 지표 목록 전체 펼치기
+  const [sheetOpen, setSheetOpen] = useState(false); // "내가 설정한 지표값 상세" 시트
   const [edited, setEdited] = useState<Principle | null>(null); // 수치를 직접 고친 원칙 (저장 전)
   const view = edited ?? base; // 화면에 보여주는 원칙
 
   // 고치려는 원칙을 바꾸면 그 원칙에 저장된 잠금으로 다시 시작한다
   useEffect(() => {
     setLockedIds(lockedOf(base));
-    setOpen(false);
+    setSheetOpen(false);
     setEdited(null);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [editTargetId]);
@@ -62,7 +62,6 @@ export default function S08_PrincipleEdit() {
   const sorted = base
     ? [...base.indicators].sort((a, b) => rank(a, lockedIds) - rank(b, lockedIds) || a.id - b.id)
     : [];
-  const shown = open ? sorted : sorted.slice(0, PREVIEW_COUNT);
 
   // 되묻는 중이면 앞서 한 말을 history로 함께 보내, 선택지 답이 무엇에 대한 것인지 서버가 알게 한다.
   async function modify(text: string) {
@@ -94,39 +93,16 @@ export default function S08_PrincipleEdit() {
       <h3 className="label">원칙을 선택하세요</h3>
       <Select principles={principles} value={editTargetId} onChange={setEditTargetId} />
       {base && (
-        <div className="rule-list">
-          <div className="rule-list-head">
-            <h3>이 원칙의 지표 · {sorted.length}개</h3>
-            <span>잠근 지표 {lockedIds.length}개</span>
-          </div>
-          <p className="rule-list-note">수치를 눌러 직접 바꿔요 · 잠근 지표는 대화로 안 바뀌어요</p>
-          <div className={`rule-list-body${open ? " open" : ""}`}>
-            {shown.map((i) => (
-              <IndicatorCard
-                key={i.id}
-                indicator={findIndicator(i.id)}
-                value={view!.values[i.id]}
-                locked={lockedIds.includes(i.id)}
-                onToggleLock={() => toggleLock(i.id)}
-                onEditValue={(text, n) => editValue(i.id, text, n)}
-                tag={view!.indicators.find((x) => x.id === i.id)!.source === "default" ? "default" : "user"}
-              />
-            ))}
-          </div>
-          {sorted.length > PREVIEW_COUNT && (
-            <button type="button" className="rule-list-toggle" onClick={() => setOpen(!open)}>
-              {open ? "접기" : `나머지 ${sorted.length - PREVIEW_COUNT}개 보기`}
-              <span className={`chev${open ? " up" : ""}`} />
-            </button>
-          )}
-        </div>
+        <button type="button" className="detail-btn" onClick={() => setSheetOpen(true)}>
+          <span className="spark" />
+          내가 설정한 지표값 상세보기
+          <span aria-hidden>›</span>
+        </button>
       )}
-      {!open && (
-        <div className="guide s08-guide">
-          <h2 className="headline-sm">어떻게 바꾸고 싶으세요?</h2>
-          <p className="desc">말해 주시면 수치로 바꿔서 보여 드려요.</p>
-        </div>
-      )}
+      <div className="guide s08-guide">
+        <h2 className="headline-sm">어떻게 바꾸고 싶으세요?</h2>
+        <p className="desc">말해 주시면 수치로 바꿔서 보여 드려요. 마음에 들면 그때 반영해요.</p>
+      </div>
       {clarify && <ChatBubble side="ai">{clarify.message}</ChatBubble>}
       {clarify && pending === null && (
         <div className="options">
@@ -142,8 +118,7 @@ export default function S08_PrincipleEdit() {
           <ChatBubble side="ai"><span className="typing"><span className="dots"><i /><i /><i /></span>수치를 바꿔 보는 중이에요</span></ChatBubble>
         </div>
       )}
-      {edited && !clarify && pending === null && <Button onClick={continueEdited}>수정한 수치로 이어서 확인</Button>}
-      {!edited && !clarify && pending === null && !open && (
+      {!clarify && pending === null && (
         <div className="chip-row">
           {suggestions.map((s) => (
             <Chip key={s} onClick={() => modify(s)}>{s}</Chip>
@@ -151,6 +126,32 @@ export default function S08_PrincipleEdit() {
         </div>
       )}
       <ChatInput placeholder="바꾸고 싶은 점을 말해 보세요" busy={pending !== null} busyText="수치를 바꿔 보는 중이에요" onSend={modify} />
+      <BottomSheet open={sheetOpen} onClose={() => setSheetOpen(false)}>
+        <div className="sheet-title">
+          <h2>내가 설정한 지표값</h2>
+        </div>
+        <div className="rule-list">
+          <div className="rule-list-head">
+            <h3>이 원칙의 지표 · {sorted.length}개</h3>
+            <span>잠근 지표 {lockedIds.length}개</span>
+          </div>
+          <p className="rule-list-note">수치를 눌러 직접 바꿔요 · 잠근 지표는 대화로 안 바뀌어요</p>
+          <div className="rule-list-body open">
+            {sorted.map((i) => (
+              <IndicatorCard
+                key={i.id}
+                indicator={findIndicator(i.id)}
+                value={view!.values[i.id]}
+                locked={lockedIds.includes(i.id)}
+                onToggleLock={() => toggleLock(i.id)}
+                onEditValue={(text, n) => editValue(i.id, text, n)}
+                tag={view!.indicators.find((x) => x.id === i.id)!.source === "default" ? "default" : "user"}
+              />
+            ))}
+          </div>
+        </div>
+        {edited ? <Button onClick={continueEdited}>수정한 수치로 이어서 확인</Button> : <Button onClick={() => setSheetOpen(false)}>닫기</Button>}
+      </BottomSheet>
     </div>
   );
 }
