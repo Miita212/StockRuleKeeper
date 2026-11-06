@@ -1,0 +1,27 @@
+평가 111건 → outputs/eval_base
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights:   1%|          | 2/399 [00:00<00:27, 14.53it/s]Loading weights:   9%|▉         | 37/399 [00:00<00:01, 183.08it/s]Loading weights:  15%|█▌        | 60/399 [00:00<00:01, 201.85it/s]Loading weights:  21%|██        | 82/399 [00:00<00:01, 206.62it/s]Loading weights:  29%|██▊       | 114/399 [00:00<00:01, 234.67it/s]Loading weights:  40%|███▉      | 158/399 [00:00<00:00, 299.62it/s]Loading weights:  51%|█████     | 202/399 [00:00<00:00, 343.03it/s]Loading weights:  59%|█████▉    | 237/399 [00:00<00:00, 338.22it/s]Loading weights:  69%|██████▉   | 276/399 [00:00<00:00, 351.96it/s]Loading weights:  78%|███████▊  | 312/399 [00:01<00:00, 328.84it/s]Loading weights:  87%|████████▋ | 346/399 [00:01<00:00, 320.62it/s]Loading weights:  98%|█████████▊| 390/399 [00:01<00:00, 353.01it/s]Loading weights: 100%|██████████| 399/399 [00:01<00:00, 302.52it/s]
+/home/dgu/miniforge3/envs/srk-ft/lib/python3.11/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+  생성 8/111
+  생성 16/111
+  생성 24/111
+  생성 32/111
+  생성 40/111
+  생성 48/111
+  생성 56/111
+  생성 64/111
+  생성 72/111
+  생성 80/111
+  생성 88/111
+  생성 96/111
+  생성 104/111
+  생성 111/111
+
+===== 결과: base (111건, 1건당 0.74초) =====
+  json_valid        97.3%  (n=111)
+  type_correct       0.0%  (n=111)
+  anchor_exact       0.0%  (n=67)
+  all20_exact        0.0%  (n=67)
+  clarify_correct    0.0%  (n=30)
+  refusal_correct    0.0%  (n=14)
+EVAL_EXIT=0

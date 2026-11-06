@@ -1,0 +1,12 @@
+{
+  "name": "base",
+  "n": 111,
+  "seconds": 81.6,
+  "seconds_per_item": 0.74,
+  "json_valid": 0.972972972972973,
+  "type_correct": 0.0,
+  "anchor_exact": 0.0,
+  "all20_exact": 0.0,
+  "clarify_correct": 0.0,
+  "refusal_correct": 0.0
+}

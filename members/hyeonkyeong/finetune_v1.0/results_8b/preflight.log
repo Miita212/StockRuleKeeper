@@ -1,0 +1,85 @@
+===== 1. 토큰 길이 (max_len = 2048 ) =====
+[train] 대화 2090개 → 샘플 2515개  최대 1179  평균 458  잘리는 샘플 0건  총 토큰 1,151,871
+   S3    샘플  765개  최대  1179  평균   570
+   S4    샘플  665개  최대   820  평균   758
+   S5    샘플  291개  최대   154  평균   136
+   S6    샘플  399개  최대   185  평균   133
+   S7    샘플  200개  최대   247  평균   186
+   SEED  샘플  195개  최대   725  평균   423
+[val] 대화 111개 → 샘플 135개  최대 1092  평균 467  잘리는 샘플 0건  총 토큰 63,035
+   S3    샘플   42개  최대  1092  평균   568
+   S4    샘플   35개  최대   808  평균   766
+   S5    샘플   15개  최대   146  평균   136
+   S6    샘플   21개  최대   161  평균   132
+   S7    샘플   10개  최대   228  평균   181
+   SEED  샘플   12개  최대   713  평균   480
+
+===== 2. 마스크 샘플 ([[ ]] 안이 학습되는 부분) =====
+
+--- S3 (1번째 답) ---
+<|im_start|>system
+너는 투자 원칙 점검 앱의 도우미야. 사용자의 말을 지표 20개 기준 JSON으로 바꿔. JSON만 출력하고, 종목 추천이나 수익 예측은 하지 않아.<|im_end|>
+<|im_start|>user
+PER 낮은 주식<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+[[{"needs_clarification": true, "reason": "VALUE_MISSING", "indicator_id": 10, "message": "버는 돈에 비해 주가가 싼지는 PER로 볼 수 있어요. PER이 몇 배 이하면 괜찮을까요?", "options": [{"level": "엄격", "label": "8배 이하로 엄격하게 할래요", "value": 8}, {"level": "보통", "label": "10배 이하로 보통으로 할래요", "value": 10}, {"level": "느슨", "label": "15배 이하로 느슨하게 할래요", "value": 15}]}<|im_end|>]]
+
+--- S3 (2번째 답) ---
+<|im_start|>system
+너는 투자 원칙 점검 앱의 도우미야. 사용자의 말을 지표 20개 기준 JSON으로 바꿔. JSON만 출력하고, 종목 추천이나 수익 예측은 하지 않아.<|im_end|>
+<|im_start|>user
+PER 낮은 주식<|im_end|>
+<|im_start|>assistant
+{"needs_clarification": true, "reason": "VALUE_MISSING", "indicator_id": 10, "message": "버는 돈에 비해 주가가 싼지는 PER로 볼 수 있어요. PER이 몇 배 이하면 괜찮을까요?", "options": [{"level": "엄격", "label": "8배 이하로 엄격하게 할래요", "value": 8}, {"level": "보통", "label": "10배 이하로 보통으로 할래요", "value": 10}, {"level": "느슨", "label": "15배 이하로 느슨하게 할래요", "value": 15}]}<|im_end|>
+<|im_start|>user
+15배 이하로 느슨하게 할래요<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+[[{"indicators": [{"id": 1, "operator": "<=", "value": 100, "unit": "%", "source": "default"}, {"id": 2, "operator": "<=", "value": 30, "unit": "%", "source": "default"}, {"id": 3, "operator": ">=", "value": 3, "unit": "배", "source": "default"}, {"id": 4, "operator": "<=", "value": 0, "unit": "%", "source": "default"}, {"id": 5, "operator": ">", "value": 0, "unit": "억원", "source": "default"}, {"id": 6, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 7, "operator": ">=", "value": 5, "unit": "%", "source": "default"}, {"id": 8, "operator": ">=", "value": 15, "unit": "%", "source": "default"}, {"id": 9, "operator": ">=", "value": 10, "unit": "%", "source": "default"}, {"id": 10, "operator": "<=", "value": 15, "unit": "배", "source": "user"}, {"id": 11, "operator": "<=", "value": 1, "unit": "배", "source": "default"}, {"id": 12, "operator": ">=", "value": 2, "unit": "%", "source": "default"}, {"id": 13, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 14, "operator": ">=", "value": 10000, "unit": "억원", "source": "default"}, {"id": 15, "operator": ">=", "value": 10, "unit": "%", "source": "default"}, {"id": 16, "operator": ">=", "value": -20, "unit": "%", "source": "default"}, {"id": 17, "operator": "<=", "value": 50, "unit": "%", "source": "default"}, {"id": 18, "operator": "<=", "value": 2, "unit": "%", "source": "default"}, {"id": 19, "operator": ">=", "value": 10, "unit": "억원", "source": "default"}, {"id": 20, "operator": ">=", "value": 2, "unit": "배", "source": "default"}], "anchors": [10], "explain_bubble": "PER 기준을 15배 이하로 잡았어요. 번 돈의 15배까지는 괜찮다고 보는 느슨한 기준이에요. 나중에 바꿀 수 있어요."}<|im_end|>]]
+
+--- SEED (1번째 답) ---
+<|im_start|>system
+너는 투자 원칙 점검 앱의 도우미야. 사용자의 말을 지표 20개 기준 JSON으로 바꿔. JSON만 출력하고, 종목 추천이나 수익 예측은 하지 않아.<|im_end|>
+<|im_start|>user
+부채 많은곳은 시러요<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+[[{"needs_clarification": true, "reason": "VALUE_MISSING", "indicator_id": 1, "message": "빚이 많다는 건 보통 부채비율이 높다는 뜻이에요. 어느 정도까지 괜찮을까요?", "options": [{"level": "엄격", "label": "50% 이하로 엄격하게 할래요", "value": 50}, {"level": "보통", "label": "100% 이하로 보통으로 할래요", "value": 100}, {"level": "느슨", "label": "200% 이하로 느슨하게 할래요", "value": 200}]}<|im_end|>]]
+
+--- S4 (1번째 답) ---
+<|im_start|>system
+너는 투자 원칙 점검 앱의 도우미야. 사용자의 말을 지표 20개 기준 JSON으로 바꿔. JSON만 출력하고, 종목 추천이나 수익 예측은 하지 않아.<|im_end|>
+<|im_start|>user
+현재 원칙: {"indicators": [{"id": 1, "operator": "<=", "value": 100, "unit": "%", "source": "default"}, {"id": 2, "operator": "<=", "value": 30, "unit": "%", "source": "default"}, {"id": 3, "operator": ">=", "value": 3, "unit": "배", "source": "default"}, {"id": 4, "operator": "<=", "value": 0, "unit": "%", "source": "default"}, {"id": 5, "operator": ">", "value": 0, "unit": "억원", "source": "default"}, {"id": 6, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 7, "operator": ">=", "value": 5, "unit": "%", "source": "default"}, {"id": 8, "operator": ">=", "value": 15, "unit": "%", "source": "user"}, {"id": 9, "operator": ">=", "value": 10, "unit": "%", "source": "default", "locked": true}, {"id": 10, "operator": "<=", "value": 10, "unit": "배", "source": "default"}, {"id": 11, "operator": "<=", "value": 1, "unit": "배", "source": "default"}, {"id": 12, "operator": ">=", "value": 2, "unit": "%", "source": "default"}, {"id": 13, "operator": ">=", "value": 3, "unit": "년", "source": "default"}, {"id": 14, "operator": ">=", "value": 10000, "unit": "억원", "source": "default", "locked": true}, {"id": 15, "operator": ">=", "value": 10, "unit": "%", "source": "default"}, {"id": 16, "operator": ">=", "value": -20, "unit": "%", "source": "default"}, {"id": 17, "operator": "<=", "value": 50, "unit": "%", "source": "default"}, {"id": 18, "operator": "<=", "value": 2, "unit": "%", "source": "default"}, {"id": 19, "operator": ">=", "value": 10, "unit": "억원", "source": "default"}, {"id": 20, "operator": ">=", "value": 2, "unit": "배", "source": "default"}]}
+요청: 연속 영업흑자 연수 기준 더 깐깐하게 바꿔 줘<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+[[{"changes": [{"id": 6, "name": "연속 영업흑자 연수", "before": 3, "after": 4, "unit": "년"}]}<|im_end|>]]
+
+--- S6 (1번째 답) ---
+<|im_start|>system
+너는 투자 원칙 점검 앱의 도우미야. 주식 용어를 초보자에게 해요체로 쉽게 설명해. 종목 추천이나 수익 예측은 하지 않아.<|im_end|>
+<|im_start|>user
+PBR 계산식 알려줘<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+[[계산식은 「주가 ÷ 주당순자산(BPS)」이에요. 회사가 가진 순자산에 비해 주가가 몇 배인지 보는 지표예요.<|im_end|>]]
+
+===== 3. 전체 마스크 검사 =====
+train 대화 2090개 → 샘플 2515개, 이상 0건

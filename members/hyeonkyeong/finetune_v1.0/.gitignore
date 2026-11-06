@@ -1,0 +1,5 @@
+# 모델 가중치·체크포인트·GGUF 는 커밋하지 않는다 (팀 규칙: 대용량 파일 제외)
+models/
+tools/
+outputs/*
+!outputs/.gitkeep
