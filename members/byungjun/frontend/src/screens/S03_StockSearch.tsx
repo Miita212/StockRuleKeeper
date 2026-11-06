@@ -96,7 +96,7 @@ export default function S03_StockSearch() {
           <div key={s.code} className="stock-card" onClick={() => navigate(`/stocks/${s.code}`, { state: { name: s.name } })}>
             <div className="indicator-text">
               <div className="indicator-name">{s.name}</div>
-              <div className="stock-sub">{s.code} · 원칙 {s.passCount}/{total}개 충족</div>
+              <div className="stock-sub">{s.code} · 지표 {s.passCount}/{total}개 충족</div>
             </div>
             <div className={`rate ${s.changeRate >= 0 ? "up" : "down"}`}>
               {s.changeRate >= 0 ? "▲" : "▼"} {Math.abs(s.changeRate)}%

@@ -52,6 +52,8 @@ export default function PrincipleChat({ edit = false }: { edit?: boolean }) {
   const [includeDefaults, setIncludeDefaults] = useState(() => hasDefaults(base)); // "그 외 지표(기본값)를 원칙에 포함"
   const [restOpen, setRestOpen] = useState(false); // 그 외 지표 펼치기
   const [sheetOpen, setSheetOpen] = useState(false); // 고치기: "내가 설정한 지표값 상세" 시트
+  const [nameOpen, setNameOpen] = useState(false); // 새 원칙: 이름 정하기 시트
+  const [nameInput, setNameInput] = useState(""); // 이름 입력칸 (AI가 지은 이름으로 시작)
   const endRef = useRef<HTMLDivElement>(null);
   const restRef = useRef<HTMLDivElement>(null);
 
@@ -162,7 +164,8 @@ export default function PrincipleChat({ edit = false }: { edit?: boolean }) {
     setLockedIds((ids) => (ids.includes(id) ? ids.filter((x) => x !== id) : [...ids, id]));
   }
 
-  async function approve() {
+  // newName: 새 원칙을 저장할 때 사용자가 정한 이름
+  async function approve(newName?: string) {
     if (!draft) return;
     // "원칙에 포함"을 끄면 기본값 지표는 빼고, 대화로 정한 지표만 원칙으로 저장한다.
     const toSave = {
@@ -182,7 +185,7 @@ export default function PrincipleChat({ edit = false }: { edit?: boolean }) {
       setPrinciples(principles.map((p) => (p.id === updated.id ? updated : p)));
       navigate("/edit-done");
     } else {
-      const saved = await savePrinciple(toSave);
+      const saved = await savePrinciple({ ...toSave, name: newName || draft.name || "내 원칙" });
       setPrinciples([...principles, saved]);
       setCurrentId(saved.id);
       if (principles.length === 0) {
@@ -191,6 +194,12 @@ export default function PrincipleChat({ edit = false }: { edit?: boolean }) {
       }
       navigate("/stocks");
     }
+  }
+
+  // 새 원칙은 저장하기 전에 이름을 정한다
+  function openName() {
+    setNameInput(draft?.name ?? "");
+    setNameOpen(true);
   }
 
   // ---- 지표 카드 (대화 맨 아래 하나) ----
@@ -303,7 +312,7 @@ export default function PrincipleChat({ edit = false }: { edit?: boolean }) {
   }
 
   const approveButton = draft && pending === null && messages[messages.length - 1]?.kind === "result" && (
-    <Button onClick={approve}>{edit ? "이대로 수정할래요" : "이 원칙으로 시작해요"}</Button>
+    <Button onClick={edit ? () => approve() : openName}>{edit ? "이대로 수정할래요" : "이 원칙으로 시작해요"}</Button>
   );
   const talking = messages.length > 0 || pending !== null;
 
@@ -411,6 +420,25 @@ export default function PrincipleChat({ edit = false }: { edit?: boolean }) {
         busyText={pending ?? ""}
         onSend={send}
       />
+      {!edit && (
+        <BottomSheet open={nameOpen} onClose={() => setNameOpen(false)}>
+          <div className="sheet-title">
+            <h2>원칙의 이름을 정해 주세요</h2>
+          </div>
+          <p className="name-desc">말씀하신 내용으로 이름을 지어 뒀어요. 마음대로 고쳐도 돼요. 원칙 리스트에서 나중에 바꿀 수도 있어요.</p>
+          <div className="name-box">
+            <input
+              value={nameInput}
+              maxLength={30}
+              placeholder="원칙 이름"
+              onChange={(e) => setNameInput(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && approve(nameInput.trim())}
+            />
+            <span>{nameInput.length}/30</span>
+          </div>
+          <Button onClick={() => approve(nameInput.trim())}>이 이름으로 시작해요</Button>
+        </BottomSheet>
+      )}
     </div>
   );
 }

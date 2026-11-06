@@ -45,10 +45,10 @@ export function categoryLabel(category: string, count: number) {
   return `${category} · ${count}개`;
 }
 
-// 원칙 한 줄 요약 (예: "원칙 20개 · 부채비율 100% 이하 외")
+// 원칙 한 줄 요약 (예: "지표 20개 · 부채비율 100% 이하 외")
 export function summarize(principle: Principle) {
   const ids = Object.keys(principle.values).map(Number);
   const first = indicators.find((i) => ids.includes(i.id));
-  if (!first) return "원칙 0개";
-  return `원칙 ${ids.length}개 · ${first.name} ${principle.values[first.id]}${ids.length > 1 ? " 외" : ""}`;
+  if (!first) return "지표 0개";
+  return `지표 ${ids.length}개 · ${first.name} ${principle.values[first.id]}${ids.length > 1 ? " 외" : ""}`;
 }
