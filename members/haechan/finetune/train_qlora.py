@@ -79,6 +79,7 @@ def main():
     ap.add_argument("--lr", type=float, default=1e-4, help="byungjun 명세 1e-4 (불안정하면 5e-5, 느리면 2e-4)")
     ap.add_argument("--max-steps", type=int, default=-1, help="스모크 테스트용. 예: 50 (-1 이면 에폭 기준)")
     ap.add_argument("--eval-steps", type=int, default=0, help="평가·저장 간격(스텝). 0 이면 0.5 에폭마다")
+    ap.add_argument("--resume", default=None, help="체크포인트 폴더에서 이어서 학습 (학습률 일정·옵티마이저 상태 포함). 다른 설정은 처음과 같게")
     ap.add_argument("--group-by-length", action="store_true",
                     help="길이가 비슷한 샘플끼리 배치. 기본 끔: 답 유형마다 길이가 달라 배치가 한 유형으로 몰리고 v1·v2가 한 유형으로 쏠렸다")
     ap.add_argument("--batch", type=int, default=2, help="GPU 한 번에 처리하는 샘플 수 (16GB 기준. 24GB 면 4)")
@@ -190,7 +191,7 @@ def main():
         remove_unused_columns=False,
     )
     trainer = Trainer(model=model, args=targs, train_dataset=train_ex, eval_dataset=val_ex, data_collator=collate)
-    trainer.train()
+    trainer.train(resume_from_checkpoint=args.resume)
     trainer.save_model(args.out)  # LoRA 어댑터만 저장(합치기·양자화는 따로)
     tok.save_pretrained(args.out)
     print("저장 완료:", args.out)
