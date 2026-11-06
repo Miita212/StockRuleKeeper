@@ -65,4 +65,5 @@ v1의 되묻기 97%, v2의 거절 100%는 잘 배운 결과가 아니라, 한 �
 - `eval_v2/`: v2 체크포인트(76/152/153) 평가
 - `diag/`: 학습 문장 진단 결과와 로그
 - `train_logs/`: 학습 로그(손실 변화)
+- `adapter_v1/`, `adapter_v2_1ep/`: 어댑터 설정·토크나이저 (byungjun `finetune_train/runs/v1`과 같은 구성). 가중치 `adapter_model.safetensors`(349MB)는 크기·팀 규칙 때문에 제외
 - 스크립트(상위 폴더): `train_qlora.py` 학습, `eval_model.py` 평가, `prep_data_v2.py` v2 데이터 생성, `run_v2_test.sh` v2 학습+평가 자동 실행, `diag_train_samples.py` 진단

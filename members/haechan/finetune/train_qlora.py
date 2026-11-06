@@ -78,6 +78,9 @@ def main():
     ap.add_argument("--epochs", type=float, default=3)
     ap.add_argument("--lr", type=float, default=1e-4, help="byungjun 명세 1e-4 (불안정하면 5e-5, 느리면 2e-4)")
     ap.add_argument("--max-steps", type=int, default=-1, help="스모크 테스트용. 예: 50 (-1 이면 에폭 기준)")
+    ap.add_argument("--eval-steps", type=int, default=0, help="평가·저장 간격(스텝). 0 이면 0.5 에폭마다")
+    ap.add_argument("--group-by-length", action="store_true",
+                    help="길이가 비슷한 샘플끼리 배치. 기본 끔: 답 유형마다 길이가 달라 배치가 한 유형으로 몰리고 v1·v2가 한 유형으로 쏠렸다")
     ap.add_argument("--batch", type=int, default=2, help="GPU 한 번에 처리하는 샘플 수 (16GB 기준. 24GB 면 4)")
     ap.add_argument("--accum", type=int, default=8, help="gradient accumulation (실효 배치 = batch x accum = 16)")
     ap.add_argument("--rank", type=int, default=32)
@@ -154,8 +157,9 @@ def main():
 
     # 0.5 에폭마다 평가·저장 (byungjun 명세). 샘플을 턴 단위로 풀어서 에폭당 스텝은 명세(131)보다 많다.
     steps_per_epoch = max(1, -(-len(train_ex) // (args.batch * args.accum)))
-    half_epoch = max(1, steps_per_epoch // 2)
-    print(f"에폭당 약 {steps_per_epoch}스텝, 평가·저장 {half_epoch}스텝마다, 전체 약 {int(steps_per_epoch * args.epochs)}스텝")
+    half_epoch = args.eval_steps or max(1, steps_per_epoch // 2)
+    total_steps = args.max_steps if args.max_steps > 0 else int(steps_per_epoch * args.epochs)
+    print(f"에폭당 약 {steps_per_epoch}스텝, 평가·저장 {half_epoch}스텝마다, 전체 약 {total_steps}스텝, group_by_length={args.group_by_length}")
     targs = TrainingArguments(
         output_dir=args.out,
         num_train_epochs=args.epochs,
@@ -165,8 +169,8 @@ def main():
         gradient_accumulation_steps=args.accum,
         learning_rate=args.lr,
         lr_scheduler_type="cosine",
-        warmup_ratio=0.05,
-        weight_decay=0.01,
+        # byungjun train.py(정상 학습 확인됨)와 맞춤: warmup 은 스텝 수로, weight_decay 는 기본값(0)
+        warmup_steps=int(total_steps * 0.05),
         max_grad_norm=1.0,
         optim="paged_adamw_8bit",
         bf16=True,
@@ -180,7 +184,7 @@ def main():
         load_best_model_at_end=True,
         metric_for_best_model="eval_loss",
         greater_is_better=False,
-        group_by_length=True,
+        group_by_length=args.group_by_length,
         report_to="none",
         seed=args.seed,
         remove_unused_columns=False,
