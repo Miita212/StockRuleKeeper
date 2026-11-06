@@ -12,12 +12,13 @@ type Props = {
   mark?: "match" | "soft" | "changed" | "rest" | "off"; // 02: match=대화로 정한 지표, soft=이전에 정한 지표, changed=방금 바꾼 지표, rest=기본값 지표, off=원칙에 포함하지 않는 기본값 지표
   prev?: string; // changed일 때 바꾸기 전 값
   onEditValue?: (text: string, number: number) => void; // 있으면 수치를 눌러 직접 입력할 수 있다
+  glow?: boolean; // 02: 방금 대화로 정해지거나 바뀐 지표는 파란 테두리에 은은한 빛이 난다
   tag?: "user" | "default"; // 08: 설명 줄 대신 "내가 정한 지표"/"기본값"을 보여준다
 };
 
-export default function IndicatorCard({ indicator, value, compact, locked, onToggleLock, mark, prev, tag, onEditValue }: Props) {
+export default function IndicatorCard({ indicator, value, compact, locked, onToggleLock, mark, prev, tag, glow, onEditValue }: Props) {
   return (
-    <div className={`indicator-card ${compact ? "compact" : ""}${mark ? ` mark-${mark}` : ""}${tag ? ` tag-${tag}` : ""}`}>
+    <div className={`indicator-card ${compact ? "compact" : ""}${mark ? ` mark-${mark}` : ""}${tag ? ` tag-${tag}` : ""}${glow ? " glow" : ""}`}>
       <div className="code">{indicator.code}</div>
       <div className="indicator-text">
         <div className="indicator-name">
