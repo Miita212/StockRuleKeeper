@@ -1,0 +1,12 @@
+{
+  "name": "checkpoint-553",
+  "n": 111,
+  "seconds": 89.7,
+  "seconds_per_item": 0.81,
+  "json_valid": 0.9819819819819819,
+  "type_correct": 0.32432432432432434,
+  "anchor_exact": 0.0,
+  "all20_exact": 0.0,
+  "clarify_correct": 0.5,
+  "refusal_correct": 0.7142857142857143
+}

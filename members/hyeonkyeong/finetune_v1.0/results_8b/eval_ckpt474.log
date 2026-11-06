@@ -1,0 +1,26 @@
+평가 111건 → outputs/eval_checkpoint-474
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights:   0%|          | 1/399 [00:00<01:16,  5.19it/s]Loading weights:   1%|          | 2/399 [00:00<02:09,  3.06it/s]Loading weights:   2%|▏         | 6/399 [00:00<00:37, 10.46it/s]Loading weights:   4%|▍         | 17/399 [00:00<00:12, 30.59it/s]Loading weights:   7%|▋         | 28/399 [00:00<00:08, 45.35it/s]Loading weights:  10%|▉         | 38/399 [00:01<00:06, 58.02it/s]Loading weights:  12%|█▏        | 48/399 [00:01<00:05, 68.07it/s]Loading weights:  14%|█▍        | 57/399 [00:01<00:04, 73.24it/s]Loading weights:  17%|█▋        | 66/399 [00:01<00:04, 74.59it/s]Loading weights:  20%|██        | 81/399 [00:01<00:03, 87.35it/s]Loading weights:  23%|██▎       | 92/399 [00:01<00:03, 89.21it/s]Loading weights:  26%|██▌       | 102/399 [00:01<00:03, 91.99it/s]Loading weights:  28%|██▊       | 112/399 [00:01<00:03, 86.49it/s]Loading weights:  30%|███       | 121/399 [00:02<00:03, 82.37it/s]Loading weights:  33%|███▎      | 130/399 [00:02<00:03, 78.50it/s]Loading weights:  35%|███▍      | 138/399 [00:02<00:03, 72.35it/s]Loading weights:  37%|███▋      | 149/399 [00:02<00:03, 75.68it/s]Loading weights:  40%|████      | 160/399 [00:02<00:03, 77.54it/s]Loading weights:  43%|████▎     | 171/399 [00:02<00:02, 79.70it/s]Loading weights:  46%|████▌     | 182/399 [00:02<00:02, 80.60it/s]Loading weights:  48%|████▊     | 192/399 [00:02<00:02, 85.11it/s]Loading weights:  51%|█████     | 202/399 [00:03<00:02, 88.93it/s]Loading weights:  53%|█████▎    | 212/399 [00:03<00:02, 83.85it/s]Loading weights:  56%|█████▌    | 224/399 [00:03<00:01, 92.55it/s]Loading weights:  59%|█████▊    | 234/399 [00:03<00:01, 94.09it/s]Loading weights:  61%|██████    | 244/399 [00:03<00:01, 78.77it/s]Loading weights:  64%|██████▍   | 256/399 [00:03<00:01, 88.87it/s]Loading weights:  67%|██████▋   | 266/399 [00:03<00:01, 84.87it/s]Loading weights:  69%|██████▉   | 275/399 [00:03<00:01, 82.23it/s]Loading weights:  71%|███████   | 284/399 [00:04<00:03, 36.66it/s]Loading weights:  73%|███████▎  | 291/399 [00:04<00:03, 35.26it/s]Loading weights:  75%|███████▍  | 299/399 [00:04<00:02, 40.69it/s]Loading weights:  76%|███████▋  | 305/399 [00:04<00:02, 42.11it/s]Loading weights:  78%|███████▊  | 313/399 [00:05<00:01, 46.19it/s]Loading weights:  81%|████████  | 323/399 [00:05<00:01, 56.35it/s]Loading weights:  83%|████████▎ | 330/399 [00:05<00:01, 51.82it/s]Loading weights:  84%|████████▍ | 337/399 [00:05<00:01, 47.52it/s]Loading weights:  86%|████████▋ | 345/399 [00:05<00:00, 54.06it/s]Loading weights:  88%|████████▊ | 352/399 [00:05<00:00, 51.56it/s]Loading weights:  90%|████████▉ | 358/399 [00:06<00:01, 35.43it/s]Loading weights:  92%|█████████▏| 368/399 [00:06<00:00, 46.27it/s]Loading weights:  95%|█████████▍| 378/399 [00:06<00:00, 56.24it/s]Loading weights:  97%|█████████▋| 387/399 [00:06<00:00, 63.63it/s]Loading weights:  99%|█████████▉| 395/399 [00:06<00:00, 64.13it/s]Loading weights: 100%|██████████| 399/399 [00:06<00:00, 60.79it/s]
+/home/dgu/miniforge3/envs/srk-ft/lib/python3.11/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+  생성 8/111
+  생성 16/111
+  생성 24/111
+  생성 32/111
+  생성 40/111
+  생성 48/111
+  생성 56/111
+  생성 64/111
+  생성 72/111
+  생성 80/111
+  생성 88/111
+  생성 96/111
+  생성 104/111
+  생성 111/111
+
+===== 결과: checkpoint-474 (111건, 1건당 0.88초) =====
+  json_valid        98.2%  (n=111)
+  type_correct      29.7%  (n=111)
+  anchor_exact       0.0%  (n=67)
+  all20_exact        0.0%  (n=67)
+  clarify_correct   40.0%  (n=30)
+  refusal_correct   78.6%  (n=14)

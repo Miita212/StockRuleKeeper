@@ -1,0 +1,12 @@
+{
+  "name": "checkpoint-474",
+  "n": 111,
+  "seconds": 97.2,
+  "seconds_per_item": 0.88,
+  "json_valid": 0.9819819819819819,
+  "type_correct": 0.2972972972972973,
+  "anchor_exact": 0.0,
+  "all20_exact": 0.0,
+  "clarify_correct": 0.4,
+  "refusal_correct": 0.7857142857142857
+}

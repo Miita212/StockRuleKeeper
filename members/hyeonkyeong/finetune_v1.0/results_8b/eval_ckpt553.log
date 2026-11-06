@@ -1,0 +1,26 @@
+평가 111건 → outputs/eval_checkpoint-553
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights:   0%|          | 1/399 [00:00<04:16,  1.55it/s]Loading weights:   2%|▏         | 6/399 [00:00<00:39,  9.96it/s]Loading weights:   4%|▍         | 17/399 [00:00<00:13, 28.09it/s]Loading weights:   7%|▋         | 27/399 [00:01<00:08, 42.87it/s]Loading weights:  14%|█▎        | 54/399 [00:01<00:03, 94.60it/s]Loading weights:  21%|██        | 83/399 [00:01<00:02, 139.29it/s]Loading weights:  29%|██▉       | 116/399 [00:01<00:01, 184.88it/s]Loading weights:  40%|███▉      | 159/399 [00:01<00:00, 249.33it/s]Loading weights:  51%|█████     | 203/399 [00:01<00:00, 300.13it/s]Loading weights:  62%|██████▏   | 247/399 [00:01<00:00, 336.01it/s]Loading weights:  73%|███████▎  | 291/399 [00:01<00:00, 361.38it/s]Loading weights:  84%|████████▍ | 335/399 [00:01<00:00, 379.39it/s]Loading weights:  95%|█████████▍| 379/399 [00:01<00:00, 395.21it/s]Loading weights: 100%|██████████| 399/399 [00:01<00:00, 202.08it/s]
+/home/dgu/miniforge3/envs/srk-ft/lib/python3.11/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+  생성 8/111
+  생성 16/111
+  생성 24/111
+  생성 32/111
+  생성 40/111
+  생성 48/111
+  생성 56/111
+  생성 64/111
+  생성 72/111
+  생성 80/111
+  생성 88/111
+  생성 96/111
+  생성 104/111
+  생성 111/111
+
+===== 결과: checkpoint-553 (111건, 1건당 0.81초) =====
+  json_valid        98.2%  (n=111)
+  type_correct      32.4%  (n=111)
+  anchor_exact       0.0%  (n=67)
+  all20_exact        0.0%  (n=67)
+  clarify_correct   50.0%  (n=30)
+  refusal_correct   71.4%  (n=14)
