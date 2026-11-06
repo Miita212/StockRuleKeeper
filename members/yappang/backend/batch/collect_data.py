@@ -31,7 +31,7 @@ ERRORS = config.ROOT / ".cache" / "collect_errors.json"
 def collect_kis(conn, code: str, force: bool) -> None:
     today = date.today()
     have = conn.execute("SELECT COUNT(*), MAX(date) FROM prices_daily WHERE code=?", (code,)).fetchone()
-    if force or have[0] < 400 or have[1] < (today - timedelta(days=5)).isoformat():
+    if force or have[0] < 400 or have[1] < today.isoformat():
         start = today - timedelta(days=PRICE_DAYS) if force or have[0] < 400 else date.fromisoformat(have[1])
         rows = quotes.get_daily_prices(code, start, today)
         conn.executemany("INSERT OR REPLACE INTO prices_daily(code,date,close,volume,value) VALUES (?,?,?,?,?)",

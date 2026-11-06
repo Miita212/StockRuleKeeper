@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 import Steps from "../components/Steps";
+import ValueInput from "../components/ValueInput";
 import { categoryLabel, groupByCategory } from "../data/indicators";
 import { useApp } from "../store/AppContext";
 
@@ -36,14 +37,14 @@ export default function S11_SimAdjust() {
       </div>
       <div className="guide s11-guide">
         <h2 className="headline-sm">원칙 수치를 수정하세요</h2>
-        <p className="desc">+ − 를 눌러 바꿔 보세요. 바뀐 값은 파란색으로 표시돼요.</p>
+        <p className="desc">+ − 나 숫자를 눌러 바꿔요. 바뀐 값은 파란색이에요.</p>
       </div>
       <div className="scroll">
         {groups.map(([category, items]) => [
           <h3 key={category} className="category">{categoryLabel(category, items.length)}</h3>,
           ...items.map((i) => {
             const edited = simValues[i.id] !== origin[i.id];
-            const [number, direction] = split(simValues[i.id]);
+            const [, direction] = split(simValues[i.id]);
             const sub = edited ? `${direction} · 기존 ${split(origin[i.id])[0]}` : direction;
             return (
               <div key={i.id} className={`stepper-card ${edited ? "edited" : ""}`}>
@@ -53,7 +54,9 @@ export default function S11_SimAdjust() {
                   {sub && <div className="indicator-desc">{sub}</div>}
                 </div>
                 <button onClick={() => step(i.id, -1)} aria-label="낮추기">−</button>
-                <div className="stepper-value">{number}</div>
+                <div className="stepper-value">
+                  <ValueInput value={simValues[i.id]} showDirection={false} onChange={(text) => setSimValues({ ...simValues, [i.id]: text })} />
+                </div>
                 <button onClick={() => step(i.id, 1)} aria-label="높이기">+</button>
               </div>
             );

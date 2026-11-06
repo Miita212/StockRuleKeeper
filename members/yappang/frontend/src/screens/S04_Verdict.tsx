@@ -1,5 +1,5 @@
 ﻿import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { getVerdict } from "../api";
 import check from "../assets/icons/check.svg";
 import x from "../assets/icons/x.svg";
@@ -11,6 +11,7 @@ import type { Verdict } from "../types";
 export default function S04_Verdict() {
   const navigate = useNavigate();
   const { code } = useParams();
+  const stockName: string | undefined = useLocation().state?.name; // 03에서 넘어올 때 받은 종목 이름
   const { principles, currentId } = useApp();
   const principle = principles.find((p) => p.id === currentId)!;
   const [verdict, setVerdict] = useState<Verdict | null>(null);
@@ -19,7 +20,39 @@ export default function S04_Verdict() {
     getVerdict(code!, principle).then(setVerdict);
   }, [code, principle]);
 
-  if (!verdict) return <div className="screen">판정 중...</div>;
+  if (!verdict) {
+    return (
+      <div className="screen with-footer s04">
+        <h1 className="title">판정서</h1>
+        <div className="verdict-card">
+          <div className="verdict-head">
+            <div>
+              <span className="name">{stockName}</span>
+              <span className="stock-code">{code}</span>
+            </div>
+            <span className="skeleton" style={{ width: 64, height: 22 }} />
+          </div>
+          <div className="summary waiting">
+            <span>최신 값으로 판정하는 중이에요</span>
+            <span className="skeleton" style={{ width: 84, height: 32, borderRadius: 8 }} />
+          </div>
+          <div className="scroll">
+            {Array.from({ length: 8 }, (_, n) => (
+              <div key={n} className="verdict-row skeleton-row">
+                <span className="skeleton circle" />
+                <div className="indicator-text">
+                  <span className="skeleton" style={{ width: 100, height: 14 }} />
+                  <span className="skeleton" style={{ width: 70, height: 10 }} />
+                </div>
+                <span className="skeleton" style={{ width: 48, height: 18 }} />
+              </div>
+            ))}
+          </div>
+        </div>
+        <Button variant="secondary" onClick={() => navigate("/stocks")}>닫기</Button>
+      </div>
+    );
+  }
 
   const passed = verdict.rows.filter((r) => r.pass).length;
   const { stock } = verdict;
