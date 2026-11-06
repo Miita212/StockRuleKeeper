@@ -2339,7 +2339,7 @@
 {"type": "S1", "indicator_ids": [19], "prompt_id": "S1A-19-2", "style": "줄임말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1232}
 {"type": "S1", "indicator_ids": [14], "prompt_id": "S1B-H4c-005", "style": "오타", "seed_id": "H4c-005", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 2355}
 {"type": "S5", "indicator_ids": [], "prompt_id": "S5R-H4a-063", "style": "존댓말", "seed_id": "H4a-063", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1822}
-{"type": "S3", "kind": "B 지표 모호", "indicator_ids": [13], "_source": "hyeonkyeong/data/gen_s3.jsonl", "_line": 305}
+{"type": "S3", "kind": "B 지표 모호", "indicator_ids": [12, 13], "_source": "hyeonkyeong/data/gen_s3.jsonl", "_line": 305}
 {"type": "S3", "kind": "A 값 없음", "indicator_ids": [6], "_source": "hyeonkyeong/data/gen_s3.jsonl", "_line": 84}
 {"type": "S2", "indicator_ids": [8, 9], "prompt_id": "S1B-H4b-016", "style": "줄임말", "seed_id": "H4b-016", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1956}
 {"type": "S4", "kind": "S4 전체 요청", "indicator_ids": [11], "locked": [], "_source": "hyeonkyeong/data/gen_s4_s5.jsonl", "_line": 662}
@@ -4056,7 +4056,7 @@
 {"type": "SEED", "seed_id": "H4c-037", "id": "H4c-037", "kind": "되묻기(값 없음)", "note": "근처 = 값 필요", "indicator_ids": [17], "text": "저점 근처 종목이 좋아", "output": {"needs_clarification": true, "reason": "VALUE_MISSING", "indicator_id": 17, "message": "1년 최저가에서 얼마나 올랐는지는 52주 저점 대비로 볼 수 있어요. 저점보다 몇 % 안쪽이면 괜찮을까요?", "options": [{"level": "엄격", "label": "20% 이내로 엄격하게 할래요", "value": 20}, {"level": "보통", "label": "50% 이내로 보통으로 할래요", "value": 50}, {"level": "느슨", "label": "100% 이내로 느슨하게 할래요", "value": 100}]}, "_source": "haechan/data/seed_14-20.jsonl", "_line": 37}
 {"type": "S1", "indicator_ids": [6], "prompt_id": "S1A-06-1", "style": "존댓말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 357}
 {"type": "S3", "kind": "A 값 없음", "indicator_ids": [18], "_source": "hyeonkyeong/data/gen_s3.jsonl", "_line": 241}
-{"type": "S3", "kind": "B 지표 모호", "indicator_ids": [13], "_source": "hyeonkyeong/data/gen_s3.jsonl", "_line": 310}
+{"type": "S3", "kind": "B 지표 모호", "indicator_ids": [12, 13], "_source": "hyeonkyeong/data/gen_s3.jsonl", "_line": 310}
 {"type": "S1", "indicator_ids": [8], "prompt_id": "S1A-08-3", "style": "존댓말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 523}
 {"type": "S1", "indicator_ids": [5], "prompt_id": "S1A-05-3", "style": "반말", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 323}
 {"type": "S1", "indicator_ids": [7], "prompt_id": "S1B-H4a-045", "style": "반말", "seed_id": "H4a-045", "_source": "yappang/data/gen_s1_s2_pass.jsonl", "_line": 1693}

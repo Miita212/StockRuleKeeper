@@ -46,13 +46,13 @@ B6-확대,재라벨,train,2191,꾸준한 배당을 주는 곳이 좋아,"AMBIGUO
 B6-확대,재라벨,train,3284,배당을 매년 지속해서 내는 기업,"AMBIGUOUS_INDICATOR:[12, 13]",VALUE_MISSING:13
 B6-확대,재라벨,train,2195,배당이 규칙적인 곳이 좋아,"AMBIGUOUS_INDICATOR:[12, 13]",VALUE_MISSING:13
 B6-확대,재라벨,train,2192,배당이 지속적인 곳이 좋아,"AMBIGUOUS_INDICATOR:[12, 13]",VALUE_MISSING:13
-B6-확대,재라벨,train,305,꾸준히 배당하는 회사,"AMBIGUOUS_INDICATOR:[12, 13]",VALUE_MISSING:13
+B6-확대,되돌림(다중 턴 S3 대화라 원본 복원),train,305,꾸준히 배당하는 회사,"AMBIGUOUS_INDICATOR:[12, 13]","(변경 없음, 원본 그대로)"
 B6-확대,재라벨,train,3282,연간 배당을 꾸준히 내는 기업,"AMBIGUOUS_INDICATOR:[12, 13]",VALUE_MISSING:13
 B6-확대,재라벨,train,2196,배당이 매달 나오는 곳이 좋아,"AMBIGUOUS_INDICATOR:[12, 13]",VALUE_MISSING:13
 B6-확대,재라벨,train,2194,배당이 정기적인 곳이 좋아,"AMBIGUOUS_INDICATOR:[12, 13]",VALUE_MISSING:13
 B6-확대,재라벨,train,2193,배당이 계속 나오는 곳이 좋아,"AMBIGUOUS_INDICATOR:[12, 13]",VALUE_MISSING:13
 B6-확대,재라벨,train,3278,정기적으로 배당금을 지급하는 기업,"AMBIGUOUS_INDICATOR:[12, 13]",VALUE_MISSING:13
-B6-확대,재라벨,train,310,매년 꼬박꼬박 배당하는 회사,"AMBIGUOUS_INDICATOR:[12, 13]",VALUE_MISSING:13
+B6-확대,되돌림(다중 턴 S3 대화라 원본 복원),train,310,매년 꼬박꼬박 배당하는 회사,"AMBIGUOUS_INDICATOR:[12, 13]","(변경 없음, 원본 그대로)"
 B6-확대,재라벨,train,52,배당 꾸준한 곳이 좋아,"AMBIGUOUS_INDICATOR:[12, 13]",VALUE_MISSING:13
 B6-확대,재라벨,train,2200,정기 배당으로 수익 얻고 싶습니다,"AMBIGUOUS_INDICATOR:[12, 13]",VALUE_MISSING:13
 B6-확대,재라벨,val,3281,배당 지급이 매년 이어지는 회사,"AMBIGUOUS_INDICATOR:[12, 13]",VALUE_MISSING:13
@@ -70,3 +70,10 @@ B6-확대,재라벨,val,2189,배당이 꾸준한 곳이 좋아요,"AMBIGUOUS_IND
 추가점검-방향모순,제거,train,1093,고점 대비 마이너스 30% 이상 하락한 주식이에요,"추출:[(16, '>=', -30)]",
 추가점검-생성설명,제거,train,2131,배당 수익률 지정됐지만 숫자 없음,VALUE_MISSING:12,
 추가점검-생성설명,제거,train,2133,배당금 비율이 지정되지만 값 없음,VALUE_MISSING:12,
+초기제거,제거,train,1252,마법의 흐름을 가진 주식은 좋아,VALUE_MISSING:19,
+초기제거,제거,train,2409,이익률이 높은 기업만 보여줘,VALUE_MISSING:14,
+초기제거,제거,train,2588,이제는 주식 팔고 싶은 마음이 있어,VALUE_MISSING:18,
+초기제거,제거,train,340,공장에서 만든 제품이 100억 이상이라면 그 회사는 괜찮아,추출,
+초기제거,제거,train,9,지진 위험 지역 같은 회사야,VALUE_MISSING:1,
+초기제거,제거,train,3189,예산 초과로 흔들리는 회사,AMBIGUOUS_INDICATOR:None,
+초기제거,제거,train,437,이익이 잘 떨어지는 회사는 좋은 투자처야,VALUE_MISSING:7,
