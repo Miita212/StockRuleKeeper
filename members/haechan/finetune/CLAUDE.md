@@ -7,3 +7,4 @@
 - 학습 코드를 참고하려면 현재 `train_qlora.py`(2026-11-06 수정본, group_by_length 기본 끔)나 `members/byungjun/finetune_train/train.py`를 볼 것. **2026-11-06 이전 커밋의 `train_qlora.py`는 쓰지 말 것.**
 - 참고 금지 폴더: `results/eval_v1/`, `results/eval_v2/`, `results/diag/`, `results/adapter_v1-haechan/`, `results/adapter_v2_1ep-haechan/`, `results/train_logs/v1_train.log`, `results/train_logs/v2_1ep_train.log`, `prep_data_v2.py`·`run_v2_test.sh`(v2용, 데이터 비율 가설은 틀렸음)
 - 참고해도 되는 결과: v3 이후(`*v3*-haechan`). 자세한 내용은 `results/RESULTS.md` 6절.
+- **`test_haechan/`(58건)은 시험 전용이다. 학습 데이터에 넣지 말 것.** 넣으면 v3·v4 비교가 무의미해진다. 보강 데이터는 `data_aug/`, v4 학습 데이터는 `data_v5/build_v5.py`로 만든다(RESULTS.md 10절).

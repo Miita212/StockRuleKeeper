@@ -145,11 +145,12 @@ def main():
     ap.add_argument("--variants", nargs="*", help="base 또는 이름=어댑터경로. 기본: base + runs/qwen3-8b-v1/checkpoint-*")
     ap.add_argument("--out", default=str(HERE / "runs" / "eval"))
     ap.add_argument("--limit", type=int, default=0, help="앞에서 N건만 (동작 확인용)")
+    ap.add_argument("--data", default=EVAL_GLOB, help="평가할 jsonl (glob). 기본: hyeonkyeong 평가 세트 111건")
     ap.add_argument("--batch", type=int, default=8)
     ap.add_argument("--max-new", type=int, default=1024)
     args = ap.parse_args()
 
-    rows = [r for f in sorted(glob.glob(EVAL_GLOB)) for r in read_jsonl(f)]
+    rows = [r for f in sorted(glob.glob(args.data)) for r in read_jsonl(f)]
     if args.limit:
         rows = rows[: args.limit]
     variants = args.variants

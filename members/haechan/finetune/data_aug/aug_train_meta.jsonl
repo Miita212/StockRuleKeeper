@@ -1,0 +1,210 @@
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [17], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [18], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [19], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "설립 연도", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [12, 13], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [17, 18], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [13], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "ESG 점수", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [17, 18], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [8], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "배당성향", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "상한가 횟수", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [3], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [8], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [14], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [16], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [15], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [1, 2], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [1], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "상한가 횟수", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [18], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [16], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "공매도 비율", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [9], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [2], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [6], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [15], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [16], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "개인 순매수", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "업종", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "신용잔고", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [1], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [8], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [16], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [20], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "재고자산 회전율", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [2, 4], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [2], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [8], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "재고자산 회전율", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "시장점유율", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "목표주가", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [18], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [6, 13], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [14], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "외국인 순매수", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [14], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "재고자산 회전율", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [1], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [13], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [6], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [2], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [15, 18], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [2], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [13], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [8], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "분기배당", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [1, 2], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "수주잔고", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [2], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [2, 4], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [8, 9], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [20], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [17], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "외국인 순매수", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "공매도 비율", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "외국인 지분율", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [16], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [8, 10], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [16, 17], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "이동평균선", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [6], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [15], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "자사주 매입", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [14, 20], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [16], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [16], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "개인 순매수", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "배당성향", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [8, 9], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [19], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [2], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [17], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [1, 3], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [15, 18], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "이동평균선", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "연구개발비", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [15, 20], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [3], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [13], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [20], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [9], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [1, 3], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "업종", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "배당성향", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "ROE", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "업종", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [17], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [17], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [16], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [14, 19], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [20], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "대주주 지분율", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "수주잔고", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [9], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [17], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [8, 9], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [13], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [14, 20], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [6], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [13], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "대주주 지분율", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "ROE", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "신용잔고", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [15], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [1, 2], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [13], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [15, 20], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "주당배당금", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [13], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [6], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [8, 9], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [12, 13], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [9], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "외국인 지분율", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [1], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [4], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [20], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [16, 18], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [12, 13], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [8, 10], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "주당배당금", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "주당배당금", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [4], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [16, 17], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "내부자 매수", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "목표주가", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [18], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [8], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [17], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [8], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [2, 4], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [1, 2], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [16, 18], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [19], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [15], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "매출총이익률", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [1, 3], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [20], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "분기배당", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [8, 9], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "외국인 지분율", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [1, 2], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "연구개발비", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "ROE", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [8, 9], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [9], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [6, 13], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "목표주가", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [13], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [8], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "직원 수", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "ESG 점수", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [14, 19], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [17], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "분기배당", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [17], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "업종", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [15], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [9], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [8, 10], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [8], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [9], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "자사주 매입", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "상한가 횟수", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [2], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [16, 17], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "해외 매출 비중", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [17, 18], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [2], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [16, 18], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [15, 20], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "수주잔고", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [19], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [14, 20], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "매출총이익률", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "설립 연도", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [16], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "자사주 매입", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [9], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [15, 18], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [14, 19], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "개인 순매수", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [15, 20], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [9], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [4], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [3], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [16, 18], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [17, 18], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "내부자 매수", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [8, 9], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "시장점유율", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [14, 19], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [8, 9], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "직원 수", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S2", "kind": "haechan 보강: 지표 혼동·두 지표", "indicator_ids": [6, 13], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [13], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [6], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S5", "kind": "haechan 보강: 20개 밖 개념(풀어 말하기)", "indicator_ids": [], "concept": "연구개발비", "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
+{"type": "S1", "kind": "haechan 보강: 지표 혼동", "indicator_ids": [17], "_source": "haechan/finetune/data_aug/gen_aug_haechan.py"}
