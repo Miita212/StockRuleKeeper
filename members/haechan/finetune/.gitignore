@@ -1,0 +1,5 @@
+# 모델·데이터·실행 출력은 커밋하지 않는다 (팀 규칙)
+runs/
+data_v2/
+run_v2_test.out
+__pycache__/
