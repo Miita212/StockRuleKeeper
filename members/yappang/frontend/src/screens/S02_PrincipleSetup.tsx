@@ -22,6 +22,7 @@ export default function S02_PrincipleSetup({ edit = false }: { edit?: boolean })
   );
   const [clarify, setClarify] = useState<Clarify | null>(null); // 수정 말이 모호해서 서버가 되물을 때의 질문과 선택지
   const [history, setHistory] = useState<string[]>([]); // 되묻기 전까지 사용자가 한 말
+  const [recentIds, setRecentIds] = useState<number[] | null>(null); // 방금 대화로 정해지거나 바뀐 지표 (null: 처음 만든 직후라 해당 지표 전체)
   const [modifying, setModifying] = useState(false); // 서버가 수치를 다시 바꾸는 중
   // "그 외 지표(기본값)를 원칙에 포함" 스위치. 저장된 원칙을 고치는 중이면 그 원칙이 기본값 지표를 담고 있었는지로 시작한다.
   const [includeDefaults, setIncludeDefaults] = useState(() => {
@@ -68,6 +69,7 @@ export default function S02_PrincipleSetup({ edit = false }: { edit?: boolean })
 
   // 수치를 직접 입력하면 그 지표는 내가 정한 지표(user)가 된다
   function editValue(id: number, text: string, n: number) {
+    setRecentIds([id]);
     setDraft({
       ...draft!,
       values: { ...draft!.values, [id]: text },
@@ -94,6 +96,17 @@ export default function S02_PrincipleSetup({ edit = false }: { edit?: boolean })
     // 모델 응답과 상관없이 잠긴 지표는 기존 수치를 그대로 유지한다
     const values = { ...result.principle.values };
     for (const id of lockedIds) values[id] = draft!.values[id];
+    // 이번 대화로 새로 정해졌거나 연산자·값이 바뀐 지표가 "방금 설정된 지표"
+    const old = new Map(draft!.indicators.map((i) => [i.id, i]));
+    setRecentIds(
+      result.principle.indicators
+        .filter((i) => i.source !== "default")
+        .filter((i) => {
+          const o = old.get(i.id);
+          return !o || o.source === "default" || o.operator !== i.operator || o.value !== i.value;
+        })
+        .map((i) => i.id),
+    );
     setDraft({ ...result.principle, values, id: draft!.id, name: draft!.name });
   }
 
@@ -122,6 +135,7 @@ export default function S02_PrincipleSetup({ edit = false }: { edit?: boolean })
         onToggleLock={() => toggleLock(id)}
         onEditValue={(text, n) => editValue(id, text, n)}
         mark={mark}
+        glow={!edit && mark === "match" && (recentIds === null || recentIds.includes(id))}
         prev={prev}
       />
     );
