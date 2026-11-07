@@ -9,10 +9,13 @@
 """
 import csv
 import json
+import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 FT = HERE.parent
+sys.path.insert(0, str(FT / "data_aug"))
+from gen_aug_v6 import amb  # noqa: E402
 
 # (문장, 지표 id, 지금 부등호, 바로잡을 부등호)
 FIXES = [
@@ -42,6 +45,10 @@ FIXES = [
 ]
 
 
+# 공식 평가셋에서 '규모가 큰 회사'는 시총·거래대금 중 고르는 되묻기(14·19)다. 학습의 '규모' 값 묻기 14(4행)를 같은 기준으로 맞춘다.
+RELABEL_AMB = ["규모가 큰 기업들만 골라줘", "작은 규모는 피하고 싶어요", "작은 규모의 회사는 피하고 싶어요", "규모가 작은 회사는 피하고 싶어요"]
+
+
 def rd(p):
     return [json.loads(l) for l in open(p, encoding="utf-8") if l.strip()]
 
@@ -68,6 +75,13 @@ def main():
                         log.append((sp, text, iid, old, new))
             out.setdefault(text, 0)
             out[text] += hit
+        for r, m in zip(rows, meta):
+            if len(r["messages"]) == 3 and r["messages"][1]["content"] in RELABEL_AMB:
+                d = json.loads(r["messages"][2]["content"])
+                assert d.get("reason") == "VALUE_MISSING" and d.get("indicator_id") == 14, r["messages"][1]["content"]
+                r["messages"][2]["content"] = amb("규모", (14, 19))
+                m["_relabel"] = "haechan data_v6: 규모 → 고르기 14·19 (공식 평가셋 기준)"
+                log.append((sp, r["messages"][1]["content"], 14, "VALUE_MISSING:14", "AMBIGUOUS_INDICATOR:14,19"))
         aug = HERE.parent / "data_aug" / f"aug6_{sp}.jsonl"
         n_aug = 0
         if aug.exists():
@@ -81,12 +95,12 @@ def main():
             for r, m in zip(rows, meta):
                 f.write(json.dumps(r, ensure_ascii=False) + "\n")
                 g.write(json.dumps(m, ensure_ascii=False) + "\n")
-        print(f"{sp}: {len(rows)}행 (부등호 바로잡음 {sum(1 for l in log if l[0] == sp)}, aug6 {n_aug})")
+        print(f"{sp}: {len(rows)}행 (라벨 바꿈 {sum(1 for l in log if l[0] == sp)}, aug6 {n_aug})")
     missing = [t for t, h in out.items() if h == 0]
     assert not missing, f"못 찾은 행: {missing}"
     with open(HERE / "EDIT_LOG_v6.csv", "w", encoding="utf-8-sig", newline="") as f:
         w = csv.writer(f)
-        w.writerow(["분할", "입력", "지표", "변경 전 부등호", "변경 후 부등호"])
+        w.writerow(["분할", "입력", "지표", "변경 전", "변경 후"])
         w.writerows(log)
 
 
