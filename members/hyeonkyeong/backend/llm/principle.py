@@ -123,7 +123,8 @@ def current_rule_text(base: dict, locked_ids: list[int]) -> str:
 
 def local_messages(text: str, base: dict | None, locked_ids: list[int], history: list[str]) -> list[dict]:
     if history:  # 되묻기에 대한 답: 앞선 대화(모델의 되묻기 포함)를 이어 붙인다(S3 형식)
-        if _dialog["users"] == history:
+        # 첫 문장이 같으면 같은 대화로 본다(화면에 따라 history에 첫 문장만 보내는 경우가 있다)
+        if _dialog["users"] and _dialog["users"][0] == history[0]:
             msgs = list(_dialog["messages"])
         else:  # 서버가 다시 켜져 대화를 잃었으면 사용자 말만 이어 붙인다
             msgs = [{"role": "user", "content": h} for h in history]
