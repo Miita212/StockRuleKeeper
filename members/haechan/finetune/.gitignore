@@ -6,3 +6,5 @@ run_v2_test.out
 __pycache__/
 data_v5/*.jsonl
 data_v6/*.jsonl
+data_v7/*.jsonl
+data_aug/aug7_*.jsonl
