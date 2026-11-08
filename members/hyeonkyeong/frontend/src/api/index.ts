@@ -65,6 +65,11 @@ export async function updatePrinciple(p: Principle): Promise<Principle> {
   return toPrinciple(saved);
 }
 
+// 원칙 삭제 (서버에서 그 원칙의 모든 버전이 지워진다)
+export async function deletePrinciple(id: string): Promise<void> {
+  await call(`/principles/${id}`, "DELETE");
+}
+
 // FR-01: 자연어 → 원칙(지표 기준값). 되묻기가 필요하면 clarify에 질문과 선택지가 온다.
 // base가 있으면 기존 원칙(또는 초안)을 수정하는 흐름이다.
 // lockedIds: 사용자가 잠근 지표. 서버가 이 지표의 수치를 바꾸지 않는다.
@@ -83,9 +88,9 @@ export async function askPrinciple(
   return { needsClarify: false, clarify: null, principle: toPrinciple(r) };
 }
 
-// 03: 원칙 충족 개수 순 종목 목록
-export async function searchStocks(principle: Principle): Promise<Stock[]> {
-  return call<Stock[]>(`/stocks?principle_id=${principle.id}`);
+// 03: 원칙 충족 개수 순 종목 목록. q 없음 = 전체(DB 값, 즉시), q 있음 = 검색한 종목(한투 최신 값)
+export async function searchStocks(principle: Principle, q = ""): Promise<Stock[]> {
+  return call<Stock[]>(`/stocks?principle_id=${principle.id}&q=${encodeURIComponent(q)}`);
 }
 
 // 03 검색창 아래: 내 원칙(사용자가 정한 지표)을 모두 충족하는 추천 종목

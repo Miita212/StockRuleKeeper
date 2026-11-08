@@ -55,8 +55,8 @@
   "source": "dart",
   "unit": "억원",
   "scale": 100000000.0,
-  "operator": ">",
-  "value": 0,
+  "operator": ">=",
+  "value": 100,
   "word": "흑자"
  },
  {
