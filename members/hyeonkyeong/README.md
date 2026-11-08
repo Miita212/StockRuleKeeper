@@ -1,5 +1,7 @@
 # hyeonkyeong
 
+> **변경 기록·팀원 적용 방법은 [`CHANGES.md`](CHANGES.md)** (최신: 2026-11-09 의미 검증·PER/PBR 0 버그·거래량 재수집)
+
 ## 담당 역할
 LLM 개발 — 데이터 준비 계획표(`data-preparation-plan.xlsx`)의 hyeonkyeong 담당 11개 (H6, H8, H5-a~c, T-a~c, D1, S-2, S-3).
 
