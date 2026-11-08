@@ -58,7 +58,9 @@ def normalize(raw: dict, base: list[dict] | None, locked_ids: list[int]) -> dict
     """모델 출력을 검증해 화면·저장에 쓸 결과로 만든다. 잠긴 지표는 이전 값으로 되돌린다."""
     warnings: list[str] = []
     locked = set(locked_ids)
-    current = {x["id"]: dict(x) for x in (base or default_indicators())}
+    # 저장된 원칙이 기본값 지표를 뺀 n개만 담고 있어도(프론트 "원칙에 포함" 끄기), 기본값 20개 위에 base를 덮어 모든 지표 id를 다룰 수 있게 한다.
+    current = {x["id"]: dict(x) for x in default_indicators()}
+    current.update({x["id"]: dict(x) for x in (base or [])})
     for i in current:
         current[i]["locked"] = i in locked
 

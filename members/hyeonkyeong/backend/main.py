@@ -12,11 +12,13 @@ from fastapi.staticfiles import StaticFiles
 import config
 from api import principles, simulation, stocks
 from db.database import init_db
+from services.live import seed_stocks
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     init_db()
+    seed_stocks()  # stocks 표가 비어 있으면 종목 풀 파일로 채운다
     yield
 
 

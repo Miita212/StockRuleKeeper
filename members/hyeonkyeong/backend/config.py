@@ -45,6 +45,9 @@ LOCAL_LLM_MODEL = env("LOCAL_LLM_MODEL", "qwen3-8b-stockrule")
 KIS_MIN_INTERVAL = float(env("KIS_MIN_INTERVAL", "0.6"))  # 초. 실측으로 0.12초는 제한에 걸렸다
 DART_MIN_INTERVAL = float(env("DART_MIN_INTERVAL", "0.2"))
 HTTP_TIMEOUT = float(env("HTTP_TIMEOUT", "20"))
+# 요청 시점에 한투·DART를 먼저 부른다(1). 끄면(0) DB 저장분만 읽는다. TTL 안에는 같은 종목을 다시 받지 않는다.
+LIVE_FETCH = env("LIVE_FETCH", "1") == "1"
+LIVE_TTL_SEC = float(env("LIVE_TTL_SEC", "300"))
 MAX_RETRIES = 2  # 한도 초과(429)나 5xx만
 
 # --- 앱 설정 ---

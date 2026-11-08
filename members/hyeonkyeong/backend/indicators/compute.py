@@ -1,4 +1,4 @@
-"""DB에 저장된 수집 데이터로 종목의 지표 20개를 계산한다(요청 시점에 외부 API를 부르지 않는다)."""
+"""DB에 저장된 데이터로 종목의 지표 20개를 계산한다. 최신 데이터는 호출하는 쪽(services/stocks.py)이 services/live.py로 먼저 받아 둔다."""
 import json
 import sqlite3
 from datetime import date
