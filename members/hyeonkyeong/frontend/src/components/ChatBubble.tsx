@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { boldIndicators } from "../data/boldIndicators";
 
 type Props = {
   side: "ai" | "user";
@@ -7,5 +8,5 @@ type Props = {
 };
 
 export default function ChatBubble({ side, size = "md", children }: Props) {
-  return <div className={`bubble bubble-${side} bubble-${size}`}>{children}</div>;
+  return <div className={`bubble bubble-${side} bubble-${size}`}>{side === "ai" && typeof children === "string" ? boldIndicators(children) : children}</div>;
 }

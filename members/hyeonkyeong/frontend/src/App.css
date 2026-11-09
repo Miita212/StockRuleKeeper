@@ -433,3 +433,10 @@ p, h1, h2, h3 { margin: 0; }
 .notice-bar { position: absolute; top: 0; left: 0; right: 0; z-index: 5; height: 24px; overflow: hidden; background: rgba(140, 148, 159, 0.2); pointer-events: none; }
 .notice-bar span { position: absolute; top: 4px; left: 0; white-space: nowrap; font-size: 12px; line-height: 16px; color: #4e5968; animation: notice-scroll 14s linear infinite; }
 @keyframes notice-scroll { from { transform: translateX(390px); } to { transform: translateX(-100%); } }
+
+/* 선택 버튼을 먼저 골라야 할 때 입력창 (19번) */
+.chat-input.locked { background: var(--surface-100); box-shadow: none; }
+.chat-input.locked input { cursor: not-allowed; }
+.chat-input.locked input::placeholder { color: var(--ink-500); font-weight: 500; }
+.chat-input.locked button { background: var(--line); cursor: not-allowed; }
+.chat-input.locked button img { opacity: 0.4; }

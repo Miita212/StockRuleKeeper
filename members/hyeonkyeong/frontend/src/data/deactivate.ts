@@ -7,7 +7,7 @@ const INTENT =
   /사용 ?(하고 ?싶지 ?않|하지 ?않|하지 ?말|안 ?할|안 ?해|안 ?쓸)|쓰(고 ?싶지 ?않|지 ?않|지 ?말|기 ?싫|지 ?마)|안 ?쓸|버려|버릴|삭제|비활성|없애|지워|필요 ?없|꺼 ?줘|끌래|보지 ?않|안 ?볼/;
 
 // 지표 이름 말고 자주 쓰는 다른 말
-const ALIASES: Record<number, string[]> = {
+export const ALIASES: Record<number, string[]> = {
   3: ["ebitda", "이자보상"],
   5: ["영업이익"],
   6: ["영업흑자연수", "연속영업흑자", "연속흑자"],
@@ -25,9 +25,8 @@ const ALIASES: Record<number, string[]> = {
 
 const norm = (s: string) => s.replace(/\s/g, "").toLowerCase();
 
-// 지표를 비활성화하라는 말이면 그 말에 나온 지표 id들을, 아니면 null
-export function findDeactivation(text: string): number[] | null {
-  if (!INTENT.test(text)) return null;
+// 말에 나온 지표 id들 (없으면 빈 배열)
+function mentionedIds(text: string): number[] {
   const keys = indicators
     .flatMap((i) => [i.name, ...(ALIASES[i.id] ?? [])].map((k) => ({ id: i.id, key: norm(k) })))
     .sort((a, b) => b.key.length - a.key.length); // 긴 이름 먼저: "영업이익 증가율"이 "영업이익"에 먼저 잡히게
@@ -39,5 +38,23 @@ export function findDeactivation(text: string): number[] | null {
       rest = rest.replace(key, "#");
     }
   }
+  return ids;
+}
+
+// 지표를 비활성화하라는 말이면 그 말에 나온 지표 id들을, 아니면 null
+export function findDeactivation(text: string): number[] | null {
+  if (!INTENT.test(text)) return null;
+  const ids = mentionedIds(text);
   return ids.length > 0 ? ids : null;
+}
+
+// "영업이익 잠가줘", "PER 고정해줘", "부채비율 잠금 풀어줘" 같은 말: 모델에 보내지 않고 화면에서 바로 잠그거나 푼다
+const UNLOCK = /잠금 ?(을 )?(풀|해제)|잠금해제|풀어|해제|고정 ?(을 )?(풀|해제)/;
+const LOCK = /잠가|잠궈|잠그|잠글|잠금|잠겨|고정/;
+
+export function findLockRequest(text: string): { ids: number[]; lock: boolean } | null {
+  const lock = !UNLOCK.test(text);
+  if (lock && !LOCK.test(text)) return null;
+  const ids = mentionedIds(text);
+  return ids.length > 0 ? { ids, lock } : null;
 }

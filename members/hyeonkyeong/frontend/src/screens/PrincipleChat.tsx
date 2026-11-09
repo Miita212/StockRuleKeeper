@@ -10,7 +10,7 @@ import ConfirmDialog from "../components/ConfirmDialog";
 import Chip from "../components/Chip";
 import IndicatorCard from "../components/IndicatorCard";
 import Select from "../components/Select";
-import { findDeactivation } from "../data/deactivate";
+import { findDeactivation, findLockRequest } from "../data/deactivate";
 import { categoryLabel, findIndicator, groupByCategory } from "../data/indicators";
 import { useApp } from "../store/AppContext";
 import type { IndicatorSetting, Principle } from "../types";
@@ -100,6 +100,22 @@ export default function PrincipleChat({ edit = false }: { edit?: boolean }) {
       const marked = last?.kind === "options" && !last.picked ? [...m.slice(0, -1), { ...last, picked: text }] : m;
       return [...marked, { kind: "user", text }];
     });
+    // "영업이익 잠가줘", "PER 잠금 풀어줘" 같은 말도 모델에 보내지 않고 바로 잠그거나 푼다 (모델은 잠금을 학습하지 않아 값을 바꿔 버린다)
+    const lockReq = history.length === 0 ? findLockRequest(text) : null;
+    if (lockReq) {
+      const reply = (t: string) => setMessages((m) => [...m, { kind: "ai", text: t }]);
+      const names = (ids: number[]) => ids.map((id) => findIndicator(id).name).join(", ");
+      const setIds = lockReq.ids.filter((id) => cur?.indicators.some((i) => i.id === id && i.source !== "default"));
+      const todo = setIds.filter((id) => lockedIds.includes(id) !== lockReq.lock);
+      if (!cur) reply("먼저 원칙을 만든 뒤에 지표를 잠글 수 있어요.");
+      else if (setIds.length === 0) reply(`${names(lockReq.ids)}은(는) 지금 정해 둔 지표가 아니에요. 수치를 먼저 정해 주세요.`);
+      else if (todo.length === 0) reply(`${names(setIds)}은(는) 이미 ${lockReq.lock ? "잠겨" : "풀려"} 있어요.`);
+      else {
+        setLockedIds((l) => (lockReq.lock ? [...l, ...todo] : l.filter((x) => !todo.includes(x))));
+        reply(lockReq.lock ? `${names(todo)}을(를) 잠갔어요. 이제 수치가 바뀌지 않아요.` : `${names(todo)}의 잠금을 풀었어요.`);
+      }
+      return;
+    }
     // "부채비율은 사용하고 싶지 않아", "PER 삭제해줘" 같은 말은 모델에 보내지 않고 비활성화 확인 창을 띄운다
     const target = cur && history.length === 0 ? findDeactivation(text) : null;
     if (cur && target) {
@@ -341,6 +357,9 @@ export default function PrincipleChat({ edit = false }: { edit?: boolean }) {
   const lastResult = messages.map((m) => m.kind).lastIndexOf("result");
   const lastOptions = messages.map((m) => m.kind).lastIndexOf("options");
 
+  // 마지막이 아직 고르지 않은 선택 버튼이면, 먼저 그 버튼을 고르게 하려고 입력창을 잠근다 (한 번에 한 주제)
+  const waitingOption = lastOptions >= 0 && lastOptions === messages.length - 1 && !(messages[lastOptions] as { picked?: string }).picked;
+
   function thread() {
     return (
       <div className="scroll chat-thread">
@@ -497,6 +516,8 @@ export default function PrincipleChat({ edit = false }: { edit?: boolean }) {
         placeholder={edit ? "바꾸고 싶은 점을 말해 보세요" : "직접 말해도 돼요"}
         busy={pending !== null}
         busyText={pending ?? ""}
+        locked={waitingOption}
+        lockedText="위 버튼 중에서 먼저 골라 주세요"
         onSend={send}
       />
       {deactDialog}
