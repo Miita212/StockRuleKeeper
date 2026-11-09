@@ -89,4 +89,4 @@ python3 -X utf8 data_v6/build_v6.py      # → data_v6/train.jsonl, val.jsonl
 ## 5. 다음
 
 - 이 3에폭 어댑터로 앱의 로컬 모델(지금은 해찬 v3 2에폭)을 바꿀 수 있다(GGUF Q4_K_M 변환 → Ollama `qwen3-8b-stockrule` 재등록).
-- yappang 통합 데이터 fixed-4(8B·4B 공용)로 8B 학습을 별도로 진행 중이다. 결과는 따로 공유한다.
+- yappang 통합 데이터 fixed-4(8B·4B 공용)로 8B 학습 결과: [8B_fixed4_학습_결과.md](8B_fixed4_학습_결과.md) (추출은 이 3에폭이 앞섬 → 앱 모델 유지)
