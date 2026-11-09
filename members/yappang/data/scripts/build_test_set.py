@@ -3,7 +3,7 @@
 합치는 것: 공식 111문항(members/hyeonkyeong/data/eval_*.jsonl = 백업된 train_model_q4b/data/backup/2026-11-09/eval_set.jsonl 과 같은 문장)
          + haechan 시험 123문항(members/haechan/finetune/test_haechan/test_haechan.jsonl 58, test_haechan_v5.jsonl 31, test_haechan_v7.jsonl 34)
 각 행: test_id(T001~), source(official111 | haechan58 | haechan31 | haechan34), orig_id(원래 id), eval_id(=orig_id, 평가 스크립트 호환), id(=orig_id, haechan 평가 호환),
-       kind, text, output, messages  (원본 필드는 고치지 않았다)
+       kind, text, output, messages  (원본 필드는 고치지 않았다. 단 거절 정답 문구의 조사 오류만 fix_refusal_josa 로 고친다: 2026-11-09 팀 합의)
 결과: train_model_q4b/data/test_set.jsonl
 사용 (members/yappang 에서):
   python3 -I -X utf8 data/scripts/build_test_set.py --haechan <test_haechan 폴더> [--train-val train_fixed4.jsonl val_fixed4.jsonl]
@@ -22,6 +22,26 @@ def load(p):
     return [json.loads(l) for l in open(p, encoding="utf-8") if l.strip()]
 
 
+import re
+
+
+def _final(ch):  # 받침 번호(0=없음, 8=ㄹ)
+    return (ord(ch[-1]) - 0xAC00) % 28 if "가" <= ch[-1] <= "힣" else 0
+
+
+def fix_refusal_josa(out):
+    """'X는 아직 쓰지 … A나 B 볼 수 있어요' → 'X은/는 …, A이나/나 B으로/로 볼 수 있어요'. 이미 맞은 문장은 그대로."""
+    if not (isinstance(out, dict) and out.get("refusal")):
+        return out
+    m = re.fullmatch(r"(.+?)(는|은) 아직 쓰지 않는 지표예요\. (.+?)(?:이나|나) (.+?)(?:으로|로)? 볼 수 있어요\.", out["message"])
+    if not m or out["message"].endswith("로 볼 수 있어요."):
+        return out
+    x, _, a_, b = m.groups()
+    msg = "%s%s 아직 쓰지 않는 지표예요. %s%s %s%s 볼 수 있어요." % (
+        x, "은" if _final(x) else "는", a_, "이나" if _final(a_) else "나", b, "로" if _final(b) in (0, 8) else "으로")
+    return {**out, "message": msg}
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--haechan", required=True, help="haechan test_haechan 폴더 (jsonl 3개가 있는 곳)")
@@ -33,7 +53,7 @@ def main():
         p = Path(path) if isinstance(path, Path) else Path(a.haechan) / path
         for r in load(p):
             o = {"test_id": "T%03d" % (len(rows) + 1), "source": src, "orig_id": r[key], "eval_id": r[key], "id": r[key],
-                 "kind": r["kind"], "text": r["text"], "output": r["output"], "messages": r["messages"]}
+                 "kind": r["kind"], "text": r["text"], "output": fix_refusal_josa(r["output"]), "messages": r["messages"]}
             rows.append(o)
     texts = [r["text"].strip() for r in rows]
     assert len(set(texts)) == len(texts), "문장 중복"
