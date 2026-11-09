@@ -44,6 +44,12 @@ def indicators():
     return list(MASTER.values())
 
 
+@router.get("/indicators/defaults")
+def indicator_defaults():
+    """지표 20개의 기본값(연산자·값·기준 문구). 화면에서 지표를 비활성화하면 이 값으로 되돌린다."""
+    return public({"name": "기본값", "indicators": svc.default_indicators()})
+
+
 @router.post("/principles/ask")
 def ask(body: AskBody):
     base = [i.model_dump(exclude_none=True) for i in body.base_indicators] if body.base_indicators else None

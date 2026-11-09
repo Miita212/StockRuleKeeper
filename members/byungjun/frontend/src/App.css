@@ -420,3 +420,6 @@ p, h1, h2, h3 { margin: 0; }
 .name-box:focus-within { border: 2px solid var(--brand-500); padding: 0 15px; }
 .name-box input { flex: 1; min-width: 0; border: 0; outline: 0; background: none; font-size: 17px; font-weight: 700; color: var(--ink-900); }
 .name-box span { font-size: 13px; color: var(--ink-500); }
+
+/* 15. 지표 카드를 꾹 눌러 비활성화 */
+.indicator-card.pressable:active { background: #e8ecf2; }
