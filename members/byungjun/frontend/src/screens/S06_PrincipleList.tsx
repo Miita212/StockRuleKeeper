@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import { deletePrinciple, updatePrinciple } from "../api";
+import pencil from "../assets/icons/pencil.svg";
 import ConfirmDialog from "../components/ConfirmDialog";
 import Pager from "../components/Pager";
 import ScrollText from "../components/ScrollText";
@@ -12,7 +13,7 @@ import S07_PrincipleDetailSheet from "./S07_PrincipleDetailSheet";
 const PAGE_SIZE = 4; // 다른 원칙은 한 페이지에 4개까지
 const LONG_PRESS_MS = 600; // 카드를 이만큼 누르고 있으면 삭제 안내가 뜬다
 
-// 카드 탭: 07 시트 / 카드 꾹 누르기: 삭제 안내 / "선택": 적용 중인 원칙으로 바꾸기 / "수정": 원칙 이름 바꾸기
+// 카드 탭: 07 시트 / 카드 꾹 누르기: 삭제 안내 / "선택": 적용 중인 원칙으로 바꾸기 / 이름 옆 연필: 원칙 이름 바꾸기
 export default function S06_PrincipleList() {
   const { principles, setPrinciples, currentId, setCurrentId, editTargetId, setEditTargetId, simPrincipleId, setSimPrincipleId } = useApp();
   const [selectedId, setSelectedId] = useState<string | null>(null);
@@ -112,17 +113,17 @@ export default function S06_PrincipleList() {
     return (
       <div className="principle-name">
         <ScrollText text={p.name} />
+        <button className="pencil-btn" aria-label={`${p.name} 이름 수정`} onClick={(e) => startRename(e, p)}>
+          <img src={pencil} width={15} height={15} alt="" />
+        </button>
         {badge && <span className="badge">적용 중</span>}
       </div>
     );
   }
 
-  function editButton(p: Principle) {
-    return p.id === renamingId ? (
-      <button className="btn-sm fill" onClick={saveName}>저장</button>
-    ) : (
-      <button className="btn-sm soft" onClick={(e) => startRename(e, p)}>수정</button>
-    );
+  // 이름을 고치는 중에는 오른쪽 끝(선택 자리)에 저장 버튼이 나온다
+  function saveButton() {
+    return <button className="btn-sm fill" onClick={saveName}>저장</button>;
   }
 
   return (
@@ -134,7 +135,7 @@ export default function S06_PrincipleList() {
           {title(current, true)}
           <div className="indicator-desc">{summarize(current)}</div>
         </div>
-        {editButton(current)}
+        {current.id === renamingId && saveButton()}
       </div>
       {others.length > 0 && (
         <div className="s06-label-row">
@@ -159,10 +160,11 @@ export default function S06_PrincipleList() {
               {title(p)}
               <div className="indicator-desc">{summarize(p)}</div>
             </div>
-            {p.id !== renamingId && (
+            {p.id === renamingId ? (
+              saveButton()
+            ) : (
               <button className="btn-sm fill" onClick={(e) => choose(e, p.id)}>선택</button>
             )}
-            {editButton(p)}
           </div>
         ))}
       </div>

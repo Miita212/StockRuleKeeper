@@ -423,3 +423,8 @@ p, h1, h2, h3 { margin: 0; }
 
 /* 15. 지표 카드를 꾹 눌러 비활성화 */
 .indicator-card.pressable:active { background: #e8ecf2; }
+
+/* 16. 06: 수정 버튼 대신 원칙명 바로 옆 연필 아이콘으로 이름 수정, 선택 버튼은 맨 오른쪽 */
+.principle-name { gap: 4px; }
+.pencil-btn { flex-shrink: 0; display: flex; align-items: center; justify-content: center; padding: 8px; margin: -8px; border: 0; background: none; cursor: pointer; }
+.principle-name .badge { margin-left: 4px; }
