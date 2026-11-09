@@ -5,6 +5,20 @@
 
 ---
 
+## 2026-11-09 · 병준 UI 15~17번 반영 (지표 비활성화, 06 연필 아이콘, 03 공지 띠)
+
+- 무엇: 병준 커밋 `43f127b`·`f70d25c`·`4b80340`·`f8becdf`의 백엔드·프론트 변경을 내 폴더로 가져왔다. 내용은 병준 것과 **똑같다**(줄바꿈만 내 파일 형식 CRLF 유지).
+- 상세 설명(동작·이유·한계): `members/byungjun/frontend/UI및백엔드수정내역.md` 15·16·17절. 여기서는 반복하지 않는다.
+- 가져온 파일 10개:
+  - 백엔드: `backend/api/principles.py` (`GET /indicators/defaults` 추가)
+  - 프론트 수정: `src/App.css`, `src/api/index.ts`, `src/components/IndicatorCard.tsx`, `src/screens/PrincipleChat.tsx`, `src/screens/S03_StockSearch.tsx`, `src/screens/S06_PrincipleList.tsx`
+  - 프론트 새 파일: `src/components/NoticeBar.tsx`, `src/data/deactivate.ts`, `src/assets/icons/pencil.svg`
+- 적용 방법(다른 팀원): 내 폴더의 위 6개 파일이 병준의 `9e01c46` 시점과 같았다면(나는 같았음, 줄바꿈 무시 비교) 병준 최신 파일을 그대로 복사하면 된다. 내 것을 고쳐 둔 게 있으면 병준 diff(`git diff 9e01c46 HEAD -- members/byungjun/frontend/src members/byungjun/backend`)만 손으로 옮긴다.
+- 실행: **백엔드를 다시 켜야** `/indicators/defaults`가 생긴다. 프론트는 다시 빌드.
+- 확인: `curl localhost:8000/indicators/defaults` → `name: 기본값`, 지표 20개(영업이익 `100억원 이상`). 프론트 `vite build` 통과. 화면 동작(꾹 눌러 비활성화 등)은 병준이 헤드리스 Chrome으로 확인한 것이고 내 앱 화면에서는 아직 안 봤다.
+
+---
+
 ## 2026-11-09 · 자연어→수치 의미 검증 + 데이터 버그 2개 수정
 
 - 커밋: `[hyeonkyeong] 자연어→수치 의미 검증 추가, 한투 PER·PBR 0을 데이터 없음으로 처리` (이 문서와 같은 커밋)

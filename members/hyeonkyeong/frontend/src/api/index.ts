@@ -45,6 +45,11 @@ function settings(p: Principle) {
   }));
 }
 
+// 지표 20개의 기본값 (지표를 비활성화하면 이 값으로 돌아간다)
+export async function getDefaultIndicators(): Promise<Principle> {
+  return toPrinciple(await call<ServerPrinciple>("/indicators/defaults"));
+}
+
 export async function listPrinciples(): Promise<Principle[]> {
   return (await call<ServerPrinciple[]>("/principles")).map(toPrinciple);
 }

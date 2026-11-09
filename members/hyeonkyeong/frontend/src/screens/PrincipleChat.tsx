@@ -1,14 +1,16 @@
 import { useEffect, useRef, useState } from "react";
 import { Navigate, useLocation, useNavigate } from "react-router-dom";
-import { askPrinciple, savePrinciple, updatePrinciple } from "../api";
+import { askPrinciple, getDefaultIndicators, savePrinciple, updatePrinciple } from "../api";
 import back from "../assets/icons/back.svg";
 import BottomSheet from "../components/BottomSheet";
 import Button from "../components/Button";
 import ChatBubble from "../components/ChatBubble";
 import ChatInput from "../components/ChatInput";
+import ConfirmDialog from "../components/ConfirmDialog";
 import Chip from "../components/Chip";
 import IndicatorCard from "../components/IndicatorCard";
 import Select from "../components/Select";
+import { findDeactivation } from "../data/deactivate";
 import { categoryLabel, findIndicator, groupByCategory } from "../data/indicators";
 import { useApp } from "../store/AppContext";
 import type { IndicatorSetting, Principle } from "../types";
@@ -52,10 +54,16 @@ export default function PrincipleChat({ edit = false }: { edit?: boolean }) {
   const [includeDefaults, setIncludeDefaults] = useState(() => hasDefaults(base)); // "그 외 지표(기본값)를 원칙에 포함"
   const [restOpen, setRestOpen] = useState(false); // 그 외 지표 펼치기
   const [sheetOpen, setSheetOpen] = useState(false); // 고치기: "내가 설정한 지표값 상세" 시트
+  const [defaults, setDefaults] = useState<Principle | null>(null); // 지표 20개의 기본값 (비활성화하면 이 값으로 돌아간다)
+  const [deact, setDeact] = useState<{ ids: number[]; fromChat: boolean } | null>(null); // 비활성화 확인 창에 떠 있는 지표
   const [nameOpen, setNameOpen] = useState(false); // 새 원칙: 이름 정하기 시트
   const [nameInput, setNameInput] = useState(""); // 이름 입력칸 (AI가 지은 이름으로 시작)
   const endRef = useRef<HTMLDivElement>(null);
   const restRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    getDefaultIndicators().then(setDefaults);
+  }, []);
 
   // 고칠 원칙을 바꾸면 대화를 처음부터 다시 시작한다
   useEffect(() => {
@@ -68,6 +76,7 @@ export default function PrincipleChat({ edit = false }: { edit?: boolean }) {
     setIncludeDefaults(hasDefaults(base));
     setRestOpen(false);
     setSheetOpen(false);
+    setDeact(null);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [editTargetId]);
 
@@ -91,6 +100,18 @@ export default function PrincipleChat({ edit = false }: { edit?: boolean }) {
       const marked = last?.kind === "options" && !last.picked ? [...m.slice(0, -1), { ...last, picked: text }] : m;
       return [...marked, { kind: "user", text }];
     });
+    // "부채비율은 사용하고 싶지 않아", "PER 삭제해줘" 같은 말은 모델에 보내지 않고 비활성화 확인 창을 띄운다
+    const target = cur && history.length === 0 ? findDeactivation(text) : null;
+    if (cur && target) {
+      const active = target.filter((id) => cur.indicators.find((i) => i.id === id)?.source === "user" || cur.indicators.find((i) => i.id === id)?.source === "inferred");
+      const free = active.filter((id) => !lockedIds.includes(id));
+      const names = (ids: number[]) => ids.map((id) => findIndicator(id).name).join(", ");
+      const reply = (t: string) => setMessages((m) => [...m, { kind: "ai", text: t }]);
+      if (active.length === 0) reply(`${names(target)}은(는) 지금 정해 둔 지표가 아니에요. 이미 기본값(그 외 지표)이에요.`);
+      else if (free.length === 0) reply(`${names(active)}은(는) 잠겨 있어서 비활성화할 수 없어요. 잠금을 풀고 다시 말씀해 주세요.`);
+      else setDeact({ ids: free, fromChat: true });
+      return;
+    }
     setPending(history.length > 0 ? "답을 반영하는 중이에요" : "말씀하신 대로 수치로 바꾸는 중이에요");
     const result = await askPrinciple(text, cur, lockedIds, history);
     setPending(null);
@@ -196,6 +217,32 @@ export default function PrincipleChat({ edit = false }: { edit?: boolean }) {
     }
   }
 
+  // 지표 비활성화: 정한 지표를 기본값으로 되돌려 "그 외 지표"로 보낸다
+  function confirmDeactivate() {
+    const c = draft ?? base;
+    if (!deact || !c || !defaults) return;
+    const ids = deact.ids;
+    const values = { ...c.values };
+    const indicators = c.indicators.map((i) => {
+      const d = defaults.indicators.find((x) => x.id === i.id);
+      if (!ids.includes(i.id) || !d) return i;
+      values[i.id] = defaults.values[i.id];
+      return { ...i, operator: d.operator, value: d.value, unit: d.unit, source: "default", locked: false };
+    });
+    const next: Principle = { ...c, values, indicators };
+    const names = ids.map((id) => findIndicator(id).name).join(", ");
+    setLockedIds((l) => l.filter((x) => !ids.includes(x)));
+    setDraft(next);
+    setRecentIds([]);
+    setDeact(null);
+    setMessages((m) => [
+      ...m,
+      { kind: "ai", text: `${names} 지표를 비활성화했어요. '그 외 지표'로 옮기고 기본값으로 돌렸어요.` },
+      ...ids.map((id) => ({ kind: "change", name: findIndicator(id).name, before: c.values[id] ?? "없음", after: `${defaults.values[id]} (기본값)` }) as Msg),
+      { kind: "result", count: indicators.filter((i) => i.source !== "default").length },
+    ]);
+  }
+
   // 새 원칙은 저장하기 전에 이름을 정한다
   function openName() {
     setNameInput(draft?.name ?? "");
@@ -203,7 +250,8 @@ export default function PrincipleChat({ edit = false }: { edit?: boolean }) {
   }
 
   // ---- 지표 카드 (대화 맨 아래 하나) ----
-  function card(d: Principle, id: number, mark?: "match" | "soft" | "changed" | "rest" | "off", prev?: string) {
+  function card(d: Principle, id: number, mark?: "match" | "soft" | "changed" | "rest" | "off", prev?: string, pill?: string) {
+    const canDeactivate = d.indicators.find((i) => i.id === id)?.source !== "default" && (mark === "match" || mark === "changed" || mark === "soft");
     return (
       <IndicatorCard
         key={id}
@@ -215,6 +263,8 @@ export default function PrincipleChat({ edit = false }: { edit?: boolean }) {
         mark={mark}
         prev={prev}
         glow={!edit && mark === "match" && (recentIds === null || recentIds.includes(id))}
+        pill={pill}
+        onLongPress={canDeactivate ? () => pending === null && setDeact({ ids: [id], fromChat: false }) : undefined}
       />
     );
   }
@@ -223,15 +273,21 @@ export default function PrincipleChat({ edit = false }: { edit?: boolean }) {
     const matchedIds = d.indicators.filter((i) => i.source !== "default").map((i) => i.id);
     const defaultIds = d.indicators.filter((i) => i.source === "default").map((i) => i.id);
     const saved = edit ? principles.find((p) => p.id === d.id) : undefined;
-    // 고치기: 저장된 원칙과 달라진 지표(값이 바뀌었거나 기본값이던 지표를 새로 정한 경우)만 위에 보여준다
+    // 고치기: 저장된 원칙과 달라진 지표만 위에 보여준다. 값이 바뀌었거나, 기본값이던 지표를 새로 정했거나,
+    // 정해 둔 지표를 비활성화해 기본값으로 돌린 경우(비활성화됨)이다.
     const changedIds = saved
-      ? matchedIds.filter((id) => {
-          const old = saved.indicators.find((x) => x.id === id);
-          return !old || old.source === "default" || saved.values[id] !== d.values[id];
-        })
+      ? d.indicators
+          .filter((i) => {
+            const old = saved.indicators.find((x) => x.id === i.id);
+            if (i.source === "default") return !!old && old.source !== "default";
+            return !old || old.source === "default" || saved.values[i.id] !== d.values[i.id];
+          })
+          .map((i) => i.id)
       : [];
     const shownIds = edit ? changedIds : matchedIds;
-    const restIds = edit ? [...matchedIds.filter((id) => !changedIds.includes(id)), ...defaultIds] : defaultIds;
+    const restIds = edit
+      ? [...matchedIds, ...defaultIds].filter((id) => !changedIds.includes(id)) // 바뀐 지표는 위에 있으니 여기서 뺀다
+      : defaultIds;
     const restMark = matchedIds.length > 0 ? (includeDefaults ? "rest" : "off") : undefined;
     return (
       <div className="chat-result">
@@ -240,7 +296,15 @@ export default function PrincipleChat({ edit = false }: { edit?: boolean }) {
           <h3>{edit ? `바뀐 지표 · ${shownIds.length}개` : `해당 지표 · ${shownIds.length}개`}</h3>
           <p>{edit ? "나머지 지표는 그대로예요" : "말씀하신 내용에 맞춰 정한 지표예요"}</p>
         </div>
-        {shownIds.map((id) => card(d, id, edit ? "changed" : "match", edit && saved && saved.values[id] !== d.values[id] ? saved.values[id] : undefined))}
+        {shownIds.map((id) =>
+          card(
+            d,
+            id,
+            edit ? "changed" : "match",
+            edit && saved && saved.values[id] !== d.values[id] ? saved.values[id] : undefined,
+            d.indicators.find((i) => i.id === id)?.source === "default" ? "비활성화됨" : undefined,
+          ),
+        )}
         {restIds.length > 0 && (
           <div ref={restRef} className="zone rest rest-row" role="button" onClick={() => setRestOpen(!restOpen)}>
             <div>
@@ -311,6 +375,19 @@ export default function PrincipleChat({ edit = false }: { edit?: boolean }) {
     );
   }
 
+  const deactDialog = (
+    <ConfirmDialog
+      open={deact !== null}
+      title="지표를 비활성화 하시겠습니까?"
+      description={`${(deact?.ids ?? []).map((id) => findIndicator(id).name).join(", ")} 지표를 '그 외 지표'로 옮기고 기본값으로 되돌려요.`}
+      confirmText="비활성화"
+      onConfirm={confirmDeactivate}
+      onClose={() => {
+        if (deact?.fromChat) setMessages((m) => [...m, { kind: "ai", text: "그대로 둘게요. 비활성화하지 않았어요." }]);
+        setDeact(null);
+      }}
+    />
+  );
   const approveButton = draft && pending === null && messages[messages.length - 1]?.kind === "result" && (
     <Button onClick={edit ? () => approve() : openName}>{edit ? "이대로 수정할래요" : "이 원칙으로 시작해요"}</Button>
   );
@@ -397,6 +474,7 @@ export default function PrincipleChat({ edit = false }: { edit?: boolean }) {
                     onToggleLock={() => toggleLock(i.id)}
                     onEditValue={(text, n) => { editValue(i.id, text, n); setSheetOpen(false); }}
                     tag={i.source === "default" ? "default" : "user"}
+                    onLongPress={i.source === "default" ? undefined : () => setDeact({ ids: [i.id], fromChat: false })}
                   />
                 ))}
               </div>
@@ -404,6 +482,7 @@ export default function PrincipleChat({ edit = false }: { edit?: boolean }) {
             <Button onClick={() => setSheetOpen(false)}>닫기</Button>
           </BottomSheet>
         )}
+        {deactDialog}
       </div>
     );
   }
@@ -420,6 +499,7 @@ export default function PrincipleChat({ edit = false }: { edit?: boolean }) {
         busyText={pending ?? ""}
         onSend={send}
       />
+      {deactDialog}
       {!edit && (
         <BottomSheet open={nameOpen} onClose={() => setNameOpen(false)}>
           <div className="sheet-title">
