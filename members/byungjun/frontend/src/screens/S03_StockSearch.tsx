@@ -2,10 +2,15 @@
 import { useNavigate } from "react-router-dom";
 import { searchStocks } from "../api";
 import search from "../assets/icons/search.svg";
+import NoticeBar from "../components/NoticeBar";
 import Pager from "../components/Pager";
 import usePageSwipe from "../hooks/usePageSwipe";
 import { useApp } from "../store/AppContext";
 import type { Stock } from "../types";
+
+// 맨 위 공지사항 띠를 보일지. 공지가 필요할 때 true로 바꾼다 (Figma의 "공지사항 있는 버전" / "없는 버전").
+const SHOW_NOTICE = true;
+const NOTICE = "현재는 반도체 종목만 확인할 수 있으며, 추후 모든 상장 종목으로 확장 예정입니다. 감사합니다.";
 
 export default function S03_StockSearch() {
   const navigate = useNavigate();
@@ -57,6 +62,7 @@ export default function S03_StockSearch() {
 
   return (
     <div className="screen s03 swipe-page" {...swipe}>
+      {SHOW_NOTICE && <NoticeBar>{NOTICE}</NoticeBar>}
       <h1 className="title">종목 검색</h1>
       <div className="search">
         <img src={search} width={22} height={22} alt="" />

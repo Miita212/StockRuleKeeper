@@ -428,3 +428,8 @@ p, h1, h2, h3 { margin: 0; }
 .principle-name { gap: 4px; }
 .pencil-btn { flex-shrink: 0; display: flex; align-items: center; justify-content: center; padding: 8px; margin: -8px; border: 0; background: none; cursor: pointer; }
 .principle-name .badge { margin-left: 4px; }
+
+/* 17. 03 공지사항 띠: 얇은 반투명 회색, 문구가 오른쪽에서 왼쪽으로 흐른다 */
+.notice-bar { position: absolute; top: 0; left: 0; right: 0; z-index: 5; height: 24px; overflow: hidden; background: rgba(140, 148, 159, 0.2); pointer-events: none; }
+.notice-bar span { position: absolute; top: 4px; left: 0; white-space: nowrap; font-size: 12px; line-height: 16px; color: #4e5968; animation: notice-scroll 14s linear infinite; }
+@keyframes notice-scroll { from { transform: translateX(390px); } to { transform: translateX(-100%); } }
