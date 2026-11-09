@@ -1,0 +1,22 @@
+{
+ "train": 6942,
+ "val": 314,
+ "replaced": 33,
+ "added": 433,
+ "dropped": 30,
+ "q3_val_moved_to_train": 70,
+ "answers": {
+  "clar:VALUE_MISSING": 1700,
+  "extract": 3144,
+  "text": 599,
+  "clar:AMBIGUOUS_INDICATOR": 1313,
+  "refuse": 539,
+  "clar:PERIOD_MISSING": 72
+ },
+ "sha256": {
+  "train_fixed4.jsonl": "765827feb85733f61b95e3928a67ac5feb3f0c08845709367941e8d0a021152a",
+  "val_fixed4.jsonl": "058cea44cf6ab118a19a110ccafb8b111506c8eb250859bf5fb6b38c2b0a1489",
+  "train_meta_fixed4.jsonl": "2ea1631ad32d81d9ba6d42d9e04864d274635c14c6caf4e6e49ebf443575f2fa",
+  "val_meta_fixed4.jsonl": "61cc3e0a44f31d287df6141290723151c6c3292e8243d89a5aa0d0a25fee3088"
+ }
+}

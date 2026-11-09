@@ -1,7 +1,9 @@
 """Qwen3-4B QLoRA 파인튜닝 (RTX 4060 Laptop 8GB). haechan 의 train_qlora.py 를 복사해 기본값만 바꾼 버전.
-변경: 모델 4B, 데이터 yappang/train_model/data, max-len 1280, batch 1 x accum 16, 출력 outputs/.
+변경: 모델 4B, 데이터 yappang/train_model_q4b/data, max-len 1280, batch 1 x accum 16, 출력 outputs/.
 
-데이터: train_model/data/train.jsonl, val.jsonl  (한 줄 = {"messages": [system, user, assistant, ...]})
+데이터: 기본값은 아래 TRAIN_FILE/VAL_FILE (현재 train_fixed.jsonl, val_fixed.jsonl)  (한 줄 = {"messages": [system, user, assistant, ...]})
+  데이터를 바꿔 다시 학습할 때는 이 두 상수와 data/DATA_VERSION.md 만 고친다. 실행하면 쓴 파일과 해시를 출력하고
+  출력 폴더에 data_used.json 으로 남기므로, 어떤 데이터로 학습한 모델인지 나중에 확인할 수 있다.
 
 loss 범위: assistant 답변 전부. 대화가 여러 턴(S3 되묻기)이면 assistant 턴마다 학습 샘플을 하나씩 만든다.
   - 샘플 = (그 턴 앞까지의 대화 + 생성 시작 표시)  →  정답 = 그 턴의 assistant 답변 + <|im_end|>
@@ -10,17 +12,39 @@ loss 범위: assistant 답변 전부. 대화가 여러 턴(S3 되묻기)이면 a
 
 사용:
     python -X utf8 train_qlora.py --dry-run                 # GPU 없이 토큰 길이·샘플 1개만 확인
-    python -X utf8 scripts/train_qlora.py --out outputs/q4b-v1    # 학습
+    python -X utf8 scripts/train_qlora.py --epochs 2              # 학습 (출력 outputs/q4b-v2, 데이터 train_fixed.jsonl)
 """
 import argparse
 import json
+import os
 import random
 import statistics
 from pathlib import Path
 
+# 8GB GPU 에서 긴 샘플(1,100토큰 이상)이 나오면 메모리 조각화로 OOM 이 난다. q4b-v2 첫 시도가 15스텝에서 중단됐다(2026-11-08, 7.66GiB 중 7.38GiB 사용).
+# 가장 긴 8개 샘플로 시험한 결과 이 설정에서 최대 6.99GiB 로 들어간다. torch 를 불러오기 전에 정해야 하므로 맨 위에 둔다.
+os.environ.setdefault("PYTORCH_ALLOC_CONF", "expandable_segments:True")
+
 HERE = Path(__file__).resolve().parent
 DEFAULT_DATA = HERE.parent / "data"
+# 학습에 쓰는 데이터 파일(기본값). 데이터를 바꾸면 여기와 data/DATA_VERSION.md 를 함께 고친다.
+TRAIN_FILE = "train_fixed4.jsonl"
+VAL_FILE = "val_fixed4.jsonl"
+# 이번 학습의 이름(출력 폴더 outputs/<RUN_NAME>). 이전 학습(q4b-v1: 원본 데이터)과 겹치지 않게 데이터를 바꿀 때마다 새 이름으로 올린다.
+# 대응표는 data/DATA_VERSION.md 의 "모델 버전" 절.
+RUN_NAME = "q4b-v4"
 IGNORE = -100
+
+
+def data_info(path):
+    """쓰는 데이터를 로그에 남기기 위한 (경로, 줄 수, sha256)."""
+    import hashlib
+
+    p = Path(path)
+    if not p.exists():
+        raise SystemExit(f"데이터 파일이 없습니다: {p}")
+    raw = p.read_bytes()
+    return {"path": str(p), "lines": sum(1 for x in raw.splitlines() if x.strip()), "sha256": hashlib.sha256(raw).hexdigest()}
 
 
 def read_jsonl(path):
@@ -72,9 +96,9 @@ def describe(name, examples, dropped):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--model", default="Qwen/Qwen3-4B")
-    ap.add_argument("--train", default=str(DEFAULT_DATA / "train.jsonl"))
-    ap.add_argument("--val", default=str(DEFAULT_DATA / "val.jsonl"))
-    ap.add_argument("--out", default=str(HERE.parent / "outputs" / "q4b-v1"))
+    ap.add_argument("--train", default=str(DEFAULT_DATA / TRAIN_FILE))
+    ap.add_argument("--val", default=str(DEFAULT_DATA / VAL_FILE))
+    ap.add_argument("--out", default=str(HERE.parent / "outputs" / RUN_NAME))
     ap.add_argument("--max-len", type=int, default=1280)
     ap.add_argument("--epochs", type=float, default=3)
     ap.add_argument("--lr", type=float, default=1e-4, help="byungjun 명세 1e-4 (불안정하면 5e-5, 느리면 2e-4)")
@@ -88,6 +112,12 @@ def main():
     args = ap.parse_args()
 
     from transformers import AutoTokenizer
+
+    used = {"train": data_info(args.train), "val": data_info(args.val)}
+    for k, v in used.items():
+        print(f"[데이터] {k}: {v['path']}  ({v['lines']}대화, sha256 {v['sha256'][:12]}…)")
+    if not (Path(args.train).name.endswith("_fixed.jsonl") and Path(args.val).name.endswith("_fixed.jsonl")):
+        print("  ※ '_fixed' 가 아닌 파일로 학습합니다. 의도한 것이 맞는지 확인하세요(data/DATA_VERSION.md 참고).")
 
     tok = AutoTokenizer.from_pretrained(args.model)
     train_recs, val_recs = read_jsonl(args.train), read_jsonl(args.val)
@@ -109,6 +139,13 @@ def main():
     print(f"\n정답이 <|im_end|> 로 끝나는 샘플: {ends}/{len(train_ex)}  (전부여야 정상)")
     if args.dry_run:
         return
+
+    out_dir = Path(args.out)
+    if out_dir.exists() and (list(out_dir.glob("adapter_model*")) or list(out_dir.glob("checkpoint-*"))):
+        raise SystemExit(f"이미 학습 결과가 있는 폴더입니다: {out_dir}\n"
+                         "이전 학습을 덮어쓰지 않도록 멈춥니다. --out 에 새 이름을 주거나 RUN_NAME 을 바꾸세요.")
+    out_dir.mkdir(parents=True, exist_ok=True)
+    (Path(args.out) / "data_used.json").write_text(json.dumps(used, ensure_ascii=False, indent=2), encoding="utf-8")
 
     import torch
     from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training

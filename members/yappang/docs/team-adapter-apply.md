@@ -21,7 +21,7 @@
 | 베이스 Qwen3-8B | `models/base/Qwen3-8B/` (약 16GB) | 어댑터를 계속 받을 예정이라 **지우지 않는다**. 없으면 `huggingface_hub.snapshot_download('Qwen/Qwen3-8B', allow_patterns=['*.safetensors','*.json','*.txt','*.jinja'], local_dir='models/base/Qwen3-8B')` |
 | 병합 스크립트 | `models/merge_lora_to_hf.py` | 병준 `merge_lora.py`와 같은 계산(`W + (B@A)*alpha/r`), 층 수 검사 포함 |
 | llama.cpp 변환 도구 | `models/tools/llama.cpp/` | `git clone --depth 1 https://github.com/ggml-org/llama.cpp`. **빌드는 하지 않는다**(변환 스크립트만 쓴다) |
-| 파이썬 환경 | `train_model/.venv` | `pip install gguf sentencepiece`가 추가로 필요했다 |
+| 파이썬 환경 | `members/yappang/.venv` | `pip install gguf sentencepiece`가 추가로 필요했다 |
 | 양자화 도구 | `/usr/local/lib/ollama/llama-quantize` | **Ollama가 설치할 때 함께 깔아 준 것**을 쓴다 |
 
 ## 3. 절차 (새 어댑터마다)
@@ -30,7 +30,7 @@
 
 ```bash
 cd ~/miniProject/StockRuleKeeper/members/yappang/models
-PY=../train_model/.venv/bin/python
+PY=../.venv/bin/python
 
 # 1) 병합 (약 1분). 마지막에 "합친 층 252개 / 어댑터 층 252개 OK"가 나와야 한다
 $PY -I -X utf8 merge_lora_to_hf.py --adapter <작성자>/<이름> --base-dir base/Qwen3-8B --out <작성자>/merged-<이름>
@@ -64,7 +64,7 @@ rm -r <작성자>/merged-<이름> && rm <작성자>/merged-<이름>-f16.gguf
 
 ```bash
 # 모델 직접 호출 (백엔드와 같은 설정: think=false, format=json, temperature 0)
-cd members/yappang/train_model
+cd members/yappang/train_model_q4b
 python3 -I scripts/eval_ollama.py --model <Ollama 모델 이름> --tag <태그> --limit 6     # 시험
 python3 -I scripts/eval_ollama.py --model <Ollama 모델 이름> --tag <태그>               # 전체 111문항 (약 20분)
 
@@ -86,7 +86,7 @@ curl -s -X POST localhost:8000/principles/ask -H 'Content-Type: application/json
 
 ## 6. 평가 결과 (이 모델, 111문항)
 
-모델 `qwen3-8b-stockrule-v3-2ep`(haechan v3 2에폭, Q4_K_M)을 Ollama로 평가했다(2026-11-06). `train_model/scripts/eval_ollama.py`, greedy, `think=false`, `format=json`, 최대 900토큰. 결과 파일은 `train_model/outputs/eval_ollama-v3-2ep-haechan.jsonl`(gitignore).
+모델 `qwen3-8b-stockrule-v3-2ep`(haechan v3 2에폭, Q4_K_M)을 Ollama로 평가했다(2026-11-06). `train_model_q4b/scripts/eval_ollama.py`, greedy, `think=false`, `format=json`, 최대 900토큰. 결과 파일은 `train_model_q4b/outputs/eval_ollama-v3-2ep-haechan.jsonl`(gitignore).
 **Q4B 자체 기준**(`eval_q4b.py`의 정의, 목표는 얍팡 기준) 점수다. haechan·hyeonkyeong 지표와는 정의가 다르다.
 
 | 지표 | 결과 | 목표 |

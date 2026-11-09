@@ -7,6 +7,9 @@
   3. 같은 첫 질문(입력)은 train 과 val 한쪽에만 들어가도록 입력 단위로 묶어서, 유형별로 val 비율(기본 5%)만큼 나눈다. 시드 42.
   4. train/val 과 메타(train_meta/val_meta)를 쓰고, 결과가 약속대로인지 검사해서 보여 준다.
 
+수정 규칙(2026-11-08): 분할이 끝난 뒤 `yappang/data/scripts/data_fixes.py` 규칙을 적용한다(부등호 경계·조사 수정, 반전·깨진 문장 제외).
+  분할을 먼저 하고 고치므로 train/val 배정은 병준 최종 병합과 같고, 결과 파일명에는 `_fixed`가 붙는다. 수정 없이 원본 결과가 필요하면 `--no-fix`.
+
 기존 코드와 다른 점
   - 출력 폴더를 `--out`으로 고른다. 기본은 `train_model/outputs/merge_sets/`라서 학습에 쓰는 `train_model/data/`를 덮어쓰지 않는다.
   - val 비율·시드를 옵션으로 바꿀 수 있다(기본값은 기존과 같아서 같은 결과가 나온다).
@@ -49,6 +52,31 @@ EVAL_FILES = [
     "hyeonkyeong/data/eval_14-20.jsonl",
 ]
 OUT_NAMES = ["train.jsonl", "val.jsonl", "train_meta.jsonl", "val_meta.jsonl"]
+FIX_SCRIPTS = HERE.parents[1] / "data" / "scripts"  # data_fixes.py 가 있는 폴더
+
+
+def out_names(fix):
+    """결과 파일명. 수정 규칙을 적용하면 _fixed 를 붙여 원본 병합 결과와 구분한다."""
+    return [n.replace(".jsonl", "_fixed.jsonl") for n in OUT_NAMES] if fix else list(OUT_NAMES)
+
+
+def apply_fixes(rows):
+    """분할된 행 목록에 수정 규칙을 적용한다. returns (행, 수정 건수, 제외 건수). 수정한 행은 메타에 _fix 가 남는다."""
+    sys.path.insert(0, str(FIX_SCRIPTS))
+    import data_fixes
+
+    out, n_fix, n_drop = [], 0, 0
+    for r in rows:
+        nr, act, note = data_fixes.fix_row(r, r["type"])
+        if act == "drop":
+            n_drop += 1
+            continue
+        if act == "fix":
+            nr = dict(nr)
+            nr["_fix"] = note
+            n_fix += 1
+        out.append(nr)
+    return out, n_fix, n_drop
 
 
 def read_jsonl(rel):
@@ -166,6 +194,7 @@ def main():
     ap.add_argument("--out", default=str(HERE.parent / "outputs" / "merge_sets"))
     ap.add_argument("--val-ratio", type=float, default=0.05)
     ap.add_argument("--seed", type=int, default=42)
+    ap.add_argument("--no-fix", action="store_true", help="수정 규칙을 적용하지 않는다(원본 병합 결과, 파일명에 _fixed 없음)")
     ap.add_argument("--compare", default=None, help="이 폴더의 train/val/meta 와 해시를 비교")
     a = ap.parse_args()
 
@@ -176,11 +205,17 @@ def main():
     print(f"평가 문장 {len(eval_texts)}개 / 입력 파일:")
     rows, removed, skipped = load_rows(eval_texts)
     train, val = split(rows, a.val_ratio, a.seed)
+    fix = not a.no_fix
+    if fix:
+        train, f1, d1 = apply_fixes(train)
+        val, f2, d2 = apply_fixes(val)
+        print(f"\n[수정 규칙] train 수정 {f1} / 제외 {d1}, val 수정 {f2} / 제외 {d2}")
+    names = out_names(fix)
 
-    write(out_dir, "train.jsonl", train, False)
-    write(out_dir, "val.jsonl", val, False)
-    write(out_dir, "train_meta.jsonl", train, True)
-    write(out_dir, "val_meta.jsonl", val, True)
+    write(out_dir, names[0], train, False)
+    write(out_dir, names[1], val, False)
+    write(out_dir, names[2], train, True)
+    write(out_dir, names[3], val, True)
 
     print("\n평가와 겹쳐 제외:", removed)
     print("기존 데이터와 첫 질문이 같아 제외:", skipped)
@@ -197,7 +232,7 @@ def main():
         cmp_dir = Path(a.compare).resolve()
         print(f"\n[비교] {cmp_dir}")
         same = True
-        for name in OUT_NAMES:
+        for name in names:
             other = cmp_dir / name
             if not other.exists():
                 print(f"  {name}: 상대 파일 없음")

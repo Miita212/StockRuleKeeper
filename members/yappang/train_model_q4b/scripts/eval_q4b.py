@@ -1,6 +1,6 @@
 """Q4B(Qwen3-4B) 평가. 병준 eval.py 를 바탕으로 8GB 용으로 조정하고 팀 목표 지표를 더했다.
 
-평가 세트: hyeonkyeong/data/eval_*.jsonl 111문항 (8B 병준 v1 과 같은 세트라 직접 비교 가능)
+평가 세트: data/test_set.jsonl 통합 시험 234문항. 기본(--set official111)은 예전 111문항(8B 병준 v1 과 같은 세트라 직접 비교 가능), haechan 123문항은 --set haechan, 전체는 --set all
 지표 (정의는 이 스크립트 기준. 팀 정의가 따로 있으면 맞춰야 함)
   - JSON 유효율   : 출력이 JSON 으로 파싱되는 비율                                  (목표 99%)
   - 형태 일치율   : 최상위 키 집합이 정답과 같은 비율 (변환/되묻기/거절 구분)
@@ -21,8 +21,15 @@ import json
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-MEMBERS = HERE.parents[2]
-EVAL_FILES = [MEMBERS / "hyeonkyeong" / "data" / f"eval_{r}.jsonl" for r in ("1-7", "8-13", "14-20")]
+
+EVAL_FILES = [HERE.parent / "data" / "test_set.jsonl"]  # 통합 시험 세트 234문항(공식 111 + haechan 123). 학습·검증에 쓰지 않는다. 생성: data/scripts/build_test_set.py
+SETS = {"official111": ("official111",), "haechan": ("haechan58", "haechan31", "haechan34"), "all": None}  # --set 선택지
+
+
+def select(rows, name):
+    """--set 에 맞는 행만. 기본 official111 은 예전 111문항과 같다(이전 버전 수치와 비교용)."""
+    src = SETS[name]
+    return rows if src is None else [r for r in rows if r["source"] in src]
 SLANG_WORDS = ("별칭", "오타", "구어")
 
 
@@ -50,6 +57,7 @@ def main():
     ap.add_argument("--batch", type=int, default=8)
     ap.add_argument("--max-new", type=int, default=900)
     ap.add_argument("--limit", type=int, default=0, help="앞에서 N문항만 (시험용)")
+    ap.add_argument("--set", choices=list(SETS), default="official111", help="시험 범위: official111(기본, 예전 111문항) | haechan(123) | all(234)")
     a = ap.parse_args()
 
     import torch
@@ -66,7 +74,7 @@ def main():
         model = PeftModel.from_pretrained(model, a.adapter)
     model.eval()
 
-    rows = [json.loads(l) for p in EVAL_FILES for l in open(p, encoding="utf-8") if l.strip()]
+    rows = select([json.loads(l) for p in EVAL_FILES for l in open(p, encoding="utf-8") if l.strip()], a.set)
     if a.limit:
         rows = rows[:a.limit]
     results = []

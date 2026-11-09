@@ -1,4 +1,6 @@
-"""병준의 merge_train_data.py 를 복사해 S1·S2 생성분(yappang/data/gen_s1_s2_pass.jsonl)을 입력에 추가한 버전.
+"""[구버전·쓰지 않음] 현행은 merge_train_sets.py(수정 규칙 적용, 파일명 _fixed). 이 파일은 수정 규칙이 없고 원본 이름(train.jsonl)으로 쓴다.
+
+병준의 merge_train_data.py 를 복사해 S1·S2 생성분(yappang/data/gen_s1_s2_pass.jsonl)을 입력에 추가한 버전.
 팀원 데이터는 읽기만 하고, 결과는 yappang/train_model/data 에 저장한다. 원본 로직(평가 중복 제거, 입력 단위 분할, 시드 42)은 그대로.
 실행: python -I scripts/merge_train_data.py
 """

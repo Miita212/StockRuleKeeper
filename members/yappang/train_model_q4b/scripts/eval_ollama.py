@@ -58,9 +58,10 @@ def main():
     ap.add_argument("--url", default="http://localhost:11434")
     ap.add_argument("--max-new", type=int, default=900)
     ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--set", choices=list(q.SETS), default="official111", help="시험 범위: official111(기본) | haechan(123) | all(234)")
     a = ap.parse_args()
 
-    rows = [json.loads(l) for p in q.EVAL_FILES for l in open(p, encoding="utf-8") if l.strip()]
+    rows = q.select([json.loads(l) for p in q.EVAL_FILES for l in open(p, encoding="utf-8") if l.strip()], a.set)
     if a.limit:
         rows = rows[:a.limit]
     out = HERE.parent / "outputs" / f"eval_{a.tag}.jsonl"
