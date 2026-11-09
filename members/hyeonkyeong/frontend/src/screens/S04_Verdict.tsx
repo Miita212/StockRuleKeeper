@@ -71,7 +71,7 @@ export default function S04_Verdict() {
             <span className={`rate ${stock.changeRate >= 0 ? "up" : "down"}`}>
               {stock.changeRate >= 0 ? "▲" : "▼"} {Math.abs(stock.changeRate)}%
             </span>
-            <span className="today">오늘</span>
+            <span className="today">{stock.priceBasis}</span>
           </div>
         </div>
         <div className="summary">

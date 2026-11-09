@@ -5,6 +5,7 @@ DB에는 저장하지 않는다(services/live.py). DB 갱신은 batch/collect_da
 """
 import sqlite3
 import time
+from datetime import date, datetime
 
 import config
 from indicators.compute import compute_all, load_inputs
@@ -68,12 +69,28 @@ def day_change(conn: sqlite3.Connection, code: str, daily: list[dict] | None = N
     return round((rows[0]["close"] / rows[1]["close"] - 1) * 100, 2) if len(rows) == 2 and rows[1]["close"] else 0.0
 
 
+def price_basis(conn: sqlite3.Connection, code: str, daily: list[dict] | None = None) -> str:
+    """등락률이 어느 가격 기준인지: 장중 오늘 값이면 "실시간", 아니면 "11/09 종가"."""
+    if daily is None:
+        row = conn.execute("SELECT MAX(date) AS d FROM prices_daily WHERE code=?", (code,)).fetchone()
+        last = row["d"]
+    else:
+        last = daily[-1]["date"] if daily else None
+    if not last:
+        return ""
+    now = datetime.now()
+    if last == date.today().isoformat() and now.weekday() < 5 and (9, 0) <= (now.hour, now.minute) < (15, 40):
+        return "실시간"
+    return f"{int(last[5:7])}/{int(last[8:10])} 종가"
+
+
 def stock_card(conn: sqlite3.Connection, row: sqlite3.Row, principle: list[dict], inputs: dict | None = None) -> dict:
     result = judge_stock(principle, actuals(conn, row["code"], inputs))
     core = principle_svc.core_ids(principle)  # 조건에 맞는 종목 = 사용자가 정한 지표를 모두 충족
     all_pass = all(r["pass"] for r in result["rows"] if r["indicator_id"] in core)
     return {"code": row["code"], "name": row["name"], "passCount": result["pass_count"], "total": result["total"],
-            "allPass": all_pass, "changeRate": day_change(conn, row["code"], inputs["daily"] if inputs else None)}
+            "allPass": all_pass, "changeRate": day_change(conn, row["code"], inputs["daily"] if inputs else None),
+            "priceBasis": price_basis(conn, row["code"], inputs["daily"] if inputs else None)}
 
 
 def list_stocks(conn: sqlite3.Connection, principle: list[dict], q: str = "", only_pass: bool = False,

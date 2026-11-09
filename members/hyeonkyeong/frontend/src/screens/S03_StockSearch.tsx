@@ -75,7 +75,10 @@ export default function S03_StockSearch() {
         </div>
       ) : (
         <div className="list-header">
-          <h3 className="label">{searching ? "검색 결과" : "내 원칙을 충족하는 종목들"}</h3>
+          <div>
+            <h3 className="label">{searching ? "검색 결과" : "내 원칙을 충족하는 종목들"}</h3>
+            {shown[0]?.priceBasis && <div className="stock-sub">등락률 {shown[0].priceBasis} 기준</div>}
+          </div>
           <div className="count-pager">
             <span>{list.length}개</span>
             {pageCount > 1 && <Pager page={page} pageCount={pageCount} onChange={setPage} />}

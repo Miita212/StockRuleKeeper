@@ -33,6 +33,7 @@ export type Stock = {
   name: string;
   passCount: number;
   changeRate: number;
+  priceBasis: string; // 등락률 기준: "실시간" 또는 "11/09 종가"
 };
 
 export type VerdictRow = {
