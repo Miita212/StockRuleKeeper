@@ -396,3 +396,35 @@ p, h1, h2, h3 { margin: 0; }
   0%, 100% { box-shadow: 0 0 8px 1px rgba(31, 95, 234, 0.55), 0 0 16px 2px rgba(91, 143, 255, 0.35); }
   50% { box-shadow: 0 0 10px 2px rgba(31, 95, 234, 0.75), 0 0 20px 4px rgba(91, 143, 255, 0.55); }
 }
+
+/* 12. 대화가 쌓이는 화면 (PrincipleChat) */
+.chat-screen { gap: 10px; padding-top: 56px; }
+.chat-thread { gap: 10px; margin: 0 -16px; padding: 24px 16px 8px; -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 28px); mask-image: linear-gradient(to bottom, transparent 0, #000 28px); }
+.chat-thread .bubble-user { white-space: normal; }
+.chat-thread .options { padding-top: 0; }
+.chat-thread .options.done .chip { pointer-events: none; }
+.chat-thread .options.done .chip:not(.chip-selected) { opacity: 0.4; }
+.chat-change { display: flex; align-items: center; align-self: flex-start; flex-wrap: wrap; gap: 8px; padding: 9px 12px; border-radius: 12px; background: var(--brand-50); font-size: 13px; line-height: 18px; }
+.chat-change b { color: var(--ink-900); }
+.chat-change span { color: var(--ink-500); }
+.chat-change i { font-style: normal; color: var(--brand-500); }
+.chat-change em { font-style: normal; font-weight: 700; color: var(--brand-500); }
+.chat-collapsed { align-self: flex-start; padding: 8px 12px; border-radius: 12px; background: #e8ecf2; font-size: 13px; line-height: 18px; color: var(--ink-500); }
+.chat-result { display: flex; flex-direction: column; gap: 8px; }
+.chat-result-title { font-size: 16px; line-height: 22px; font-weight: 700; padding: 0 4px; }
+.rest-row { cursor: pointer; }
+
+/* 14. 새 원칙 이름 정하기 시트 */
+.name-desc { padding: 0 4px; font-size: 14px; line-height: 20px; color: var(--ink-500); }
+.name-box { display: flex; align-items: center; gap: 8px; height: 56px; padding: 0 16px; box-sizing: border-box; border: 1px solid var(--line); border-radius: 12px; background: var(--surface-0); }
+.name-box:focus-within { border: 2px solid var(--brand-500); padding: 0 15px; }
+.name-box input { flex: 1; min-width: 0; border: 0; outline: 0; background: none; font-size: 17px; font-weight: 700; color: var(--ink-900); }
+.name-box span { font-size: 13px; color: var(--ink-500); }
+
+/* 15. 지표 카드를 꾹 눌러 비활성화 */
+.indicator-card.pressable:active { background: #e8ecf2; }
+
+/* 16. 06: 수정 버튼 대신 원칙명 바로 옆 연필 아이콘으로 이름 수정, 선택 버튼은 맨 오른쪽 */
+.principle-name { gap: 4px; }
+.pencil-btn { flex-shrink: 0; display: flex; align-items: center; justify-content: center; padding: 8px; margin: -8px; border: 0; background: none; cursor: pointer; }
+.principle-name .badge { margin-left: 4px; }

@@ -63,14 +63,13 @@ export default function S03_StockSearch() {
         <input value={query} placeholder="종목명이나 코드를 검색해요" onChange={(e) => { setQuery(e.target.value); setPage(1); }} />
         {waiting && <span className="spinner" />}
       </div>
-      <p className="note">반도체 업종 종목만 점검할 수 있어요.</p>
       {waiting ? (
         <div className="list-header">
           <h3 className="label">한국투자증권에서 최신 값을 불러오는 중이에요</h3>
         </div>
       ) : (
         <div className="list-header">
-          <h3 className="label">{searching ? "검색 결과" : "내 원칙 충족 순 반도체 종목"}</h3>
+          <h3 className="label">{searching ? "검색 결과" : "내 원칙을 충족하는 종목들"}</h3>
           <div className="count-pager">
             <span>{list.length}개</span>
             {pageCount > 1 && <Pager page={page} pageCount={pageCount} onChange={setPage} />}
@@ -96,7 +95,7 @@ export default function S03_StockSearch() {
           <div key={s.code} className="stock-card" onClick={() => navigate(`/stocks/${s.code}`, { state: { name: s.name } })}>
             <div className="indicator-text">
               <div className="indicator-name">{s.name}</div>
-              <div className="stock-sub">{s.code} · 원칙 {s.passCount}/{total}개 충족</div>
+              <div className="stock-sub">{s.code} · 지표 {s.passCount}/{total}개 충족</div>
             </div>
             <div className={`rate ${s.changeRate >= 0 ? "up" : "down"}`}>
               {s.changeRate >= 0 ? "▲" : "▼"} {Math.abs(s.changeRate)}%
