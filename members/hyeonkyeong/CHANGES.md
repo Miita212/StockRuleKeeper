@@ -5,6 +5,19 @@
 
 ---
 
+## 2026-11-09 · 새 학습 데이터 fixed-5-hk (`data_fixed5_hk/`)
+
+- **무엇**: yappang fixed-4를 바탕으로 라벨을 고치고 보강한 학습 데이터예요.
+  - train 7,065 / val 314 (fixed-4 val과 같음) / 새 시험 30 (학습 금지)
+  - 바꾼 것: `anchors` 채움 400, "싸다" 후보 [PER, PBR] 통일 66, "남는 이익" → 매출순이익률 값 되묻기 13, "배당 많이" → 배당수익률 값 되묻기 5, 거절 보강 90, 경계 보강 33
+- **왜**: fixed-4로 학습한 8B·4B 모두 `anchors` 누락으로 감점됐고, 되묻기 후보가 데이터 안에서 서로 엇갈렸어요. 근거는 `docs/8B_v6_vs_fixed4_공유요약.md`, `docs/8B_v6_vs_fixed4_yappang채점기준_비교.md`.
+- **적용**: 앱 코드 변경은 없어요. 4B·8B를 다시 학습할 때 `--train members/hyeonkyeong/data_fixed5_hk/train_fixed5_hk.jsonl --val members/hyeonkyeong/data_fixed5_hk/val_fixed5_hk.jsonl`로 쓰면 돼요.
+- **다시 만들기**: `python3 -I -X utf8 members/hyeonkyeong/data_fixed5_hk/build_fixed5_hk.py`
+- **확인**: 결과 해시가 `data_fixed5_hk/SHA256SUMS_fixed5_hk.txt`와 같아야 해요. 기준·비교 방법·팀이 정할 표현은 `data_fixed5_hk/README.md`에 있어요.
+- 공유용 zip(`train`/`val`/`test` 형태)은 git 밖에서 따로 전달했어요. 내용은 README 7장 참고.
+
+---
+
 ## 2026-11-09 · 병준 UI 18·19번 반영 (지표명 굵게, 되묻기 중 입력창 잠금, 잠금 말 화면 처리)
 
 - 병준 커밋 `3716973`(18번 챗봇 답변 지표명 굵게)과 `c35a4de`(19번)를 반영. 상세 설명은 `members/byungjun/frontend/UI및백엔드수정내역.md` 18·19번.
