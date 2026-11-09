@@ -5,6 +5,21 @@
 
 ---
 
+## 2026-11-09 · 새 학습 데이터 fixed-6-hk (`data_fixed6_hk/`), yappang 검증 반영
+
+- **무엇**: fixed-5-hk에 yappang 검증(11/09) 지적과 표현 기준을 반영한 학습 데이터예요.
+  - train 7,081 (31개 지우고 47개 더함) / val 314 (4줄 수정) / 새 시험 30 (N019 교체, 학습 금지)
+  - "어떤 기준으로 볼까요? 아래에서 골라 주세요." 88개: 정답이 틀린 게 많아 줄마다 처리(값 되묻기 24, 문구·후보 수정 33, 지움 31)
+  - 표현 기준 G1~G7: 이익 늘어남=영업이익 증가율, 폭락=[기간 수익률, 52주 고점 대비](고점을 말하면 고점 대비), 규모=시가총액, 가성비=[PER, PBR], 저점·바닥=52주 저점 대비, 잘 버는=[영업이익, 매출순이익률](꾸준히면 연속 흑자 포함), 본업=영업이익
+  - `test_fixed6_hk.jsonl`: yappang `test_set.jsonl` 정답 9건을 위 기준으로 고친 **제안본** + 새 시험 30. 원본은 건드리지 않았어요.
+- **왜**: 학습 데이터와 시험 정답이 서로 다른 표현이 있어서, 기준을 정하지 않으면 모델이 같은 문항을 계속 틀려요. 기준과 이유는 `data_fixed6_hk/README.md` 2장.
+- **적용**: 앱 코드 변경은 없어요. 학습할 때 `--train members/hyeonkyeong/data_fixed6_hk/train_fixed6_hk.jsonl --val members/hyeonkyeong/data_fixed6_hk/val_fixed6_hk.jsonl`
+- **다시 만들기**: `python3 -I -X utf8 members/hyeonkyeong/data_fixed6_hk/build_fixed6_hk.py` (fixed-5-hk 출력을 읽어요)
+- **확인**: 해시가 `data_fixed6_hk/SHA256SUMS_fixed6_hk.txt`와 같아야 해요.
+- **주의**: 새 시험 30개 중 14개가 학습 문장과 유사도 0.65 이상이에요(대부분 숫자가 든 추출 문장). "처음 보는 문장" 점수로 읽으면 안 돼요.
+
+---
+
 ## 2026-11-09 · 새 학습 데이터 fixed-5-hk (`data_fixed5_hk/`)
 
 - **무엇**: yappang fixed-4를 바탕으로 라벨을 고치고 보강한 학습 데이터예요.
