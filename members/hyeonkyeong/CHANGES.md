@@ -5,6 +5,28 @@
 
 ---
 
+## 2026-11-09 · 앱 로컬 모델 = data_v6 3에폭 (해찬 v5 재현), 백엔드 .env를 로컬 모델로
+
+### 1. 어떤 모델이 붙어 있나
+- Ollama `qwen3-8b-stockrule` = **data_v6 3에폭**(hyeonkyeong이 ws6에서 학습, 해찬 v5 3에폭과 같은 데이터·설정 → 공식 111문제 점수가 항목마다 1문제 안쪽으로 같음). 결과: [`docs/8B_data_v6_재학습_결과.md`](docs/8B_data_v6_재학습_결과.md).
+- 이전 모델(해찬 v3 2에폭)은 `qwen3-8b-stockrule-v3-2ep`로 남겨 둠. 되돌리기: `ollama cp qwen3-8b-stockrule-v3-2ep qwen3-8b-stockrule`.
+- 앱에서 확인(에뮬레이터): "적자 기업은 제외할래요" → 영업이익/매출순이익률 고르기 → 100억원 초과 (v3는 자본잠식률로 잘못 바꿨던 문장). "영업이익 500억 넘는 회사 찾아줘"도 이제 거절하지 않고 추출.
+- 알려진 약점(해찬 v5와 같음): "부채비율 150% 이하에 영업이익 100억 이상"처럼 지표 두 개 문장에서 영업이익을 빠뜨림. 되묻기 값 단계에서 버튼 대신 직접 "60% 이하"라고 치면 문맥을 잃음 → 시연은 버튼으로.
+- 다음: yappang fixed-4(8B·4B 공용)로 8B 학습 중. 결과가 더 좋으면 같은 방법으로 교체 예정.
+
+### 2. 백엔드를 그냥 켜도 로컬 모델을 쓰게
+- **문제**: `config.py` 기본값이 `LLM_PROVIDER=anthropic`, `HTTP_TIMEOUT=20`이라 `.env`에 안 적으면 원칙 변환이 Haiku로 가고, 로컬로 바꿔도 20초 타임아웃에 끊길 수 있었다(로컬 변환 13~18초).
+- **바꾼 것**: 내 `backend/.env`(git에 안 올라감)에 아래 3줄 추가. `.env.example`에는 시연용 안내 주석만 추가(기본값은 그대로 anthropic — Ollama 없는 PC에서 켜도 동작하게).
+```
+LLM_PROVIDER=local
+LOCAL_LLM_MODEL=qwen3-8b-stockrule
+HTTP_TIMEOUT=300
+```
+- **팀원 적용**: 자기 PC에서 로컬 모델(Ollama `qwen3-8b-stockrule`)로 시연하려면 자기 `backend/.env`에 같은 3줄을 넣는다. Ollama 모델이 없으면 넣지 말 것(원칙 변환이 실패한다).
+- **확인**: `cd backend && python -c "import config;print(config.LLM_PROVIDER, config.HTTP_TIMEOUT)"` → `local 300.0`.
+
+---
+
 ## 2026-11-09 · 병준 UI 15~17번 반영 (지표 비활성화, 06 연필 아이콘, 03 공지 띠)
 
 - 무엇: 병준 커밋 `43f127b`·`f70d25c`·`4b80340`·`f8becdf`의 백엔드·프론트 변경을 내 폴더로 가져왔다. 내용은 병준 것과 **똑같다**(줄바꿈만 내 파일 형식 CRLF 유지).
