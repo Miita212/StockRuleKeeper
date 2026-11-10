@@ -430,6 +430,8 @@ python batch/collect_data.py --codes 005930
 
 **🚀 실제 모드**: 한투·DART에서 받으려면 키가 필요해요. 시세·배당·재무를 한 번에 받아요.
 
+> ⏱️ **처음 전체를 받을 때는 한투 약 10분 + DART 약 10분, 합쳐서 20분 이상 걸릴 수 있어요.** 끝날 때까지 이 터미널을 닫지 말고 기다려 주세요. 중간에 멈춰도 같은 명령을 다시 실행하면 이어서 받아요.
+
 ```bash
 python batch/collect_data.py                          # 전체 (한투 약 10분 + DART 약 10분)
 python batch/collect_data.py --codes 005930 000660    # 일부 종목만
