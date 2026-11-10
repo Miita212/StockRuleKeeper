@@ -440,3 +440,8 @@ p, h1, h2, h3 { margin: 0; }
 .chat-input.locked input::placeholder { color: var(--ink-500); font-weight: 500; }
 .chat-input.locked button { background: var(--line); cursor: not-allowed; }
 .chat-input.locked button img { opacity: 0.4; }
+
+/* 설정: 관리자 모드 */
+.admin-box { display: flex; flex-direction: column; gap: 10px; padding: 16px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface-0); }
+.admin-head { justify-content: space-between; font-size: 15px; line-height: 22px; font-weight: 700; color: var(--ink-900); }
+.admin-box .label, .admin-box .note { padding: 0; }
