@@ -1,0 +1,3846 @@
+{
+ "fx6-8b-2ep": {
+  "원본/전체264": {
+   "n": 264,
+   "yappang": {
+    "JSON 유효율": [
+     264,
+     264
+    ],
+    "형태 일치율": [
+     243,
+     264
+    ],
+    "필드 정확도": [
+     176,
+     187
+    ],
+    "은어 변환율": [
+     13,
+     14
+    ],
+    "완전 일치율": [
+     189,
+     264
+    ]
+   },
+   "구조 일치": {
+    "전체": [
+     227,
+     264
+    ],
+    "extract": [
+     142,
+     152
+    ],
+    "official111": [
+     95,
+     111
+    ],
+    "clarify": [
+     43,
+     67
+    ],
+    "refuse": [
+     42,
+     45
+    ],
+    "haechan58": [
+     54,
+     58
+    ],
+    "haechan31": [
+     25,
+     31
+    ],
+    "haechan34": [
+     25,
+     34
+    ],
+    "holdout_hk": [
+     28,
+     30
+    ]
+   }
+  },
+  "원본/기존234": {
+   "n": 234,
+   "yappang": {
+    "JSON 유효율": [
+     234,
+     234
+    ],
+    "형태 일치율": [
+     215,
+     234
+    ],
+    "필드 정확도": [
+     160,
+     171
+    ],
+    "은어 변환율": [
+     13,
+     14
+    ],
+    "완전 일치율": [
+     167,
+     234
+    ]
+   },
+   "구조 일치": {
+    "전체": [
+     199,
+     234
+    ],
+    "extract": [
+     130,
+     140
+    ],
+    "official111": [
+     95,
+     111
+    ],
+    "clarify": [
+     34,
+     56
+    ],
+    "refuse": [
+     35,
+     38
+    ],
+    "haechan58": [
+     54,
+     58
+    ],
+    "haechan31": [
+     25,
+     31
+    ],
+    "haechan34": [
+     25,
+     34
+    ]
+   }
+  },
+  "원본/새시험30": {
+   "n": 30,
+   "yappang": {
+    "JSON 유효율": [
+     30,
+     30
+    ],
+    "형태 일치율": [
+     28,
+     30
+    ],
+    "필드 정확도": [
+     16,
+     16
+    ],
+    "은어 변환율": [
+     0,
+     0
+    ],
+    "완전 일치율": [
+     22,
+     30
+    ]
+   },
+   "구조 일치": {
+    "전체": [
+     28,
+     30
+    ],
+    "extract": [
+     12,
+     12
+    ],
+    "holdout_hk": [
+     28,
+     30
+    ],
+    "clarify": [
+     9,
+     11
+    ],
+    "refuse": [
+     7,
+     7
+    ]
+   }
+  },
+  "제안/전체264": {
+   "n": 264,
+   "yappang": {
+    "JSON 유효율": [
+     264,
+     264
+    ],
+    "형태 일치율": [
+     248,
+     264
+    ],
+    "필드 정확도": [
+     176,
+     187
+    ],
+    "은어 변환율": [
+     13,
+     14
+    ],
+    "완전 일치율": [
+     191,
+     264
+    ]
+   },
+   "구조 일치": {
+    "전체": [
+     234,
+     264
+    ],
+    "extract": [
+     142,
+     152
+    ],
+    "official111": [
+     98,
+     111
+    ],
+    "clarify": [
+     50,
+     67
+    ],
+    "refuse": [
+     42,
+     45
+    ],
+    "haechan58": [
+     54,
+     58
+    ],
+    "haechan31": [
+     27,
+     31
+    ],
+    "haechan34": [
+     27,
+     34
+    ],
+    "holdout_hk": [
+     28,
+     30
+    ]
+   }
+  },
+  "제안/기존234": {
+   "n": 234,
+   "yappang": {
+    "JSON 유효율": [
+     234,
+     234
+    ],
+    "형태 일치율": [
+     220,
+     234
+    ],
+    "필드 정확도": [
+     160,
+     171
+    ],
+    "은어 변환율": [
+     13,
+     14
+    ],
+    "완전 일치율": [
+     169,
+     234
+    ]
+   },
+   "구조 일치": {
+    "전체": [
+     206,
+     234
+    ],
+    "extract": [
+     130,
+     140
+    ],
+    "official111": [
+     98,
+     111
+    ],
+    "clarify": [
+     41,
+     56
+    ],
+    "refuse": [
+     35,
+     38
+    ],
+    "haechan58": [
+     54,
+     58
+    ],
+    "haechan31": [
+     27,
+     31
+    ],
+    "haechan34": [
+     27,
+     34
+    ]
+   }
+  },
+  "제안/새시험30": {
+   "n": 30,
+   "yappang": {
+    "JSON 유효율": [
+     30,
+     30
+    ],
+    "형태 일치율": [
+     28,
+     30
+    ],
+    "필드 정확도": [
+     16,
+     16
+    ],
+    "은어 변환율": [
+     0,
+     0
+    ],
+    "완전 일치율": [
+     22,
+     30
+    ]
+   },
+   "구조 일치": {
+    "전체": [
+     28,
+     30
+    ],
+    "extract": [
+     12,
+     12
+    ],
+    "holdout_hk": [
+     28,
+     30
+    ],
+    "clarify": [
+     9,
+     11
+    ],
+    "refuse": [
+     7,
+     7
+    ]
+   }
+  },
+  "기준 바뀐 9문항": {
+   "T031": {
+    "text": "잘 버는 회사만 볼래요",
+    "pred": "AMBIGUOUS_INDICATOR [5, 6, 7]",
+    "원본 정답과 구조 일치": true,
+    "제안 정답과 구조 일치": false
+   },
+   "T064": {
+    "text": "가성비 좋은 주식 찾아줘",
+    "pred": "AMBIGUOUS_INDICATOR [10, 11]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   },
+   "T065": {
+    "text": "이익이 늘어나는 회사가 좋아",
+    "pred": "VALUE_MISSING [9]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   },
+   "T106": {
+    "text": "주가가 롤러코스터 같은 종목",
+    "pred": "VALUE_MISSING [18]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   },
+   "T107": {
+    "text": "규모가 큰 회사",
+    "pred": "VALUE_MISSING [14]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   },
+   "T193": {
+    "text": "크기가 큰 상장사만 보여줘",
+    "pred": "VALUE_MISSING [14]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   },
+   "T197": {
+    "text": "최근 주가가 푹 꺼진 종목",
+    "pred": "AMBIGUOUS_INDICATOR [15, 16]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   },
+   "T228": {
+    "text": "돈 잘 버는 회사만 보여줘",
+    "pred": "AMBIGUOUS_INDICATOR [5, 7]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   },
+   "T229": {
+    "text": "가격 매력 있는 종목 골라줘",
+    "pred": "AMBIGUOUS_INDICATOR [10, 11]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   }
+  },
+  "구조 오답(원본)": [
+   {
+    "test_id": "T009",
+    "source": "official111",
+    "kind": "단일(흑자 = 0 초과)",
+    "text": "영업이익이 흑자인 회사만 보여줘",
+    "gold": "extract",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 5, \"message\": \"본업에서 얼마나 버는지는 영업이익으로 볼 수 있어요. 어느 정도 이상 벌어야 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"1천억원 초과로 엄격하게 할래요\", \"value\": 1000}, {\"level\": \"보통\", \"label\": \"100억원 초과로 보통으로 할래요\", \"value\": 100}, {\"level\": \"느슨\", \"label\":"
+   },
+   {
+    "test_id": "T018",
+    "source": "official111",
+    "kind": "복수",
+    "text": "자본잠식 없고 매출순이익률 7% 이상인 곳",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T022",
+    "source": "official111",
+    "kind": "오타",
+    "text": "영업리익 흑자인 회사만",
+    "gold": "extract",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 5, \"message\": \"본업에서 얼마나 버는지는 영업이익으로 볼 수 있어요. 어느 정도 이상 벌어야 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"1천억원 초과로 엄격하게 할래요\", \"value\": 1000}, {\"level\": \"보통\", \"label\": \"100억원 초과로 보통으로 할래요\", \"value\": 100}, {\"level\": \"느슨\", \"label\":"
+   },
+   {
+    "test_id": "T023",
+    "source": "official111",
+    "kind": "되묻기(값 없음)",
+    "text": "빌린 돈에 많이 기대는 회사는 걸러줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"대출이 많다는 건 두 지표로 갈려요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 1, \"label\": \"부채비율\"}, {\"id\": 2, \"label\": \"차입금의존도\"}]}"
+   },
+   {
+    "test_id": "T024",
+    "source": "official111",
+    "kind": "되묻기(값 없음)",
+    "text": "자본이 깎여 나간 회사는 싫어",
+    "gold": "clarify",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T030",
+    "source": "official111",
+    "kind": "되묻기(지표 모호)",
+    "text": "빚 걱정 없는 회사만",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"대출이 많다는 건 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 1, \"label\": \"부채비율\"}, {\"id\": 2, \"label\": \"차입금의존도\"}]}"
+   },
+   {
+    "test_id": "T032",
+    "source": "official111",
+    "kind": "되묻기(지표 모호)",
+    "text": "망할 걱정 없는 회사",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"안전하다고 볼 수 있는 기준이 여러 가지예요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 1, \"label\": \"부채비율\"}, {\"id\": 2, \"label\": \"차입금의존도\"}, {\"id\": 4, \"label\": \"자본잠식률\"}, {\"id\": 18, \"label\": \"최근 60거래일 변동성\"}]}"
+   },
+   {
+    "test_id": "T064",
+    "source": "official111",
+    "kind": "되묻기(지표 모호)",
+    "text": "가성비 좋은 주식 찾아줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"싸다고 볼 수 있는 기준이 두 가지예요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 10, \"label\": \"PER\"}, {\"id\": 11, \"label\": \"PBR\"}]}"
+   },
+   {
+    "test_id": "T065",
+    "source": "official111",
+    "kind": "되묻기(지표 모호)",
+    "text": "이익이 늘어나는 회사가 좋아",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 9, \"message\": \"본업 이익이 느는 속도는 영업이익 증가율로 볼 수 있어요. 얼마나 늘어야 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"30% 이상으로 엄격하게 할래요\", \"value\": 30}, {\"level\": \"보통\", \"label\": \"10% 이상으로 보통으로 할래요\", \"value\": 10}, {\"level\": \"느슨\", \"label\": \"0% 이"
+   },
+   {
+    "test_id": "T068",
+    "source": "official111",
+    "kind": "거절(20개 밖)",
+    "text": "배당 성장률 높은 회사",
+    "gold": "refuse",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 12, \"message\": \"배당을 얼마나 주는지는 12개월 배당수익률로 볼 수 있어요. 1년에 주가의 몇 % 이상이면 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"4% 이상으로 엄격하게 할래요\", \"value\": 4}, {\"level\": \"보통\", \"label\": \"2% 이상으로 보통으로 할래요\", \"value\": 2}, {\"level\": \"느슨\", \"label\""
+   },
+   {
+    "test_id": "T071",
+    "source": "official111",
+    "kind": "거절(종목 추천)",
+    "text": "배당 많이 주는 종목 중에 하나 골라줘",
+    "gold": "refuse",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"배당은 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 12, \"label\": \"최근 12개월 현금배당수익률\"}, {\"id\": 13, \"label\": \"연속 현금배당 연수\"}]}"
+   },
+   {
+    "test_id": "T074",
+    "source": "official111",
+    "kind": "단일(조 → 억원)",
+    "text": "시총 3조 넘는 대형주",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T094",
+    "source": "official111",
+    "kind": "복수",
+    "text": "거래량 2배 이상 늘었고 시총 3000억 이상",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T104",
+    "source": "official111",
+    "kind": "되묻기(기간 없음)",
+    "text": "최근 주가가 많이 내린 종목",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"'최근 주가가 많이 내린 종목'은 여러 기준으로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 15, \"label\": \"기간 수익률\"}, {\"id\": 16, \"label\": \"52주 고점 대비\"}]}"
+   },
+   {
+    "test_id": "T106",
+    "source": "official111",
+    "kind": "되묻기(지표 모호)",
+    "text": "주가가 롤러코스터 같은 종목",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 18, \"message\": \"주가가 출렁이는 정도는 60일 변동성으로 볼 수 있어요. 하루 등락이 평균 몇 % 안쪽이면 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"1.5% 이하로 엄격하게 할래요\", \"value\": 1.5}, {\"level\": \"보통\", \"label\": \"2% 이하로 보통으로 할래요\", \"value\": 2}, {\"level\": \"느슨\", \"labe"
+   },
+   {
+    "test_id": "T107",
+    "source": "official111",
+    "kind": "되묻기(지표 모호)",
+    "text": "규모가 큰 회사",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 14, \"message\": \"회사의 덩치는 시가총액으로 볼 수 있어요. 어느 정도 이상이면 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"5조원 이상으로 엄격하게 할래요\", \"value\": 50000}, {\"level\": \"보통\", \"label\": \"1조원 이상으로 보통으로 할래요\", \"value\": 10000}, {\"level\": \"느슨\", \"label\": \"5천억"
+   },
+   {
+    "test_id": "T116",
+    "source": "haechan58",
+    "kind": "A 끝말 추출",
+    "text": "시총 3조 이상 대형주 찾아줘",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T125",
+    "source": "haechan58",
+    "kind": "B 20개 밖 개념 거절",
+    "text": "주가가 만 원도 안 되는 주식",
+    "gold": "refuse",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T139",
+    "source": "haechan58",
+    "kind": "D 지표 짝 새 표현",
+    "text": "1년 최저가 대비 25% 이하로 오른 주식",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T168",
+    "source": "haechan58",
+    "kind": "G 애매한 말 되묻기",
+    "text": "주가가 꽤 올라온 종목",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"거품은 여러 가지로 갈려요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 10, \"label\": \"PER\"}, {\"id\": 11, \"label\": \"PBR\"}, {\"id\": 15, \"label\": \"기간 수익률\"}]}"
+   },
+   {
+    "test_id": "T191",
+    "source": "haechan31",
+    "kind": "K 되묻기 기준",
+    "text": "빚 때문에 불안하지 않은 회사",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"대출이 많다는 건 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 1, \"label\": \"부채비율\"}, {\"id\": 2, \"label\": \"차입금의존도\"}]}"
+   },
+   {
+    "test_id": "T192",
+    "source": "haechan31",
+    "kind": "K 되묻기 기준",
+    "text": "수익 탄탄한 회사 찾아줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"잘 번다는 건 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 5, \"label\": \"영업이익\"}, {\"id\": 7, \"label\": \"매출순이익률\"}]}"
+   },
+   {
+    "test_id": "T193",
+    "source": "haechan31",
+    "kind": "K 되묻기 기준",
+    "text": "크기가 큰 상장사만 보여줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 14, \"message\": \"회사의 덩치는 시가총액으로 볼 수 있어요. 어느 정도 이상이면 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"5조원 이상으로 엄격하게 할래요\", \"value\": 50000}, {\"level\": \"보통\", \"label\": \"1조원 이상으로 보통으로 할래요\", \"value\": 10000}, {\"level\": \"느슨\", \"label\": \"5천억"
+   },
+   {
+    "test_id": "T194",
+    "source": "haechan31",
+    "kind": "K 되묻기 기준",
+    "text": "가격 대비 효율 좋은 종목 알려줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"싸다고 볼 수 있는 기준이 두 가지예요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 10, \"label\": \"PER\"}, {\"id\": 11, \"label\": \"PBR\"}]}"
+   },
+   {
+    "test_id": "T197",
+    "source": "haechan31",
+    "kind": "K 되묻기 기준",
+    "text": "최근 주가가 푹 꺼진 종목",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"'최근 주가가 푹 꺼진 종목'은 여러 기준으로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 15, \"label\": \"기간 수익률\"}, {\"id\": 16, \"label\": \"52주 최고가 대비 등락률\"}]}"
+   },
+   {
+    "test_id": "T198",
+    "source": "haechan31",
+    "kind": "K 되묻기 기준",
+    "text": "이익이 두둑이 남는 회사 찾아줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"이익은 두 지표로 갈려요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 5, \"label\": \"영업이익\"}, {\"id\": 7, \"label\": \"매출순이익률\"}]}"
+   },
+   {
+    "test_id": "T220",
+    "source": "haechan34",
+    "kind": "N 부등호·방향",
+    "text": "자본 대비 부채가 130%를 밑도는 곳",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 130, \"unit\": \"%\", \"source\": \"user\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"sourc"
+   },
+   {
+    "test_id": "T225",
+    "source": "haechan34",
+    "kind": "N 부등호·방향",
+    "text": "매출 성장률이 9% 안 되는 회사는 거를래",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T226",
+    "source": "haechan34",
+    "kind": "N 부등호·방향",
+    "text": "배당수익률 3%에 못 미치는 종목만 골라줘",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T227",
+    "source": "haechan34",
+    "kind": "O 되묻기 말투",
+    "text": "부채 걱정 없는 회사 찾아줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"대출이 많다는 건 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 1, \"label\": \"부채비율\"}, {\"id\": 2, \"label\": \"차입금의존도\"}]}"
+   },
+   {
+    "test_id": "T228",
+    "source": "haechan34",
+    "kind": "O 되묻기 말투",
+    "text": "돈 잘 버는 회사만 보여줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"잘 번다는 건 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 5, \"label\": \"영업이익\"}, {\"id\": 7, \"label\": \"매출순이익률\"}]}"
+   },
+   {
+    "test_id": "T229",
+    "source": "haechan34",
+    "kind": "O 되묻기 말투",
+    "text": "가격 매력 있는 종목 골라줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"싸다고 볼 수 있는 기준이 두 가지예요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 10, \"label\": \"PER\"}, {\"id\": 11, \"label\": \"PBR\"}]}"
+   },
+   {
+    "test_id": "T231",
+    "source": "haechan34",
+    "kind": "O 되묻기 말투",
+    "text": "본업 수익이 넉넉한 회사 알려줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"본업이 잘 된다는 건 여러 지표로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 5, \"label\": \"영업이익\"}, {\"id\": 7, \"label\": \"매출순이익률\"}]}"
+   },
+   {
+    "test_id": "T233",
+    "source": "haechan34",
+    "kind": "O 되묻기 말투",
+    "text": "주가가 와르르 무너진 종목",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"폭락은 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 15, \"label\": \"기간 수익률\"}, {\"id\": 16, \"label\": \"52주 최고가 대비 등락률\"}]}"
+   },
+   {
+    "test_id": "T234",
+    "source": "haechan34",
+    "kind": "O 되묻기 말투",
+    "text": "주가가 훨훨 나는 종목 보여줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"급등은 두 지표로 갈려요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 15, \"label\": \"기간 수익률\"}, {\"id\": 20, \"label\": \"거래량 증가 배율\"}]}"
+   },
+   {
+    "test_id": "N013",
+    "source": "holdout_hk",
+    "kind": "VAL",
+    "text": "자기 돈보다 남의 돈을 훨씬 많이 쓰는 회사는 걸러줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"대출이 많다는 건 두 지표로 갈려요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 1, \"label\": \"부채비율\"}, {\"id\": 2, \"label\": \"차입금의존도\"}]}"
+   },
+   {
+    "test_id": "N020",
+    "source": "holdout_hk",
+    "kind": "VAL",
+    "text": "여러 해 동안 본업 적자를 한 번도 안 낸 회사",
+    "gold": "clarify",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   }
+  ]
+ },
+ "fx6-8b-3ep": {
+  "원본/전체264": {
+   "n": 264,
+   "yappang": {
+    "JSON 유효율": [
+     264,
+     264
+    ],
+    "형태 일치율": [
+     242,
+     264
+    ],
+    "필드 정확도": [
+     181,
+     187
+    ],
+    "은어 변환율": [
+     13,
+     14
+    ],
+    "완전 일치율": [
+     194,
+     264
+    ]
+   },
+   "구조 일치": {
+    "전체": [
+     232,
+     264
+    ],
+    "extract": [
+     146,
+     152
+    ],
+    "official111": [
+     98,
+     111
+    ],
+    "clarify": [
+     44,
+     67
+    ],
+    "refuse": [
+     42,
+     45
+    ],
+    "haechan58": [
+     54,
+     58
+    ],
+    "haechan31": [
+     27,
+     31
+    ],
+    "haechan34": [
+     26,
+     34
+    ],
+    "holdout_hk": [
+     27,
+     30
+    ]
+   }
+  },
+  "원본/기존234": {
+   "n": 234,
+   "yappang": {
+    "JSON 유효율": [
+     234,
+     234
+    ],
+    "형태 일치율": [
+     215,
+     234
+    ],
+    "필드 정확도": [
+     165,
+     171
+    ],
+    "은어 변환율": [
+     13,
+     14
+    ],
+    "완전 일치율": [
+     173,
+     234
+    ]
+   },
+   "구조 일치": {
+    "전체": [
+     205,
+     234
+    ],
+    "extract": [
+     134,
+     140
+    ],
+    "official111": [
+     98,
+     111
+    ],
+    "clarify": [
+     36,
+     56
+    ],
+    "refuse": [
+     35,
+     38
+    ],
+    "haechan58": [
+     54,
+     58
+    ],
+    "haechan31": [
+     27,
+     31
+    ],
+    "haechan34": [
+     26,
+     34
+    ]
+   }
+  },
+  "원본/새시험30": {
+   "n": 30,
+   "yappang": {
+    "JSON 유효율": [
+     30,
+     30
+    ],
+    "형태 일치율": [
+     27,
+     30
+    ],
+    "필드 정확도": [
+     16,
+     16
+    ],
+    "은어 변환율": [
+     0,
+     0
+    ],
+    "완전 일치율": [
+     21,
+     30
+    ]
+   },
+   "구조 일치": {
+    "전체": [
+     27,
+     30
+    ],
+    "extract": [
+     12,
+     12
+    ],
+    "holdout_hk": [
+     27,
+     30
+    ],
+    "clarify": [
+     8,
+     11
+    ],
+    "refuse": [
+     7,
+     7
+    ]
+   }
+  },
+  "제안/전체264": {
+   "n": 264,
+   "yappang": {
+    "JSON 유효율": [
+     264,
+     264
+    ],
+    "형태 일치율": [
+     247,
+     264
+    ],
+    "필드 정확도": [
+     181,
+     187
+    ],
+    "은어 변환율": [
+     13,
+     14
+    ],
+    "완전 일치율": [
+     197,
+     264
+    ]
+   },
+   "구조 일치": {
+    "전체": [
+     241,
+     264
+    ],
+    "extract": [
+     146,
+     152
+    ],
+    "official111": [
+     103,
+     111
+    ],
+    "clarify": [
+     53,
+     67
+    ],
+    "refuse": [
+     42,
+     45
+    ],
+    "haechan58": [
+     54,
+     58
+    ],
+    "haechan31": [
+     29,
+     31
+    ],
+    "haechan34": [
+     28,
+     34
+    ],
+    "holdout_hk": [
+     27,
+     30
+    ]
+   }
+  },
+  "제안/기존234": {
+   "n": 234,
+   "yappang": {
+    "JSON 유효율": [
+     234,
+     234
+    ],
+    "형태 일치율": [
+     220,
+     234
+    ],
+    "필드 정확도": [
+     165,
+     171
+    ],
+    "은어 변환율": [
+     13,
+     14
+    ],
+    "완전 일치율": [
+     176,
+     234
+    ]
+   },
+   "구조 일치": {
+    "전체": [
+     214,
+     234
+    ],
+    "extract": [
+     134,
+     140
+    ],
+    "official111": [
+     103,
+     111
+    ],
+    "clarify": [
+     45,
+     56
+    ],
+    "refuse": [
+     35,
+     38
+    ],
+    "haechan58": [
+     54,
+     58
+    ],
+    "haechan31": [
+     29,
+     31
+    ],
+    "haechan34": [
+     28,
+     34
+    ]
+   }
+  },
+  "제안/새시험30": {
+   "n": 30,
+   "yappang": {
+    "JSON 유효율": [
+     30,
+     30
+    ],
+    "형태 일치율": [
+     27,
+     30
+    ],
+    "필드 정확도": [
+     16,
+     16
+    ],
+    "은어 변환율": [
+     0,
+     0
+    ],
+    "완전 일치율": [
+     21,
+     30
+    ]
+   },
+   "구조 일치": {
+    "전체": [
+     27,
+     30
+    ],
+    "extract": [
+     12,
+     12
+    ],
+    "holdout_hk": [
+     27,
+     30
+    ],
+    "clarify": [
+     8,
+     11
+    ],
+    "refuse": [
+     7,
+     7
+    ]
+   }
+  },
+  "기준 바뀐 9문항": {
+   "T031": {
+    "text": "잘 버는 회사만 볼래요",
+    "pred": "AMBIGUOUS_INDICATOR [5, 7]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   },
+   "T064": {
+    "text": "가성비 좋은 주식 찾아줘",
+    "pred": "AMBIGUOUS_INDICATOR [10, 11]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   },
+   "T065": {
+    "text": "이익이 늘어나는 회사가 좋아",
+    "pred": "VALUE_MISSING [9]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   },
+   "T106": {
+    "text": "주가가 롤러코스터 같은 종목",
+    "pred": "VALUE_MISSING [18]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   },
+   "T107": {
+    "text": "규모가 큰 회사",
+    "pred": "VALUE_MISSING [14]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   },
+   "T193": {
+    "text": "크기가 큰 상장사만 보여줘",
+    "pred": "VALUE_MISSING [14]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   },
+   "T197": {
+    "text": "최근 주가가 푹 꺼진 종목",
+    "pred": "AMBIGUOUS_INDICATOR [15, 16]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   },
+   "T228": {
+    "text": "돈 잘 버는 회사만 보여줘",
+    "pred": "AMBIGUOUS_INDICATOR [5, 7]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   },
+   "T229": {
+    "text": "가격 매력 있는 종목 골라줘",
+    "pred": "AMBIGUOUS_INDICATOR [10, 11]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   }
+  },
+  "구조 오답(원본)": [
+   {
+    "test_id": "T009",
+    "source": "official111",
+    "kind": "단일(흑자 = 0 초과)",
+    "text": "영업이익이 흑자인 회사만 보여줘",
+    "gold": "extract",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 5, \"message\": \"본업에서 얼마나 버는지는 영업이익으로 볼 수 있어요. 어느 정도 이상 벌어야 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"1천억원 초과로 엄격하게 할래요\", \"value\": 1000}, {\"level\": \"보통\", \"label\": \"100억원 초과로 보통으로 할래요\", \"value\": 100}, {\"level\": \"느슨\", \"label\":"
+   },
+   {
+    "test_id": "T022",
+    "source": "official111",
+    "kind": "오타",
+    "text": "영업리익 흑자인 회사만",
+    "gold": "extract",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 5, \"message\": \"본업에서 얼마나 버는지는 영업이익으로 볼 수 있어요. 어느 정도 이상 벌어야 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"1천억원 초과로 엄격하게 할래요\", \"value\": 1000}, {\"level\": \"보통\", \"label\": \"100억원 초과로 보통으로 할래요\", \"value\": 100}, {\"level\": \"느슨\", \"label\":"
+   },
+   {
+    "test_id": "T023",
+    "source": "official111",
+    "kind": "되묻기(값 없음)",
+    "text": "빌린 돈에 많이 기대는 회사는 걸러줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"대출이 많다는 건 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 1, \"label\": \"부채비율\"}, {\"id\": 2, \"label\": \"차입금의존도\"}]}"
+   },
+   {
+    "test_id": "T024",
+    "source": "official111",
+    "kind": "되묻기(값 없음)",
+    "text": "자본이 깎여 나간 회사는 싫어",
+    "gold": "clarify",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T031",
+    "source": "official111",
+    "kind": "되묻기(지표 모호)",
+    "text": "잘 버는 회사만 볼래요",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"잘 번다는 건 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 5, \"label\": \"영업이익\"}, {\"id\": 7, \"label\": \"매출순이익률\"}]}"
+   },
+   {
+    "test_id": "T032",
+    "source": "official111",
+    "kind": "되묻기(지표 모호)",
+    "text": "망할 걱정 없는 회사",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"안전하다고 볼 수 있는 기준이 여러 가지예요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 1, \"label\": \"부채비율\"}, {\"id\": 2, \"label\": \"차입금의존도\"}, {\"id\": 4, \"label\": \"자본잠식률\"}, {\"id\": 18, \"label\": \"최근 60거래일 변동성\"}]}"
+   },
+   {
+    "test_id": "T064",
+    "source": "official111",
+    "kind": "되묻기(지표 모호)",
+    "text": "가성비 좋은 주식 찾아줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"싸다고 볼 수 있는 기준이 두 가지예요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 10, \"label\": \"PER\"}, {\"id\": 11, \"label\": \"PBR\"}]}"
+   },
+   {
+    "test_id": "T065",
+    "source": "official111",
+    "kind": "되묻기(지표 모호)",
+    "text": "이익이 늘어나는 회사가 좋아",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 9, \"message\": \"본업 이익이 느는 속도는 영업이익 증가율로 볼 수 있어요. 얼마나 늘어야 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"30% 이상으로 엄격하게 할래요\", \"value\": 30}, {\"level\": \"보통\", \"label\": \"10% 이상으로 보통으로 할래요\", \"value\": 10}, {\"level\": \"느슨\", \"label\": \"0% 이"
+   },
+   {
+    "test_id": "T068",
+    "source": "official111",
+    "kind": "거절(20개 밖)",
+    "text": "배당 성장률 높은 회사",
+    "gold": "refuse",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 12, \"message\": \"배당을 얼마나 주는지는 12개월 배당수익률로 볼 수 있어요. 1년에 주가의 몇 % 이상이면 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"4% 이상으로 엄격하게 할래요\", \"value\": 4}, {\"level\": \"보통\", \"label\": \"2% 이상으로 보통으로 할래요\", \"value\": 2}, {\"level\": \"느슨\", \"label\""
+   },
+   {
+    "test_id": "T071",
+    "source": "official111",
+    "kind": "거절(종목 추천)",
+    "text": "배당 많이 주는 종목 중에 하나 골라줘",
+    "gold": "refuse",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"배당은 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 12, \"label\": \"최근 12개월 현금배당수익률\"}, {\"id\": 13, \"label\": \"연속 현금배당 연수\"}]}"
+   },
+   {
+    "test_id": "T104",
+    "source": "official111",
+    "kind": "되묻기(기간 없음)",
+    "text": "최근 주가가 많이 내린 종목",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"폭락은 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 15, \"label\": \"기간 수익률\"}, {\"id\": 16, \"label\": \"52주 최고가 대비 등락률\"}]}"
+   },
+   {
+    "test_id": "T106",
+    "source": "official111",
+    "kind": "되묻기(지표 모호)",
+    "text": "주가가 롤러코스터 같은 종목",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 18, \"message\": \"주가가 출렁이는 정도는 60일 변동성으로 볼 수 있어요. 하루 등락이 평균 몇 % 안쪽이면 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"1.5% 이하로 엄격하게 할래요\", \"value\": 1.5}, {\"level\": \"보통\", \"label\": \"2% 이하로 보통으로 할래요\", \"value\": 2}, {\"level\": \"느슨\", \"labe"
+   },
+   {
+    "test_id": "T107",
+    "source": "official111",
+    "kind": "되묻기(지표 모호)",
+    "text": "규모가 큰 회사",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 14, \"message\": \"회사의 덩치는 시가총액으로 볼 수 있어요. 어느 정도 이상이면 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"5조원 이상으로 엄격하게 할래요\", \"value\": 50000}, {\"level\": \"보통\", \"label\": \"1조원 이상으로 보통으로 할래요\", \"value\": 10000}, {\"level\": \"느슨\", \"label\": \"5천억"
+   },
+   {
+    "test_id": "T125",
+    "source": "haechan58",
+    "kind": "B 20개 밖 개념 거절",
+    "text": "주가가 만 원도 안 되는 주식",
+    "gold": "refuse",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T139",
+    "source": "haechan58",
+    "kind": "D 지표 짝 새 표현",
+    "text": "1년 최저가 대비 25% 이하로 오른 주식",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T162",
+    "source": "haechan58",
+    "kind": "G 애매한 말 되묻기",
+    "text": "배당 두둑하게 주는 회사 찾아줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"배당은 두 지표로 갈려요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 12, \"label\": \"최근 12개월 현금배당수익률\"}, {\"id\": 13, \"label\": \"연속 현금배당 연수\"}]}"
+   },
+   {
+    "test_id": "T168",
+    "source": "haechan58",
+    "kind": "G 애매한 말 되묻기",
+    "text": "주가가 꽤 올라온 종목",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"거품은 여러 지표로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 10, \"label\": \"PER\"}, {\"id\": 11, \"label\": \"PBR\"}, {\"id\": 15, \"label\": \"기간 수익률\"}]}"
+   },
+   {
+    "test_id": "T192",
+    "source": "haechan31",
+    "kind": "K 되묻기 기준",
+    "text": "수익 탄탄한 회사 찾아줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"잘 번다는 건 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 5, \"label\": \"영업이익\"}, {\"id\": 7, \"label\": \"매출순이익률\"}]}"
+   },
+   {
+    "test_id": "T193",
+    "source": "haechan31",
+    "kind": "K 되묻기 기준",
+    "text": "크기가 큰 상장사만 보여줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 14, \"message\": \"회사의 덩치는 시가총액으로 볼 수 있어요. 어느 정도 이상이면 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"5조원 이상으로 엄격하게 할래요\", \"value\": 50000}, {\"level\": \"보통\", \"label\": \"1조원 이상으로 보통으로 할래요\", \"value\": 10000}, {\"level\": \"느슨\", \"label\": \"5천억"
+   },
+   {
+    "test_id": "T194",
+    "source": "haechan31",
+    "kind": "K 되묻기 기준",
+    "text": "가격 대비 효율 좋은 종목 알려줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"싸다고 볼 수 있는 기준이 두 가지예요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 10, \"label\": \"PER\"}, {\"id\": 11, \"label\": \"PBR\"}]}"
+   },
+   {
+    "test_id": "T197",
+    "source": "haechan31",
+    "kind": "K 되묻기 기준",
+    "text": "최근 주가가 푹 꺼진 종목",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"'최근 주가가 푹 꺼진 종목'은 여러 기준으로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 15, \"label\": \"기간 수익률\"}, {\"id\": 16, \"label\": \"52주 최고가 대비 등락률\"}]}"
+   },
+   {
+    "test_id": "T220",
+    "source": "haechan34",
+    "kind": "N 부등호·방향",
+    "text": "자본 대비 부채가 130%를 밑도는 곳",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 130, \"unit\": \"%\", \"source\": \"user\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"sourc"
+   },
+   {
+    "test_id": "T225",
+    "source": "haechan34",
+    "kind": "N 부등호·방향",
+    "text": "매출 성장률이 9% 안 되는 회사는 거를래",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T226",
+    "source": "haechan34",
+    "kind": "N 부등호·방향",
+    "text": "배당수익률 3%에 못 미치는 종목만 골라줘",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T228",
+    "source": "haechan34",
+    "kind": "O 되묻기 말투",
+    "text": "돈 잘 버는 회사만 보여줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"잘 번다는 건 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 5, \"label\": \"영업이익\"}, {\"id\": 7, \"label\": \"매출순이익률\"}]}"
+   },
+   {
+    "test_id": "T229",
+    "source": "haechan34",
+    "kind": "O 되묻기 말투",
+    "text": "가격 매력 있는 종목 골라줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"싸다고 볼 수 있는 기준이 두 가지예요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 10, \"label\": \"PER\"}, {\"id\": 11, \"label\": \"PBR\"}]}"
+   },
+   {
+    "test_id": "T231",
+    "source": "haechan34",
+    "kind": "O 되묻기 말투",
+    "text": "본업 수익이 넉넉한 회사 알려줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"본업이 잘 된다는 건 여러 지표로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 5, \"label\": \"영업이익\"}, {\"id\": 7, \"label\": \"매출순이익률\"}]}"
+   },
+   {
+    "test_id": "T233",
+    "source": "haechan34",
+    "kind": "O 되묻기 말투",
+    "text": "주가가 와르르 무너진 종목",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"폭락은 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 15, \"label\": \"기간 수익률\"}, {\"id\": 16, \"label\": \"52주 최고가 대비 등락률\"}]}"
+   },
+   {
+    "test_id": "T234",
+    "source": "haechan34",
+    "kind": "O 되묻기 말투",
+    "text": "주가가 훨훨 나는 종목 보여줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"급등은 두 지표로 갈려요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 15, \"label\": \"기간 수익률\"}, {\"id\": 20, \"label\": \"거래량 증가 배율\"}]}"
+   },
+   {
+    "test_id": "N013",
+    "source": "holdout_hk",
+    "kind": "VAL",
+    "text": "자기 돈보다 남의 돈을 훨씬 많이 쓰는 회사는 걸러줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"대출이 많다는 건 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 1, \"label\": \"부채비율\"}, {\"id\": 2, \"label\": \"차입금의존도\"}]}"
+   },
+   {
+    "test_id": "N019",
+    "source": "holdout_hk",
+    "kind": "VAL",
+    "text": "청산하면 지금 주가보다 더 받을 수 있는 회사",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"싸다고 볼 수 있는 기준이 두 가지예요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 10, \"label\": \"PER\"}, {\"id\": 11, \"label\": \"PBR\"}]}"
+   },
+   {
+    "test_id": "N020",
+    "source": "holdout_hk",
+    "kind": "VAL",
+    "text": "여러 해 동안 본업 적자를 한 번도 안 낸 회사",
+    "gold": "clarify",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   }
+  ]
+ },
+ "fx6-4b-2ep": {
+  "원본/전체264": {
+   "n": 264,
+   "yappang": {
+    "JSON 유효율": [
+     264,
+     264
+    ],
+    "형태 일치율": [
+     236,
+     264
+    ],
+    "필드 정확도": [
+     167,
+     187
+    ],
+    "은어 변환율": [
+     13,
+     14
+    ],
+    "완전 일치율": [
+     170,
+     264
+    ]
+   },
+   "구조 일치": {
+    "전체": [
+     210,
+     264
+    ],
+    "extract": [
+     134,
+     152
+    ],
+    "official111": [
+     89,
+     111
+    ],
+    "clarify": [
+     40,
+     67
+    ],
+    "refuse": [
+     36,
+     45
+    ],
+    "haechan58": [
+     51,
+     58
+    ],
+    "haechan31": [
+     22,
+     31
+    ],
+    "haechan34": [
+     22,
+     34
+    ],
+    "holdout_hk": [
+     26,
+     30
+    ]
+   }
+  },
+  "원본/기존234": {
+   "n": 234,
+   "yappang": {
+    "JSON 유효율": [
+     234,
+     234
+    ],
+    "형태 일치율": [
+     209,
+     234
+    ],
+    "필드 정확도": [
+     151,
+     171
+    ],
+    "은어 변환율": [
+     13,
+     14
+    ],
+    "완전 일치율": [
+     151,
+     234
+    ]
+   },
+   "구조 일치": {
+    "전체": [
+     184,
+     234
+    ],
+    "extract": [
+     123,
+     140
+    ],
+    "official111": [
+     89,
+     111
+    ],
+    "clarify": [
+     31,
+     56
+    ],
+    "refuse": [
+     30,
+     38
+    ],
+    "haechan58": [
+     51,
+     58
+    ],
+    "haechan31": [
+     22,
+     31
+    ],
+    "haechan34": [
+     22,
+     34
+    ]
+   }
+  },
+  "원본/새시험30": {
+   "n": 30,
+   "yappang": {
+    "JSON 유효율": [
+     30,
+     30
+    ],
+    "형태 일치율": [
+     27,
+     30
+    ],
+    "필드 정확도": [
+     16,
+     16
+    ],
+    "은어 변환율": [
+     0,
+     0
+    ],
+    "완전 일치율": [
+     19,
+     30
+    ]
+   },
+   "구조 일치": {
+    "전체": [
+     26,
+     30
+    ],
+    "extract": [
+     11,
+     12
+    ],
+    "holdout_hk": [
+     26,
+     30
+    ],
+    "clarify": [
+     9,
+     11
+    ],
+    "refuse": [
+     6,
+     7
+    ]
+   }
+  },
+  "제안/전체264": {
+   "n": 264,
+   "yappang": {
+    "JSON 유효율": [
+     264,
+     264
+    ],
+    "형태 일치율": [
+     237,
+     264
+    ],
+    "필드 정확도": [
+     167,
+     187
+    ],
+    "은어 변환율": [
+     13,
+     14
+    ],
+    "완전 일치율": [
+     172,
+     264
+    ]
+   },
+   "구조 일치": {
+    "전체": [
+     214,
+     264
+    ],
+    "extract": [
+     134,
+     152
+    ],
+    "official111": [
+     91,
+     111
+    ],
+    "clarify": [
+     44,
+     67
+    ],
+    "refuse": [
+     36,
+     45
+    ],
+    "haechan58": [
+     51,
+     58
+    ],
+    "haechan31": [
+     24,
+     31
+    ],
+    "haechan34": [
+     22,
+     34
+    ],
+    "holdout_hk": [
+     26,
+     30
+    ]
+   }
+  },
+  "제안/기존234": {
+   "n": 234,
+   "yappang": {
+    "JSON 유효율": [
+     234,
+     234
+    ],
+    "형태 일치율": [
+     210,
+     234
+    ],
+    "필드 정확도": [
+     151,
+     171
+    ],
+    "은어 변환율": [
+     13,
+     14
+    ],
+    "완전 일치율": [
+     153,
+     234
+    ]
+   },
+   "구조 일치": {
+    "전체": [
+     188,
+     234
+    ],
+    "extract": [
+     123,
+     140
+    ],
+    "official111": [
+     91,
+     111
+    ],
+    "clarify": [
+     35,
+     56
+    ],
+    "refuse": [
+     30,
+     38
+    ],
+    "haechan58": [
+     51,
+     58
+    ],
+    "haechan31": [
+     24,
+     31
+    ],
+    "haechan34": [
+     22,
+     34
+    ]
+   }
+  },
+  "제안/새시험30": {
+   "n": 30,
+   "yappang": {
+    "JSON 유효율": [
+     30,
+     30
+    ],
+    "형태 일치율": [
+     27,
+     30
+    ],
+    "필드 정확도": [
+     16,
+     16
+    ],
+    "은어 변환율": [
+     0,
+     0
+    ],
+    "완전 일치율": [
+     19,
+     30
+    ]
+   },
+   "구조 일치": {
+    "전체": [
+     26,
+     30
+    ],
+    "extract": [
+     11,
+     12
+    ],
+    "holdout_hk": [
+     26,
+     30
+    ],
+    "clarify": [
+     9,
+     11
+    ],
+    "refuse": [
+     6,
+     7
+    ]
+   }
+  },
+  "기준 바뀐 9문항": {
+   "T031": {
+    "text": "잘 버는 회사만 볼래요",
+    "pred": "AMBIGUOUS_INDICATOR [5, 7]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   },
+   "T064": {
+    "text": "가성비 좋은 주식 찾아줘",
+    "pred": "AMBIGUOUS_INDICATOR [10, 11]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   },
+   "T065": {
+    "text": "이익이 늘어나는 회사가 좋아",
+    "pred": "AMBIGUOUS_INDICATOR [8, 9]",
+    "원본 정답과 구조 일치": true,
+    "제안 정답과 구조 일치": false
+   },
+   "T106": {
+    "text": "주가가 롤러코스터 같은 종목",
+    "pred": "AMBIGUOUS_INDICATOR [15, 16]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": false
+   },
+   "T107": {
+    "text": "규모가 큰 회사",
+    "pred": "VALUE_MISSING [14]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   },
+   "T193": {
+    "text": "크기가 큰 상장사만 보여줘",
+    "pred": "VALUE_MISSING [14]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   },
+   "T197": {
+    "text": "최근 주가가 푹 꺼진 종목",
+    "pred": "AMBIGUOUS_INDICATOR [15, 16]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   },
+   "T228": {
+    "text": "돈 잘 버는 회사만 보여줘",
+    "pred": "AMBIGUOUS_INDICATOR [5, 6, 7]",
+    "원본 정답과 구조 일치": true,
+    "제안 정답과 구조 일치": false
+   },
+   "T229": {
+    "text": "가격 매력 있는 종목 골라줘",
+    "pred": "AMBIGUOUS_INDICATOR [10, 11]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   }
+  },
+  "구조 오답(원본)": [
+   {
+    "test_id": "T001",
+    "source": "official111",
+    "kind": "단일",
+    "text": "빚이 자기 돈의 두 배를 넘으면 안 돼요",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 2, \"unit\": \"배\", \"source\": \"user\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"년\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"source\""
+   },
+   {
+    "test_id": "T004",
+    "source": "official111",
+    "kind": "단일",
+    "text": "빌린 돈이 총자산의 10%를 못 넘는 회사",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 10, \"unit\": \"%\", \"s"
+   },
+   {
+    "test_id": "T007",
+    "source": "official111",
+    "kind": "단일(0%)",
+    "text": "자본잠식 없는 회사만 보고 싶어요",
+    "gold": "extract",
+    "pred": "refuse",
+    "raw": "{\"refusal\": true, \"message\": \"자본잠식률은 아직 쓰지 않는 지표예요. 부채비율이나 영업이익으로 볼 수 있어요.\", \"indicators\": []}"
+   },
+   {
+    "test_id": "T011",
+    "source": "official111",
+    "kind": "단일(조 → 억원)",
+    "text": "영업이익 1조 넘는 회사",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T023",
+    "source": "official111",
+    "kind": "되묻기(값 없음)",
+    "text": "빌린 돈에 많이 기대는 회사는 걸러줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"대출이 많다는 건 두 지표로 갈려요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 1, \"label\": \"부채비율\"}, {\"id\": 2, \"label\": \"차입금의존도\"}]}"
+   },
+   {
+    "test_id": "T025",
+    "source": "official111",
+    "kind": "되묻기(값 없음)",
+    "text": "이자를 잘 갚을 여유가 있는 회사였으면 좋겠어",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"이자 부담은 여러 가지로 갈려요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 1, \"label\": \"부채비율\"}, {\"id\": 2, \"label\": \"차입금의존도\"}, {\"id\": 3, \"label\": \"EBITDA/금융비용\"}]}"
+   },
+   {
+    "test_id": "T030",
+    "source": "official111",
+    "kind": "되묻기(지표 모호)",
+    "text": "빚 걱정 없는 회사만",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"안전하다고 볼 수 있는 기준이 여러 가지예요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 1, \"label\": \"부채비율\"}, {\"id\": 2, \"label\": \"차입금의존도\"}, {\"id\": 4, \"label\": \"자본잠식률\"}, {\"id\": 18, \"label\": \"최근 60거래일 변동성\"}]}"
+   },
+   {
+    "test_id": "T031",
+    "source": "official111",
+    "kind": "되묻기(지표 모호)",
+    "text": "잘 버는 회사만 볼래요",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"잘 번다는 건 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 5, \"label\": \"영업이익\"}, {\"id\": 7, \"label\": \"매출순이익률\"}]}"
+   },
+   {
+    "test_id": "T032",
+    "source": "official111",
+    "kind": "되묻기(지표 모호)",
+    "text": "망할 걱정 없는 회사",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"안전하다고 볼 수 있는 기준이 여러 가지예요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 1, \"label\": \"부채비율\"}, {\"id\": 2, \"label\": \"차입금의존도\"}, {\"id\": 4, \"label\": \"자본잠식률\"}, {\"id\": 18, \"label\": \"최근 60거래일 변동성\"}]}"
+   },
+   {
+    "test_id": "T036",
+    "source": "official111",
+    "kind": "거절(종목 추천)",
+    "text": "부채비율 낮은 회사 중에 제일 좋은 거 하나만 골라줘",
+    "gold": "refuse",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 1, \"message\": \"빚이 많다는 건 보통 부채비율이 높다는 뜻이에요. 어느 정도까지 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"50% 이하로 엄격하게 할래요\", \"value\": 50}, {\"level\": \"보통\", \"label\": \"100% 이하로 보통으로 할래요\", \"value\": 100}, {\"level\": \"느슨\", \"label\": \"200% 이하로 "
+   },
+   {
+    "test_id": "T047",
+    "source": "official111",
+    "kind": "단일(초과)",
+    "text": "배당을 3% 넘게 주는 종목",
+    "gold": "extract",
+    "pred": "refuse",
+    "raw": "{\"refusal\": true, \"message\": \"배당성향은 아직 쓰지 않는 지표예요. 12개월 배당수익률이나 연속 배당 연수로 볼 수 있어요.\", \"indicators\": []}"
+   },
+   {
+    "test_id": "T059",
+    "source": "official111",
+    "kind": "되묻기(값 없음)",
+    "text": "자산가치 대비 저렴한 회사",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 10, \"message\": \"순자산에 비해 주가가 싼지는 PBR로 볼 수 있어요. PBR이 몇 배 이하면 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"0.8배 이하로 엄격하게 할래요\", \"value\": 0.8}, {\"level\": \"보통\", \"label\": \"1배 이하로 보통으로 할래요\", \"value\": 1}, {\"level\": \"느슨\", \"label\": \"1.5"
+   },
+   {
+    "test_id": "T060",
+    "source": "official111",
+    "kind": "되묻기(값 없음)",
+    "text": "배당 많이 주는 회사",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"'배당 많이 주는 회사'은 여러 기준으로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 12, \"label\": \"최근 12개월 현금배당수익률\"}, {\"id\": 13, \"label\": \"연속 현금배당 연수\"}]}"
+   },
+   {
+    "test_id": "T064",
+    "source": "official111",
+    "kind": "되묻기(지표 모호)",
+    "text": "가성비 좋은 주식 찾아줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"싸다고 볼 수 있는 기준이 두 가지예요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 10, \"label\": \"PER\"}, {\"id\": 11, \"label\": \"PBR\"}]}"
+   },
+   {
+    "test_id": "T068",
+    "source": "official111",
+    "kind": "거절(20개 밖)",
+    "text": "배당 성장률 높은 회사",
+    "gold": "refuse",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 13, \"message\": \"배당을 얼마나 주는지는 12개월 배당수익률로 볼 수 있어요. 1년에 주가의 몇 % 이상이면 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"4% 이상으로 엄격하게 할래요\", \"value\": 4}, {\"level\": \"보통\", \"label\": \"2% 이상으로 보통으로 할래요\", \"value\": 2}, {\"level\": \"느슨\", \"label\""
+   },
+   {
+    "test_id": "T071",
+    "source": "official111",
+    "kind": "거절(종목 추천)",
+    "text": "배당 많이 주는 종목 중에 하나 골라줘",
+    "gold": "refuse",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 12, \"message\": \"배당을 얼마나 주는지는 12개월 배당수익률로 볼 수 있어요. 1년에 주가의 몇 % 이상이면 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"4% 이상으로 엄격하게 할래요\", \"value\": 4}, {\"level\": \"보통\", \"label\": \"2% 이상으로 보통으로 할래요\", \"value\": 2}, {\"level\": \"느슨\", \"label\""
+   },
+   {
+    "test_id": "T075",
+    "source": "official111",
+    "kind": "단일",
+    "text": "시가총액이 2000억은 되는 회사",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T079",
+    "source": "official111",
+    "kind": "단일(기간)",
+    "text": "3개월 동안 마이너스인 종목은 제외해줘",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T094",
+    "source": "official111",
+    "kind": "복수",
+    "text": "거래량 2배 이상 늘었고 시총 3000억 이상",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T105",
+    "source": "official111",
+    "kind": "되묻기(기간 없음)",
+    "text": "20% 넘게 오른 종목",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 15, \"message\": \"최근 주가 흐름은 기간 수익률로 볼 수 있어요. 얼마 이상 오른 종목을 볼까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"20% 이상으로 엄격하게 할래요\", \"value\": 20}, {\"level\": \"보통\", \"label\": \"10% 이상으로 보통으로 할래요\", \"value\": 10}, {\"level\": \"느슨\", \"label\": \"0% 이상으"
+   },
+   {
+    "test_id": "T106",
+    "source": "official111",
+    "kind": "되묻기(지표 모호)",
+    "text": "주가가 롤러코스터 같은 종목",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"폭락은 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 15, \"label\": \"기간 수익률\"}, {\"id\": 16, \"label\": \"52주 최고가 대비 등락률\"}]}"
+   },
+   {
+    "test_id": "T107",
+    "source": "official111",
+    "kind": "되묻기(지표 모호)",
+    "text": "규모가 큰 회사",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 14, \"message\": \"회사의 덩치는 시가총액으로 볼 수 있어요. 어느 정도 이상이면 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"5조원 이상으로 엄격하게 할래요\", \"value\": 50000}, {\"level\": \"보통\", \"label\": \"1조원 이상으로 보통으로 할래요\", \"value\": 10000}, {\"level\": \"느슨\", \"label\": \"5천억"
+   },
+   {
+    "test_id": "T125",
+    "source": "haechan58",
+    "kind": "B 20개 밖 개념 거절",
+    "text": "주가가 만 원도 안 되는 주식",
+    "gold": "refuse",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 17, \"message\": \"10일 평균 거래대금은 아직 쓰지 않는 지표예요. 거래량 증가 배율이나 20일 평균 거래대금으로 볼 수 있어요.\", \"alternatives\": [{\"id\": 20, \"label\": \"20일 평균 거래대금\"}, {\"id\": 19, \"label\": \"거래량 증가 배율\"}]}"
+   },
+   {
+    "test_id": "T132",
+    "source": "haechan58",
+    "kind": "B 20개 밖 개념 거절",
+    "text": "유통 주식이 적어서 품귀인 종목",
+    "gold": "refuse",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 16, \"message\": \"거래가 활발한지는 20일 평균 거래대금으로 볼 수 있어요. 하루 평균 얼마 이상이면 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"50억원 이상으로 엄격하게 할래요\", \"value\": 50}, {\"level\": \"보통\", \"label\": \"10억원 이상으로 보통으로 할래요\", \"value\": 10}, {\"level\": \"느슨\", \"labe"
+   },
+   {
+    "test_id": "T135",
+    "source": "haechan58",
+    "kind": "C 추천·예측 거절",
+    "text": "부채비율 낮은 회사 중에 지금 사면 좋은 거 알려줘",
+    "gold": "refuse",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 1, \"message\": \"빚이 많다는 건 보통 부채비율이 높다는 뜻이에요. 어느 정도까지 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"50% 이하로 엄격하게 할래요\", \"value\": 50}, {\"level\": \"보통\", \"label\": \"100% 이하로 보통으로 할래요\", \"value\": 100}, {\"level\": \"느슨\", \"label\": \"200% 이하로 "
+   },
+   {
+    "test_id": "T137",
+    "source": "haechan58",
+    "kind": "C 추천·예측 거절",
+    "text": "PER 낮은 주식 중에 제일 괜찮은 거 하나 골라줘",
+    "gold": "refuse",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 10, \"message\": \"버는 돈에 비해 주가가 싼지는 PER로 볼 수 있어요. PER이 몇 배 이하면 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"8배 이하로 엄격하게 할래요\", \"value\": 8}, {\"level\": \"보통\", \"label\": \"10배 이하로 보통으로 할래요\", \"value\": 10}, {\"level\": \"느슨\", \"label\": \"15배 "
+   },
+   {
+    "test_id": "T161",
+    "source": "haechan58",
+    "kind": "F 부등호 표현",
+    "text": "최고점 대비 낙폭이 25% 넘는 종목은 제외해",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T162",
+    "source": "haechan58",
+    "kind": "G 애매한 말 되묻기",
+    "text": "배당 두둑하게 주는 회사 찾아줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"배당은 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 12, \"label\": \"최근 12개월 현금배당수익률\"}, {\"id\": 13, \"label\": \"연속 현금배당 연수\"}]}"
+   },
+   {
+    "test_id": "T163",
+    "source": "haechan58",
+    "kind": "G 애매한 말 되묻기",
+    "text": "몸집 큰 회사 위주로 보여줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"커진다는 건 두 지표로 갈려요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 8, \"label\": \"매출액 증가율\"}, {\"id\": 14, \"label\": \"시가총액\"}]}"
+   },
+   {
+    "test_id": "T174",
+    "source": "haechan31",
+    "kind": "H 부등호",
+    "text": "PER이 14배를 넘지 않고 영업이익 증가율이 12% 넘는 곳",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T184",
+    "source": "haechan31",
+    "kind": "I 16·17 구분",
+    "text": "고점 대비 22% 넘게 하락한 종목은 빼줘",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T191",
+    "source": "haechan31",
+    "kind": "K 되묻기 기준",
+    "text": "빚 때문에 불안하지 않은 회사",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"대출이 많다는 건 두 지표로 갈려요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 1, \"label\": \"부채비율\"}, {\"id\": 2, \"label\": \"차입금의존도\"}]}"
+   },
+   {
+    "test_id": "T193",
+    "source": "haechan31",
+    "kind": "K 되묻기 기준",
+    "text": "크기가 큰 상장사만 보여줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 14, \"message\": \"회사의 덩치는 시가총액으로 볼 수 있어요. 어느 정도 이상이면 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"5조원 이상으로 엄격하게 할래요\", \"value\": 50000}, {\"level\": \"보통\", \"label\": \"1조원 이상으로 보통으로 할래요\", \"value\": 10000}, {\"level\": \"느슨\", \"label\": \"5천억"
+   },
+   {
+    "test_id": "T194",
+    "source": "haechan31",
+    "kind": "K 되묻기 기준",
+    "text": "가격 대비 효율 좋은 종목 알려줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"싸다고 볼 수 있는 기준이 두 가지예요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 10, \"label\": \"PER\"}, {\"id\": 11, \"label\": \"PBR\"}]}"
+   },
+   {
+    "test_id": "T196",
+    "source": "haechan31",
+    "kind": "K 되묻기 기준",
+    "text": "순자산 대비 낮은 가격에 거래되는 회사",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 10, \"message\": \"순자산에 비해 주가가 싼지는 PBR로 볼 수 있어요. PBR이 몇 배 이하면 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"0.8배 이하로 엄격하게 할래요\", \"value\": 0.8}, {\"level\": \"보통\", \"label\": \"1배 이하로 보통으로 할래요\", \"value\": 1}, {\"level\": \"느슨\", \"label\": \"1.5"
+   },
+   {
+    "test_id": "T197",
+    "source": "haechan31",
+    "kind": "K 되묻기 기준",
+    "text": "최근 주가가 푹 꺼진 종목",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"폭락은 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 15, \"label\": \"기간 수익률\"}, {\"id\": 16, \"label\": \"52주 최고가 대비 등락률\"}]}"
+   },
+   {
+    "test_id": "T198",
+    "source": "haechan31",
+    "kind": "K 되묻기 기준",
+    "text": "이익이 두둑이 남는 회사 찾아줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"이익은 두 지표로 갈려요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 5, \"label\": \"영업이익\"}, {\"id\": 7, \"label\": \"매출순이익률\"}]}"
+   },
+   {
+    "test_id": "T200",
+    "source": "haechan31",
+    "kind": "K 되묻기 기준",
+    "text": "배당 빵빵한 회사 알려줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"배당은 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 12, \"label\": \"최근 12개월 현금배당수익률\"}, {\"id\": 13, \"label\": \"연속 현금배당 연수\"}]}"
+   },
+   {
+    "test_id": "T203",
+    "source": "haechan34",
+    "kind": "L 20개 밖 개념 거절",
+    "text": "경영권 다툼 중인 회사는 피하고 싶어",
+    "gold": "refuse",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"경영권은 여러 지표로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 1, \"label\": \"최대주주 지분율\"}, {\"id\": 2, \"label\": \"연속 영업흑자 연수\"}, {\"id\": 3, \"label\": \"영업이익 증가율\"}]}"
+   },
+   {
+    "test_id": "T213",
+    "source": "haechan34",
+    "kind": "M 지표 번호 혼동",
+    "text": "거래량이 평소의 2.5배 넘게 늘고 거래대금 25억 넘는 종목",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T214",
+    "source": "haechan34",
+    "kind": "M 지표 번호 혼동",
+    "text": "영업이익 60억 이상 내는 시총 3000억 이상 회사",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T220",
+    "source": "haechan34",
+    "kind": "N 부등호·방향",
+    "text": "자본 대비 부채가 130%를 밑도는 곳",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 130, \"unit\": \"%\", \"source\": \"user\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"sourc"
+   },
+   {
+    "test_id": "T223",
+    "source": "haechan34",
+    "kind": "N 부등호·방향",
+    "text": "시총 4000억에 못 미치는 곳은 제외해줘",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T225",
+    "source": "haechan34",
+    "kind": "N 부등호·방향",
+    "text": "매출 성장률이 9% 안 되는 회사는 거를래",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T226",
+    "source": "haechan34",
+    "kind": "N 부등호·방향",
+    "text": "배당수익률 3%에 못 미치는 종목만 골라줘",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T227",
+    "source": "haechan34",
+    "kind": "O 되묻기 말투",
+    "text": "부채 걱정 없는 회사 찾아줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"안전하다고 볼 수 있는 기준이 여러 가지예요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 1, \"label\": \"부채비율\"}, {\"id\": 2, \"label\": \"차입금의존도\"}, {\"id\": 4, \"label\": \"자본잠식률\"}, {\"id\": 18, \"label\": \"최근 60거래일 변동성\"}]}"
+   },
+   {
+    "test_id": "T229",
+    "source": "haechan34",
+    "kind": "O 되묻기 말투",
+    "text": "가격 매력 있는 종목 골라줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"싸다고 볼 수 있는 기준이 두 가지예요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 10, \"label\": \"PER\"}, {\"id\": 11, \"label\": \"PBR\"}]}"
+   },
+   {
+    "test_id": "T231",
+    "source": "haechan34",
+    "kind": "O 되묻기 말투",
+    "text": "본업 수익이 넉넉한 회사 알려줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"본업이 잘 된다는 건 여러 지표로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 5, \"label\": \"영업이익\"}, {\"id\": 7, \"label\": \"매출순이익률\"}]}"
+   },
+   {
+    "test_id": "T233",
+    "source": "haechan34",
+    "kind": "O 되묻기 말투",
+    "text": "주가가 와르르 무너진 종목",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"폭락은 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 15, \"label\": \"기간 수익률\"}, {\"id\": 16, \"label\": \"52주 최고가 대비 등락률\"}]}"
+   },
+   {
+    "test_id": "T234",
+    "source": "haechan34",
+    "kind": "O 되묻기 말투",
+    "text": "주가가 훨훨 나는 종목 보여줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"급등은 두 지표로 갈려요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 15, \"label\": \"기간 수익률\"}, {\"id\": 20, \"label\": \"거래량 증가 배율\"}]}"
+   },
+   {
+    "test_id": "N007",
+    "source": "holdout_hk",
+    "kind": "EXT",
+    "text": "본업에서 일곱 해 내리 흑자, 7년 이상 연속인 곳",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 7, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "N013",
+    "source": "holdout_hk",
+    "kind": "VAL",
+    "text": "자기 돈보다 남의 돈을 훨씬 많이 쓰는 회사는 걸러줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"대출이 많다는 건 두 지표로 갈려요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 1, \"label\": \"부채비율\"}, {\"id\": 2, \"label\": \"차입금의존도\"}]}"
+   },
+   {
+    "test_id": "N019",
+    "source": "holdout_hk",
+    "kind": "VAL",
+    "text": "청산하면 지금 주가보다 더 받을 수 있는 회사",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"싸다고 볼 수 있는 기준이 두 가지예요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 10, \"label\": \"PER\"}, {\"id\": 11, \"label\": \"PBR\"}]}"
+   },
+   {
+    "test_id": "N025",
+    "source": "holdout_hk",
+    "kind": "REF",
+    "text": "감사의견 거절 받은 회사 빼줘",
+    "gold": "refuse",
+    "pred": "other",
+    "raw": "{\"refusal_reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"감사의견은 아직 쓰지 않는 지표예요. 부채비율이나 연속 영업흑자 연수로 볼 수 있어요.\", \"candidates\": []}"
+   }
+  ]
+ },
+ "fx6-4b-3ep": {
+  "원본/전체264": {
+   "n": 264,
+   "yappang": {
+    "JSON 유효율": [
+     264,
+     264
+    ],
+    "형태 일치율": [
+     240,
+     264
+    ],
+    "필드 정확도": [
+     171,
+     187
+    ],
+    "은어 변환율": [
+     14,
+     14
+    ],
+    "완전 일치율": [
+     182,
+     264
+    ]
+   },
+   "구조 일치": {
+    "전체": [
+     217,
+     264
+    ],
+    "extract": [
+     136,
+     152
+    ],
+    "official111": [
+     93,
+     111
+    ],
+    "clarify": [
+     44,
+     67
+    ],
+    "refuse": [
+     37,
+     45
+    ],
+    "haechan58": [
+     51,
+     58
+    ],
+    "haechan31": [
+     23,
+     31
+    ],
+    "haechan34": [
+     23,
+     34
+    ],
+    "holdout_hk": [
+     27,
+     30
+    ]
+   }
+  },
+  "원본/기존234": {
+   "n": 234,
+   "yappang": {
+    "JSON 유효율": [
+     234,
+     234
+    ],
+    "형태 일치율": [
+     211,
+     234
+    ],
+    "필드 정확도": [
+     156,
+     171
+    ],
+    "은어 변환율": [
+     14,
+     14
+    ],
+    "완전 일치율": [
+     162,
+     234
+    ]
+   },
+   "구조 일치": {
+    "전체": [
+     190,
+     234
+    ],
+    "extract": [
+     125,
+     140
+    ],
+    "official111": [
+     93,
+     111
+    ],
+    "clarify": [
+     34,
+     56
+    ],
+    "refuse": [
+     31,
+     38
+    ],
+    "haechan58": [
+     51,
+     58
+    ],
+    "haechan31": [
+     23,
+     31
+    ],
+    "haechan34": [
+     23,
+     34
+    ]
+   }
+  },
+  "원본/새시험30": {
+   "n": 30,
+   "yappang": {
+    "JSON 유효율": [
+     30,
+     30
+    ],
+    "형태 일치율": [
+     29,
+     30
+    ],
+    "필드 정확도": [
+     15,
+     16
+    ],
+    "은어 변환율": [
+     0,
+     0
+    ],
+    "완전 일치율": [
+     20,
+     30
+    ]
+   },
+   "구조 일치": {
+    "전체": [
+     27,
+     30
+    ],
+    "extract": [
+     11,
+     12
+    ],
+    "holdout_hk": [
+     27,
+     30
+    ],
+    "clarify": [
+     10,
+     11
+    ],
+    "refuse": [
+     6,
+     7
+    ]
+   }
+  },
+  "제안/전체264": {
+   "n": 264,
+   "yappang": {
+    "JSON 유효율": [
+     264,
+     264
+    ],
+    "형태 일치율": [
+     245,
+     264
+    ],
+    "필드 정확도": [
+     171,
+     187
+    ],
+    "은어 변환율": [
+     14,
+     14
+    ],
+    "완전 일치율": [
+     185,
+     264
+    ]
+   },
+   "구조 일치": {
+    "전체": [
+     226,
+     264
+    ],
+    "extract": [
+     136,
+     152
+    ],
+    "official111": [
+     98,
+     111
+    ],
+    "clarify": [
+     53,
+     67
+    ],
+    "refuse": [
+     37,
+     45
+    ],
+    "haechan58": [
+     51,
+     58
+    ],
+    "haechan31": [
+     25,
+     31
+    ],
+    "haechan34": [
+     25,
+     34
+    ],
+    "holdout_hk": [
+     27,
+     30
+    ]
+   }
+  },
+  "제안/기존234": {
+   "n": 234,
+   "yappang": {
+    "JSON 유효율": [
+     234,
+     234
+    ],
+    "형태 일치율": [
+     216,
+     234
+    ],
+    "필드 정확도": [
+     156,
+     171
+    ],
+    "은어 변환율": [
+     14,
+     14
+    ],
+    "완전 일치율": [
+     165,
+     234
+    ]
+   },
+   "구조 일치": {
+    "전체": [
+     199,
+     234
+    ],
+    "extract": [
+     125,
+     140
+    ],
+    "official111": [
+     98,
+     111
+    ],
+    "clarify": [
+     43,
+     56
+    ],
+    "refuse": [
+     31,
+     38
+    ],
+    "haechan58": [
+     51,
+     58
+    ],
+    "haechan31": [
+     25,
+     31
+    ],
+    "haechan34": [
+     25,
+     34
+    ]
+   }
+  },
+  "제안/새시험30": {
+   "n": 30,
+   "yappang": {
+    "JSON 유효율": [
+     30,
+     30
+    ],
+    "형태 일치율": [
+     29,
+     30
+    ],
+    "필드 정확도": [
+     15,
+     16
+    ],
+    "은어 변환율": [
+     0,
+     0
+    ],
+    "완전 일치율": [
+     20,
+     30
+    ]
+   },
+   "구조 일치": {
+    "전체": [
+     27,
+     30
+    ],
+    "extract": [
+     11,
+     12
+    ],
+    "holdout_hk": [
+     27,
+     30
+    ],
+    "clarify": [
+     10,
+     11
+    ],
+    "refuse": [
+     6,
+     7
+    ]
+   }
+  },
+  "기준 바뀐 9문항": {
+   "T031": {
+    "text": "잘 버는 회사만 볼래요",
+    "pred": "AMBIGUOUS_INDICATOR [5, 7]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   },
+   "T064": {
+    "text": "가성비 좋은 주식 찾아줘",
+    "pred": "AMBIGUOUS_INDICATOR [10, 11]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   },
+   "T065": {
+    "text": "이익이 늘어나는 회사가 좋아",
+    "pred": "VALUE_MISSING [9]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   },
+   "T106": {
+    "text": "주가가 롤러코스터 같은 종목",
+    "pred": "VALUE_MISSING [18]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   },
+   "T107": {
+    "text": "규모가 큰 회사",
+    "pred": "VALUE_MISSING [14]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   },
+   "T193": {
+    "text": "크기가 큰 상장사만 보여줘",
+    "pred": "VALUE_MISSING [14]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   },
+   "T197": {
+    "text": "최근 주가가 푹 꺼진 종목",
+    "pred": "AMBIGUOUS_INDICATOR [15, 16]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   },
+   "T228": {
+    "text": "돈 잘 버는 회사만 보여줘",
+    "pred": "AMBIGUOUS_INDICATOR [5, 7]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   },
+   "T229": {
+    "text": "가격 매력 있는 종목 골라줘",
+    "pred": "AMBIGUOUS_INDICATOR [10, 11]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   }
+  },
+  "구조 오답(원본)": [
+   {
+    "test_id": "T001",
+    "source": "official111",
+    "kind": "단일",
+    "text": "빚이 자기 돈의 두 배를 넘으면 안 돼요",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 2, \"unit\": \"배\", \"source\": \"user\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"년\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"source\""
+   },
+   {
+    "test_id": "T004",
+    "source": "official111",
+    "kind": "단일",
+    "text": "빌린 돈이 총자산의 10%를 못 넘는 회사",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 10, \"unit\": \"%\", \"s"
+   },
+   {
+    "test_id": "T011",
+    "source": "official111",
+    "kind": "단일(조 → 억원)",
+    "text": "영업이익 1조 넘는 회사",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T023",
+    "source": "official111",
+    "kind": "되묻기(값 없음)",
+    "text": "빌린 돈에 많이 기대는 회사는 걸러줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"대출이 많다는 건 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 1, \"label\": \"부채비율\"}, {\"id\": 2, \"label\": \"차입금의존도\"}]}"
+   },
+   {
+    "test_id": "T025",
+    "source": "official111",
+    "kind": "되묻기(값 없음)",
+    "text": "이자를 잘 갚을 여유가 있는 회사였으면 좋겠어",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"이자 부담은 여러 지표로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 1, \"label\": \"부채비율\"}, {\"id\": 2, \"label\": \"차입금의존도\"}, {\"id\": 3, \"label\": \"EBITDA/금융비용\"}]}"
+   },
+   {
+    "test_id": "T031",
+    "source": "official111",
+    "kind": "되묻기(지표 모호)",
+    "text": "잘 버는 회사만 볼래요",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"잘 번다는 건 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 5, \"label\": \"영업이익\"}, {\"id\": 7, \"label\": \"매출순이익률\"}]}"
+   },
+   {
+    "test_id": "T032",
+    "source": "official111",
+    "kind": "되묻기(지표 모호)",
+    "text": "망할 걱정 없는 회사",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"안전하다고 볼 수 있는 기준이 여러 가지예요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 1, \"label\": \"부채비율\"}, {\"id\": 2, \"label\": \"차입금의존도\"}, {\"id\": 4, \"label\": \"자본잠식률\"}, {\"id\": 18, \"label\": \"최근 60거래일 변동성\"}]}"
+   },
+   {
+    "test_id": "T036",
+    "source": "official111",
+    "kind": "거절(종목 추천)",
+    "text": "부채비율 낮은 회사 중에 제일 좋은 거 하나만 골라줘",
+    "gold": "refuse",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 1, \"message\": \"빚이 많다는 건 보통 부채비율이 높다는 뜻이에요. 어느 정도까지 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"50% 이하로 엄격하게 할래요\", \"value\": 50}, {\"level\": \"보통\", \"label\": \"100% 이하로 보통으로 할래요\", \"value\": 100}, {\"level\": \"느슨\", \"label\": \"200% 이하로 "
+   },
+   {
+    "test_id": "T047",
+    "source": "official111",
+    "kind": "단일(초과)",
+    "text": "배당을 3% 넘게 주는 종목",
+    "gold": "extract",
+    "pred": "refuse",
+    "raw": "{\"refusal\": true, \"message\": \"배당성향은 아직 쓰지 않는 지표예요. 12개월 배당수익률이나 연속 배당 연수로 볼 수 있어요.\", \"indicators\": []}"
+   },
+   {
+    "test_id": "T064",
+    "source": "official111",
+    "kind": "되묻기(지표 모호)",
+    "text": "가성비 좋은 주식 찾아줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"싸다고 볼 수 있는 기준이 두 가지예요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 10, \"label\": \"PER\"}, {\"id\": 11, \"label\": \"PBR\"}]}"
+   },
+   {
+    "test_id": "T065",
+    "source": "official111",
+    "kind": "되묻기(지표 모호)",
+    "text": "이익이 늘어나는 회사가 좋아",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 9, \"message\": \"본업 이익이 느는 속도는 영업이익 증가율로 볼 수 있어요. 얼마나 늘어야 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"30% 이상으로 엄격하게 할래요\", \"value\": 30}, {\"level\": \"보통\", \"label\": \"10% 이상으로 보통으로 할래요\", \"value\": 10}, {\"level\": \"느슨\", \"label\": \"0% 이"
+   },
+   {
+    "test_id": "T068",
+    "source": "official111",
+    "kind": "거절(20개 밖)",
+    "text": "배당 성장률 높은 회사",
+    "gold": "refuse",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 12, \"message\": \"배당을 얼마나 주는지는 12개월 배당수익률로 볼 수 있어요. 1년에 주가의 몇 % 이상이면 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"4% 이상으로 엄격하게 할래요\", \"value\": 4}, {\"level\": \"보통\", \"label\": \"2% 이상으로 보통으로 할래요\", \"value\": 2}, {\"level\": \"느슨\", \"label\""
+   },
+   {
+    "test_id": "T071",
+    "source": "official111",
+    "kind": "거절(종목 추천)",
+    "text": "배당 많이 주는 종목 중에 하나 골라줘",
+    "gold": "refuse",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 12, \"message\": \"배당을 얼마나 주는지는 12개월 배당수익률로 볼 수 있어요. 1년에 주가의 몇 % 이상이면 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"4% 이상으로 엄격하게 할래요\", \"value\": 4}, {\"level\": \"보통\", \"label\": \"2% 이상으로 보통으로 할래요\", \"value\": 2}, {\"level\": \"느슨\", \"label\""
+   },
+   {
+    "test_id": "T079",
+    "source": "official111",
+    "kind": "단일(기간)",
+    "text": "3개월 동안 마이너스인 종목은 제외해줘",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T094",
+    "source": "official111",
+    "kind": "복수",
+    "text": "거래량 2배 이상 늘었고 시총 3000억 이상",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T105",
+    "source": "official111",
+    "kind": "되묻기(기간 없음)",
+    "text": "20% 넘게 오른 종목",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 15, \"message\": \"고점에서 얼마나 떨어졌는지는 52주 고점 대비로 볼 수 있어요. 고점보다 몇 % 안쪽까지 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"-10% 이내로 엄격하게 할래요\", \"value\": -10}, {\"level\": \"보통\", \"label\": \"-20% 이내로 보통으로 할래요\", \"value\": -20}, {\"level\": \"느슨\", \"l"
+   },
+   {
+    "test_id": "T106",
+    "source": "official111",
+    "kind": "되묻기(지표 모호)",
+    "text": "주가가 롤러코스터 같은 종목",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 18, \"message\": \"주가가 출렁이는 정도는 60일 변동성으로 볼 수 있어요. 하루 등락이 평균 몇 % 안쪽이면 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"1.5% 이하로 엄격하게 할래요\", \"value\": 1.5}, {\"level\": \"보통\", \"label\": \"2% 이하로 보통으로 할래요\", \"value\": 2}, {\"level\": \"느슨\", \"labe"
+   },
+   {
+    "test_id": "T107",
+    "source": "official111",
+    "kind": "되묻기(지표 모호)",
+    "text": "규모가 큰 회사",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 14, \"message\": \"회사의 덩치는 시가총액으로 볼 수 있어요. 어느 정도 이상이면 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"5조원 이상으로 엄격하게 할래요\", \"value\": 50000}, {\"level\": \"보통\", \"label\": \"1조원 이상으로 보통으로 할래요\", \"value\": 10000}, {\"level\": \"느슨\", \"label\": \"5천억"
+   },
+   {
+    "test_id": "T125",
+    "source": "haechan58",
+    "kind": "B 20개 밖 개념 거절",
+    "text": "주가가 만 원도 안 되는 주식",
+    "gold": "refuse",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T135",
+    "source": "haechan58",
+    "kind": "C 추천·예측 거절",
+    "text": "부채비율 낮은 회사 중에 지금 사면 좋은 거 알려줘",
+    "gold": "refuse",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 1, \"message\": \"빚이 많다는 건 보통 부채비율이 높다는 뜻이에요. 어느 정도까지 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"50% 이하로 엄격하게 할래요\", \"value\": 50}, {\"level\": \"보통\", \"label\": \"100% 이하로 보통으로 할래요\", \"value\": 100}, {\"level\": \"느슨\", \"label\": \"200% 이하로 "
+   },
+   {
+    "test_id": "T137",
+    "source": "haechan58",
+    "kind": "C 추천·예측 거절",
+    "text": "PER 낮은 주식 중에 제일 괜찮은 거 하나 골라줘",
+    "gold": "refuse",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 10, \"message\": \"버는 돈에 비해 주가가 싼지는 PER로 볼 수 있어요. PER이 몇 배 이하면 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"8배 이하로 엄격하게 할래요\", \"value\": 8}, {\"level\": \"보통\", \"label\": \"10배 이하로 보통으로 할래요\", \"value\": 10}, {\"level\": \"느슨\", \"label\": \"15배 "
+   },
+   {
+    "test_id": "T138",
+    "source": "haechan58",
+    "kind": "D 지표 짝 새 표현",
+    "text": "52주 신고가에서 10% 이내에 있는 종목",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T161",
+    "source": "haechan58",
+    "kind": "F 부등호 표현",
+    "text": "최고점 대비 낙폭이 25% 넘는 종목은 제외해",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T162",
+    "source": "haechan58",
+    "kind": "G 애매한 말 되묻기",
+    "text": "배당 두둑하게 주는 회사 찾아줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"배당은 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 12, \"label\": \"최근 12개월 현금배당수익률\"}, {\"id\": 13, \"label\": \"연속 현금배당 연수\"}]}"
+   },
+   {
+    "test_id": "T163",
+    "source": "haechan58",
+    "kind": "G 애매한 말 되묻기",
+    "text": "몸집 큰 회사 위주로 보여줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"커진다는 건 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 8, \"label\": \"매출액 증가율\"}, {\"id\": 14, \"label\": \"시가총액\"}]}"
+   },
+   {
+    "test_id": "T174",
+    "source": "haechan31",
+    "kind": "H 부등호",
+    "text": "PER이 14배를 넘지 않고 영업이익 증가율이 12% 넘는 곳",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T184",
+    "source": "haechan31",
+    "kind": "I 16·17 구분",
+    "text": "고점 대비 22% 넘게 하락한 종목은 빼줘",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T192",
+    "source": "haechan31",
+    "kind": "K 되묻기 기준",
+    "text": "수익 탄탄한 회사 찾아줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"잘 번다는 건 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 5, \"label\": \"영업이익\"}, {\"id\": 7, \"label\": \"매출순이익률\"}]}"
+   },
+   {
+    "test_id": "T193",
+    "source": "haechan31",
+    "kind": "K 되묻기 기준",
+    "text": "크기가 큰 상장사만 보여줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 14, \"message\": \"회사의 덩치는 시가총액으로 볼 수 있어요. 어느 정도 이상이면 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"5조원 이상으로 엄격하게 할래요\", \"value\": 50000}, {\"level\": \"보통\", \"label\": \"1조원 이상으로 보통으로 할래요\", \"value\": 10000}, {\"level\": \"느슨\", \"label\": \"5천억"
+   },
+   {
+    "test_id": "T194",
+    "source": "haechan31",
+    "kind": "K 되묻기 기준",
+    "text": "가격 대비 효율 좋은 종목 알려줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"싸다고 볼 수 있는 기준이 두 가지예요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 10, \"label\": \"PER\"}, {\"id\": 11, \"label\": \"PBR\"}]}"
+   },
+   {
+    "test_id": "T197",
+    "source": "haechan31",
+    "kind": "K 되묻기 기준",
+    "text": "최근 주가가 푹 꺼진 종목",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"폭락은 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 15, \"label\": \"기간 수익률\"}, {\"id\": 16, \"label\": \"52주 최고가 대비 등락률\"}]}"
+   },
+   {
+    "test_id": "T198",
+    "source": "haechan31",
+    "kind": "K 되묻기 기준",
+    "text": "이익이 두둑이 남는 회사 찾아줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"이익은 두 지표로 갈려요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 5, \"label\": \"영업이익\"}, {\"id\": 7, \"label\": \"매출순이익률\"}]}"
+   },
+   {
+    "test_id": "T200",
+    "source": "haechan31",
+    "kind": "K 되묻기 기준",
+    "text": "배당 빵빵한 회사 알려줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"배당은 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 12, \"label\": \"최근 12개월 현금배당수익률\"}, {\"id\": 13, \"label\": \"연속 현금배당 연수\"}]}"
+   },
+   {
+    "test_id": "T203",
+    "source": "haechan34",
+    "kind": "L 20개 밖 개념 거절",
+    "text": "경영권 다툼 중인 회사는 피하고 싶어",
+    "gold": "refuse",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 1, \"message\": \"경영진이 갈려요. 어떤 기준으로 볼까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"최대 3% 이내로 엄격하게 할래요\", \"value\": 3}, {\"level\": \"보통\", \"label\": \"최대 5% 이내로 보통으로 할래요\", \"value\": 5}, {\"level\": \"느슨\", \"label\": \"최대 10% 이내로 느슨하게 할래요\", \"value\""
+   },
+   {
+    "test_id": "T220",
+    "source": "haechan34",
+    "kind": "N 부등호·방향",
+    "text": "자본 대비 부채가 130%를 밑도는 곳",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 130, \"unit\": \"%\", \"source\": \"user\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"sourc"
+   },
+   {
+    "test_id": "T223",
+    "source": "haechan34",
+    "kind": "N 부등호·방향",
+    "text": "시총 4000억에 못 미치는 곳은 제외해줘",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T224",
+    "source": "haechan34",
+    "kind": "N 부등호·방향",
+    "text": "52주 저점 대비 70% 넘게 오른 종목은 빼줘",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T225",
+    "source": "haechan34",
+    "kind": "N 부등호·방향",
+    "text": "매출 성장률이 9% 안 되는 회사는 거를래",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T226",
+    "source": "haechan34",
+    "kind": "N 부등호·방향",
+    "text": "배당수익률 3%에 못 미치는 종목만 골라줘",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T228",
+    "source": "haechan34",
+    "kind": "O 되묻기 말투",
+    "text": "돈 잘 버는 회사만 보여줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"잘 번다는 건 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 5, \"label\": \"영업이익\"}, {\"id\": 7, \"label\": \"매출순이익률\"}]}"
+   },
+   {
+    "test_id": "T229",
+    "source": "haechan34",
+    "kind": "O 되묻기 말투",
+    "text": "가격 매력 있는 종목 골라줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"싸다고 볼 수 있는 기준이 두 가지예요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 10, \"label\": \"PER\"}, {\"id\": 11, \"label\": \"PBR\"}]}"
+   },
+   {
+    "test_id": "T231",
+    "source": "haechan34",
+    "kind": "O 되묻기 말투",
+    "text": "본업 수익이 넉넉한 회사 알려줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"본업이 잘 된다는 건 여러 지표로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 5, \"label\": \"영업이익\"}, {\"id\": 7, \"label\": \"매출순이익률\"}]}"
+   },
+   {
+    "test_id": "T233",
+    "source": "haechan34",
+    "kind": "O 되묻기 말투",
+    "text": "주가가 와르르 무너진 종목",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"폭락은 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 15, \"label\": \"기간 수익률\"}, {\"id\": 16, \"label\": \"52주 최고가 대비 등락률\"}]}"
+   },
+   {
+    "test_id": "T234",
+    "source": "haechan34",
+    "kind": "O 되묻기 말투",
+    "text": "주가가 훨훨 나는 종목 보여줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"급등은 두 지표로 갈려요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 15, \"label\": \"기간 수익률\"}, {\"id\": 20, \"label\": \"거래량 증가 배율\"}]}"
+   },
+   {
+    "test_id": "N005",
+    "source": "holdout_hk",
+    "kind": "EXT",
+    "text": "몸값이 2조는 넘어야 해, 2조 이상으로 해줘",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "N013",
+    "source": "holdout_hk",
+    "kind": "VAL",
+    "text": "자기 돈보다 남의 돈을 훨씬 많이 쓰는 회사는 걸러줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 2, \"message\": \"빌린 돈에 기대는 정도는 차입금의존도로 볼 수 있어요. 자산 중 빌린 돈 비중을 어디까지 허용할까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"20% 이하로 엄격하게 할래요\", \"value\": 20}, {\"level\": \"보통\", \"label\": \"30% 이하로 보통으로 할래요\", \"value\": 30}, {\"level\": \"느슨\", \"label\""
+   },
+   {
+    "test_id": "N025",
+    "source": "holdout_hk",
+    "kind": "REF",
+    "text": "감사의견 거절 받은 회사 빼줘",
+    "gold": "refuse",
+    "pred": "other",
+    "raw": "{\"refusal_reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"감사의견은 아직 쓰지 않는 지표예요. 부채비율이나 연속 영업흑자 연수로 볼 수 있어요.\", \"candidates\": []}"
+   }
+  ]
+ },
+ "v6-3ep": {
+  "원본/전체264": {
+   "n": 264,
+   "yappang": {
+    "JSON 유효율": [
+     264,
+     264
+    ],
+    "형태 일치율": [
+     244,
+     264
+    ],
+    "필드 정확도": [
+     175,
+     187
+    ],
+    "은어 변환율": [
+     13,
+     14
+    ],
+    "완전 일치율": [
+     191,
+     264
+    ]
+   },
+   "구조 일치": {
+    "전체": [
+     228,
+     264
+    ],
+    "extract": [
+     141,
+     152
+    ],
+    "official111": [
+     100,
+     111
+    ],
+    "clarify": [
+     49,
+     67
+    ],
+    "refuse": [
+     38,
+     45
+    ],
+    "haechan58": [
+     51,
+     58
+    ],
+    "haechan31": [
+     26,
+     31
+    ],
+    "haechan34": [
+     26,
+     34
+    ],
+    "holdout_hk": [
+     25,
+     30
+    ]
+   }
+  },
+  "원본/기존234": {
+   "n": 234,
+   "yappang": {
+    "JSON 유효율": [
+     234,
+     234
+    ],
+    "형태 일치율": [
+     216,
+     234
+    ],
+    "필드 정확도": [
+     162,
+     171
+    ],
+    "은어 변환율": [
+     13,
+     14
+    ],
+    "완전 일치율": [
+     172,
+     234
+    ]
+   },
+   "구조 일치": {
+    "전체": [
+     203,
+     234
+    ],
+    "extract": [
+     131,
+     140
+    ],
+    "official111": [
+     100,
+     111
+    ],
+    "clarify": [
+     40,
+     56
+    ],
+    "refuse": [
+     32,
+     38
+    ],
+    "haechan58": [
+     51,
+     58
+    ],
+    "haechan31": [
+     26,
+     31
+    ],
+    "haechan34": [
+     26,
+     34
+    ]
+   }
+  },
+  "원본/새시험30": {
+   "n": 30,
+   "yappang": {
+    "JSON 유효율": [
+     30,
+     30
+    ],
+    "형태 일치율": [
+     28,
+     30
+    ],
+    "필드 정확도": [
+     13,
+     16
+    ],
+    "은어 변환율": [
+     0,
+     0
+    ],
+    "완전 일치율": [
+     19,
+     30
+    ]
+   },
+   "구조 일치": {
+    "전체": [
+     25,
+     30
+    ],
+    "extract": [
+     10,
+     12
+    ],
+    "holdout_hk": [
+     25,
+     30
+    ],
+    "clarify": [
+     9,
+     11
+    ],
+    "refuse": [
+     6,
+     7
+    ]
+   }
+  },
+  "제안/전체264": {
+   "n": 264,
+   "yappang": {
+    "JSON 유효율": [
+     264,
+     264
+    ],
+    "형태 일치율": [
+     247,
+     264
+    ],
+    "필드 정확도": [
+     175,
+     187
+    ],
+    "은어 변환율": [
+     13,
+     14
+    ],
+    "완전 일치율": [
+     194,
+     264
+    ]
+   },
+   "구조 일치": {
+    "전체": [
+     229,
+     264
+    ],
+    "extract": [
+     141,
+     152
+    ],
+    "official111": [
+     100,
+     111
+    ],
+    "clarify": [
+     50,
+     67
+    ],
+    "refuse": [
+     38,
+     45
+    ],
+    "haechan58": [
+     51,
+     58
+    ],
+    "haechan31": [
+     28,
+     31
+    ],
+    "haechan34": [
+     25,
+     34
+    ],
+    "holdout_hk": [
+     25,
+     30
+    ]
+   }
+  },
+  "제안/기존234": {
+   "n": 234,
+   "yappang": {
+    "JSON 유효율": [
+     234,
+     234
+    ],
+    "형태 일치율": [
+     219,
+     234
+    ],
+    "필드 정확도": [
+     162,
+     171
+    ],
+    "은어 변환율": [
+     13,
+     14
+    ],
+    "완전 일치율": [
+     175,
+     234
+    ]
+   },
+   "구조 일치": {
+    "전체": [
+     204,
+     234
+    ],
+    "extract": [
+     131,
+     140
+    ],
+    "official111": [
+     100,
+     111
+    ],
+    "clarify": [
+     41,
+     56
+    ],
+    "refuse": [
+     32,
+     38
+    ],
+    "haechan58": [
+     51,
+     58
+    ],
+    "haechan31": [
+     28,
+     31
+    ],
+    "haechan34": [
+     25,
+     34
+    ]
+   }
+  },
+  "제안/새시험30": {
+   "n": 30,
+   "yappang": {
+    "JSON 유효율": [
+     30,
+     30
+    ],
+    "형태 일치율": [
+     28,
+     30
+    ],
+    "필드 정확도": [
+     13,
+     16
+    ],
+    "은어 변환율": [
+     0,
+     0
+    ],
+    "완전 일치율": [
+     19,
+     30
+    ]
+   },
+   "구조 일치": {
+    "전체": [
+     25,
+     30
+    ],
+    "extract": [
+     10,
+     12
+    ],
+    "holdout_hk": [
+     25,
+     30
+    ],
+    "clarify": [
+     9,
+     11
+    ],
+    "refuse": [
+     6,
+     7
+    ]
+   }
+  },
+  "기준 바뀐 9문항": {
+   "T031": {
+    "text": "잘 버는 회사만 볼래요",
+    "pred": "VALUE_MISSING [5]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": false
+   },
+   "T064": {
+    "text": "가성비 좋은 주식 찾아줘",
+    "pred": "AMBIGUOUS_INDICATOR [10, 11, 16]",
+    "원본 정답과 구조 일치": true,
+    "제안 정답과 구조 일치": false
+   },
+   "T065": {
+    "text": "이익이 늘어나는 회사가 좋아",
+    "pred": "VALUE_MISSING [9]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   },
+   "T106": {
+    "text": "주가가 롤러코스터 같은 종목",
+    "pred": "VALUE_MISSING [18]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   },
+   "T107": {
+    "text": "규모가 큰 회사",
+    "pred": "AMBIGUOUS_INDICATOR [14, 19]",
+    "원본 정답과 구조 일치": true,
+    "제안 정답과 구조 일치": false
+   },
+   "T193": {
+    "text": "크기가 큰 상장사만 보여줘",
+    "pred": "VALUE_MISSING [14]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   },
+   "T197": {
+    "text": "최근 주가가 푹 꺼진 종목",
+    "pred": "AMBIGUOUS_INDICATOR [15, 16]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": true
+   },
+   "T228": {
+    "text": "돈 잘 버는 회사만 보여줘",
+    "pred": "VALUE_MISSING [7]",
+    "원본 정답과 구조 일치": false,
+    "제안 정답과 구조 일치": false
+   },
+   "T229": {
+    "text": "가격 매력 있는 종목 골라줘",
+    "pred": "AMBIGUOUS_INDICATOR [10, 11, 16]",
+    "원본 정답과 구조 일치": true,
+    "제안 정답과 구조 일치": false
+   }
+  },
+  "구조 오답(원본)": [
+   {
+    "test_id": "T001",
+    "source": "official111",
+    "kind": "단일",
+    "text": "빚이 자기 돈의 두 배를 넘으면 안 돼요",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 200, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"user\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"sour"
+   },
+   {
+    "test_id": "T028",
+    "source": "official111",
+    "kind": "되묻기(값 없음)",
+    "text": "남는 장사하는 회사가 좋아",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 5, \"message\": \"본업에서 얼마나 버는지는 영업이익으로 볼 수 있어요. 어느 정도 이상 벌어야 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"1천억원 초과로 엄격하게 할래요\", \"value\": 1000}, {\"level\": \"보통\", \"label\": \"100억원 초과로 보통으로 할래요\", \"value\": 100}, {\"level\": \"느슨\", \"label\":"
+   },
+   {
+    "test_id": "T031",
+    "source": "official111",
+    "kind": "되묻기(지표 모호)",
+    "text": "잘 버는 회사만 볼래요",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 5, \"message\": \"본업에서 얼마나 버는지는 영업이익으로 볼 수 있어요. 어느 정도 이상 벌어야 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"1천억원 초과로 엄격하게 할래요\", \"value\": 1000}, {\"level\": \"보통\", \"label\": \"100억원 초과로 보통으로 할래요\", \"value\": 100}, {\"level\": \"느슨\", \"label\":"
+   },
+   {
+    "test_id": "T032",
+    "source": "official111",
+    "kind": "되묻기(지표 모호)",
+    "text": "망할 걱정 없는 회사",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"안전하다고 볼 수 있는 기준이 여러 가지예요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 1, \"name\": \"부채비율\"}, {\"id\": 2, \"name\": \"차입금의존도\"}, {\"id\": 4, \"name\": \"자본잠식률\"}, {\"id\": 18, \"name\": \"60일 변동성\"}]}"
+   },
+   {
+    "test_id": "T034",
+    "source": "official111",
+    "kind": "거절(20개 밖)",
+    "text": "현금 많이 쌓아둔 회사 찾아줘",
+    "gold": "refuse",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 1, \"message\": \"설립 금액은 설립 시 투입한 자본금으로 볼 수 있어요. 어느 정도 이상이면 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"10억원 이상으로 엄격하게 할래요\", \"value\": 10}, {\"level\": \"보통\", \"label\": \"1억원 이상으로 보통으로 할래요\", \"value\": 1}, {\"level\": \"느슨\", \"label\": \"5천만"
+   },
+   {
+    "test_id": "T041",
+    "source": "official111",
+    "kind": "단일(별칭)",
+    "text": "영업이익 성장률 15% 이상",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T059",
+    "source": "official111",
+    "kind": "되묻기(값 없음)",
+    "text": "자산가치 대비 저렴한 회사",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"어떤 기준으로 볼까요? 아래에서 골라 주세요.\", \"candidates\": [{\"id\": 10, \"name\": \"PER\"}, {\"id\": 11, \"name\": \"PBR\"}]}"
+   },
+   {
+    "test_id": "T065",
+    "source": "official111",
+    "kind": "되묻기(지표 모호)",
+    "text": "이익이 늘어나는 회사가 좋아",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 9, \"message\": \"본업 이익이 느는 속도는 영업이익 증가율로 볼 수 있어요. 얼마나 늘어야 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"30% 이상으로 엄격하게 할래요\", \"value\": 30}, {\"level\": \"보통\", \"label\": \"10% 이상으로 보통으로 할래요\", \"value\": 10}, {\"level\": \"느슨\", \"label\": \"0% 이"
+   },
+   {
+    "test_id": "T068",
+    "source": "official111",
+    "kind": "거절(20개 밖)",
+    "text": "배당 성장률 높은 회사",
+    "gold": "refuse",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 13, \"message\": \"꾸준한 배당은 연속 배당 연수로 볼 수 있어요. 몇 년 연속 배당해야 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"5년 이상으로 엄격하게 할래요\", \"value\": 5}, {\"level\": \"보통\", \"label\": \"3년 이상으로 보통으로 할래요\", \"value\": 3}, {\"level\": \"느슨\", \"label\": \"1년 이상으로 느"
+   },
+   {
+    "test_id": "T099",
+    "source": "official111",
+    "kind": "되묻기(값 없음)",
+    "text": "저점에서 아직 안 오른 종목",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"바닥권은 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 16, \"name\": \"52주 고점 대비\"}, {\"id\": 17, \"name\": \"52주 저점 대비\"}]}"
+   },
+   {
+    "test_id": "T106",
+    "source": "official111",
+    "kind": "되묻기(지표 모호)",
+    "text": "주가가 롤러코스터 같은 종목",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 18, \"message\": \"주가가 출렁이는 정도는 60일 변동성으로 볼 수 있어요. 하루 등락이 평균 몇 % 안쪽이면 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"1.5% 이하로 엄격하게 할래요\", \"value\": 1.5}, {\"level\": \"보통\", \"label\": \"2% 이하로 보통으로 할래요\", \"value\": 2}, {\"level\": \"느슨\", \"labe"
+   },
+   {
+    "test_id": "T127",
+    "source": "haechan58",
+    "kind": "B 20개 밖 개념 거절",
+    "text": "액면분할 예정인 종목",
+    "gold": "refuse",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 14, \"message\": \"주가가 출렁이는 정도는 60일 변동성으로 볼 수 있어요. 하루 등락이 평균 몇 % 안쪽이면 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"1.5% 이하로 엄격하게 할래요\", \"value\": 1.5}, {\"level\": \"보통\", \"label\": \"2% 이하로 보통으로 할래요\", \"value\": 2}, {\"level\": \"느슨\", \"labe"
+   },
+   {
+    "test_id": "T129",
+    "source": "haechan58",
+    "kind": "B 20개 밖 개념 거절",
+    "text": "이번 분기 실적 발표 앞둔 회사",
+    "gold": "refuse",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"PERIOD_MISSING\", \"indicator_id\": 13, \"message\": \"주가가 오른 정도는 기간에 따라 달라져요. 얼마 동안의 수익률로 볼까요?\", \"options\": [{\"label\": \"최근 1개월\", \"months\": 1}, {\"label\": \"최근 3개월\", \"months\": 3}, {\"label\": \"최근 6개월\", \"months\": 6}, {\"label\": \"최근 12개월\", \"months\": 12}]}"
+   },
+   {
+    "test_id": "T135",
+    "source": "haechan58",
+    "kind": "C 추천·예측 거절",
+    "text": "부채비율 낮은 회사 중에 지금 사면 좋은 거 알려줘",
+    "gold": "refuse",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 1, \"message\": \"빚이 많다는 건 보통 부채비율이 높다는 뜻이에요. 어느 정도까지 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"50% 이하로 엄격하게 할래요\", \"value\": 50}, {\"level\": \"보통\", \"label\": \"100% 이하로 보통으로 할래요\", \"value\": 100}, {\"level\": \"느슨\", \"label\": \"200% 이하로 "
+   },
+   {
+    "test_id": "T152",
+    "source": "haechan58",
+    "kind": "E 지표 2~3개",
+    "text": "부채비율 150% 이하에 영업이익 100억 이상인 회사",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 150, \"unit\": \"%\", \"source\": \"user\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"sourc"
+   },
+   {
+    "test_id": "T158",
+    "source": "haechan58",
+    "kind": "F 부등호 표현",
+    "text": "PBR이 1배가 안 되는 종목",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T167",
+    "source": "haechan58",
+    "kind": "G 애매한 말 되묻기",
+    "text": "싸게 거래되는 주식 찾아줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"싸다고 볼 수 있는 기준이 여러 가지예요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 10, \"name\": \"PER\"}, {\"id\": 11, \"name\": \"PBR\"}, {\"id\": 16, \"name\": \"52주 고점 대비\"}]}"
+   },
+   {
+    "test_id": "T168",
+    "source": "haechan58",
+    "kind": "G 애매한 말 되묻기",
+    "text": "주가가 꽤 올라온 종목",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"뜬다는 건 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 15, \"name\": \"기간 수익률\"}, {\"id\": 20, \"name\": \"거래량 증가 배율\"}]}"
+   },
+   {
+    "test_id": "T184",
+    "source": "haechan31",
+    "kind": "I 16·17 구분",
+    "text": "고점 대비 22% 넘게 하락한 종목은 빼줘",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T188",
+    "source": "haechan31",
+    "kind": "J 20개 안 지표 끝말",
+    "text": "PBR 0.6배가 안 되는 주식 찾아줘",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T193",
+    "source": "haechan31",
+    "kind": "K 되묻기 기준",
+    "text": "크기가 큰 상장사만 보여줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 14, \"message\": \"회사의 덩치는 시가총액으로 볼 수 있어요. 어느 정도 이상이면 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"5조원 이상으로 엄격하게 할래요\", \"value\": 50000}, {\"level\": \"보통\", \"label\": \"1조원 이상으로 보통으로 할래요\", \"value\": 10000}, {\"level\": \"느슨\", \"label\": \"5천억"
+   },
+   {
+    "test_id": "T194",
+    "source": "haechan31",
+    "kind": "K 되묻기 기준",
+    "text": "가격 대비 효율 좋은 종목 알려줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"어떤 기준으로 볼까요? 아래에서 골라 주세요.\", \"candidates\": [{\"id\": 10, \"name\": \"PER\"}, {\"id\": 11, \"name\": \"PBR\"}]}"
+   },
+   {
+    "test_id": "T197",
+    "source": "haechan31",
+    "kind": "K 되묻기 기준",
+    "text": "최근 주가가 푹 꺼진 종목",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"폭락은 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 15, \"name\": \"기간 수익률\"}, {\"id\": 16, \"name\": \"52주 고점 대비\"}]}"
+   },
+   {
+    "test_id": "T203",
+    "source": "haechan34",
+    "kind": "L 20개 밖 개념 거절",
+    "text": "경영권 다툼 중인 회사는 피하고 싶어",
+    "gold": "refuse",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 18, \"message\": \"주가가 출렁이는 정도는 60일 변동성으로 볼 수 있어요. 하루 등락이 평균 몇 % 안쪽이면 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"1.5% 이하로 엄격하게 할래요\", \"value\": 1.5}, {\"level\": \"보통\", \"label\": \"2% 이하로 보통으로 할래요\", \"value\": 2}, {\"level\": \"느슨\", \"labe"
+   },
+   {
+    "test_id": "T216",
+    "source": "haechan34",
+    "kind": "M 지표 번호 혼동",
+    "text": "영업이익 증가율 20% 이상이고 영업이익 400억 이상인 기업",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T220",
+    "source": "haechan34",
+    "kind": "N 부등호·방향",
+    "text": "자본 대비 부채가 130%를 밑도는 곳",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 130, \"unit\": \"%\", \"source\": \"user\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"sourc"
+   },
+   {
+    "test_id": "T226",
+    "source": "haechan34",
+    "kind": "N 부등호·방향",
+    "text": "배당수익률 3%에 못 미치는 종목만 골라줘",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "T227",
+    "source": "haechan34",
+    "kind": "O 되묻기 말투",
+    "text": "부채 걱정 없는 회사 찾아줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"어떤 기준으로 볼까요? 아래에서 골라 주세요.\", \"candidates\": [{\"id\": 1, \"name\": \"부채비율\"}, {\"id\": 2, \"name\": \"차입금의존도\"}, {\"id\": 3, \"name\": \"EBITDA/금융비용\"}, {\"id\": 4, \"name\": \"자본잠식률\"}]}"
+   },
+   {
+    "test_id": "T228",
+    "source": "haechan34",
+    "kind": "O 되묻기 말투",
+    "text": "돈 잘 버는 회사만 보여줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 7, \"message\": \"이익이 잘 남는지는 매출순이익률로 볼 수 있어요. 매출 100원 중 얼마가 남아야 괜찮을까요?\", \"options\": [{\"level\": \"엄격\", \"label\": \"10% 이상으로 엄격하게 할래요\", \"value\": 10}, {\"level\": \"보통\", \"label\": \"5% 이상으로 보통으로 할래요\", \"value\": 5}, {\"level\": \"느슨\", \"label\": \"2"
+   },
+   {
+    "test_id": "T231",
+    "source": "haechan34",
+    "kind": "O 되묻기 말투",
+    "text": "본업 수익이 넉넉한 회사 알려줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"본업이 잘 된다는 건 여러 지표로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 5, \"name\": \"영업이익\"}, {\"id\": 7, \"name\": \"매출순이익률\"}]}"
+   },
+   {
+    "test_id": "T233",
+    "source": "haechan34",
+    "kind": "O 되묻기 말투",
+    "text": "주가가 와르르 무너진 종목",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"폭락은 두 가지로 볼 수 있어요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 15, \"name\": \"기간 수익률\"}, {\"id\": 16, \"name\": \"52주 고점 대비\"}]}"
+   },
+   {
+    "test_id": "N005",
+    "source": "holdout_hk",
+    "kind": "EXT",
+    "text": "몸값이 2조는 넘어야 해, 2조 이상으로 해줘",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "N009",
+    "source": "holdout_hk",
+    "kind": "EXT",
+    "text": "PER 15배 이하에 매출 성장률 10% 이상인 기업",
+    "gold": "extract",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "N020",
+    "source": "holdout_hk",
+    "kind": "VAL",
+    "text": "여러 해 동안 본업 적자를 한 번도 안 낸 회사",
+    "gold": "clarify",
+    "pred": "extract",
+    "raw": "{\"indicators\": [{\"id\": 1, \"operator\": \"<=\", \"value\": 100, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 2, \"operator\": \"<=\", \"value\": 30, \"unit\": \"%\", \"source\": \"default\"}, {\"id\": 3, \"operator\": \">=\", \"value\": 3, \"unit\": \"배\", \"source\": \"default\"}, {\"id\": 4, \"operator\": \"<=\", \"value\": 0, \"unit\": \"%\", \"so"
+   },
+   {
+    "test_id": "N021",
+    "source": "holdout_hk",
+    "kind": "AMB",
+    "text": "싸 보이는 주식 위주로 골라줘",
+    "gold": "clarify",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"AMBIGUOUS_INDICATOR\", \"message\": \"싸다고 볼 수 있는 기준이 여러 가지예요. 어떤 걸로 볼까요?\", \"candidates\": [{\"id\": 10, \"name\": \"PER\"}, {\"id\": 11, \"name\": \"PBR\"}, {\"id\": 16, \"name\": \"52주 고점 대비\"}]}"
+   },
+   {
+    "test_id": "N025",
+    "source": "holdout_hk",
+    "kind": "REF",
+    "text": "감사의견 거절 받은 회사 빼줘",
+    "gold": "refuse",
+    "pred": "clarify",
+    "raw": "{\"needs_clarification\": true, \"reason\": \"VALUE_MISSING\", \"indicator_id\": 4, \"message\": \"어떤 기준으로 볼까요? 정한 기준에 따라 검색 결과가 달라져요.\", \"options\": [{\"level\": \"엄격\", \"label\": \"부채비율 100% 이하로 엄격하게 할래요\", \"value\": 100}, {\"level\": \"보통\", \"label\": \"부채비율 150% 이하로 보통으로 할래요\", \"value\": 150}, {\"level\": \"느슨\", \"label\": \"부채비율"
+   }
+  ]
+ }
+}

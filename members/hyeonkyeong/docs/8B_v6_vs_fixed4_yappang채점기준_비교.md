@@ -157,7 +157,7 @@ yappang 문서 5절의 제안("되묻기 이유 + 후보 id 집합, 거절 여�
 | (새로 찾음) `anchors` 누락 | fixed-4로 학습한 8B·4B 모두 17~18건. fixed-5에서 400개 보강 필요. |
 
 **fixed-5 초안(`docs/fixed5-draft.md`)에 더하면 좋을 것**
-- fixed-4의 `indicators`만 있는 추출 정답 400개에 `anchors`(사용자 지정 지표 id)·`name`·`explain_*`를 채운다.
+- fixed-4의 `indicators`만 있는 추출 정답 400개에 `anchors`(사용자 지정 지표 id)를 채운다. (정정 11/10: 채울 것은 `anchors`뿐이다. v6도 추출 정답 2,095개 중 1,755개가 `anchors`+`indicators`만 있고 `name`·`explain_*`는 없다. 앱은 `name`이 없으면 "내 원칙"으로 표시한다. fixed-6-hk에서 `anchors`만 채웠다.)
 - 평가에 6장의 구조 일치 지표를 같이 낸다. 그래야 완전 일치만으로 모델을 판단하지 않는다.
 
 ## 8. 아직 확인하지 않은 것

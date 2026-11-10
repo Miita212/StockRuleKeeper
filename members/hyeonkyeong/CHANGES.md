@@ -5,6 +5,18 @@
 
 ---
 
+## 2026-11-10 · 모델 3종 시험 비교 (fixed-6 8B / fixed-6 4B / v6 8B)
+
+- **무엇**: fixed-6-hk로 8B·4B를 같은 설정으로 학습(ws6)하고, 지금 앱 모델 v6 8B와 264문항(test_set 234 + 새 시험 30)으로 비교했어요. 결과: [`docs/모델3종_비교_fixed6.md`](docs/모델3종_비교_fixed6.md)
+  - 원래 정답 구조 일치: fixed-6 8B 87.9% / v6 8B 86.4% / fixed-6 4B 82.2%
+  - fixed-6 8B는 추출·거절이 좋고, v6는 되묻기가 좋아요. 4B는 종목 추천 요청을 거절하지 않는 실수가 있어요.
+- **새 파일**: `data_fixed6_hk/score_fx6.py` (정답 두 벌 × 234/30, 구조 일치 + yappang 기준 채점), `docs/eval_fx6/score_5ckpt.json` (채점 결과 전체)
+- **앱 코드 변경 없음.** 앱 모델은 아직 v6 그대로예요. 앱 테스트 후 결정해요.
+- **다시 채점하기**: `python3 -I -X utf8 members/hyeonkyeong/data_fixed6_hk/score_fx6.py fx6-8b-3ep=<출력.jsonl> ...` (출력은 haechan `eval_model.py` 결과 형식)
+- **문서 정정**: `docs/8B_v6_vs_fixed4_공유요약.md`, `docs/8B_fixed4_학습_결과.md`, `docs/8B_v6_vs_fixed4_yappang채점기준_비교.md`에 "400개에 anchors·name·explain_* 채우기"라고 쓴 곳을 "anchors만"으로 정정했어요(v6도 추출 정답 대부분에 name·explain_*가 없음).
+
+---
+
 ## 2026-11-09 · 새 학습 데이터 fixed-6-hk (`data_fixed6_hk/`), yappang 검증 반영
 
 - **무엇**: fixed-5-hk에 yappang 검증(11/09) 지적과 표현 기준을 반영한 학습 데이터예요.
