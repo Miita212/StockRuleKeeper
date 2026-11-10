@@ -2,7 +2,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24&height=220&section=header&text=StockRuleKeeper&fontSize=56&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%20%EC%9B%90%EC%B9%99%20%EC%A7%80%ED%82%B4%EC%9D%B4&descSize=22&descAlignY=58" alt="StockRuleKeeper 배너" />
 
-<img src="https://readme-typing-svg.demolab.com?font=Noto+Sans+KR&weight=600&size=22&duration=3000&pause=1200&color=2563EB&center=true&vCenter=true&width=640&height=48&lines=%EB%A7%90%20%ED%95%9C%EB%A7%88%EB%94%94%EB%A1%9C%20%ED%88%AC%EC%9E%90%20%EC%9B%90%EC%B9%99%EC%9D%84%20%EC%84%B8%EC%9B%8C%EC%9A%94;20%EA%B0%9C%20%EC%A7%80%ED%91%9C%EB%A1%9C%20%EC%A2%85%EB%AA%A9%EC%9D%84%20%ED%8C%90%EC%A0%95%ED%95%B4%EC%9A%94;%EC%9B%90%EC%B9%99%EC%9D%84%20%EB%B0%94%EA%BE%B8%EB%A9%B4%20%EA%B2%B0%EA%B3%BC%EA%B0%80%20%EC%96%B4%EB%96%BB%EA%B2%8C%20%EB%8B%AC%EB%9D%BC%EC%A7%88%EA%B9%8C%3F" alt="말 한마디로 투자 원칙을 세워요 / 20개 지표로 종목을 판정해요 / 원칙을 바꾸면 결과가 어떻게 달라질까?" />
+<img src="https://readme-typing-svg.demolab.com?font=Noto+Sans+KR&weight=600&size=22&duration=3000&pause=1200&color=2563EB&center=true&vCenter=true&width=640&height=48&lines=%ED%95%9C%20%EB%AC%B8%EC%9E%A5%EC%9C%BC%EB%A1%9C%20%ED%88%AC%EC%9E%90%20%EC%9B%90%EC%B9%99%EC%9D%84%20%EC%84%B8%EC%9B%8C%EC%9A%94;20%EA%B0%9C%20%EC%A7%80%ED%91%9C%EB%A1%9C%20%EC%A2%85%EB%AA%A9%EC%9D%84%20%ED%8C%90%EC%A0%95%ED%95%B4%EC%9A%94;%EC%9B%90%EC%B9%99%EC%9D%84%20%EB%B0%94%EA%BE%B8%EB%A9%B4%20%EA%B2%B0%EA%B3%BC%EA%B0%80%20%EC%96%B4%EB%96%BB%EA%B2%8C%20%EB%8B%AC%EB%9D%BC%EC%A7%88%EA%B9%8C%3F" alt="한 문장으로 투자 원칙을 세워요 / 20개 지표로 종목을 판정해요 / 원칙을 바꾸면 결과가 어떻게 달라질까?" />
 
 <br />
 
@@ -28,9 +28,9 @@
 ### 🎯 목적
 
 - 투자 원칙을 세워도, 종목마다 그 원칙을 지켰는지 하나하나 확인하기는 어려워요.
-- StockRuleKeeper는 **지표 이름을 몰라도 말로 원칙을 세우고**, 종목이 그 원칙을 **얼마나 지켰는지 숫자로 확인**하게 도와줘요.
+- StockRuleKeeper는 **지표 이름을 몰라도 채팅창에 평소 쓰는 문장으로 원칙을 세우고**, 종목이 그 원칙을 **얼마나 지켰는지 숫자로 확인**하게 도와줘요. 입력은 글자로만 하고, 음성 입력은 지원하지 않아요.
 - 원칙의 기준을 바꾸면 결과가 어떻게 달라지는지도 **과거 데이터 시뮬레이션으로 미리 비교**해 볼 수 있어요.
-- 종목을 추천하거나 주가를 예측하는 앱이 아니라, **내 원칙을 지키도록 돕는 도구**예요.
+- 앱이 임의로 종목을 골라 추천하거나 주가를 예측하지는 않아요. 판정은 모델이 아니라 코드와 데이터가 하고, **내 원칙을 지키도록 돕는 도구**예요. 종목 검색 화면은 종목을 원칙 충족 개수가 많은 순으로 보여 줄 뿐이에요.
 
 ### 🏁 결과
 
@@ -38,12 +38,12 @@
 
 | 사용자가 하는 일 | 앱이 돌려주는 결과 |
 | --- | --- |
-| 💬 원칙을 말로 이야기해요<br/>_"영업이익 500억원 이상인 회사만 보고 싶어요"_ | 20개 지표 중 **해당 지표를 골라 수치로 바꿔 줘요.**<br/>기준이 애매하면 **되묻고**, 예측·종목 추천은 **거절**해요. |
+| 💬 원칙을 채팅으로 이야기해요<br/>_"영업이익 500억원 이상인 회사만 보고 싶어요"_ | 20개 지표 중 **해당 지표를 골라 수치로 바꿔 줘요.**<br/>기준이 애매하면 **되묻고**, 예측·종목 추천은 **거절**해요. |
 | 🧾 종목을 검색해요 | 내 원칙을 **몇 개 충족하는지** 알려 주는 판정서<br/>(예: 동진쎄미켐 **16 / 20개 충족**, 지표별 실제 값과 충족 여부) |
 | 🗂️ 원칙을 관리해요 | 이름을 붙여 저장하고, 수치를 고치고, 지표를 잠그거나 꺼 둘 수 있어요. |
 | 📈 원칙의 수치를 바꿔 봐요 | 바꾸기 **전·후 비교**(조건에 맞는 종목 수, 평균 수익률, 오른 종목 비율)와 **쉬운 말 리포트**<br/>(예: 부채비율 30% → 24%, 6개월 기준) |
 
-그리고 말을 원칙으로 바꾸는 모델(Qwen3-8B QLoRA)은 264문항 평가에서 **전체 91.7%**를 기록했어요. (서버 4비트 환경, 팀 내부 평가)
+그리고 문장을 원칙으로 바꾸는 모델(Qwen3-8B QLoRA)은 264문항 평가에서 **전체 91.7%**를 기록했어요. (서버 4비트 환경, 팀 내부 평가)
 
 > 표의 숫자는 실제 앱 화면에서 가져온 예시예요.
 
@@ -71,7 +71,7 @@
 
 <table>
 <tr>
-<td align="center" width="33%"><img src="https://raw.githubusercontent.com/ByJn1224/stockrulekeeper-assets/main/1_extract.png" width="220" alt="추출" /><br /><b>추출</b><br />말한 내용을 지표 수치로 바꿔요</td>
+<td align="center" width="33%"><img src="https://raw.githubusercontent.com/ByJn1224/stockrulekeeper-assets/main/1_extract.png" width="220" alt="추출" /><br /><b>추출</b><br />입력한 문장을 지표 수치로 바꿔요</td>
 <td align="center" width="33%"><img src="https://raw.githubusercontent.com/ByJn1224/stockrulekeeper-assets/main/2_clarify.png" width="220" alt="되묻기" /><br /><b>되묻기</b><br />기준이 애매하면 다시 물어봐요</td>
 <td align="center" width="33%"><img src="https://raw.githubusercontent.com/ByJn1224/stockrulekeeper-assets/main/3_reject.png" width="220" alt="거절" /><br /><b>거절</b><br />예측·종목 추천은 정중히 거절해요</td>
 </tr>
@@ -96,6 +96,13 @@
 </td>
 </tr>
 </table>
+
+**판정서 숫자는 이렇게 읽어요** (코드로 확인한 동작이에요)
+- 원칙은 지표 20개로 이뤄져요. 내가 문장으로 정하지 않은 지표에는 **기본값**이 들어가고, 화면에서는 "그 외 지표"로 보여요.
+- **"원칙에 포함" 스위치**를 켜면 기본값 지표까지 함께 저장해서 20개 모두를 판정해요. 끄면 내가 정한 지표만 저장해서, 충족 개수의 전체가 그 개수(예: 4개 중 2개)로 나와요.
+- **충족 개수**는 지표별 기준을 통과한 지표의 수이고, **전체**는 원칙에 저장된 지표의 수예요. 값을 구하지 못한 지표("데이터 없음")는 충족으로 세지 않아요.
+- **잠근 지표**는 문장으로 말해도 바뀌지 않아요. 잠금을 풀고 다시 말해야 해요.
+- **비활성화**는 내가 정한 지표를 기본값으로 되돌려 "그 외 지표"로 돌려놓는 거예요. 잠금과는 달라요.
 
 #### ③ 시뮬레이션과 리포트
 
@@ -206,119 +213,168 @@ virtual-app/                    앱 밖에서 앱 열기를 시험하는 가상 
 
 ## 3. 실행 방법 (step by step)
 
-(아래는 `members/byungjun/` 폴더 기준이에요. `yappang`, `hyeonkyeong` 폴더도 같은 구조라서 폴더 이름만 바꾸면 똑같이 돼요.)
+처음 받은 컴퓨터에서 그대로 따라 할 수 있도록 순서대로 적었어요.
+
+**기준 폴더와 터미널**
+- 아래 명령은 `members/byungjun/` 폴더 기준이에요. `yappang`, `hyeonkyeong` 폴더도 구조가 같아서 폴더 이름만 바꾸면 돼요.
+- 저장소를 받은 폴더(`StockRuleKeeper/`)를 **저장소 루트**라고 부르고, 모든 `cd` 명령은 저장소 루트에서 시작하도록 적었어요.
+- 터미널을 세 개 써요. 서버 터미널과 화면 터미널은 계속 켜 두어요.
+
+| 터미널 | 하는 일 | 계속 켜 두나요? |
+| --- | --- | --- |
+| **터미널 A** | 서버 설치 · 설정 · 실행 | 네 (서버가 돌고 있어요) |
+| **터미널 B** | 데이터 수집, 모델 등록 (🚀 실제 모드) | 아니요 (끝나면 닫아도 돼요) |
+| **터미널 C** | 앱 화면 실행 | 네 (화면 서버가 돌고 있어요) |
+
+**어디까지 확인했나요?**
+- 직접 확인한 환경: Linux(WSL2), Python 3.12, Node.js 24, Ollama 0.40.8, RTX 4060 Laptop(VRAM 8GB), RAM 15GB. 깨끗한 폴더에서 저장소를 새로 받아 Step 1\~7을 따라 했어요.
+- 직접 확인한 것: 서버 설치와 실행, 🧪 체험 모드 전체, 화면에서 원칙 만들기와 저장, 받은 모델로 추출·되묻기·거절, 저장된 데이터로 시뮬레이션(리포트 제외).
+- **확인하지 못한 것**: Windows PowerShell과 macOS 명령, 한투·DART에서 실제로 데이터를 받는 단계(키 필요), Claude 리포트(유료), 스마트폰·APK 접속. 이 부분은 코드와 설정을 읽고 적었어요.
 
 ### 준비물
 
-| 준비물 | 확인한 버전 | 비고 |
-| --- | --- | --- |
-| Python | 3.12 | 서버 실행 |
-| Node.js · npm | 24 | 앱 화면 실행 |
-| Git | - | 저장소 받기 |
-| API 키 | - | **실제 모드에서만** 필요해요 (KIS · DART · Anthropic) |
-| Ollama · 모델 파일(약 5GB) | - | **실제 모드에서만** 필요해요 (Step 6) |
+| 준비물 | 비고 |
+| --- | --- |
+| Python 3.12 | 서버 실행 (확인한 버전) |
+| Node.js · npm 24 | 앱 화면 실행 (확인한 버전) |
+| Git | 저장소 받기 |
+| 🚀 API 키 | 실제 모드에서만. 아래 "키는 어떤 기능에 필요한가요?" 참고 |
+| 🚀 Ollama와 모델 파일(약 5GB) | 실제 모드에서만. 디스크 여유 공간이 넉넉해야 해요. |
+
+로컬 모델의 최소 사양은 확인하지 못했어요. 위에서 적은 환경(GPU VRAM 8GB, RAM 15GB)에서 모델이 정상으로 응답했고, CPU만으로 돌아가는지와 속도는 확인하지 못했어요.
 
 ### 어떤 모드로 돌릴까요?
 
 | | 🧪 체험 모드 (처음엔 이걸로!) | 🚀 실제 모드 |
 | --- | --- | --- |
-| 필요한 것 | 없음 (키 · 모델 불필요) | KIS · DART · Anthropic 키, Ollama와 모델 파일 |
-| 데이터 | 비어 있어요. 종목 이름만 있고 시세·재무는 "데이터 없음"으로 나와요 | 한투 · DART에서 받아 DB에 저장 (Step 5, 필수) |
-| 말 → 원칙 변환 | 말과 상관없이 **고정된 샘플 결과** | 모델이 실제로 변환 |
-| 용도 | 화면 구성과 원칙 만들기 흐름 둘러보기 (판정서 · 시뮬레이션 값은 비어 있음) | 시연 · 실제 사용 |
+| 필요한 것 | 없음 (키 · 모델 불필요) | KIS · DART · Anthropic 키(기능별), Ollama와 모델 파일 |
+| 데이터 | 종목 이름만 있고 시세·재무는 비어 있어요 | 한투 · DART에서 받아 DB에 저장 (Step 6) |
+| 말 → 원칙 변환 | 입력한 문장과 상관없이 **고정된 샘플 결과** | 모델이 실제로 변환 |
+| 용도 | 화면 구성과 원칙 만들기 흐름 둘러보기 | 시연 · 실제 사용 |
 
-### Step 1. 저장소 받기
+### 키는 어떤 기능에 필요한가요? (🚀 실제 모드)
+
+키는 기능별로 필요해요. 코드를 확인한 결과는 다음과 같아요.
+
+| 기능 | 필요한 키 | 키가 없으면 |
+| --- | --- | --- |
+| 말 → 원칙 변환 | 파인튜닝 모델을 쓰면(`LLM_PROVIDER=local`) **필요 없음** (Ollama가 처리). Claude로 변환하면(`anthropic`) `ANTHROPIC_API_KEY` | 변환 요청이 실패해요 |
+| 종목 데이터 수집 · 최신 시세 | `KIS_APP_KEY`, `KIS_APP_SECRET` | 새로 받지 못하고, DB에 저장된 값만 써요 |
+| 재무 데이터 수집 | `DART_API_KEY` | 재무 지표를 새로 받지 못해요 |
+| 시뮬레이션 리포트 | `ANTHROPIC_API_KEY` (리포트는 항상 Claude Haiku 5.5) | 고정 양식의 기본 리포트로 대신해요 |
+
+키를 받는 곳이에요. 신청 화면과 정책은 바뀔 수 있으니 공식 사이트 안내를 따라 주세요. 키 값은 문서나 저장소에 절대 적지 않아요.
+
+| 키 | 받는 곳 | 확인하지 못한 점 |
+| --- | --- | --- |
+| 한국투자증권 `KIS_APP_KEY` · `KIS_APP_SECRET` | 한국투자증권 Open API 포털(KIS Developers, `apiportal.koreainvestment.com`)에서 앱을 등록해 앱키와 앱시크릿을 받아요. 이 프로젝트는 **실전 키**(`KIS_ENV=real`)로 **조회 API만** 써요. 코드가 조회 API 외에는 막아 두었어요. | 계좌 개설 여부, 실전 API 별도 승인 절차와 소요 시간은 확인 필요 |
+| 오픈DART `DART_API_KEY` | 오픈DART(`opendart.fss.or.kr`)에 가입한 뒤 인증키 신청·관리 메뉴에서 신청해요. | 일일 사용 한도는 확인 필요 |
+| Anthropic `ANTHROPIC_API_KEY` | Anthropic Console(`console.anthropic.com`)에서 API 키를 만들어요. | 사용량에 따라 요금이 나가요. 결제·충전 조건은 확인 필요 |
+
+### Step 1. 저장소 받기 (터미널 A)
 
 ```bash
 git clone https://github.com/Miita212/StockRuleKeeper.git
-cd StockRuleKeeper/members/byungjun
+cd StockRuleKeeper
 ```
 
-### Step 2. 서버 패키지 설치
+### Step 2. 서버 패키지 설치 (터미널 A)
+
+**Linux · macOS · WSL**
 
 ```bash
-cd backend
+cd members/byungjun/backend
 python3 -m venv .venv
-source .venv/bin/activate          # Windows(PowerShell): .venv\Scripts\Activate.ps1
+source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### Step 3. 환경변수 파일 만들기
+**Windows PowerShell**
 
-```bash
-cp .env.example .env               # Windows: copy .env.example .env
+```powershell
+cd members\byungjun\backend
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
 ```
 
-`.env`를 열어 모드에 맞게 바꿔요. **`.env`는 키가 들어가므로 절대 올리지 않아요.**
+> 가상환경 활성화가 "스크립트를 실행할 수 없다"는 오류로 막히면, 활성화하지 않고 가상환경 안의 프로그램을 직접 불러서 써요. 시스템 보안 설정은 바꾸지 않아도 돼요.
+>
+> ```powershell
+> .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+> ```
+>
+> 이 경우 Step 5의 서버 실행도 `.\.venv\Scripts\python.exe -m uvicorn main:app --host 0.0.0.0 --port 8000`으로 해요.
+
+### Step 3. 환경변수 파일 만들기 (터미널 A, `backend/` 폴더)
+
+```bash
+cp .env.example .env               # Windows PowerShell: Copy-Item .env.example .env
+```
+
+`.env`를 열어 **한 가지 모드만** 골라 적어요. **`.env`는 키가 들어가므로 절대 올리지 않아요.**
+- `.env.example`에는 `EXTERNAL_MODE=live`와 `LLM_PROVIDER=anthropic`이 이미 들어 있어요. 아래 값으로 **그 줄을 바꿔 쓰고**, 같은 변수를 두 줄 적지 않아요. 같은 변수가 두 줄이면 위쪽 값이 쓰여요.
+- 서버는 시작할 때 `.env`를 읽어요. 값을 바꾸면 서버를 껐다가 다시 켜야 해요.
+
+**🧪 체험 모드**: 한 줄만 바꾸면 돼요.
 
 ```ini
-# 🧪 체험 모드: 이 한 줄만 바꾸면 돼요
 EXTERNAL_MODE=fixture
+```
 
-# 🚀 실제 모드: 아래 값을 채워요
+**🚀 실제 모드**: 기능별로 필요한 키를 채워요. (위 표 참고)
+
+```ini
 EXTERNAL_MODE=live
-KIS_APP_KEY=...
-KIS_APP_SECRET=...
-DART_API_KEY=...
-ANTHROPIC_API_KEY=...             # 시뮬레이션 리포트는 항상 Claude Haiku 5.5예요
-LLM_PROVIDER=local                # 말 → 원칙 변환을 파인튜닝 모델로 (Step 6 참고)
-LOCAL_LLM_MODEL=qwen3-8b-fixed6   # Ollama에 등록한 모델 이름
+KIS_APP_KEY=여기에_앱키
+KIS_APP_SECRET=여기에_앱시크릿
+KIS_ENV=real
+DART_API_KEY=여기에_인증키
+ANTHROPIC_API_KEY=여기에_키          # 리포트용. 없으면 고정 양식 리포트가 나와요
+LLM_PROVIDER=local                   # 말 → 원칙 변환을 파인튜닝 모델로 (Step 4)
+LOCAL_LLM_URL=http://localhost:11434
+LOCAL_LLM_MODEL=qwen3-8b-fixed6      # Step 4에서 등록하는 모델 이름과 같아야 해요
 ```
 
-### Step 4. 서버 실행하고 확인하기
+모델 없이 실제 모드를 쓰려면 `LLM_PROVIDER=anthropic`으로 바꿔요. 말 → 원칙 변환도 Claude가 해 줘요. (`ANTHROPIC_API_KEY` 필요)
 
-`backend/` 폴더에서 실행해요.
+### Step 4. 말 → 원칙 모델 준비 (🚀 실제 모드, `LLM_PROVIDER=local`일 때만)
 
-```bash
-uvicorn main:app --host 0.0.0.0 --port 8000
-```
-
-- 처음 실행하면 DB(`backend/data/stockrule.db`)가 **자동으로 만들어지고** 종목 목록이 채워져요.
-- 브라우저에서 확인해요.
-  - http://localhost:8000/health → `{"ok":true, ...}` 가 보이면 성공
-  - http://localhost:8000/docs → 서버가 제공하는 요청 목록(API 문서)
-
-### Step 5. 데이터 받아 두기 (🚀 실제 모드는 필수)
-
-DB 파일(`stockrule.db`)은 저장소에 없어서, 처음 받으면 종목 이름만 있고 시세·재무 데이터는 비어 있어요. 특히 재무 지표는 DB에 저장된 값만 쓰기 때문에 이 단계를 꼭 해야 판정서와 시뮬레이션에 값이 나와요. `backend/` 폴더에서 실행해요.
-
-```bash
-python batch/collect_data.py                    # 전체 (한투 약 10분 + DART 약 10분)
-python batch/collect_data.py --codes 005930 000660   # 일부 종목만
-```
-
-이미 받은 종목은 건너뛰고 이어서 받아요. (다시 받으려면 `--force`) 팀원이 만들어 둔 `stockrule.db`를 받아 `backend/data/`에 넣어도 돼요.
-
-> 🧪 체험 모드에서도 같은 명령(`--codes 005930`)으로 샘플 데이터를 채울 수 있지만, 일부 지표만 채워져요.
-
-### Step 6. 말 → 원칙 모델 연결하기 (🚀 실제 모드만)
-
-파인튜닝한 모델(Qwen3-8B + fixed-6 어댑터를 합쳐 4비트로 줄인 파일, 약 5GB)은 Hugging Face에 올려 두었어요. 받아서 Ollama에 등록하면 끝나요.
+서버를 켜기 전에 모델을 준비해요. 파인튜닝한 모델(Qwen3-8B + fixed-6 어댑터를 합쳐 4비트로 줄인 파일, 약 5GB)은 Hugging Face에 올려 두었어요. ([모델 저장소](https://huggingface.co/availablename2/stockrulekeeper-qwen3-8b-fixed6))
 
 1. [Ollama](https://ollama.com)를 설치하고 켜요. (기본 주소 `http://localhost:11434`)
-2. 모델 파일을 받아요. ([모델 저장소](https://huggingface.co/availablename2/stockrulekeeper-qwen3-8b-fixed6))
+2. **터미널 B**에서 모델 파일을 받아요. 서버 가상환경에 다운로드 도구를 설치하고, 저장소 밖의 폴더(홈 폴더 아래 `srk-model`)에 받아요. 공개 저장소라서 로그인은 필요 없어요.
+
+   **Linux · macOS · WSL**
 
    ```bash
+   cd StockRuleKeeper/members/byungjun/backend
+   source .venv/bin/activate
    pip install -U huggingface_hub
-   hf download availablename2/stockrulekeeper-qwen3-8b-fixed6 --local-dir srk-model
+   hf download availablename2/stockrulekeeper-qwen3-8b-fixed6 --local-dir ~/srk-model
+   cd ~/srk-model
    ```
 
-3. Ollama에 등록해요.
+   **Windows PowerShell**
+
+   ```powershell
+   cd StockRuleKeeper\members\byungjun\backend
+   .\.venv\Scripts\Activate.ps1
+   pip install -U huggingface_hub
+   hf download availablename2/stockrulekeeper-qwen3-8b-fixed6 --local-dir $HOME\srk-model
+   cd $HOME\srk-model
+   ```
+
+   > 가상환경 활성화가 막히면 Step 2의 안내처럼 활성화 없이 `.\.venv\Scripts\hf.exe download ...` 로 실행해요.
+
+3. Ollama에 등록해요. 받은 폴더 안에서 실행해야 해요. (`Modelfile`이 같은 폴더의 GGUF 파일을 상대 경로로 가리켜요)
 
    ```bash
-   cd srk-model
    ollama create qwen3-8b-fixed6 -f Modelfile
    ollama list                       # qwen3-8b-fixed6 가 보이면 성공
    ```
 
-4. `backend/.env`에 모델 이름을 적어요.
-
-   ```ini
-   LLM_PROVIDER=local
-   LOCAL_LLM_MODEL=qwen3-8b-fixed6
-   ```
-
-> 모델 없이 실제 모드를 써 보고 싶다면 `.env`에서 `LLM_PROVIDER=anthropic`으로 바꿔요. 말 → 원칙 변환도 Claude가 해 줘요.
+받은 폴더에는 모델 파일(`qwen3-8b-fixed6-Q4_K_M.gguf`)과 `Modelfile` 두 개가 들어 있어요. 등록한 이름은 Step 3의 `LOCAL_LLM_MODEL`과 같아야 해요.
 
 <details>
 <summary>학습한 어댑터에서 직접 만들고 싶다면</summary>
@@ -334,33 +390,116 @@ bash finetune_train/swap_adapter.sh <어댑터폴더> qwen3-8b-fixed6
 
 </details>
 
-### Step 7. 앱 화면 실행하기
+### Step 5. 서버 실행하고 확인하기 (터미널 A, `backend/` 폴더)
 
-새 터미널을 열어서 `frontend/` 폴더에서 실행해요. (서버는 켜 둔 채로)
+가상환경이 켜진 상태에서 실행해요. (새 터미널이라면 Step 2의 `cd`와 활성화 명령부터 다시 해요)
 
 ```bash
-cd frontend
+uvicorn main:app --host 0.0.0.0 --port 8000
+```
+
+- 처음 실행하면 DB(`backend/data/stockrule.db`)가 **자동으로 만들어지고** 종목 목록(반도체 113개)이 채워져요.
+- 브라우저에서 확인해요.
+  - `http://localhost:8000/health`: `{"ok":true, ...}` 가 보이면 성공이에요. `mode`와 `llm` 값이 `.env`와 같은지 봐요.
+  - `http://localhost:8000/docs`: 서버가 제공하는 요청 목록(API 문서)
+- `.env`를 고치면 `Ctrl+C`로 서버를 끄고 이 명령을 다시 실행해요.
+
+### Step 6. 데이터 채우기 (터미널 B, `backend/` 폴더, 서버는 켜 둔 채로)
+
+새 터미널에서 `backend/` 폴더로 이동하고 가상환경을 켜요.
+
+```bash
+cd StockRuleKeeper/members/byungjun/backend      # Windows: cd StockRuleKeeper\members\byungjun\backend
+source .venv/bin/activate                          # Windows: .\.venv\Scripts\Activate.ps1
+```
+
+**🧪 체험 모드**: 안 해도 돼요. 하고 싶다면 샘플 데이터를 한 종목에만 채울 수 있어요.
+
+```bash
+python batch/collect_data.py --codes 005930
+```
+
+체험 모드의 상태는 이렇게 달라요. (직접 확인한 결과)
+
+| 상태 | 판정서와 화면에서 볼 수 있는 것 |
+| --- | --- |
+| 처음 실행 직후 | 종목 113개의 이름과 코드만 있어요. 판정서의 지표 값은 모두 "데이터 없음", 충족 개수는 0이에요. 원칙 만들기는 입력한 문장과 상관없이 **고정 샘플 응답**(부채비율 100% 이하)이 나와요. |
+| 위 명령을 실행한 뒤 | 그 종목의 시세·배당 관련 지표(12\~20번)에 **가짜 샘플 값**이 채워져요. 재무 지표(1\~11번)는 샘플이 없어서 계속 "데이터 없음"이에요. 끝에 "실패 1건"이 나와도 이 때문이라 정상이에요. |
+
+체험 모드의 샘플 값은 실제 값이 아니에요. 의미 있는 판정서와 시뮬레이션은 실제 모드에서 볼 수 있어요.
+
+**🚀 실제 모드**: 한투·DART에서 받으려면 키가 필요해요. 시세·배당·재무를 한 번에 받아요.
+
+```bash
+python batch/collect_data.py                          # 전체 (한투 약 10분 + DART 약 10분)
+python batch/collect_data.py --codes 005930 000660    # 일부 종목만
+```
+
+이미 받은 종목은 건너뛰고 이어서 받아요. (다시 받으려면 `--force`) 재무 지표는 DB에 저장된 값만 쓰기 때문에, 키가 있다면 이 단계를 꼭 해야 판정서에 값이 나와요.
+
+키가 없다면 팀원이 만든 `stockrule.db`를 받아 서버를 끈 상태에서 `backend/data/`에 넣어도 돼요. (DB 파일은 저장소에 없어서 팀에 따로 받아요.) 이때 판정서는 DB에 저장된 값으로 계산해요. 한투 키가 없으면 서버가 시세를 새로 받으려다 실패했다는 로그를 계속 남기니, `.env`에 아래 두 줄을 더하고 서버를 다시 켜요.
+
+```ini
+LIVE_FETCH=0
+PRICE_REFRESH=0
+```
+
+### Step 7. 앱 화면 실행하기 (터미널 C)
+
+서버(터미널 A)가 켜져 있는 상태에서 새 터미널을 열어요.
+
+```bash
+cd StockRuleKeeper/members/byungjun/frontend      # Windows: cd StockRuleKeeper\members\byungjun\frontend
 npm install
 npm run dev
 ```
 
-터미널에 나온 주소(기본 `http://localhost:5173`)를 브라우저에서 열면 돼요. **모바일 화면 크기**(개발자 도구의 폰 보기)로 보면 가장 잘 보여요.
+터미널에 나온 `Local` 주소(기본 `http://localhost:5173`)를 같은 컴퓨터의 브라우저에서 열어요. **모바일 화면 크기**(개발자 도구의 폰 보기)로 보면 가장 잘 보여요. 화면은 서버 주소를 기본으로 `http://localhost:8000`으로 알고 있어서, 같은 컴퓨터에서는 따로 설정하지 않아도 돼요.
 
-- 서버 주소를 바꾸려면 `frontend/.env`에 `VITE_API_BASE=http://서버주소:8000` 을 적어요. (기본값은 `http://localhost:8000`)
-- 폰으로 보려면 노트북과 같은 Wi-Fi에서 노트북의 주소로 접속해요.
+원칙을 만들어 저장하면 종목 검색 화면으로 넘어가요. 체험 모드라면 지표 값이 비어 있는 것이 정상이에요.
 
-### Step 8. 가상 주식앱 열어 보기
+### Step 8. 스마트폰에서 접속하기 (웹 브라우저)
 
-서버가 켜져 있으면 http://localhost:8000/virtual-app/ 에서 가상 주식앱 페이지를 볼 수 있어요.
+폰과 컴퓨터가 **같은 Wi-Fi**에 있어야 해요. 폰의 `localhost`는 폰 자기 자신을 가리켜요. 그래서 폰 브라우저에서 화면 주소를 열 때도, 화면이 서버를 부를 때도 컴퓨터의 **LAN IP**를 써야 해요.
+
+1. 컴퓨터의 LAN IP를 확인해요. (예: `192.168.0.12`)
+   - Linux: `hostname -I`
+   - macOS: `ipconfig getifaddr en0`
+   - Windows: `ipconfig` 결과의 `IPv4 주소`
+2. 서버는 Step 5에서 `--host 0.0.0.0`으로 이미 외부 접속을 받아요. 화면 서버(`npm run dev`)도 외부 접속을 받도록 설정되어 있어요. (`frontend/vite.config.ts`의 `host: true`, 시작 로그에 `Network` 주소가 보여요)
+3. 화면이 컴퓨터의 서버를 찾도록 `frontend/.env` 파일을 만들어요.
+
+   ```ini
+   VITE_API_BASE=http://192.168.0.12:8000
+   ```
+
+   이 값은 화면 서버를 시작할 때 읽으니, 만든 뒤에 터미널 C에서 `Ctrl+C`로 끄고 `npm run dev`를 다시 실행해요.
+4. 폰 브라우저에서 `http://192.168.0.12:5173`을 열어요.
+5. 서버의 CORS는 모든 출처를 허용하도록 되어 있어서 따로 설정하지 않아도 돼요. 다만 컴퓨터의 **방화벽에서 TCP 5173과 8000 포트의 들어오는 연결을 허용**해야 해요.
+
+**Windows의 WSL2에서 서버를 돌리는 경우** (직접 확인하지 못했어요): WSL2 안의 주소는 폰에서 보이지 않아요. 관리자 PowerShell에서 Windows가 WSL2로 포트를 넘기도록 설정해야 해요. WSL2의 IP는 WSL 터미널에서 `hostname -I`로 확인해요.
+
+```powershell
+netsh interface portproxy add v4tov4 listenport=8000 listenaddress=0.0.0.0 connectport=8000 connectaddress=<WSL의 IP>
+netsh interface portproxy add v4tov4 listenport=5173 listenaddress=0.0.0.0 connectport=5173 connectaddress=<WSL의 IP>
+```
+
+**안드로이드 앱(APK)으로 실행하는 경우는 설정이 달라요.** APK는 서버 주소를 앱을 **빌드할 때** 넣어서 고정해요. 그래서 위 `frontend/.env`처럼 실행 중에 바꾸는 방식이 아니라, 폰이 접근할 수 있는 주소(`http://<컴퓨터 LAN IP>:8000`)를 정해 다시 빌드하고 설치해야 해요. (안드로이드 에뮬레이터는 컴퓨터를 `10.0.2.2`로 불러요) 앱의 http 통신은 허용되어 있어요(`frontend/capacitor.config.ts`). 빌드 방법은 [현경님 폴더의 안내](members/hyeonkyeong/README.md)에 있고, APK 빌드는 이 문서에서 직접 확인하지 못했어요. 서버 주소를 적는 `.env.production` 파일은 저장소에 없어서 직접 만들어야 해요.
+
+### Step 9. 가상 주식앱 열어 보기
+
+서버가 켜져 있으면 `http://localhost:8000/virtual-app/` 에서 가상 주식앱 페이지를 볼 수 있어요.
 
 ### 막힐 때
 
 | 증상 | 확인할 것 |
 | --- | --- |
-| 앱에 "서버 연결 실패"가 떠요 | 서버(Step 4)가 켜져 있는지, `VITE_API_BASE` 주소가 맞는지 |
-| `Address already in use` | 같은 포트를 쓰는 프로그램이 있어요. 끄거나 `--port 8001`처럼 다른 포트로 실행해요. |
-| 말을 보냈는데 계속 같은 결과가 나와요 | 🧪 체험 모드(`EXTERNAL_MODE=fixture`)라서 그래요. 실제 모드로 바꿔요. |
-| 실제 모드에서 모델이 응답하지 않아요 | Ollama가 켜져 있는지, `LOCAL_LLM_MODEL` 이름이 등록한 모델과 같은지 |
+| 앱에 "서버 연결 실패"가 떠요 | 서버(Step 5)가 켜져 있는지, `VITE_API_BASE` 주소가 맞는지. 값을 바꿨다면 `npm run dev`를 다시 시작했는지 |
+| `Address already in use` | 같은 포트를 쓰는 프로그램이 있어요. 끄거나 `--port 8001`처럼 다른 포트로 실행하고 `VITE_API_BASE`도 맞춰요. |
+| 말을 보냈는데 계속 같은 결과가 나와요 | 🧪 체험 모드(`EXTERNAL_MODE=fixture`)라서 그래요. 실제 모드로 바꾸고 서버를 다시 켜요. |
+| 실제 모드에서 모델이 응답하지 않아요 | Ollama가 켜져 있는지, `LOCAL_LLM_MODEL` 이름이 `ollama list`의 이름과 같은지 |
+| 폰에서 화면이 열리지 않아요 | 같은 Wi-Fi인지, 방화벽에서 5173·8000 포트를 허용했는지, WSL2라면 포트 넘기기를 했는지 |
+| 판정서가 모두 "데이터 없음"이에요 | 데이터를 채웠는지(Step 6). 체험 모드는 재무 지표가 계속 비어 있어요. |
 
 ---
 
@@ -473,7 +612,7 @@ npm run dev
     - 한투 실전 키는 조회만 하도록 코드로 막았어요.
     - 시연은 안드로이드로 진행해요.
 - **앱 개발**
-  - 백엔드(FastAPI + SQLite): 지표 20개 계산, 원칙 저장(버전 관리), 판정서, 종목 추천, 시뮬레이션과 Haiku 리포트, 공유하기 API
+  - 백엔드(FastAPI + SQLite): 지표 20개 계산, 원칙 저장(버전 관리), 판정서, 종목 추천(서버 기능: 내 원칙을 모두 충족하는 종목 목록), 시뮬레이션과 Haiku 리포트, 공유하기 API
   - 프론트 화면 01\~14, 가상 주식앱, Capacitor 안드로이드 APK, 에뮬레이터에서 동작 확인
   - 지표 20개를 **검증하고 보정**했어요. 팀원 모듈과 대조해서 PER/PBR·EBITDA·금융비용·증가율·"N년 이상" 규칙을 고치고, 네이버 값과 5종목이 일치하는 것을 확인했어요.
   - 정합성을 수정했어요. (로컬 Qwen3 연결 코드, 기본값 8·9·15, 양방향 지표, 원칙 수정 시 설명 전체 다시 만들기)
@@ -526,7 +665,7 @@ npm run dev
 
 ## ⚠️ 알려 드려요
 
-- StockRuleKeeper는 **투자 원칙을 지키도록 돕는 도구**예요. 종목을 추천하거나 주가를 예측하지 않아요.
+- StockRuleKeeper는 **투자 원칙을 지키도록 돕는 도구**예요. 앱이 임의로 종목을 추천하거나 주가를 예측하지 않아요. (서버의 "종목 추천"은 내 원칙을 모두 충족한 종목을 돌려주는 기능이에요)
 - 시뮬레이션은 **지난 데이터로 계산한 결과**이고, 앞으로의 수익을 보장하지 않아요.
 - 투자 판단과 결과에 대한 책임은 사용자 본인에게 있어요.
 
