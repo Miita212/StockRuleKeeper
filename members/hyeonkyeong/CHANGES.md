@@ -5,6 +5,20 @@
 
 ---
 
+## 2026-11-10 · 병준 백엔드·프론트 변경 전체 대조 (안 쓰는 화면 4개 삭제, 수정내역 문서 최신화)
+
+- **무엇**: 병준(`members/byungjun`) 최신(`8f1ec60`)과 내 폴더(`backend`, `frontend`)를 줄바꿈 무시하고 파일 단위로 대조했어요. 코드는 이미 같았고, 아래 둘만 달랐어요.
+  1. **안 쓰는 화면 4개 삭제**: `frontend/src/screens/S01_Start.tsx`, `S02-1_Clarify.tsx`, `S02_PrincipleSetup.tsx`, `S08_PrincipleEdit.tsx`. 병준이 11/06(`2bda3c2`, UI 11~12번)에 `PrincipleChat.tsx`로 합치면서 지웠는데 내 폴더에는 파일만 남아 있었어요. 어디에서도 import하지 않아요(참조 0건).
+  2. **`frontend/UI및백엔드수정내역.md` 최신화**: 15~19번 요약 표와 문서 끝의 "시뮬레이션 분석 리포트에 Haiku를 쓰는 이유"가 빠진 옛 버전이었어요. 병준 최신본(`8f1ec60`)으로 교체(내 파일 형식대로 CRLF).
+- **병준 `8f1ec60`은 문서 파일 하나만 바꾼 커밋**이에요(코드 변경 없음). 15~19번 코드는 이전 반영(`9946b26` 등)과 이번 대조에서 같은 걸 확인했어요.
+- **내가 일부러 병준과 다르게 둔 곳(그대로)**:
+  - 백엔드: `services/price_refresh.py`(장 마감 뒤 가격 자동 갱신), `main.py`·`config.py`(그 시작·설정), `services/stocks.py`·`api/stocks.py`(`priceBasis`), `indicators/compute.py`(한투 PER·PBR 0 이하는 데이터 없음), `llm/principle.py`(첫 문장이 같으면 같은 대화), `scripts/eval_meaning.py`, `.env.example` 안내 주석
+  - 프론트: `types.ts`·`S03_StockSearch.tsx`·`S04_Verdict.tsx`의 등락률 기준 표시(`priceBasis`)
+- **적용 방법(다른 팀원)**: 이미 병준 `PrincipleChat.tsx`를 쓰고 있고 위 4개 파일을 import하는 곳이 없으면 그냥 지우면 돼요. `grep -rnE "S01_Start|S02_PrincipleSetup|S02-1_Clarify|S08_PrincipleEdit" frontend/src`로 정의 외 참조가 없는지 먼저 확인하세요.
+- **확인**: `node node_modules/typescript/bin/tsc -p tsconfig.app.json --noEmit` 통과, `vite build` 통과. 화면 동작·APK는 코드가 바뀐 게 없어서 다시 확인하지 않았어요.
+
+---
+
 ## 2026-11-10 · 모델 3종 시험 비교 (fixed-6 8B / fixed-6 4B / v6 8B)
 
 - **무엇**: fixed-6-hk로 8B·4B를 같은 설정으로 학습(ws6)하고, 지금 앱 모델 v6 8B와 264문항(test_set 234 + 새 시험 30)으로 비교했어요. 결과: [`docs/모델3종_비교_fixed6.md`](docs/모델3종_비교_fixed6.md)
