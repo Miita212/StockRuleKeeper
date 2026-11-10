@@ -141,6 +141,6 @@ export async function runSimulation(
 }
 
 // 가상 주식앱에서 "공유하기"를 눌렀는지 확인 (몇 초마다 부른다)
-export async function latestShare(afterId: number): Promise<{ id: number; code: string; name: string } | null> {
+export async function latestShare(afterId: number): Promise<{ id: number; code: string; name: string; age: number } | null> {
   return call(`/shares/latest?after_id=${afterId}`);
 }

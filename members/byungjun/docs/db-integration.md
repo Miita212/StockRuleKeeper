@@ -1,7 +1,7 @@
 # DB 연동 (byungjun 백엔드 기준)
 
 원본: `members/yappang/docs/db-integration.md`(2026-11-05). 경로는 모두 `members/byungjun/backend/` 기준이다.
-원본에서 byungjun 백엔드의 현재 동작에 맞게 고친 곳은 아래 "(byungjun 수정)"으로 표시했다. 자세한 변경은 `members/byungjun/수정내역.md`.
+원본에서 byungjun 백엔드의 현재 동작에 맞게 고친 곳은 아래 "(byungjun 수정)"으로 표시했다. 자세한 변경은 `members/byungjun/docs/UI및백엔드수정내역.md`의 "A. 백엔드 작업"(합치기 전 원본: `members/byungjun/docs/(구)수정내역.md`).
 
 DB는 SQLite 단일 파일(`data/stockrule.db`)이다. 경로는 `config.DB_PATH`로 정해지고 환경변수 `DB_FILE`로 바꿀 수 있다. ORM 없이 `sqlite3`로 직접 SQL을 쓴다.
 
