@@ -53,7 +53,8 @@ def virtual_stocks():
         for r in rows:
             last = conn.execute("SELECT close FROM prices_daily WHERE code=? ORDER BY date DESC LIMIT 1", (r["code"],)).fetchone()
             out.append({"code": r["code"], "name": r["name"], "price": last["close"] if last else None,
-                        "changeRate": svc.day_change(conn, r["code"])})
+                        "changeRate": svc.day_change(conn, r["code"]),
+                        "priceBasis": svc.price_basis(conn, r["code"])})
         return out
 
 

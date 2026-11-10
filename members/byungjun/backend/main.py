@@ -12,6 +12,7 @@ from fastapi.staticfiles import StaticFiles
 import config
 from api import principles, simulation, stocks
 from db.database import init_db
+from services import price_refresh
 from services.live import seed_stocks
 
 
@@ -19,6 +20,7 @@ from services.live import seed_stocks
 async def lifespan(app: FastAPI):
     init_db()
     seed_stocks()  # stocks 표가 비어 있으면 종목 풀 파일로 채운다
+    price_refresh.start()  # 장 마감 뒤 DB 가격 자동 갱신(백그라운드)
     yield
 
 

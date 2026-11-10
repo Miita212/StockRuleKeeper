@@ -48,6 +48,8 @@ HTTP_TIMEOUT = float(env("HTTP_TIMEOUT", "20"))
 # 요청 시점에 한투·DART를 먼저 부른다(1). 끄면(0) DB 저장분만 읽는다. TTL 안에는 같은 종목을 다시 받지 않는다.
 LIVE_FETCH = env("LIVE_FETCH", "1") == "1"
 LIVE_TTL_SEC = float(env("LIVE_TTL_SEC", "300"))
+# 서버가 켜져 있으면 장 마감(평일 15:40) 뒤 DB 일봉·현재가를 자동으로 새로 받는다(1). 끄기(0)
+PRICE_REFRESH = env("PRICE_REFRESH", "1") == "1"
 MAX_RETRIES = 2  # 한도 초과(429)나 5xx만
 
 # --- 앱 설정 ---

@@ -37,7 +37,7 @@ def get_snapshot(code: str) -> dict:
         "price": _num(o.get("stck_prpr")),
         "per": _num(o.get("per")),
         "pbr": _num(o.get("pbr")),
-        "market_cap_won": (_num(o.get("hts_avls")) or 0) * 100_000_000,  # 응답 단위: 억원
+        "market_cap_won": (_num(o.get("hts_avls")) or None) and _num(o.get("hts_avls")) * 100_000_000,  # 응답 단위: 억원, 0은 데이터 없음
         "high_52w": _num(o.get("w52_hgpr")),
         "low_52w": _num(o.get("w52_lwpr")),
         "from_high_pct": _num(o.get("w52_hgpr_vrss_prpr_ctrt")),

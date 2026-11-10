@@ -30,5 +30,6 @@ def compute_all(conn: sqlite3.Connection, code: str, as_of: date | None = None,
     per_factor, pbr_factor = per_pbr_factors(d["reports"], as_of)
     for i, factor in ((10, per_factor), (11, pbr_factor)):
         if i in out and out[i]["value"] is not None:
-            out[i] = {"value": out[i]["value"] * factor if factor else None, "approx": True}
+            kis = out[i]["value"]  # 한투는 값이 없을 때 0을 준다 → 0 이하는 '데이터 없음'
+            out[i] = {"value": kis * factor if factor and kis > 0 else None, "approx": True}
     return out
