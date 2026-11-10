@@ -59,20 +59,9 @@
 
 ### 1-1. 전체 사용 흐름
 
-```mermaid
-flowchart LR
-    A["💬 원칙 만들기<br/>말로 이야기해요"] --> B["💾 이름 정해 저장"]
-    B --> C["🧾 종목 검색<br/>판정서 확인"]
-    B --> D["🗂️ 원칙 관리<br/>수정 · 잠금 · 끄기"]
-    D --> C
-    B --> E["📈 시뮬레이션<br/>기준 바꿔 비교"]
-    E --> F["✍️ 리포트"]
-
-    style A fill:#EFF6FF,stroke:#2563EB,color:#1E3A8A
-    style C fill:#ECFDF5,stroke:#059669,color:#064E3B
-    style E fill:#F5F3FF,stroke:#7C3AED,color:#4C1D95
-    style F fill:#FFF7ED,stroke:#D97757,color:#7C2D12
-```
+<div align="center">
+<img src="https://raw.githubusercontent.com/ByJn1224/stockrulekeeper-assets/main/flow_user.png" width="900" alt="전체 사용 흐름: 원칙 만들기 → 원칙명 저장 → 종목 검색·원칙 관리·시뮬레이션 → 리포트" />
+</div>
 
 앱 하단 메뉴는 **원칙 생성 · 원칙 관리 · 종목 검색 · 시뮬레이션 · 설정** 다섯 칸이고, 위 흐름의 각 단계와 하나씩 이어져 있어요.
 
@@ -121,25 +110,9 @@ flowchart LR
 
 ### 1-3. 내부 처리 흐름
 
-```mermaid
-flowchart LR
-    A["💬 사용자의 말<br/>영업이익 500억원 이상인 회사만"] --> B["🤖 Qwen3-8B (QLoRA)<br/>말 → 지표·수치 변환"]
-    B -->|추출| C["📋 20개 지표 원칙"]
-    B -->|애매함| D["❓ 되묻기"]
-    B -->|예측·추천| E["🚫 거절"]
-    C --> F["🧾 종목 판정서"]
-    C --> G["📈 시뮬레이션"]
-    H[("🗄️ 재무·시세 데이터<br/>KIS · DART")] --> F
-    H --> G
-    G --> I["✍️ Claude Haiku 5.5<br/>쉬운 말 리포트"]
-
-    style A fill:#EFF6FF,stroke:#2563EB,color:#1E3A8A
-    style B fill:#F5F3FF,stroke:#7C3AED,color:#4C1D95
-    style C fill:#ECFDF5,stroke:#059669,color:#064E3B
-    style D fill:#FFFBEB,stroke:#D97706,color:#78350F
-    style E fill:#FEF2F2,stroke:#DC2626,color:#7F1D1D
-    style I fill:#FFF7ED,stroke:#D97757,color:#7C2D12
-```
+<div align="center">
+<img src="https://raw.githubusercontent.com/ByJn1224/stockrulekeeper-assets/main/flow_internal.png" width="1000" alt="내부 처리 흐름: 사용자의 말 → Qwen3-8B → 추출·되묻기·거절, 지표 원칙 → 판정서·시뮬레이션 → Haiku 리포트" />
+</div>
 
 ### 1-4. 단계별 사용 기술
 
