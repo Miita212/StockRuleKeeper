@@ -19,7 +19,7 @@ export default function AppLayout() {
   // 가상 주식앱에서 "공유하기"를 누르면 그 종목의 판정서(04)로 이동한다 (2초마다 확인)
   useEffect(() => {
     if (!hasPrinciples) return;
-    const timer = setInterval(async () => {
+    const check = async () => {
       try {
         const after = lastShareId.current ?? 0;
         const share = await latestShare(after);
@@ -33,7 +33,9 @@ export default function AppLayout() {
       } catch {
         // 서버가 잠깐 안 닿으면 다음 확인 때 다시 시도한다
       }
-    }, 2000);
+    };
+    check(); // 앱이 켜지자마자 한 번 확인 (공유하기로 켜진 경우 바로 판정서로)
+    const timer = setInterval(check, 2000);
     return () => clearInterval(timer);
   }, [hasPrinciples, navigate]);
 

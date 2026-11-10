@@ -22,6 +22,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
+            <!-- 가상 주식앱 "공유하기"가 stockrulekeeper://share 로 이 앱을 연다 -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="stockrulekeeper" android:host="share" />
+            </intent-filter>
+
         </activity>
 
         <provider

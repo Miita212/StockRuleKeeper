@@ -51,7 +51,7 @@
     setTimeout(() => (t.style.display = "none"), 2000);
     // 폰에서는 StockRuleKeeper 앱을 앞으로 띄운다 (앱이 공유를 확인해 판정서를 연다)
     if (r.ok && /Android/.test(navigator.userAgent)) {
-      location.href = "intent:#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;package=com.stockrulekeeper.app;end";
+      location.href = "intent://share?code=" + code + "#Intent;scheme=stockrulekeeper;package=com.stockrulekeeper.app;end";
     }
   }
 

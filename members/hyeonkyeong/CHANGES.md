@@ -12,10 +12,12 @@
 - **적용 방법**
   1. `backend/api/stocks.py` `latest_share`의 SELECT에 공유 후 경과 초 추가: `SELECT s.id, s.code, t.name, CAST(strftime('%s','now') - strftime('%s', s.created_at) AS INTEGER) AS age FROM shares s ...`
   2. `frontend/src/api/index.ts` `latestShare` 반환 타입에 `age: number` 추가.
-  3. `frontend/src/layouts/AppLayout.tsx`: `if (!first) navigate(...)` → `if (!first || share.age <= 60) navigate(...)` (처음 확인에서 보이는 공유라도 60초 안이면 연다).
-  4. `virtual-app/index.html` `share()` 끝에 `if (r.ok && /Android/.test(navigator.userAgent)) location.href = "intent:#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;package=com.stockrulekeeper.app;end";` 추가(앱 id를 다르게 쓰면 `package=` 값을 맞춘다).
-- **실행할 명령**: 백엔드 재시작, 프론트 재빌드(APK는 폰 주소 `VITE_API_BASE=http://<노트북 Wi-Fi IP>:8000`으로 빌드해 재설치).
-- **확인 방법**: 앱에서 원칙을 하나 만들어 둔 뒤 앱을 종료하고, 폰 크롬에서 가상 주식앱 공유하기를 누른다 → 앱이 켜지고 몇 초 안에 판정서가 열리면 성공. 이 항목은 아직 실기기에서 눌러 보지 못했다.
+  3. `frontend/src/layouts/AppLayout.tsx`: `if (!first) navigate(...)` → `if (!first || share.age <= 60) navigate(...)` (처음 확인에서 보이는 공유라도 60초 안이면 연다). 또 `setInterval(async () => {...}, 2000)`을 `const check = async () => {...}; check(); const timer = setInterval(check, 2000);`로 바꿔 앱이 켜지자마자 한 번 확인한다.
+  4. `frontend/android/app/src/main/AndroidManifest.xml` MainActivity에 링크 주소 등록(크롬은 BROWSABLE 선언이 없는 앱은 열지 않는다):
+     `<intent-filter><action android:name="android.intent.action.VIEW" /><category android:name="android.intent.category.DEFAULT" /><category android:name="android.intent.category.BROWSABLE" /><data android:scheme="stockrulekeeper" android:host="share" /></intent-filter>`
+  5. `virtual-app/index.html` `share()` 끝에 `if (r.ok && /Android/.test(navigator.userAgent)) location.href = "intent://share?code=" + code + "#Intent;scheme=stockrulekeeper;package=com.stockrulekeeper.app;end";` 추가(앱 id를 다르게 쓰면 `package=` 값을 맞춘다).
+- **실행할 명령**: 백엔드 재시작, 프론트 재빌드(AndroidManifest.xml을 바꿨으니 Gradle 빌드 폴더를 따로 쓰면 그쪽에도 복사; APK는 폰 주소 `VITE_API_BASE=http://<노트북 Wi-Fi IP>:8000`으로 빌드해 재설치).
+- **확인 방법**: 앱에서 원칙을 하나 만들어 둔 뒤 앱을 종료하고, 폰 크롬에서 가상 주식앱 공유하기를 누른다 → 앱이 켜지고 몇 초 안에 판정서가 열리면 성공. 실기기(Galaxy S10+)에서 앱을 강제 종료한 뒤 공유 + `stockrulekeeper://share` 링크로 열어 서버 로그에서 `/principles` → `/shares/latest` → `/stocks/054620/verdict` 순서로 요청이 오는 것을 확인했다(화면은 꺼져 있어 직접 보지 못함).
 
 ---
 
