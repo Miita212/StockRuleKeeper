@@ -5,6 +5,20 @@
 
 ---
 
+## 2026-11-10 · 가상 주식앱 "공유하기" → 폰 앱 자동 실행·판정서 열기
+
+- **무엇**: 폰(안드로이드)에서 가상 주식앱(`/virtual-app/`)의 공유하기를 누르면 StockRuleKeeper 앱이 앞으로 뜨고, 앱이 꺼져 있었어도 켜지면서 그 종목 판정서(04)가 열려요.
+- **왜**: 전에는 앱이 켜져 있을 때만, 그리고 앱이 시작한 뒤 새로 한 공유만 판정서로 갔어요. 앱이 꺼져 있다 켜지면 첫 확인에서 보이는 공유를 "예전 공유"로 무시했어요.
+- **적용 방법**
+  1. `backend/api/stocks.py` `latest_share`의 SELECT에 공유 후 경과 초 추가: `SELECT s.id, s.code, t.name, CAST(strftime('%s','now') - strftime('%s', s.created_at) AS INTEGER) AS age FROM shares s ...`
+  2. `frontend/src/api/index.ts` `latestShare` 반환 타입에 `age: number` 추가.
+  3. `frontend/src/layouts/AppLayout.tsx`: `if (!first) navigate(...)` → `if (!first || share.age <= 60) navigate(...)` (처음 확인에서 보이는 공유라도 60초 안이면 연다).
+  4. `virtual-app/index.html` `share()` 끝에 `if (r.ok && /Android/.test(navigator.userAgent)) location.href = "intent:#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;package=com.stockrulekeeper.app;end";` 추가(앱 id를 다르게 쓰면 `package=` 값을 맞춘다).
+- **실행할 명령**: 백엔드 재시작, 프론트 재빌드(APK는 폰 주소 `VITE_API_BASE=http://<노트북 Wi-Fi IP>:8000`으로 빌드해 재설치).
+- **확인 방법**: 앱에서 원칙을 하나 만들어 둔 뒤 앱을 종료하고, 폰 크롬에서 가상 주식앱 공유하기를 누른다 → 앱이 켜지고 몇 초 안에 판정서가 열리면 성공. 이 항목은 아직 실기기에서 눌러 보지 못했다.
+
+---
+
 ## 2026-11-10 · 모델 선정 과정 문서 추가, 3모델 비교 문서 보강
 
 - **무엇**: 최종 모델(fixed-6 8B 3에폭)을 고르기까지의 전 과정을 이야기로 정리한 [`docs/모델_선정_과정_history.md`](docs/모델_선정_과정_history.md)를 추가했어요. 팀원 각자의 기록(byungjun 데이터 병합, haechan v1~v7·4B v4, yappang 4B v1~v3·데이터 통합·검증, hyeonkyeong 서버 학습·fixed-4·5·6)을 하나의 줄거리로 묶고, 막힌 곳 → 원인 → 해결 → 배운 것 표와 발표용 줄거리 제안(17장)을 넣었어요.

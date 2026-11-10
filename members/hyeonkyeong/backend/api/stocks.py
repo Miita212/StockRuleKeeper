@@ -73,6 +73,6 @@ def share(body: ShareBody):
 def latest_share(after_id: int = 0):
     """본 앱이 몇 초마다 묻는다. after_id 이후에 공유된 종목이 있으면 가장 최근 1건, 없으면 null."""
     with connect() as conn:
-        r = conn.execute("SELECT s.id, s.code, t.name FROM shares s JOIN stocks t ON t.code=s.code "
+        r = conn.execute("SELECT s.id, s.code, t.name, CAST(strftime('%s','now') - strftime('%s', s.created_at) AS INTEGER) AS age FROM shares s JOIN stocks t ON t.code=s.code "
                          "WHERE s.user_id=? AND s.id>? ORDER BY s.id DESC LIMIT 1", (config.FIXED_USER_ID, after_id)).fetchone()
         return dict(r) if r else None

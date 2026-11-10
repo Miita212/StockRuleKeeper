@@ -24,9 +24,9 @@ export default function AppLayout() {
         const after = lastShareId.current ?? 0;
         const share = await latestShare(after);
         if (share) {
-          const first = lastShareId.current === null; // 처음 확인에서 보이는 건 예전 공유라 무시
+          const first = lastShareId.current === null; // 처음 확인에서 보이는 건 예전 공유라 무시. 단 60초 안에 한 공유는 앱이 꺼져 있다 켜진 것이므로 연다
           lastShareId.current = share.id;
-          if (!first) navigate(`/stocks/${share.code}`);
+          if (!first || share.age <= 60) navigate(`/stocks/${share.code}`);
         } else if (lastShareId.current === null) {
           lastShareId.current = 0;
         }

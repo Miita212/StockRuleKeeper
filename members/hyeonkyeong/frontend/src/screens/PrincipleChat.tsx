@@ -11,6 +11,7 @@ import Chip from "../components/Chip";
 import IndicatorCard from "../components/IndicatorCard";
 import Select from "../components/Select";
 import { findDeactivation, findLockRequest } from "../data/deactivate";
+import { getHome } from "../data/home";
 import { categoryLabel, findIndicator, groupByCategory } from "../data/indicators";
 import { useApp } from "../store/AppContext";
 import type { IndicatorSetting, Principle } from "../types";
@@ -88,8 +89,9 @@ export default function PrincipleChat({ edit = false }: { edit?: boolean }) {
     if (restOpen) restRef.current?.scrollIntoView({ block: "start", behavior: "smooth" });
   }, [restOpen]);
 
-  // 앱을 켰을 때 이미 원칙이 있으면 종목 검색으로 간다 (하단 [원칙 생성] 탭으로 온 경우는 새 원칙을 만든다)
-  if (!edit && principles.length > 0 && !location.state?.fromNav) return <Navigate to="/stocks" replace />;
+  // 앱을 켰을 때 이미 원칙이 있으면 설정에서 고른 초기화면(기본: 종목 검색)으로 간다 (하단 [원칙 생성] 탭으로 온 경우는 새 원칙을 만든다)
+  const home = getHome();
+  if (!edit && principles.length > 0 && !location.state?.fromNav && home !== "/") return <Navigate to={home} replace />;
 
   const cur = draft ?? base; // 지금 보여주는 원칙
 
